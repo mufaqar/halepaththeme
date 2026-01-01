@@ -34,6 +34,11 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/output.css" />
+    <!-- Slick Carousel CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
     <?php wp_head(); ?>
 </head>
 

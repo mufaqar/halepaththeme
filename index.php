@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package CBL_Theme
+ * @package halepath_theme
  */
 
 get_header();

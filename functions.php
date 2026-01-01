@@ -1,10 +1,10 @@
 <?php
 /**
- * CBL_Theme functions and definitions
+ * halepath_theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package CBL_Theme
+ * @package halepath_theme
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -19,14 +19,14 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function cbl_theme_setup() {
+function halepath_theme_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on CBL_Theme, use a find and replace
-		* to change 'cbl_theme' to the name of your theme in all the template files.
+		* If you're building a theme based on halepath_theme, use a find and replace
+		* to change 'halepath_theme' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'cbl_theme', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'halepath_theme', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -49,7 +49,7 @@ function cbl_theme_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'cbl_theme' ),
+			'menu-1' => esc_html__( 'Primary', 'halepath_theme' ),
 		)
 	);
 
@@ -74,7 +74,7 @@ function cbl_theme_setup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'cbl_theme_custom_background_args',
+			'halepath_theme_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -100,7 +100,7 @@ function cbl_theme_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'cbl_theme_setup' );
+add_action( 'after_setup_theme', 'halepath_theme_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -109,22 +109,22 @@ add_action( 'after_setup_theme', 'cbl_theme_setup' );
  *
  * @global int $content_width
  */
-function cbl_theme_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'cbl_theme_content_width', 640 );
+function halepath_theme_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'halepath_theme_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'cbl_theme_content_width', 0 );
+add_action( 'after_setup_theme', 'halepath_theme_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function cbl_theme_widgets_init() {
+function halepath_theme_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'cbl_theme' ),
+			'name'          => esc_html__( 'Sidebar', 'halepath_theme' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'cbl_theme' ),
+			'description'   => esc_html__( 'Add widgets here.', 'halepath_theme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -132,5 +132,5 @@ function cbl_theme_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'cbl_theme_widgets_init' );
+add_action( 'widgets_init', 'halepath_theme_widgets_init' );
 

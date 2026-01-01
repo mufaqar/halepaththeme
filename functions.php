@@ -49,7 +49,7 @@ function halepath_theme_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'halepath_theme' ),
+			'main' => esc_html__( 'Primary', 'halepath_theme' ),
 		)
 	);
 
@@ -70,35 +70,10 @@ function halepath_theme_setup() {
 		)
 	);
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'halepath_theme_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
-
-	// Add theme support for selective refresh for widgets.
+		// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	/**
-	 * Add support for core custom logo.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Logo
-	 */
-	add_theme_support(
-		'custom-logo',
-		array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		)
-	);
+	
 }
 add_action( 'after_setup_theme', 'halepath_theme_setup' );
 
@@ -133,4 +108,15 @@ function halepath_theme_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'halepath_theme_widgets_init' );
+
+function theme_assets() {
+  wp_enqueue_style(
+    'tailwind',
+    get_template_directory_uri() . '/assets/css/style.css',
+    [],
+    filemtime(get_template_directory() . '/assets/css/style.css')
+  );
+}
+add_action('wp_enqueue_scripts', 'theme_assets');
+
 

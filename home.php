@@ -32,27 +32,27 @@ $slider_items = [
 $categories = [
     [
         'title' => 'Architecture',
-        'image' => get_template_directory_uri() . '/assets/images/cat-1.jpg',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
         'link' => site_url('/category/architecture')
     ],
     [
         'title' => 'Interior Design',
-        'image' => get_template_directory_uri() . '/assets/images/cat-2.jpg',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
         'link' => site_url('/category/interior')
     ],
     [
         'title' => 'Landscape',
-        'image' => get_template_directory_uri() . '/assets/images/cat-3.jpg',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
         'link' => site_url('/category/landscape')
     ],
     [
         'title' => 'Urban Design',
-        'image' => get_template_directory_uri() . '/assets/images/cat-4.jpg',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
         'link' => site_url('/category/urban')
     ],
     [
         'title' => 'Planning',
-        'image' => get_template_directory_uri() . '/assets/images/cat-5.jpg',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
         'link' => site_url('/category/planning')
     ],
 ];
@@ -148,17 +148,15 @@ $slides = [
 
 <section class="bg-[#F5F5F5] py-10">
     <h2 class="md:text-[43px] md:leading-normal text-3xl font-bold text-title_Clr text-center mb-14">
-        Our&nbsp;Latest&nbsp;Category
+        Our Latest Category
     </h2>
 
     <div class="slider-container category-slider">
         <?php foreach ($categories as $item): ?>
             <a href="<?php echo esc_url($item['link']); ?>" class="block px-3">
                 <div class="relative overflow-hidden rounded-xl group">
-
                     <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['title']); ?>"
                         class="w-full h-[260px] object-cover transition-transform duration-500 group-hover:scale-105" />
-
                     <div class="absolute inset-0 bg-black/40 flex items-end p-4">
                         <h3 class="text-white text-xl font-semibold">
                             <?php echo esc_html($item['title']); ?>
@@ -175,7 +173,7 @@ $slides = [
 <section class="pt-[60px] bg-[#F5F5F5]">
     <div class="container flex flex-col justify-center items-center mx-auto px-4">
         <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
-            What We Offer dfadsfadfdfsdfsdfsd
+            What We Offer 
             <div class="h-[3px] bg-[#1C2E42] w-16"></div>
         </h6>
 

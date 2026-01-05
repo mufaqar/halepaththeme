@@ -87,7 +87,7 @@
 /* =========================
    COMPONENTS
 ========================= */
-@layer components {
+
   .container {
     max-width: 1440px;
   }
@@ -135,7 +135,39 @@
   .video-container iframe {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-[605px];
   }
+
+  
+/* width */
+.max_content ::-webkit-scrollbar {
+  width: 6px;
 }
+
+/* Track */
+.max_content ::-webkit-scrollbar-track {
+  background-color: #9C9C9C;
+  border-radius: 10px;
+}
+
+/* Handle */
+.max_content ::-webkit-scrollbar-thumb {
+  background: #1C2E42;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.max_content ::-webkit-scrollbar-thumb:hover {
+  background: #1C2E42;
+}
+
+.max_content .scroll_Left {
+  direction: rtl;
+  padding-left: 16px;
+}
+
+.max_content .scroll_Left p {
+  direction: ltr;
+}
+
 
 /* =========================
    UTILITIES

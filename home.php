@@ -111,7 +111,7 @@ $slides = [
 ?>
 
 <section class="main-slider relative">
-    <div class="main_slider">
+    <div class="Main_slider">
         <?php foreach ($slider_items as $slide): ?>
             <div class="relative w-full h-screen">
                 <?php if ($slide['type'] === 'video'): ?>
@@ -527,7 +527,7 @@ $slides = [
         });
     });
     jQuery(document).ready(function ($) {
-        $('.main_slider').slick({
+        $('.Main_slider').slick({
             dots: false,
             arrows: false,
             infinite: true,

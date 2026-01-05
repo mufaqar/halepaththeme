@@ -5,17 +5,19 @@
 ========================= */
 @layer base {
   :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+    --title_Clr: #1C1C1C;
+    --txt_Clr: #666666;
+    --primary: #53B6C9;
+    --secondary: #1C2E42;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --foreground-rgb: 255, 255, 255;
-      --background-start-rgb: 0, 0, 0;
-      --background-end-rgb: 0, 0, 0;
-    }
+  @theme inline {
+    --color-title_Clr: var(--title_Clr);
+    --color-txt_Clr: var(--txt_Clr);
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --backgroundImage-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+    --backgroundImage-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
   }
 
   *,
@@ -29,18 +31,26 @@
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   .PoppinsBold {
-    font-family: 'PoppinsBold';
+      font-family: 'PoppinsBold', sans-serif;
   }
 
-  a, .PoppinsMedium {
-    font-family: 'PoppinsMedium';
+  a,
+  .PoppinsMedium {
+    font-family: 'PoppinsMedium', sans-serif;
   }
 
-  p, li, span,
+  p,
+  li,
+  span,
   .PoppinsRegular {
-    font-family: 'PoppinsRegular';
+    font-family: 'PoppinsRegular', sans-serif;
   }
 }
 
@@ -50,27 +60,27 @@
 @layer base {
   @font-face {
     font-family: 'PoppinsBold';
-    src: url('/fonts/Poppins-Bold.ttf');
+    src: url('/assets/fonts/Poppins-Bold.ttf');
   }
 
   @font-face {
     font-family: 'PoppinsMedium';
-    src: url('/fonts/Poppins-Medium.ttf');
+    src: url('/assets/fonts/Poppins-Medium.ttf');
   }
 
   @font-face {
     font-family: 'PoppinsRegular';
-    src: url('/fonts/Poppins-Regular.ttf');
+    src: url('/assets/fonts/Poppins-Regular.ttf');
   }
 
   @font-face {
     font-family: 'EffraMedium';
-    src: url('/fonts/Effra_Trial_Rg.ttf');
+    src: url('/assets/fonts/Effra_Trial_Rg.ttf');
   }
 
   @font-face {
     font-family: 'SourceSansProRegular';
-    src: url('/fonts/SourceSansPro-Regular.ttf');
+    src: url('/assets/fonts/SourceSansPro-Regular.ttf');
   }
 }
 
@@ -86,9 +96,8 @@
     @apply flex w-full gap-[11px] justify-center;
   }
 
-  .thumb-wrapper > div {
-    @apply w-full overflow-hidden transition-all max-w-[154px] max-h-[131px]
-           rounded-[11px] border border-[#1C2E4230];
+  .thumb-wrapper>div {
+    @apply w-full overflow-hidden transition-all max-w-[154px] max-h-[131px] rounded-[11px] border border-[#1C2E4230];
   }
 
   .thumb-wrapper img {
@@ -124,8 +133,7 @@
   }
 
   .video-container iframe {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-           w-screen h-[605px];
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-[605px];
   }
 }
 
@@ -134,9 +142,7 @@
 ========================= */
 @layer utilities {
   .before_line {
-    @apply relative md:before:block before:hidden before:content-['']
-           before:absolute before:h-full before:top-[92px] before:left-1/2
-           before:border-l before:border-dashed;
+    @apply relative md:before:block before:hidden before:content-[''] before:absolute before:h-full before:top-[92px] before:left-1/2 before:border-l before:border-dashed;
   }
 
   .maskimage {

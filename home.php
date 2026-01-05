@@ -153,27 +153,27 @@ $slides = [
 
     <div class="slider-container category-slider">
         <?php foreach ($categories as $item): ?>
-            <a href="<?php echo esc_url($item['link']); ?>" class="block px-3">
-                <div class="relative overflow-hidden rounded-xl group">
+            <div class="w-fit p-2">
+                <a href="<?php echo esc_url($item['link']); ?>">
                     <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['title']); ?>"
-                        class="w-full h-[260px] object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-black/40 flex items-end p-4">
-                        <h3 class="text-white text-xl font-semibold">
-                            <?php echo esc_html($item['title']); ?>
-                        </h3>
-                    </div>
+                        width="363" height="375" class=" w-full object-cover" loading="lazy" />
+                </a>
 
-                </div>
-            </a>
+                <a href="<?php echo esc_url($item['link']); ?>"
+                    class="text-xl font-normal text-title_Clr text-center flex w-fit mx-auto mt-8">
+                    <?php echo esc_html($item['title']); ?>
+                </a>
+            </div>
         <?php endforeach; ?>
     </div>
 </section>
 
 
+
 <section class="pt-[60px] bg-[#F5F5F5]">
     <div class="container flex flex-col justify-center items-center mx-auto px-4">
         <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
-            What We Offer 
+            What We Offer
             <div class="h-[3px] bg-[#1C2E42] w-16"></div>
         </h6>
 
@@ -540,43 +540,43 @@ $slides = [
     });
 
     jQuery(document).ready(function ($) {
-  $('.category-slider').slick({
-    dots: false,
-    arrows: false,
-    infinite: true,
-    slidesToShow: 5,
-    autoplay: true,
-    speed: 12000,
-    cssEase: 'linear',
-    pauseOnHover: true,
-    swipeToSlide: true,
-    draggable: true,
+        $('.category-slider').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 5,
+            autoplay: true,
+            speed: 12000,
+            cssEase: 'linear',
+            pauseOnHover: true,
+            swipeToSlide: true,
+            draggable: true,
 
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-});
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
 
 </script>

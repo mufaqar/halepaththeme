@@ -21,7 +21,7 @@ $about_images = [
                 <?php endforeach; ?>
 
                 <!-- Decorative background images -->
-                <figure class="absolute z-[-1] w-[80%] mx-auto h-full top-[-2.5rem] rounded-3xl scale-105">
+                <figure class="">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/about-bg-img_2.png"
                         class="w-full h-full object-cover rounded-3xl" />
                 </figure>

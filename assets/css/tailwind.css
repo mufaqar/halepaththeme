@@ -38,7 +38,7 @@
   h5,
   h6,
   .PoppinsBold {
-      font-family: 'PoppinsBold', sans-serif;
+    font-family: 'PoppinsBold', sans-serif;
   }
 
   a,
@@ -145,10 +145,19 @@
     @apply relative md:before:block before:hidden before:content-[''] before:absolute before:h-full before:top-[92px] before:left-1/2 before:border-l before:border-dashed;
   }
 
-  .maskimage {
-    mask-image: url('/masking.png');
-    -webkit-mask-image: url('/masking.png');
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-  }
+
+}
+
+.maskimage {
+  -webkit-mask-image: url('/assets/images/masking.png');
+  mask-image: url('/assets/images/masking.png');
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }

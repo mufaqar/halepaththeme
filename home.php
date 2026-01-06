@@ -3,61 +3,69 @@
 ?>
 
 <?php
-$slider_items = [
-    [
-        'type' => 'video',
-        'src' => get_template_directory_uri() . '/assets/videos/video.mp4',
-        'title' => 'Custom cardboard packaging solutions',
-        'button_text' => 'Enquire Now',
-        'button_link' => '#',
-    ],
-    [
-        'type' => 'video',
-        'src' => get_template_directory_uri() . '/assets/videos/video.mp4',
-        'title' => 'Custom cardboard packaging solutions',
-        'button_text' => 'Enquire Now',
-        'button_link' => '#',
-    ],
-    [
-        'type' => 'video',
-        'src' => get_template_directory_uri() . '/assets/videos/video.mp4',
-        'title' => 'Custom cardboard packaging solutions',
-        'button_text' => 'Enquire Now',
-        'button_link' => '#',
-    ],
-];
-?>
-
-<?php
 $categories = [
     [
-        'title' => 'Architecture',
+        'title' => 'Candle Boxes',
         'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/architecture')
+        'link' => site_url('/category/candle-boxes')
     ],
     [
-        'title' => 'Interior Design',
+        'title' => 'Cosmetic Boxes',
         'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/interior')
+        'link' => site_url('/category/cosmetic-boxes')
     ],
     [
-        'title' => 'Landscape',
+        'title' => 'Product By Industry',
         'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/landscape')
+        'link' => site_url('/category/product-by-industry')
     ],
     [
-        'title' => 'Urban Design',
+        'title' => 'Retail Boxes',
         'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/urban')
+        'link' => site_url('/category/retail-boxes')
     ],
     [
-        'title' => 'Planning',
+        'title' => 'CBD Boxes',
         'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/planning')
+        'link' => site_url('/category/cbd-boxes')
+    ],
+    [
+        'title' => 'Custom Printed Box',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
+        'link' => site_url('/category/custom-printed-box')
+    ],
+    [
+        'title' => 'Box By Style',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
+        'link' => site_url('/category/box-by-style')
+    ],
+    [
+        'title' => 'Brand Finishes',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
+        'link' => site_url('/category/brand-finishes')
+    ],
+    [
+        'title' => 'Cardboard Boxes',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
+        'link' => site_url('/category/cardboard-boxes')
+    ],
+    [
+        'title' => 'Display Boxes',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
+        'link' => site_url('/category/display-boxes')
+    ],
+    [
+        'title' => 'Bottle Boxes',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
+        'link' => site_url('/category/bottle-boxes')
+    ],
+    [
+        'title' => 'Bottle Boxes',
+        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
+        'link' => site_url('/category/bottle-boxes')
     ],
 ];
 ?>
-
 
 <?php
 $steps = [
@@ -110,37 +118,37 @@ $slides = [
 ];
 ?>
 
-<section class="main-slider relative">
-    <div class="Main_slider">
-        <?php foreach ($slider_items as $slide): ?>
-            <div class="relative w-full h-screen">
-                <?php if ($slide['type'] === 'video'): ?>
-                    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-                        <source src="<?php echo $slide['src']; ?>" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                <?php else: ?>
-                    <div class="absolute inset-0 w-full h-full bg-cover bg-center"
-                        style="background-image: url('<?php echo $slide['src']; ?>');"></div>
-                <?php endif; ?>
-
-                <div class="md:py-44 py-24 relative bg-center bg-no-repeat bg-cover 
-                            before:content-[''] before:absolute before:w-full before:bg-gradient-to-r 
-                            before:from-black/90 before:from-30% before:via-black/70 before:h-full before:top-0">
-                    <div class="container mx-auto px-4 relative z-10">
-                        <div class="md:w-1/2 w-full">
-                            <h1 class="md:text-6xl md:leading-tight text-3xl font-bold text-white mb-10">
-                                <?php echo $slide['title']; ?>
-                            </h1>
-                            <a href="<?php echo $slide['button_link']; ?>"
-                                class="bg-primary hover:bg-white px-5 py-4 text-lg font-medium text-white hover:text-primary rounded-full border-2 border-primary inline-flex items-center gap-2">
-                                <?php echo $slide['button_text']; ?> &rarr;
-                            </a>
-                        </div>
+<section class="Main_slider">
+    <div class="main-slider">
+        <!-- Video Slide -->
+        <div class="video-container relative">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="md:py-44 py-24 relative bg-center bg-no-repeat bg-cover
+                before:content-['']
+                before:absolute
+                before:w-full
+                before:bg-gradient-to-r
+                before:from-black/90
+                before:from-30%
+                before:via-black/70
+                before:h-full
+                before:top-0">
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="md:w-1/2 w-full">
+                        <h1 class="md:text-6xl md:leading-tight text-3xl font-bold text-white mb-10">
+                            Custom cardboard packaging solutions
+                        </h1>
+                        <a href="#"
+                            class="bg-primary hover:bg-white px-5 py-4 text-lg font-medium text-white hover:text-primary rounded-full border-2 border-primary inline-flex items-center gap-2">
+                            Enquire Now <i class="fa fa-chevron-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
+        </div>
     </div>
 </section>
 
@@ -156,7 +164,7 @@ $slides = [
             <div class="w-fit p-2">
                 <a href="<?php echo esc_url($item['link']); ?>">
                     <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['title']); ?>"
-                        width="363" height="375" class=" w-full object-cover" loading="lazy" />
+                        width="363" height="375" class="maskimage w-full object-cover" loading="lazy" />
                 </a>
 
                 <a href="<?php echo esc_url($item['link']); ?>"
@@ -168,7 +176,145 @@ $slides = [
     </div>
 </section>
 
+<?php get_template_part('template-parts/home-cta'); ?>
+<!-- Product Slider Starts -->
+<section class="py-12">
+    <h4 className="text-xl font-semibold text-title_Clr mb-4 text-center flex items-center justify-center gap-3">
+        <span> Our Products </span>
+        <span className="block border-b-2 border-title_Clr max-w-[61px] mx-auto w-full"></span>
+    </h4>
+    <h2 className="md:text-[43px] md:leading-normal text-3xl font-bold text-title_Clr text-center mb-14">
+        Our Latest Products
+    </h2>
+    <?php
+    get_template_part(
+        'template-parts/product-slider',
+        null,
+        ['direction' => 'ltr', 'slidesToShow' => 5,]
+    ); ?>
+    <a href="/products"
+        class="bg-secondary hover:bg-white px-9 py-3 text-lg font-medium text-white hover:text-secondary rounded-full border-2 border-secondary flex items-center gap-2 mt-12 w-fit mx-auto">
+        See All Products
+    </a>
+</section>
+<!-- Product Slider end -->
 
+<section class="pb-12 md:px-4 px-4">
+    <div
+        class="container mx-auto md:p-14 p-8 bg-secondary flex md:flex-row flex-col gap-7 justify-between items-center rounded-[19px]">
+        <!-- Left Text + Button -->
+        <div>
+            <p class="md:text-4xl text-2xl font-normal text-white mb-10">
+                Globally Expertise Delivered Locally
+            </p>
+            <a href="<?php echo site_url('/products'); ?>"
+                class="bg-primary hover:bg-white px-9 py-3 text-lg font-medium text-white hover:text-primary rounded-full border-2 border-primary flex items-center gap-2 w-fit">
+                See All Products
+            </a>
+        </div>
+
+        <!-- Right Stats -->
+        <div class="flex md:flex-row flex-col gap-7 justify-between">
+            <div>
+                <span class="block border-b-2 border-primary max-w-[61px] w-full"></span>
+                <h3 class="md:text-5xl text-3xl font-bold text-white my-6">
+                    35
+                </h3>
+                <p class="text-lg font-normal text-white">
+                    Lorem Ipsum Lorem Ipsum
+                </p>
+            </div>
+            <div>
+                <span class="block border-b-2 border-primary max-w-[61px] w-full"></span>
+                <h3 class="md:text-5xl text-3xl font-bold text-white my-6">
+                    35,000
+                </h3>
+                <p class="text-lg font-normal text-white">
+                    Lorem Ipsum Lorem Ipsum
+                </p>
+            </div>
+            <div>
+                <span class="block border-b-2 border-primary max-w-[61px] w-full"></span>
+                <h3 class="md:text-5xl text-3xl font-bold text-white my-6">
+                    350
+                </h3>
+                <p class="text-lg font-normal text-white">
+                    Lorem Ipsum Lorem Ipsum
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Brands Section -->
+<section class="pb-12 md:px-4 px-4">
+    <div class="container mx-auto md:p-8 p-8 shadow-[0_0_5px_0_rgba(0,0,0,0.31)] rounded-[19px]">
+        <h2 class="md:text-4xl text-2xl font-bold text-title_Clr text-center mb-10">
+            Brand That Trust Us
+        </h2>
+        <div class="flex md:flex-row flex-col gap-7 justify-between">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/1.png" alt="brand1" width="179"
+                height="101" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/2.png" alt="brand2" width="179"
+                height="101" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/3.png" alt="brand3" width="179"
+                height="101" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/4.png" alt="brand4" width="179"
+                height="101" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/5.png" alt="brand5" width="179"
+                height="101" />
+        </div>
+    </div>
+</section>
+<!-- Brands Section End -->
+
+<!-- Corrugated Packaging Starts -->
+<section class="bg-cover mt-10 bg-no-repeat about_bg"
+    style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/bg.png'">
+    <div class="container mx-auto px-4 pt-[110px]">
+        <h2 class="text-white font-bold text-3xl md:text-5xl lg:text-[51px]">
+            Corrugated Packaging
+        </h2>
+    </div>
+    <div
+        class="bg-[#1C2E42] py-10 pr-8 md:p-[46px] max-w-[90%] md:max-w-[80%] lg:max-w-[70%] rounded-tr-[140px] mt-[110px]">
+        <div class="container mx-auto px-4">
+            <h5 class="text-white font-bold text-xl md:text-[25px]">
+                Hale Path Provide Best Packaging Services
+            </h5>
+            <p class="font-medium text-white text-xl md:text-[27px] mb-6 mt-2 leading-normal">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's. Lorem Ipsum has
+                been the industry's.
+            </p>
+            <a href="<?php echo site_url('/about-us'); ?>"
+                class="bg-[#53B6C9] px-[35px] rounded-full font-medium text-[17px] py-[14px] inline-block">
+                About Us
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Corrugated Packaging End -->
+<!-- Product Slider Starts -->
+<section class="py-12">
+    <?php
+    get_template_part(
+        'template-parts/product-slider',
+        null,
+        ['direction' => 'ltr', 'slidesToShow' => 5,]
+    ); ?>
+</section>
+<!-- Product Slider end -->
+<?php get_template_part('template-parts/home-cta'); ?>
+<!-- Product Slider Starts -->
+<section class="py-12">
+    <?php
+    get_template_part(
+        'template-parts/product-slider',
+        null,
+        ['direction' => 'ltr', 'slidesToShow' => 5,]
+    ); ?>
+</section>
+<!-- Product Slider end -->
 
 <section class="pt-[60px] bg-[#F5F5F5]">
     <div class="container flex flex-col justify-center items-center mx-auto px-4">
@@ -186,13 +332,10 @@ $slides = [
         <div class="container mx-auto px-4">
             <div
                 class="p-6 bg-white grid grid-cols-1 pb-24 gap-5 xl:gap-2 sm:grid-cols-2 xl:grid-cols-4 mb-32 -mt-48 border">
-
                 <?php for ($i = 1; $i <= 4; $i++): ?>
                     <div class="relative">
-
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/o<?php echo $i; ?>.png"
                             alt="Offer Image <?php echo $i; ?>" class="w-full" width="344" height="344" />
-
                         <div class="px-4 absolute -bottom-28 left-4 right-4 z-10">
                             <div class="border bg-white p-3 px-5">
                                 <h5
@@ -527,19 +670,6 @@ $slides = [
         });
     });
     jQuery(document).ready(function ($) {
-        $('.Main_slider').slick({
-            dots: false,
-            arrows: false,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-        });
-    });
-
-    jQuery(document).ready(function ($) {
         $('.category-slider').slick({
             dots: false,
             arrows: false,
@@ -558,7 +688,6 @@ $slides = [
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 3,
-                        dots: true
                     }
                 },
                 {
@@ -578,5 +707,4 @@ $slides = [
             ]
         });
     });
-
 </script>

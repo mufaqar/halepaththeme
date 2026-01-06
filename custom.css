@@ -1,3 +1,10 @@
-
-
-body {}
+.maskimage {
+    -webkit-mask-image: url('./assets/images/masking.png');
+    mask-image: url('./assets/images/masking.png');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}

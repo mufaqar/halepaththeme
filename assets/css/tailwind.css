@@ -88,55 +88,55 @@
    COMPONENTS
 ========================= */
 
-  .container {
-    max-width: 1440px;
-  }
+.container {
+  max-width: 1440px;
+}
 
-  .thumb-wrapper {
-    @apply flex w-full gap-[11px] justify-center;
-  }
+.thumb-wrapper {
+  @apply flex w-full gap-[11px] justify-center;
+}
 
-  .thumb-wrapper>div {
-    @apply w-full overflow-hidden transition-all max-w-[154px] max-h-[131px] rounded-[11px] border border-[#1C2E4230];
-  }
+.thumb-wrapper>div {
+  @apply w-full overflow-hidden transition-all max-w-[154px] max-h-[131px] rounded-[11px] border border-[#1C2E4230];
+}
 
-  .thumb-wrapper img {
-    @apply w-full h-full object-cover object-center;
-  }
+.thumb-wrapper img {
+  @apply w-full h-full object-cover object-center;
+}
 
-  .grad_Bg {
-    background-image: linear-gradient(to bottom, #2B4FB9 50%, white 50%);
-  }
+.grad_Bg {
+  background-image: linear-gradient(to bottom, #2B4FB9 50%, white 50%);
+}
 
-  .about_bg {
-    background-image: url('/images/about-page/bg.png');
-  }
+.about_bg {
+  background-image: url('/images/about-page/bg.png');
+}
 
-  .offerbg {
-    background-image: url('/images/about-page/offer-bg.png');
-  }
+.offerbg {
+  background-image: url('/images/about-page/offer-bg.png');
+}
 
-  .slider_bg {
-    background-image: url('/images/about-page/slider-bg.svg');
-  }
+.slider_bg {
+  background-image: url('/images/about-page/slider-bg.svg');
+}
 
-  .slider_bg2 {
-    background: linear-gradient(40deg, #f47b62 15%, #ee3a79 79%);
-  }
+.slider_bg2 {
+  background: linear-gradient(40deg, #f47b62 15%, #ee3a79 79%);
+}
 
-  .slider_bg3 {
-    background: linear-gradient(40deg, #41b6db 15%, #8dc99a 79%);
-  }
+.slider_bg3 {
+  background: linear-gradient(40deg, #41b6db 15%, #8dc99a 79%);
+}
 
-  .video-container {
-    @apply w-full relative h-[605px];
-  }
+.video-container {
+  @apply w-full relative h-[605px];
+}
 
-  .video-container iframe {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-[605px];
-  }
+.video-container iframe {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-[605px];
+}
 
-  
+
 /* width */
 .max_content ::-webkit-scrollbar {
   width: 6px;
@@ -176,20 +176,8 @@
   .before_line {
     @apply relative md:before:block before:hidden before:content-[''] before:absolute before:h-full before:top-[92px] before:left-1/2 before:border-l before:border-dashed;
   }
-
-
 }
 
-.maskimage {
-  -webkit-mask-image: url('/assets/images/masking.png');
-  mask-image: url('/assets/images/masking.png');
-
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-
-  -webkit-mask-position: center;
-  mask-position: center;
-
-  -webkit-mask-size: contain;
-  mask-size: contain;
+.slick-slide {
+  height: fit-content !important;
 }

@@ -1,72 +1,6 @@
 <?php /** Template Name: Home */ get_header();
 
 ?>
-
-<?php
-$categories = [
-    [
-        'title' => 'Candle Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/candle-boxes')
-    ],
-    [
-        'title' => 'Cosmetic Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/cosmetic-boxes')
-    ],
-    [
-        'title' => 'Product By Industry',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/product-by-industry')
-    ],
-    [
-        'title' => 'Retail Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/retail-boxes')
-    ],
-    [
-        'title' => 'CBD Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/cbd-boxes')
-    ],
-    [
-        'title' => 'Custom Printed Box',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/custom-printed-box')
-    ],
-    [
-        'title' => 'Box By Style',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/box-by-style')
-    ],
-    [
-        'title' => 'Brand Finishes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/brand-finishes')
-    ],
-    [
-        'title' => 'Cardboard Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/cardboard-boxes')
-    ],
-    [
-        'title' => 'Display Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/display-boxes')
-    ],
-    [
-        'title' => 'Bottle Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/bottle-boxes')
-    ],
-    [
-        'title' => 'Bottle Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/bottle-boxes')
-    ],
-];
-?>
-
 <?php
 $steps = [
     [
@@ -117,6 +51,43 @@ $slides = [
     ],
 ];
 ?>
+<?php
+$featureproductsRes = [
+    [
+        'title' => 'Eco Packaging',
+        'excerpt' => 'Sustainable and recyclable packaging solutions.',
+        'slug' => ['current' => 'eco-packaging'],
+        'gallery' => [
+            ['asset' => ['url' => get_template_directory_uri() . '/assets/images/design/1.png']]
+        ],
+    ],
+    [
+        'title' => 'Custom Boxes',
+        'excerpt' => 'Tailor-made boxes for your brand.',
+        'slug' => ['current' => 'custom-boxes'],
+        'gallery' => [
+            ['asset' => ['url' => get_template_directory_uri() . '/assets/images/design/2.png']]
+        ],
+    ],
+    [
+        'title' => 'Luxury Packaging',
+        'excerpt' => 'Premium packaging for high-end products.',
+        'slug' => ['current' => 'luxury-packaging'],
+        'gallery' => [
+            ['asset' => ['url' => get_template_directory_uri() . '/assets/images/design/3.png']]
+        ],
+    ],
+    [
+        'title' => 'Retail Packs',
+        'excerpt' => 'Perfect packaging for retail shelves.',
+        'slug' => ['current' => 'retail-packs'],
+        'gallery' => [
+            ['asset' => ['url' => get_template_directory_uri() . '/assets/images/design/4.png']]
+        ],
+    ],
+];
+?>
+
 
 <section class="Main_slider">
     <div class="main-slider">
@@ -153,37 +124,23 @@ $slides = [
 </section>
 
 <?php get_template_part('template-parts/about-imgscroll'); ?>
-
+<!-- Category Slider Starts -->
 <section class="bg-[#F5F5F5] py-10">
     <h2 class="md:text-[43px] md:leading-normal text-3xl font-bold text-title_Clr text-center mb-14">
         Our Latest Category
     </h2>
 
-    <div class="slider-container category-slider">
-        <?php foreach ($categories as $item): ?>
-            <div class="w-fit p-2">
-                <a href="<?php echo esc_url($item['link']); ?>">
-                    <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['title']); ?>"
-                        width="363" height="375" class="maskimage w-full object-cover" loading="lazy" />
-                </a>
-
-                <a href="<?php echo esc_url($item['link']); ?>"
-                    class="text-xl font-normal text-title_Clr text-center flex w-fit mx-auto mt-8">
-                    <?php echo esc_html($item['title']); ?>
-                </a>
-            </div>
-        <?php endforeach; ?>
-    </div>
+    <?php get_template_part('template-parts/category-slider'); ?>
 </section>
-
+<!-- Category Slider end -->
 <?php get_template_part('template-parts/home-cta'); ?>
 <!-- Product Slider Starts -->
 <section class="py-12">
-    <h4 className="text-xl font-semibold text-title_Clr mb-4 text-center flex items-center justify-center gap-3">
+    <h4 class="text-xl font-semibold text-title_Clr mb-4 text-center flex items-center justify-center gap-3">
         <span> Our Products </span>
-        <span className="block border-b-2 border-title_Clr max-w-[61px] mx-auto w-full"></span>
+        <span class="block border-b-2 border-title_Clr max-w-[61px] mx-auto w-full"></span>
     </h4>
-    <h2 className="md:text-[43px] md:leading-normal text-3xl font-bold text-title_Clr text-center mb-14">
+    <h2 class="md:text-[43px] md:leading-normal text-3xl font-bold text-title_Clr text-center mb-14">
         Our Latest Products
     </h2>
     <?php
@@ -198,7 +155,6 @@ $slides = [
     </a>
 </section>
 <!-- Product Slider end -->
-
 <section class="pb-12 md:px-4 px-4">
     <div
         class="container mx-auto md:p-14 p-8 bg-secondary flex md:flex-row flex-col gap-7 justify-between items-center rounded-[19px]">
@@ -266,7 +222,6 @@ $slides = [
     </div>
 </section>
 <!-- Brands Section End -->
-
 <!-- Corrugated Packaging Starts -->
 <section class="bg-cover mt-10 bg-no-repeat about_bg"
     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/bg.png'">
@@ -304,7 +259,9 @@ $slides = [
     ); ?>
 </section>
 <!-- Product Slider end -->
+<!-- CTA Starts -->
 <?php get_template_part('template-parts/home-cta'); ?>
+<!-- CTA end -->
 <!-- Product Slider Starts -->
 <section class="py-12">
     <?php
@@ -315,300 +272,21 @@ $slides = [
     ); ?>
 </section>
 <!-- Product Slider end -->
-
-<section class="pt-[60px] bg-[#F5F5F5]">
-    <div class="container flex flex-col justify-center items-center mx-auto px-4">
-        <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
-            What We Offer
-            <div class="h-[3px] bg-[#1C2E42] w-16"></div>
-        </h6>
-
-        <h2 class="text-2xl lg:text-[43px] text-center font-semibold leading-normal">
-            Sustainable Products & Services
-        </h2>
-    </div>
-
-    <div class="offerbg bg-cover bg-no-repeat mt-60 border border-black">
-        <div class="container mx-auto px-4">
-            <div
-                class="p-6 bg-white grid grid-cols-1 pb-24 gap-5 xl:gap-2 sm:grid-cols-2 xl:grid-cols-4 mb-32 -mt-48 border">
-                <?php for ($i = 1; $i <= 4; $i++): ?>
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/o<?php echo $i; ?>.png"
-                            alt="Offer Image <?php echo $i; ?>" class="w-full" width="344" height="344" />
-                        <div class="px-4 absolute -bottom-28 left-4 right-4 z-10">
-                            <div class="border bg-white p-3 px-5">
-                                <h5
-                                    class="flex group cursor-pointer md:text-xl lg:text-2xl font-medium justify-between border-b-[3px] py-3 pt-1 border-black">
-                                    Packaging
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/li_move-up-right.svg"
-                                        alt="Arrow Icon" class="group-hover:scale-110 transition-all duration-300"
-                                        width="30" height="30" />
-                                </h5>
-
-                                <p class="mt-3">Lorem ipsum dolor sit amet.</p>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                <?php endfor; ?>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="bg-secondary py-7">
-    <div class="container mx-auto px-4 flex md:flex-row flex-col items-center gap-7 justify-between">
-        <div class="md:w-2/3 w-full flex flex-wrap items-center gap-3">
-            <h6 class="md:text-xl text-lg font-normal text-white mr-4">
-                Need More This Special Year?
-            </h6>
-            <p class="md:text-3xl text-xl font-normal text-primary">30%</p>
-            <p class="md:text-3xl text-xl font-normal text-white">
-                Discount Bulk Shopping
-            </p>
-        </div>
-        <div class="md:w-1/3 w-full">
-            <Link href="#"
-                class="bg-primary hover:bg-white px-5 py-4 text-lg font-medium text-white hover:text-primary rounded-full border-2 border-primary flex w-fit ml-auto md:mr-0 mr-auto items-center gap-2">
-            Order Now
-            </Link>
-        </div>
-    </div>
-</section>
-
-<section class="pb-12 md:px-4 px-4">
-    <div
-        class="container mx-auto md:p-14 p-8 bg-secondary flex md:flex-row flex-col gap-7 justify-between items-center rounded-[19px]">
-        <!-- LEFT TEXT & BUTTON -->
-        <div>
-            <p class="md:text-4xl text-2xl font-normal text-white mb-10">
-                Globally Expertise Delivered Locally
-            </p>
-            <a href="/products"
-                class="bg-primary hover:bg-white px-9 py-3 text-lg font-medium text-white hover:text-primary rounded-full border-2 border-primary flex items-center gap-2 w-fit">
-                See All Products
-            </a>
-        </div>
-        <!-- RIGHT STATS -->
-        <div class="flex md:flex-row flex-col gap-7 justify-between">
-            <div>
-                <span class="block border-b-2 border-primary max-w-[61px] w-full"></span>
-                <h3 class="md:text-5xl text-3xl font-bold text-white my-6">
-                    35
-                </h3>
-                <p class="text-lg font-normal text-white">
-                    Lorem Ipsum Lorem Ipsum
-                </p>
-            </div>
-            <div>
-                <span class="block border-b-2 border-primary max-w-[61px] w-full"></span>
-                <h3 class="md:text-5xl text-3xl font-bold text-white my-6">
-                    35,000
-                </h3>
-                <p class="text-lg font-normal text-white">
-                    Lorem Ipsum Lorem Ipsum
-                </p>
-            </div>
-            <div>
-                <span class="block border-b-2 border-primary max-w-[61px] w-full"></span>
-                <h3 class="md:text-5xl text-3xl font-bold text-white my-6">
-                    350
-                </h3>
-                <p class="text-lg font-normal text-white">
-                    Lorem Ipsum Lorem Ipsum
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="pb-12 md:px-4 px-4">
-    <div class="container mx-auto md:p-8 p-8 shadow-[0_0_5px_0_rgba(0,0,0,0.31)] rounded-[19px]">
-        <h2 class="md:text-4xl text-2xl font-bold text-title_Clr text-center mb-10">
-            Brand That Trust Us
-        </h2>
-        <div class="flex md:flex-row flex-col gap-7 justify-between">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/1.png" alt="brand1"
-                class="w-[179px] h-[101px]" />
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/2.png" alt="brand2"
-                class="w-[179px] h-[101px]" />
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/3.png" alt="brand3"
-                class="w-[179px] h-[101px]" />
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/4.png" alt="brand4"
-                class="w-[179px] h-[101px]" />
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/5.png" alt="brand5"
-                class="w-[179px] h-[101px]" />
-        </div>
-    </div>
-</section>
-
-<section class="bg-cover mt-10 bg-no-repeat about_bg">
-    <div class="container mx-auto px-4 pt-[110px]">
-        <h2 class="text-white font-bold text-3xl md:text-5xl lg:text-[51px]">
-            Corrugated Packaging
-        </h2>
-    </div>
-    <div
-        class="bg-[#1C2E42] py-10 pr-8 md:p-[46px] max-w-[90%] md:max-w-[80%] lg:max-w-[70%] rounded-tr-[140px] mt-[110px]">
-        <div class="container mx-auto px-4">
-            <h5 class="text-white font-bold text-xl md:text-[25px]">
-                Hale Path Provide Best Packaging Services
-            </h5>
-            <p class="font-medium text-white text-xl md:text-[27px] mb-6 mt-2 leading-normal">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's. Lorem Ipsum has
-                been the industry's.
-            </p>
-            <a href="/about-us"
-                class="bg-[#53B6C9] px-[35px] rounded-full font-medium text-[17px] py-[14px] inline-block">
-                About Us
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="bg-secondary py-7">
-    <div class="container mx-auto px-4 flex md:flex-row flex-col items-center gap-7 justify-between">
-        <!-- LEFT TEXT -->
-        <div class="md:w-2/3 w-full flex flex-wrap items-center gap-3">
-            <h6 class="md:text-xl text-lg font-normal text-white mr-4">
-                Need More This Special Year?
-            </h6>
-            <p class="md:text-3xl text-xl font-normal text-primary">30%</p>
-            <p class="md:text-3xl text-xl font-normal text-white">
-                Discount Bulk Shopping
-            </p>
-        </div>
-        <!-- RIGHT BUTTON -->
-        <div class="md:w-1/3 w-full">
-            <a href="#"
-                class="bg-primary hover:bg-white px-5 py-4 text-lg font-medium text-white hover:text-primary rounded-full border-2 border-primary flex w-fit ml-auto md:mr-0 mr-auto items-center gap-2">
-                Order Now
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="md:py-14 py-10 relative bg-center bg-no-repeat bg-cover "
-    style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/qoute-bg.png')">
-    <div class="container mx-auto px-4 relative z-10 flex md:flex-row flex-col gap-7">
-        <!-- LEFT -->
-        <div class="md:w-1/2 w-full">
-            <div
-                class="bg-title_Clr h-full max-w-[546px] mx-auto rounded-2xl md:px-14 md:py-8 p-8 md:gap-12 gap-12 flex flex-col">
-                <?php foreach ($steps as $index => $step): ?>
-                    <div class="relative flex md:flex-row flex-col md:gap-[30px] gap-7">
-                        <span
-                            class="text-xl font-medium text-white PoppinsMedium bg-secondary p-[18px] border-[18px] border-primary rounded-full flex items-center justify-center w-[89px] h-[89px] <?php echo $index === count($steps) - 1 ? '' : 'before_line'; ?>">
-                            <?php echo sprintf("0%d", $step['id']); ?>
-                        </span>
-                        <div>
-                            <h4 class="text-xl font-medium text-primary mb-2 PoppinsMedium">
-                                <?php echo $step['title']; ?>
-                            </h4>
-                            <p class="text-sm font-light text-white">
-                                <?php echo $step['description']; ?>
-                            </p>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-        <!-- RIGHT -->
-        <div class="md:w-1/2 w-full ">
-            <h4 class="text-xl font-semibold text-white mb-4 flex items-center gap-3">
-                <span>Contact Us</span>
-                <span class="block border-b-2 border-white max-w-[61px] w-full"></span>
-            </h4>
-            <h2 class="md:text-4xl text-3xl font-bold text-white mb-8">
-                Request Your Any Query Now!
-            </h2>
-            <form id="contactForm" class="grid w-full gap-4 items-center mt-5 bg-primary md:p-8 p-6 rounded-[19px]">
-                <div class="flex gap-4">
-                    <input class="input" type="text" name="fullname" placeholder="Full Name" required>
-                    <input class="input" type="tel" name="phone" placeholder="Your Contact" required>
-                </div>
-                <div class="flex gap-4">
-                    <input class="input" type="email" name="email" placeholder="Email Address" required>
-                    <select class="input" name="product">
-                        <option>Select the Product</option>
-                        <option>Product1</option>
-                    </select>
-                </div>
-                <textarea class="input" name="message" rows="3" placeholder="Write Your Message..."></textarea>
-                <label class="text-white">
-                    <input type="checkbox" required> I Agree that my data is collected and stored.
-                </label>
-                <button id="submitBtn" type="submit"
-                    class="text-lg font-normal text-white bg-secondary rounded-full w-full">
-                    SUBMIT
-                </button>
-                <p id="formMsg" class="text-white mt-2"></p>
-            </form>
-        </div>
-    </div>
-</section>
-
-<section class="pt-[60px] bg-[#F5F5F5]">
-    <div class="container flex flex-col justify-center items-center mx-auto px-4">
-        <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
-            What We Offer
-            <div class="h-[3px] bg-[#1C2E42] w-16"></div>
-        </h6>
-
-        <h2 class="text-2xl lg:text-[43px] text-center font-semibold leading-normal">
-            Sustainable Products & Services
-        </h2>
-    </div>
-    <div class="offerbg bg-cover bg-no-repeat mt-60 border border-black">
-        <div class="container mx-auto px-4">
-            <div
-                class="p-6 bg-white grid grid-cols-1 pb-24 gap-5 xl:gap-2 sm:grid-cols-2 xl:grid-cols-4 mb-32 -mt-48 border">
-                <?php
-                $offers = [
-                    "Packaging",
-                    "Recycling",
-                    "Eco Materials",
-                    "Green Energy"
-                ];
-                foreach ($offers as $index => $title):
-                    ?>
-                    <div class="relative">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/o<?php echo $index + 1; ?>.png"
-                            alt="<?php echo esc_attr($title); ?>" class="w-full" width="344" height="344" />
-                        <div class="px-4 absolute -bottom-28 left-4 right-4 z-10">
-                            <div class="border bg-white p-3 px-5">
-                                <h5
-                                    class="flex group cursor-pointer md:text-xl lg:text-2xl font-medium justify-between border-b-[3px] py-3 pt-1 border-black">
-                                    <?php echo esc_html($title); ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/li_move-up-right.svg"
-                                        alt="" class="group-hover:scale-110 transition-all duration-300" width="30"
-                                        height="30" />
-                                </h5>
-                                <p class="mt-3">Lorem ipsum dolor sit amet.</p>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </div>
-</section>
-
+<!-- Qoute Section Starts -->
+<?php get_template_part('template-parts/get-qoute', ); ?>
+<!-- Qoute Section end -->
+<!-- What We Offer Starts -->
+<?php get_template_part('template-parts/what-weoffer', ); ?>
+<!-- What We Offer end -->
+<!-- About Slider Starts -->
 <section class="about">
     <div class="slider-full">
         <?php foreach ($slides as $slide): ?>
             <div class="!grid md:grid-cols-2 slider-item">
                 <!-- IMAGE -->
-                <figure>
+                <figure class="h-full">
                     <img src="<?php echo get_template_directory_uri() . $slide['image']; ?>" alt="Packaging Image"
-                        class="w-full object-cover h-[400px] md:h-[690px]" />
+                        class="w-full object-cover h-full" />
                 </figure>
                 <!-- CONTENT -->
                 <div
@@ -634,7 +312,157 @@ $slides = [
         <?php endforeach; ?>
     </div>
 </section>
+<!-- About Slider end -->
+<!-- Category Slider Starts -->
+<section class="py-16 bg-[#EAF6F9]">
+    <div class="mb-16">
+        <h2 class="md:text-[51px] md:leading-normal text-3xl font-semibold text-title_Clr text-center">
+            Explore Our Custom Printing and Packaging Design
+        </h2>
+        <p class="text-lg font-normal text-txt_Clr text-center md:w-5/6 mx-auto mt-5">
+            Start designing unique boxes with different styles, sizes, and
+            choices. Custom rigid boxes or Kraft boxes for retail products and
+            many more?We can help, Custom printing and packaging services ideas
+            abound.
+        </p>
+    </div>
 
+    <?php get_template_part('template-parts/category-slider'); ?>
+</section>
+<!-- Category Slider end -->
+
+<!-- The work we do Starts -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="md:text-[51px] md:leading-normal text-3xl font-semibold text-title_Clr text-center mb-7">
+            The work we do and <span class="text-primary">love doing</span>
+        </h2>
+        <p class="md:text-xl text-base font-normal text-title_Clr text-center max-w-[640px] mx-auto">
+            Lorem Ipsum is simply dummy to text of the printing and typesetting industry. Lorem and Ipsum has been the
+            industry's standard.
+        </p>
+        <a href="<?php echo site_url('/products'); ?>"
+            class="bg-secondary hover:bg-white px-9 py-3 text-lg font-medium text-white hover:text-secondary rounded-full border-2 border-secondary flex items-center gap-2 mt-12 w-fit mx-auto">
+            See All Products
+        </a>
+    </div>
+
+    <div class="container mx-auto px-4 flex md:flex-row flex-col md:gap-40 gap-7 mt-10">
+        <div class="md:w-1/2 w-full flex md:flex-row flex-col items-start gap-7 [&>*:nth-child(1)]:md:-mt-40">
+            <?php foreach ([$featureproductsRes[0], $featureproductsRes[1]] as $product): ?>
+                <div class='w-full border border-[#9C9C9CEB] rounded-[32px] overflow-hidden'>
+                    <div>
+                        <a href="<?php echo esc_url($product['slug']['current']); ?>">
+                            <img src="<?php echo esc_url($product['gallery'][0]['asset']['url']); ?>" alt="img"
+                                class='w-full object-cover object-center' width="292" height="226" />
+                        </a>
+                    </div>
+                    <div class='md:p-8 p-6'>
+                        <h3 class='md:text-[31px] md:leading-normal text-2xl font-semibold text-title_Clr mb-6'>
+                            <a
+                                href="<?php echo esc_url($product['slug']['current']); ?>"><?php echo esc_html($product['title']); ?></a>
+                        </h3>
+                        <p class='md:text-xl text-lg font-normal text-title_Clr'>
+                            <?php echo esc_html($product['excerpt']); ?>
+                        </p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <div class="md:w-1/2 w-full flex md:flex-row flex-col items-start gap-7 [&>*:nth-child(2)]:md:-mt-40">
+            <?php foreach ([$featureproductsRes[2], $featureproductsRes[3]] as $product): ?>
+                <div class='w-full border border-[#9C9C9CEB] rounded-[32px] overflow-hidden'>
+                    <div>
+                        <a href="<?php echo esc_url($product['slug']['current']); ?>">
+                            <img src="<?php echo esc_url($product['gallery'][0]['asset']['url']); ?>" alt="img"
+                                class='w-full object-cover object-center' width="292" height="226" />
+                        </a>
+                    </div>
+                    <div class='md:p-8 p-6'>
+                        <h3 class='md:text-[31px] md:leading-normal text-2xl font-semibold text-title_Clr mb-6'>
+                            <a
+                                href="<?php echo esc_url($product['slug']['current']); ?>"><?php echo esc_html($product['title']); ?></a>
+                        </h3>
+                        <p class='md:text-xl text-lg font-normal text-title_Clr'>
+                            <?php echo esc_html($product['excerpt']); ?>
+                        </p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+<!-- The work we do end -->
+
+<!-- Testimonial And Faq Starts -->
+<?php get_template_part('template-parts/testimonial-and-faq'); ?>
+<!-- Testimonial And Faq end -->
+
+
+<!-- Career Section Start -->
+<section class="md:pt-24 pb-10 py-16 px-4 md:pr-20">
+    <div class="relative container mx-auto px-8 bg-cover bg-no-repeat bg-center rounded-[20px] md:pt-14 md:pl-14 md:pr-0 p-10 md:pb-0 pb-0"
+        style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/career-bg.png'">
+        <div class="flex md:flex-row flex-col md:gap-8 gap-8">
+            <!-- Left Content -->
+            <div class="md:w-2/5 w-full">
+                <p
+                    class="text-lg font-normal text-white mb-7 uppercase tracking-[5px] border-l-2 border-secondary pl-1.5">
+                    Careers with Ball
+                </p>
+                <h2 class="md:text-[56px] md:leading-normal text-4xl font-medium text-white mb-9">
+                    Be unstoppable.
+                </h2>
+                <p class="text-base font-normal text-white mb-6">
+                    <strong>We believe our packaging can change the world — and you can too.</strong> Join us on our
+                    journey to provide the most sustainable packaging solutions on the planet.
+                </p>
+                <p class="text-base font-normal text-white">
+                    With Ball, you’re working toward something bigger than yourself.
+                </p>
+                <a href="#"
+                    class="bg-secondary hover:bg-white px-8 py-2.5 text-sm font-medium text-white hover:text-secondary rounded-full border-2 border-secondary flex items-center gap-2 mt-8 w-fit">
+                    Explore Ball Careers
+                </a>
+                <ul class="career_list text-white flex flex-col gap-4 md:mt-16 mt-10 md:mb-24 mb-10">
+                    <li class="text-base font-medium text-white">Medical, dental and vision insurance</li>
+                    <li class="text-base font-medium text-white">Employee stock purchase and company match</li>
+                    <li class="text-base font-medium text-white">Paid holidays, vacation and sick leave & parental leave
+                    </li>
+                    <li class="text-base font-medium text-white">Life Insurance</li>
+                    <li class="text-base font-medium text-white">401(k) plan</li>
+                </ul>
+            </div>
+
+            <!-- Right Content / Team Images -->
+            <div class="md:w-3/5 w-full flex md:flex-row flex-col items-start gap-5 md:-mr-20">
+                <div class="w-full rounded-[13px] shadow-[0_233px_93px_0_rgba(1,97,207,0.05)]">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/team1.png" alt="team1"
+                        class="w-full object-cover object-center rounded-[13px]">
+                </div>
+                <div class="w-full rounded-[13px] shadow-[0_233px_93px_0_rgba(1,97,207,0.05)]">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/team2.png" alt="team2"
+                        class="w-full object-cover object-center rounded-[13px]">
+                </div>
+                <div class="w-full rounded-[13px] shadow-[0_233px_93px_0_rgba(1,97,207,0.05)]">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/team2.png" alt="team2"
+                        class="w-full object-cover object-center rounded-[13px]">
+                </div>
+                <div class="w-full rounded-[13px] shadow-[0_233px_93px_0_rgba(1,97,207,0.05)]">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/team3.png" alt="team3"
+                        class="w-full object-cover object-center rounded-[13px]">
+                </div>
+            </div>
+
+            <!-- Background Main Image -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/teammain.png" alt="teammain" class="absolute bottom-0 right-0 ml-auto mr-0 md:w-2/3">
+        </div>
+    </div>
+</section>
+
+<!-- Career Section Ends -->
+<!-- Instagram Starts -->
 <section class="bg-[#EAF6F9] pt-14 px-4">
     <h2 class="text-3xl sm:text-[43px] lg:leading-[50px] mt-5 font-semibold leading-normal text-center">
         Instagram Posts
@@ -654,7 +482,7 @@ $slides = [
         <?php endfor; ?>
     </div>
 </section>
-
+<!-- Instagram end -->
 <?php get_footer() ?>
 
 <script>
@@ -667,44 +495,6 @@ $slides = [
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveHeight: true
-        });
-    });
-    jQuery(document).ready(function ($) {
-        $('.category-slider').slick({
-            dots: false,
-            arrows: false,
-            infinite: true,
-            slidesToShow: 5,
-            autoplay: true,
-            speed: 12000,
-            cssEase: 'linear',
-            pauseOnHover: true,
-            swipeToSlide: true,
-            draggable: true,
-
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
         });
     });
 </script>

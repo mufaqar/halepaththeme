@@ -172,11 +172,11 @@
 /* =========================
    UTILITIES
 ========================= */
-@layer utilities {
-  .before_line {
-    @apply relative md:before:block before:hidden before:content-[''] before:absolute before:h-full before:top-[92px] before:left-1/2 before:border-l before:border-dashed;
-  }
+
+.before_line {
+  @apply relative md:before:block before:hidden before:absolute before:h-full before:top-[71px] before:left-1/2 before:border-l before:border-dashed before:border-primary;
 }
+
 
 .slick-slide {
   height: fit-content !important;

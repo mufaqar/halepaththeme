@@ -8,3 +8,24 @@
     -webkit-mask-size: contain;
     mask-size: contain;
 }
+
+.slider-full .slick-dots {
+    bottom: 10px;
+}
+
+.slider-full .slick-dots li button:before {
+    font-size: 16px;
+    opacity: 1;
+    color: #a6a6a6 !important;
+}
+
+.slider-full .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #f1f1f1 !important;
+}
+ul.career_list li::marker {
+  content: '✔';
+}
+ul.career_list li {
+    padding-left: 10px;
+}

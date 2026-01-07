@@ -97,12 +97,13 @@
           </button>
 
           <?php
-          wp_nav_menu([
-            'theme_location' => 'primary_menu',
-            'container' => false,
-            'menu_class' => 'hidden lg:flex flex-col lg:flex-row gap-5 lg:gap-3 px-4 py-8 lg:p-0 bg-white lg:bg-transparent absolute lg:static top-16 left-0 right-0',
-            'fallback_cb' => false,
-          ]);
+         wp_nav_menu([
+    'theme_location' => 'primary_menu',
+    'container'      => false,
+    'menu_class'     => 'hidden lg:flex flex-col lg:flex-row gap-5 lg:gap-3 px-4 py-8 lg:p-0 bg-white lg:bg-transparent absolute lg:static top-16 left-0 right-0',
+    'fallback_cb'    => false,
+    'walker'         => new Tailwind_Nav_Walker(),
+]);
           ?>
         </nav>
 
@@ -121,3 +122,14 @@
 
       </div>
     </header>
+
+    <script>
+document.querySelectorAll('.menu-item-has-children > a').forEach(link => {
+  link.addEventListener('click', e => {
+    if (window.innerWidth < 1024) {
+      e.preventDefault();
+      link.nextElementSibling.classList.toggle('hidden');
+    }
+  });
+});
+</script>

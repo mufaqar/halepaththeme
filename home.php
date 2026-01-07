@@ -136,13 +136,17 @@ $featureproductsRes = [
 <?php get_template_part('template-parts/home-cta'); ?>
 <!-- Product Slider Starts -->
 <section class="py-12">
-    <h4 class="text-xl font-semibold text-title_Clr mb-4 text-center flex items-center justify-center gap-3">
-        <span> Our Products </span>
-        <span class="block border-b-2 border-title_Clr max-w-[61px] mx-auto w-full"></span>
-    </h4>
-    <h2 class="md:text-[43px] md:leading-normal text-3xl font-bold text-title_Clr text-center mb-14">
-        Our Latest Products
-    </h2>
+    
+     <div class="container flex flex-col justify-center items-center mx-auto px-4">
+        <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
+            Our Products
+            <div class="h-[3px] bg-[#1C2E42] w-16"></div>
+        </h6>
+        <h2 class="text-2xl lg:text-[43px] text-center font-semibold leading-normal">
+           Our Latest Products
+        </h2>
+    </div>
+    
     <?php
     get_template_part(
         'template-parts/product-slider',

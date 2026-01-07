@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 
 <head profile="http://gmpg.org/xfn/11">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-  <?php if (is_search()) { ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+    <?php if (is_search()) { ?>
     <meta name="robots" content="noindex, nofollow" />
-  <?php } ?>
-  <title>
-    <?php
+    <?php } ?>
+    <title>
+        <?php
     /*
      * Print the <title> tag based on what is being viewed.
      */
@@ -28,75 +28,77 @@
     if ($paged >= 2 || $page >= 2)
       echo ' | ' . sprintf(__('Page %s', 'wpv'), max($paged, $page));
     ?>
-  </title>
-  <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
-  <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-  <?php if (is_singular())
+    </title>
+    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <?php if (is_singular())
     wp_enqueue_script('comment-reply'); ?>
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/output.css" />
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/custom.css" />
-  <!-- Slick Carousel CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-  <?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/output.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/custom.css" />
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-  <?php wp_body_open(); ?>
-  <div id="page" class="site">
-    <!-- Top Bar -->
-    <div class="bg-secondary py-[18px] hidden md:block">
-      <div class="container mx-auto px-4 flex items-center justify-between">
-        <p class="text-base font-medium text-white">
-          Welcome To Hale Path Packaging
-        </p>
+    <?php wp_body_open(); ?>
+    <div id="page" class="site">
+        <!-- Top Bar -->
+        <div class="bg-secondary py-[18px] hidden md:block">
+            <div class="container mx-auto px-4 flex items-center justify-between">
+                <p class="text-base font-medium text-white">
+                    Welcome To Hale Path Packaging
+                </p>
 
-        <ul class="flex items-center divide-x-2 divide-white">
-          <li>
-            <a href="tel:+9212312312345" class="text-base font-medium text-white flex items-center gap-1 px-5">
-              <i class="fas fa-phone-alt"></i>
-              +92 123 123 12345
-            </a>
-          </li>
-          <li>
-            <a href="mailto:loremipsum@gmail.com" class="text-base font-medium text-white flex items-center gap-1 px-5">
-              <i class="fas fa-envelope"></i>
-              loremipsum@gmail.com
-            </a>
-          </li>
-          <li>
-            <span class="text-base font-medium text-white flex items-center gap-1 px-5">
-              <i class="fas fa-map-marker-alt"></i>
-              City, Country, Code-12345
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Header -->
-    <header class="bg-white sticky top-0 z-50" style="box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;">
-      <div class="container mx-auto px-4 py-1 flex items-center justify-between gap-5">
-
-        <!-- Logo -->
-        <div class="lg:w-[8%] w-1/2">
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="inline-flex">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Hale Path Packaging Logo"
-              height="60" width="60" />
-          </a>
+                <ul class="flex items-center divide-x-2 divide-white">
+                    <li>
+                        <a href="tel:+9212312312345"
+                            class="text-base font-medium text-white flex items-center gap-1 px-5">
+                            <i class="fas fa-phone-alt"></i>
+                            +92 123 123 12345
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:loremipsum@gmail.com"
+                            class="text-base font-medium text-white flex items-center gap-1 px-5">
+                            <i class="fas fa-envelope"></i>
+                            loremipsum@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <span class="text-base font-medium text-white flex items-center gap-1 px-5">
+                            <i class="fas fa-map-marker-alt"></i>
+                            City, Country, Code-12345
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Navigation -->
-        <nav class="lg:w-[68%] w-1/2 flex justify-end items-center">
+        <!-- Header -->
+        <header class="bg-white sticky top-0 z-50" style="box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;">
+            <div class="container mx-auto px-4 py-1 flex items-center justify-between gap-5">
 
-          <!-- Mobile Menu Button -->
-          <button id="menu-toggle" class="lg:hidden text-3xl ml-auto">
-            <i class="fas fa-bars"></i>
-          </button>
+                <!-- Logo -->
+                <div class="lg:w-[8%] w-1/2">
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="inline-flex">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png"
+                            alt="Hale Path Packaging Logo" height="60" width="60" />
+                    </a>
+                </div>
 
-          <?php
+                <!-- Navigation -->
+                <nav class="lg:w-[68%] w-1/2 flex justify-end items-center">
+
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-toggle" class="lg:hidden text-3xl ml-auto">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <?php
          wp_nav_menu([
     'theme_location' => 'primary_menu',
     'container'      => false,
@@ -105,31 +107,31 @@
     'walker'         => new Tailwind_Nav_Walker(),
 ]);
           ?>
-        </nav>
+                </nav>
 
-        <!-- Buttons -->
-        <div class="lg:w-[27%] hidden lg:flex gap-5 justify-end">
-          <a href="/contact-us"
-            class="border-2 border-primary px-5 py-2.5 text-[15px] uppercase font-medium text-primary rounded-full hover:bg-primary hover:text-white">
-            Contact Us
-          </a>
+                <!-- Buttons -->
+                <div class="lg:w-[27%] hidden lg:flex gap-5 justify-end">
+                    <a href="/contact-us"
+                        class="border-2 border-primary px-5 py-2.5 text-[15px] uppercase font-medium text-primary rounded-full hover:bg-primary hover:text-white">
+                        Contact Us
+                    </a>
 
-          <a href="/get-qoute"
-            class="border-2 border-primary bg-primary px-5 py-2.5 text-[15px] uppercase font-medium text-white rounded-full hover:bg-transparent hover:text-primary">
-            Get Quote Now
-          </a>
-        </div>
+                    <a href="/get-qoute"
+                        class="border-2 border-primary bg-primary px-5 py-2.5 text-[15px] uppercase font-medium text-white rounded-full hover:bg-transparent hover:text-primary">
+                        Get Quote Now
+                    </a>
+                </div>
 
-      </div>
-    </header>
+            </div>
+        </header>
 
-    <script>
-document.querySelectorAll('.menu-item-has-children > a').forEach(link => {
-  link.addEventListener('click', e => {
-    if (window.innerWidth < 1024) {
-      e.preventDefault();
-      link.nextElementSibling.classList.toggle('hidden');
-    }
-  });
-});
-</script>
+        <script>
+        document.querySelectorAll('.menu-item-has-children > a').forEach(link => {
+            link.addEventListener('click', e => {
+                if (window.innerWidth < 1024) {
+                    e.preventDefault();
+                    link.nextElementSibling.classList.toggle('hidden');
+                }
+            });
+        });
+        </script>

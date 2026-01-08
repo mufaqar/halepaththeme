@@ -5,35 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <?php if (is_search()) { ?>
-    <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="noindex, nofollow" />
     <?php } ?>
     <title>
         <?php
-    /*
-     * Print the <title> tag based on what is being viewed.
-     */
-    global $page, $paged, $post;
+        /*
+         * Print the <title> tag based on what is being viewed.
+         */
+        global $page, $paged, $post;
 
-    wp_title('|', true, 'right');
+        wp_title('|', true, 'right');
 
-    // Add the blog name.
-    bloginfo('name');
+        // Add the blog name.
+        bloginfo('name');
 
-    // Add the blog description for the home/front page.
-    $site_description = get_bloginfo('description', 'display');
-    if ($site_description && (is_home() || is_front_page()))
-      echo " | $site_description";
+        // Add the blog description for the home/front page.
+        $site_description = get_bloginfo('description', 'display');
+        if ($site_description && (is_home() || is_front_page()))
+            echo " | $site_description";
 
-    // Add a page number if necessary:
-    if ($paged >= 2 || $page >= 2)
-      echo ' | ' . sprintf(__('Page %s', 'wpv'), max($paged, $page));
-    ?>
+        // Add a page number if necessary:
+        if ($paged >= 2 || $page >= 2)
+            echo ' | ' . sprintf(__('Page %s', 'wpv'), max($paged, $page));
+        ?>
     </title>
     <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <?php if (is_singular())
-    wp_enqueue_script('comment-reply'); ?>
+        wp_enqueue_script('comment-reply'); ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/output.css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/custom.css" />
     <!-- Slick Carousel CSS -->
@@ -99,14 +99,17 @@
                     </button>
 
                     <?php
-         wp_nav_menu([
-    'theme_location' => 'primary_menu',
-    'container'      => false,
-    'menu_class'     => 'hidden lg:flex flex-col lg:flex-row gap-5 lg:gap-3 px-4 py-8 lg:p-0 bg-white lg:bg-transparent absolute lg:static top-16 left-0 right-0',
-    'fallback_cb'    => false,
-    'walker'         => new Tailwind_Nav_Walker(),
-]);
-          ?>
+                    wp_nav_menu([
+                        'theme_location' => 'primary_menu',
+                        'container' => false,
+                        'menu_id' => 'primary-menu',
+                        'menu_class' => 'hidden lg:flex flex-col lg:flex-row gap-5 lg:gap-3 
+                         px-4 py-8 lg:p-0 bg-white lg:bg-transparent 
+                         absolute lg:static top-16 left-0 right-0',
+                        'fallback_cb' => false,
+                        'walker' => new Tailwind_Nav_Walker(),
+                    ]);
+                    ?>
                 </nav>
 
                 <!-- Buttons -->
@@ -126,12 +129,46 @@
         </header>
 
         <script>
-        document.querySelectorAll('.menu-item-has-children > a').forEach(link => {
-            link.addEventListener('click', e => {
-                if (window.innerWidth < 1024) {
-                    e.preventDefault();
-                    link.nextElementSibling.classList.toggle('hidden');
+            document.addEventListener('DOMContentLoaded', function () {
+
+                const toggleBtn = document.getElementById('menu-toggle');
+                const menu = document.getElementById('primary-menu');
+
+                /* ===============================
+                   MAIN MOBILE MENU TOGGLE
+                =============================== */
+                if (toggleBtn && menu) {
+                    toggleBtn.addEventListener('click', function () {
+                        menu.classList.toggle('hidden');
+                    });
                 }
+
+                /* ===============================
+                   SUBMENU TOGGLE (ARROW ONLY)
+                =============================== */
+                document.querySelectorAll('.submenu-toggle').forEach(btn => {
+
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        const parentLi = btn.closest('li');
+                        const submenu = parentLi.querySelector('.sub-menu');
+
+                        if (!submenu) return;
+
+                        // Close sibling submenus
+                        parentLi.parentElement.querySelectorAll('.sub-menu').forEach(ul => {
+                            if (ul !== submenu) {
+                                ul.classList.add('hidden');
+                            }
+                        });
+
+                        submenu.classList.toggle('hidden');
+                        // btn.classList.toggle('-rotate-90');
+                    });
+
+                });
+
             });
-        });
         </script>

@@ -1,46 +1,48 @@
 <?php
 class Tailwind_Nav_Walker extends Walker_Nav_Menu {
 
-    // Start Level (submenu)
-    public function start_lvl( &$output, $depth = 0, $args = null ) {
+    // Submenu wrapper
+    public function start_lvl(&$output, $depth = 0, $args = null) {
         $indent = str_repeat("\t", $depth);
+
         $submenu_classes = $depth === 0
-            ? 'absolute left-0 top-full hidden group-hover:block bg-white shadow-lg min-w-[220px] z-50'
-            : 'ml-4 hidden group-hover:block';
+            ? 'sub-menu absolute lg:absolute left-0 top-full hidden bg-white md:shadow-lg md:py-5 pl-4 min-w-[220px] w-full z-50'
+            : 'sub-menu hidden ml-4';
 
         $output .= "\n$indent<ul class=\"$submenu_classes\">\n";
     }
 
-    // Start Element
-    public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-        $indent = ($depth) ? str_repeat("\t", $depth) : '';
+    // Menu item
+    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
 
+        $indent = ($depth) ? str_repeat("\t", $depth) : '';
         $has_children = in_array('menu-item-has-children', $item->classes);
 
-        $li_classes = [
-            'relative',
-            $has_children ? 'group' : '',
-        ];
+        $output .= $indent . '<li class="relative group">';
 
-        $output .= $indent . '<li class="' . implode(' ', array_filter($li_classes)) . '">';
+        // Link
+        $output .= '<div class="flex items-center justify-between">';
 
-        $atts = '';
-        $atts .= ! empty($item->url) ? ' href="' . esc_url($item->url) . '"' : '';
-        $atts .= ' class="block px-4 py-2 text-gray-800 hover:text-primary hover:bg-gray-100 transition"';
+        $output .= '<a href="' . esc_url($item->url) . '"
+            class="text-[15px] font-medium uppercase text-title_Clr hover:text-primary py-2 block">
+            ' . esc_html($item->title) . '
+        </a>';
 
-        $output .= '<a' . $atts . '>';
-        $output .= esc_html($item->title);
-
-        // Dropdown icon
-        if ($has_children && $depth === 0) {
-            $output .= ' <span class="ml-1 text-xs">▼</span>';
+        // Mobile toggle button (ONLY arrow)
+        if ($has_children) {
+            $output .= '
+            <button type="button"
+                class="submenu-toggle ml-2 text-lg"
+                aria-expanded="false">
+                <i class="fa fa-chevron-down"></i>
+            </button>';
         }
 
-        $output .= '</a>';
+        $output .= '</div>';
     }
 
-    // End Element
-    public function end_el( &$output, $item, $depth = 0, $args = null ) {
+    // Close item
+    public function end_el(&$output, $item, $depth = 0, $args = null) {
         $output .= "</li>\n";
     }
 }

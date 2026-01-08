@@ -455,9 +455,6 @@
   .table {
     display: table;
   }
-  .\!h-full {
-    height: 100% !important;
-  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -484,6 +481,9 @@
   }
   .h-\[141px\] {
     height: 141px;
+  }
+  .h-\[384px\] {
+    height: 384px;
   }
   .h-\[400px\] {
     height: 400px;
@@ -1483,29 +1483,6 @@
   .focus\:border-secondary {
     &:focus {
       border-color: var(--secondary);
-    }
-  }
-  .focus\:ring-2 {
-    &:focus {
-      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-  }
-  .focus\:ring-secondary {
-    &:focus {
-      --tw-ring-color: var(--secondary);
-    }
-  }
-  .focus\:ring-offset-2 {
-    &:focus {
-      --tw-ring-offset-width: 2px;
-      --tw-ring-offset-shadow: var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-    }
-  }
-  .focus\:outline-none {
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
     }
   }
   .sm\:grid-cols-2 {

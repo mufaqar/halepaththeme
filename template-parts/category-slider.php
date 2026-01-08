@@ -63,21 +63,46 @@ $categories = [
 ];
 ?>
 
-<div class="slider-container category-slider">
-    <?php foreach ($categories as $item): ?>
-        <div class="w-fit p-2">
-            <a href="<?php echo esc_url($item['link']); ?>">
-                <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['title']); ?>" width="363"
-                    height="375" class="maskimage w-full object-cover" loading="lazy" />
-            </a>
+<?php
+// Get WooCommerce product categories
+$categories = get_terms([
+    'taxonomy' => 'product_cat',
+    'hide_empty' => true,
+]);
 
-            <a href="<?php echo esc_url($item['link']); ?>"
-                class="text-xl font-normal text-title_Clr text-center flex w-fit mx-auto mt-8">
-                <?php echo esc_html($item['title']); ?>
-            </a>
-        </div>
-    <?php endforeach; ?>
-</div>
+if (!empty($categories) && !is_wp_error($categories)):
+    ?>
+    <div class="slider-container category-slider">
+
+        <?php foreach ($categories as $category):
+
+            // Category link
+            $category_link = get_term_link($category);
+
+            // Category thumbnail
+            $thumbnail_id = get_term_meta($category->term_id, 'thumbnail_id', true);
+            $image_url = $thumbnail_id
+                ? wp_get_attachment_url($thumbnail_id)
+                : get_template_directory_uri() . '/assets/images/category/1.png';
+            ?>
+
+            <div class="w-fit p-2">
+                <a href="<?php echo esc_url($category_link); ?>">
+                    <img src="<?php get_template_directory_uri() . '/assets/images/category/1.png' ?>" alt="feature" width="363"
+                        height="375" class="maskimage w-full object-cover" loading="lazy" />
+                </a>
+
+                <a href="<?php echo esc_url($category_link); ?>"
+                    class="text-xl font-normal text-title_Clr text-center flex w-fit mx-auto mt-8">
+                    <?php echo esc_html($category->name); ?>
+                </a>
+            </div>
+
+        <?php endforeach; ?>
+
+    </div>
+<?php endif; ?>
+
 
 
 <script>

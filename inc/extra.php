@@ -7,7 +7,7 @@ class Tailwind_Nav_Walker extends Walker_Nav_Menu {
 
         $submenu_classes = $depth === 0
             ? 'sub-menu absolute lg:absolute left-0 top-full hidden bg-white md:shadow-lg md:py-5 pl-4 min-w-[220px] w-full z-50'
-            : 'sub-menu hidden ml-4';
+            : 'sub-menu hidden  lg:absolute left-full top-0 bg-white md:shadow-lg md:py-5 pl-4 min-w-[220px] w-full z-50';
 
         $output .= "\n$indent<ul class=\"$submenu_classes\">\n";
     }

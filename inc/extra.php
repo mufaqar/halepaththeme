@@ -28,7 +28,7 @@ class Tailwind_Nav_Walker extends Walker_Nav_Menu {
             ' . esc_html($item->title) . '
         </a>';
 
-        // Mobile toggle button (ONLY arrow)
+        // Mobile toggle button (ONLY arrow)  
         if ($has_children) {
             $output .= '
             <button type="button"

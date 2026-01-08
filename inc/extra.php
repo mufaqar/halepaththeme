@@ -32,7 +32,7 @@ class Tailwind_Nav_Walker extends Walker_Nav_Menu {
         if ($has_children) {
             $output .= '
             <button type="button"
-                class="submenu-toggle ml-2 text-lg"
+                class="submenu-toggle ml-2 mr-2  text-xs"
                 aria-expanded="false">
                 <i class="fa fa-chevron-down"></i>
             </button>';

@@ -587,6 +587,9 @@
   .appearance-none {
     appearance: none;
   }
+  .columns-5 {
+    columns: 5;
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }

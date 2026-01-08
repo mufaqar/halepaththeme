@@ -55,3 +55,10 @@ class Tailwind_Nav_Walker extends Walker_Nav_Menu {
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 // Remove page title
 add_filter('woocommerce_show_page_title', '__return_false');
+
+function mytheme_remove_add_to_cart_buttons() {
+    if ( is_shop() || is_product_category() || is_product_tag() ) {
+        remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+    }
+}
+add_action( 'wp', 'mytheme_remove_add_to_cart_buttons' );

@@ -46,3 +46,12 @@ class Tailwind_Nav_Walker extends Walker_Nav_Menu {
         $output .= "</li>\n";
     }
 }
+
+
+
+/* Filters and Hooks  */
+
+// Remove breadcrumb only
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+// Remove page title
+add_filter('woocommerce_show_page_title', '__return_false');

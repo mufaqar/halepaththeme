@@ -298,42 +298,42 @@ get_header('shop');
 
     <div class="bg-[#EFEFEF] flex flex-col justify-center items-center px-1.5 py-[15px] rounded-[16px]">
       <img alt="Easy Price Matching"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/glob.png" />
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/price.png" />
       <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Easy Price Matching</h6>
     </div>
 
     <div class="bg-[#EFEFEF] flex flex-col justify-center items-center px-1.5 py-[15px] rounded-[16px]">
-      <img alt="3D Design Studio" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/glob.png" />
+      <img alt="3D Design Studio" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/studio.png" />
       <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">3D Design Studio</h6>
     </div>
 
     <div class="bg-[#EFEFEF] flex flex-col justify-center items-center px-1.5 py-[15px] rounded-[16px]">
       <img alt="Multiple Lead Times Option"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/glob.png" />
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/calculator.png" />
       <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Multiple Lead Times Option to Fit Your Budget
       </h6>
     </div>
 
     <div class="bg-[#EFEFEF] flex flex-col justify-center items-center px-1.5 py-[15px] rounded-[16px]">
-      <img alt="Printing Capacity" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/glob.png" />
+      <img alt="Printing Capacity" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/capacity.png" />
       <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Printing Capacity of One Million Quantities in
         One Day</h6>
     </div>
 
     <div class="bg-[#EFEFEF] flex flex-col justify-center items-center px-1.5 py-[15px] rounded-[16px]">
-      <img alt="24/7 Service" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/glob.png" />
+      <img alt="24/7 Service" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/agent.png" />
       <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">24/7 Service</h6>
     </div>
 
     <div class="bg-[#EFEFEF] flex flex-col justify-center items-center px-1.5 py-[15px] rounded-[16px]">
       <img alt="Flexible Payment Terms"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/glob.png" />
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/payment.png" />
       <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Flexible Payment Terms</h6>
     </div>
 
     <div class="bg-[#EFEFEF] flex flex-col justify-center items-center px-1.5 py-[15px] rounded-[16px]">
       <img alt="Warehousing and IMS"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/glob.png" />
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/house.png" />
       <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Warehousing and IMS</h6>
     </div>
 

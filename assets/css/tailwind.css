@@ -92,18 +92,6 @@
   max-width: 1440px;
 }
 
-.thumb-wrapper {
-  @apply flex w-full gap-[11px] justify-center;
-}
-
-.thumb-wrapper>div {
-  @apply w-full overflow-hidden transition-all max-w-[154px] max-h-[131px] rounded-[11px] border border-[#1C2E4230];
-}
-
-.thumb-wrapper img {
-  @apply w-full h-full object-cover object-center;
-}
-
 .grad_Bg {
   background-image: linear-gradient(to bottom, #2B4FB9 50%, white 50%);
 }
@@ -129,7 +117,7 @@
 }
 
 .video-container {
-  @apply w-full relative h-[605px];
+  @apply w-full relative md:h-[605px];
 }
 
 .video-container iframe {

@@ -280,7 +280,7 @@ get_header('shop');
     </p>
   </div>
 </section>
-
+ <!-- Capabilities Section Start -->
 <section class="container mx-auto px-3 mt-20">
 
   <!-- Section Title -->
@@ -350,7 +350,7 @@ get_header('shop');
   </div>
 
 </section>
-
+ <!-- Capabilities Section End -->
 
 <?php
 get_template_part('template-parts/woo/product-faq');

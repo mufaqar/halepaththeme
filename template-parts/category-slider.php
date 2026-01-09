@@ -86,10 +86,10 @@ if (!empty($categories) && !is_wp_error($categories)):
                 : get_template_directory_uri() . '/assets/images/category/1.png';
             ?>
 
-            <div class="w-fit p-2">
+            <div class="w-full p-2">
                 <a href="<?php echo esc_url($category_link); ?>">
-                    <img src="<?php get_template_directory_uri() . '/assets/images/category/1.png' ?>" alt="feature" width="363"
-                        height="375" class="maskimage w-full object-cover" loading="lazy" />
+                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($category->name); ?>" width="363"
+                        height="375" class="maskimage w-full object-cover h-full" loading="lazy" />
                 </a>
 
                 <a href="<?php echo esc_url($category_link); ?>"

@@ -73,10 +73,11 @@ if (empty($images))
         $('.product-thumbs').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
+            loop: true,
             asNavFor: '.product-slider',
             focusOnSelect: true,
             arrows: false,
-            infinite: false,
+            infinite: true,
             variableWidth: true
         });
 

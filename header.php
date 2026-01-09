@@ -147,15 +147,15 @@
                    SUBMENU TOGGLE (ARROW ONLY)
                 =============================== */
                 document.querySelectorAll('.submenu-toggle').forEach(btn => {
+                    const parentLi = btn.closest('li');
+                    const submenu = parentLi.querySelector('.sub-menu');
 
-                    btn.addEventListener('click', function (e) {
+                    if (!submenu) return;
+
+                    // Show submenu on mouse enter
+                    btn.addEventListener('mouseenter', function (e) {
                         e.preventDefault();
                         e.stopPropagation();
-
-                        const parentLi = btn.closest('li');
-                        const submenu = parentLi.querySelector('.sub-menu');
-
-                        if (!submenu) return;
 
                         // Close sibling submenus
                         parentLi.parentElement.querySelectorAll('.sub-menu').forEach(ul => {
@@ -164,11 +164,18 @@
                             }
                         });
 
-                        submenu.classList.toggle('hidden');
-                        // btn.classList.toggle('-rotate-90');
+                        submenu.classList.remove('hidden');
+                        // btn.classList.add('-rotate-90'); // Optional rotation
                     });
 
-                });
+                    // Hide submenu on mouse leave
+                    parentLi.addEventListener('mouseleave', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
 
+                        submenu.classList.add('hidden');
+                        // btn.classList.remove('-rotate-90'); // Optional rotation reset
+                    });
+                });
             });
         </script>

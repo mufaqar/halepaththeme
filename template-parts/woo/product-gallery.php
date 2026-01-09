@@ -64,7 +64,8 @@ if (empty($images))
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
-            infinite: false,
+            loop: true,
+            infinite: true,
             speed: 500,
             asNavFor: '.product-thumbs',
             lazyLoad: 'ondemand'

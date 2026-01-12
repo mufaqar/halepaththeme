@@ -27,7 +27,7 @@ $productsRes = [
             </a>
 
             <a href="<?php echo esc_url(site_url('/product/' . $p['slug'])); ?>"
-               class="cat_title">
+               class="box_link">
                 <?php echo esc_html($p['title']); ?>
             </a>
         </div>

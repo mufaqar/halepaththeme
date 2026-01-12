@@ -104,8 +104,7 @@ $featureproductsRes = [
 <?php get_template_part('template-parts/home-cta'); ?>
 <!-- Product Slider Starts -->
 <section class="py-12">
-
-    <div class="container flex flex-col justify-center items-center mx-auto px-4">
+    <div class="hale_container flex flex-col justify-center items-center">
         <h6 class="sub_title">
             Our Products
             <div class="sub_title_line"></div>
@@ -128,44 +127,43 @@ $featureproductsRes = [
 <!-- Product Slider end -->
 <section class="pb-12 md:px-4 px-4">
     <div
-        class="container mx-auto md:p-14 p-8 bg-secondary flex md:flex-row flex-col gap-7 justify-between items-center rounded-[19px]">
+        class="hale_container md:p-14! p-8! bg-secondary flex md:flex-row flex-col gap-7 justify-between items-center rounded-[19px]">
         <!-- Left Text + Button -->
         <div>
             <p class="md:text-4xl text-2xl font-normal text-white mb-10">
                 Globally Expertise Delivered Locally
             </p>
-            <a href="<?php echo site_url('/products'); ?>"
-                class="bg-primary hover:bg-white px-9 py-3 text-lg font-medium text-white hover:text-primary rounded-full border-2 border-primary flex items-center gap-2 w-fit">
+            <a href="<?php echo site_url('/products'); ?>" class="btn_primary">
                 See All Products
             </a>
         </div>
 
         <!-- Right Stats -->
         <div class="flex md:flex-row flex-col gap-7 justify-between">
-            <div>
-                <span class="block border-b-2 border-primary max-w-[61px] w-full"></span>
-                <h3 class="md:text-5xl text-3xl font-bold text-white my-6">
+            <div class="count_box">
+                <span class=""></span>
+                <h3 class="">
                     35
                 </h3>
-                <p class="text-lg font-normal text-white">
+                <p class="">
                     Lorem Ipsum Lorem Ipsum
                 </p>
             </div>
-            <div>
-                <span class="block border-b-2 border-primary max-w-[61px] w-full"></span>
-                <h3 class="md:text-5xl text-3xl font-bold text-white my-6">
+            <div class="count_box">
+                <span class=""></span>
+                <h3 class="">
                     35,000
                 </h3>
-                <p class="text-lg font-normal text-white">
+                <p class="">
                     Lorem Ipsum Lorem Ipsum
                 </p>
             </div>
-            <div>
-                <span class="block border-b-2 border-primary max-w-[61px] w-full"></span>
-                <h3 class="md:text-5xl text-3xl font-bold text-white my-6">
+            <div class="count_box">
+                <span class=""></span>
+                <h3 class="">
                     350
                 </h3>
-                <p class="text-lg font-normal text-white">
+                <p class="">
                     Lorem Ipsum Lorem Ipsum
                 </p>
             </div>
@@ -174,8 +172,8 @@ $featureproductsRes = [
 </section>
 <!-- Brands Section -->
 <section class="pb-12 md:px-4 px-4">
-    <div class="container mx-auto md:p-8 p-8 shadow-[0_0_5px_0_rgba(0,0,0,0.31)] rounded-[19px]">
-         <h2 class="h2">
+    <div class="hale_container md:p-8! p-8! shadow-[0_0_5px_0_rgba(0,0,0,0.31)] rounded-[19px]">
+        <h2 class="h2">
             Brand That Trust Us
         </h2>
         <div class="flex md:flex-row flex-col gap-7 justify-between">
@@ -196,7 +194,7 @@ $featureproductsRes = [
 <!-- Corrugated Packaging Starts -->
 <section class="bg-cover mt-10 bg-no-repeat about_bg"
     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/bg.png'">
-    <div class="hale_container pt-[110px]">
+    <div class="hale_container pt-[110px]!">
         <h2 class="text-white font-bold text-3xl md:text-5xl lg:text-[51px]">
             Corrugated Packaging
         </h2>
@@ -263,16 +261,14 @@ $featureproductsRes = [
                 <div
                     class="bg-cover bg-no-repeat flex justify-center md:items-center flex-col px-10 md:px-5 pb-14 md:pb-10 py-10 p-5 <?php echo $slide['bg']; ?>">
                     <div class="<?php echo $slide['text']; ?> slider-content">
-                        <h6 class="font-semibold text-xl relative w-fit animate-slide">
+                        <h6 class="animate-slide">
                             Hale Path Packaging
                         </h6>
-                        <h2
-                            class="font-semibold relative my-2 xl:text-[100px] max-w-[580px] text-[50px] leading-[60px] lg:text-[70px] lg:leading-[80px] xl:leading-[105px] animate-slide delay-200">
+                        <h2 class="animate-slide delay-200">
                             <?php echo esc_html($slide['title']); ?>
                         </h2>
                         <div class="flex mt-5 animate-slide delay-400">
-                            <a href="<?php echo esc_url($slide['link']); ?>"
-                                class="bg-[#1C2E42] text-white px-[35px] rounded-full font-medium text-[17px] py-[14px]">
+                            <a href="<?php echo esc_url($slide['link']); ?>" class="btn_secondry">
                                 Learn more
                             </a>
                         </div>
@@ -287,7 +283,7 @@ $featureproductsRes = [
 <!-- Category Slider Starts -->
 <section class="py-16 bg-[#EAF6F9]">
     <div class="mb-16">
-         <h2 class="h2 md:mb-5!">
+        <h2 class="h2 md:mb-5!">
             Explore Our Custom Printing and Packaging Design
         </h2>
         <p class="text-lg font-normal text-txt_Clr text-center md:w-5/6 mx-auto">
@@ -305,7 +301,7 @@ $featureproductsRes = [
 <!-- The work we do Starts -->
 <section class="py-16">
     <div class="hale_container">
-         <h2 class="h2 md:mb-5!">
+        <h2 class="h2 md:mb-5!">
             The work we do and <span class="text-primary">love doing</span>
         </h2>
         <p class="md:text-xl text-base font-normal text-title_Clr text-center max-w-[640px] mx-auto">
@@ -320,15 +316,15 @@ $featureproductsRes = [
     <div class="hale_container flex md:flex-row flex-col md:gap-40 gap-7 mt-10">
         <div class="md:w-1/2 w-full flex md:flex-row flex-col items-start gap-7 [&>*:nth-child(1)]:md:-mt-40">
             <?php foreach ([$featureproductsRes[0], $featureproductsRes[1]] as $product): ?>
-                <div class='w-full border border-[#9C9C9CEB] rounded-[32px] overflow-hidden'>
+                <div class='feature_box'>
                     <div>
                         <a href="<?php echo esc_url($product['slug']['current']); ?>">
                             <img src="<?php echo esc_url($product['gallery'][0]['asset']['url']); ?>" alt="img"
-                                class='w-full object-cover object-center' width="292" height="226" />
+                                class='img-full h-auto!' width="292" height="226" />
                         </a>
                     </div>
                     <div class='md:p-8 p-6'>
-                        <h3 class='md:text-[31px] md:leading-normal text-2xl font-semibold text-title_Clr mb-6'>
+                        <h3 class=''>
                             <a
                                 href="<?php echo esc_url($product['slug']['current']); ?>"><?php echo esc_html($product['title']); ?></a>
                         </h3>
@@ -342,19 +338,19 @@ $featureproductsRes = [
 
         <div class="md:w-1/2 w-full flex md:flex-row flex-col items-start gap-7 [&>*:nth-child(2)]:md:-mt-40">
             <?php foreach ([$featureproductsRes[2], $featureproductsRes[3]] as $product): ?>
-                <div class='w-full border border-[#9C9C9CEB] rounded-[32px] overflow-hidden'>
+                <div class='feature_box'>
                     <div>
                         <a href="<?php echo esc_url($product['slug']['current']); ?>">
                             <img src="<?php echo esc_url($product['gallery'][0]['asset']['url']); ?>" alt="img"
-                                class='w-full object-cover object-center' width="292" height="226" />
+                                class='img-full h-auto!' width="292" height="226" />
                         </a>
                     </div>
                     <div class='md:p-8 p-6'>
-                        <h3 class='md:text-[31px] md:leading-normal text-2xl font-semibold text-title_Clr mb-6'>
+                        <h3 class=''>
                             <a
                                 href="<?php echo esc_url($product['slug']['current']); ?>"><?php echo esc_html($product['title']); ?></a>
                         </h3>
-                        <p class='md:text-xl text-lg font-normal text-title_Clr'>
+                        <p class=''>
                             <?php echo esc_html($product['excerpt']); ?>
                         </p>
                     </div>
@@ -435,7 +431,7 @@ $featureproductsRes = [
 <!-- Career Section Ends -->
 <!-- Instagram Starts -->
 <section class="bg-[#EAF6F9] pt-14 px-4">
-     <h2 class="h2">
+    <h2 class="h2">
         Instagram Posts
     </h2>
     <div class="mt-9 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">

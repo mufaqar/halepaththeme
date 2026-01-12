@@ -17,115 +17,99 @@
 
         <!-- Company -->
         <div>
-            <h6 class="text-2xl font-semibold text-title_Clr mb-6 PoppinsMedium">
+            <h6 class="footer_title">
                 Company
-                <span class="block border-b-2 border-title_Clr max-w-[61px] mt-3"></span>
+                <span class=""></span>
             </h6>
             <ul class="flex flex-col gap-2.5">
-                <li><a href="<?php echo home_url(); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Home</a></li>
-                <li><a href="<?php echo home_url('/about-us'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>About Us</a></li>
-                <li><a href="<?php echo home_url('/categories'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Product By Industry</a></li>
-                <li><a href="<?php echo home_url('/products'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Products</a></li>
-                <li><a href="<?php echo home_url('/about-us#testimonials'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Testimonials</a></li>
-                <li><a href="<?php echo home_url('/about-us#faqs'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>FAQ's</a></li>
-                <li><a href="<?php echo home_url('/contact-us'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Contact</a></li>
+                <li><a href="<?php echo home_url(); ?>" class="footer_link">
+                        <span class="marker"></span>Home</a></li>
+                <li><a href="<?php echo home_url('/about-us'); ?>" class="footer_link">
+                        <span class="marker"></span>About Us</a></li>
+                <li><a href="<?php echo home_url('/categories'); ?>" class="footer_link">
+                        <span class="marker"></span>Product By Industry</a></li>
+                <li><a href="<?php echo home_url('/products'); ?>" class="footer_link">
+                        <span class="marker"></span>Products</a></li>
+                <li><a href="<?php echo home_url('/about-us#testimonials'); ?>" class="footer_link">
+                        <span class="marker"></span>Testimonials</a></li>
+                <li><a href="<?php echo home_url('/about-us#faqs'); ?>" class="footer_link">
+                        <span class="marker"></span>FAQ's</a></li>
+                <li><a href="<?php echo home_url('/contact-us'); ?>" class="footer_link">
+                        <span class="marker"></span>Contact</a></li>
             </ul>
         </div>
 
         <!-- Products Packaging -->
         <div>
-            <h6 class="text-2xl font-semibold text-title_Clr mb-6 PoppinsMedium">
+            <h6 class="footer_title">
                 Products Packaging
-                <span class="block border-b-2 border-title_Clr max-w-[61px] mt-3"></span>
+                <span class=""></span>
             </h6>
             <ul class="flex flex-col gap-2.5">
-                <li><a href="<?php echo home_url('/category/cosmetic-boxes'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Cosmetic Boxes</a></li>
-                <li><a href="<?php echo home_url('/category/cardboard-boxes'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Cardboard Boxes</a></li>
-                <li><a href="<?php echo home_url('/category/cbd-boxes'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>CBD Boxes</a></li>
-                <li><a href="<?php echo home_url('/category/display-boxes'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Display Boxes</a></li>
-                <li><a href="<?php echo home_url('/category/bottle-boxes'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Bottle Boxes</a></li>
-                <li><a href="<?php echo home_url('/category/retail-boxes'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Retail Boxes</a></li>
-                <li><a href="#" class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Sustainable Packaging</a></li>
+                <li><a href="<?php echo home_url('/category/cosmetic-boxes'); ?>" class="footer_link">
+                        <span class="marker"></span>Cosmetic Boxes</a></li>
+                <li><a href="<?php echo home_url('/category/cardboard-boxes'); ?>" class="footer_link">
+                        <span class="marker"></span>Cardboard Boxes</a></li>
+                <li><a href="<?php echo home_url('/category/cbd-boxes'); ?>" class="footer_link">
+                        <span class="marker"></span>CBD Boxes</a></li>
+                <li><a href="<?php echo home_url('/category/display-boxes'); ?>" class="footer_link">
+                        <span class="marker"></span>Display Boxes</a></li>
+                <li><a href="<?php echo home_url('/category/bottle-boxes'); ?>" class="footer_link">
+                        <span class="marker"></span>Bottle Boxes</a></li>
+                <li><a href="<?php echo home_url('/category/retail-boxes'); ?>" class="footer_link">
+                        <span class="marker"></span>Retail Boxes</a></li>
+                <li><a href="#" class="footer_link">
+                        <span class="marker"></span>Sustainable Packaging</a></li>
             </ul>
         </div>
 
         <!-- Packaging Style -->
         <div>
-            <h6 class="text-2xl font-semibold text-title_Clr mb-6 PoppinsMedium">
+            <h6 class="footer_title">
                 Packaging Style
-                <span class="block border-b-2 border-title_Clr max-w-[61px] mt-3"></span>
+                <span class=""></span>
             </h6>
             <ul class="flex flex-col gap-2.5">
-                <li><a href="#" class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Sleeve & Tray</a></li>
-                <li><a href="#" class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Die Cut Boxes</a></li>
-                <li><a href="#" class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Cigerate Boxes</a></li>
-                <li><a href="#" class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Child Resistance Boxes</a></li>
-                <li><a href="#" class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Window Boxes</a></li>
-                <li><a href="#" class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Gable Boxes</a></li>
+                <li><a href="#" class="footer_link">
+                        <span class="marker"></span>Sleeve & Tray</a></li>
+                <li><a href="#" class="footer_link">
+                        <span class="marker"></span>Die Cut Boxes</a></li>
+                <li><a href="#" class="footer_link">
+                        <span class="marker"></span>Cigerate Boxes</a></li>
+                <li><a href="#" class="footer_link">
+                        <span class="marker"></span>Child Resistance Boxes</a></li>
+                <li><a href="#" class="footer_link">
+                        <span class="marker"></span>Window Boxes</a></li>
+                <li><a href="#" class="footer_link">
+                        <span class="marker"></span>Gable Boxes</a></li>
             </ul>
         </div>
 
         <!-- Inspiration -->
         <div>
-            <h6 class="text-2xl font-semibold text-title_Clr mb-6 PoppinsMedium">
+            <h6 class="footer_title">
                 Inspiration
-                <span class="block border-b-2 border-title_Clr max-w-[61px] mt-3"></span>
+                <span class=""></span>
             </h6>
             <ul class="flex flex-col gap-2.5">
-                <li><a href="<?php echo home_url('/blog'); ?>"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Blog</a></li>
-                <li><a href="#" class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>Client Success Stories</a></li>
+                <li><a href="<?php echo home_url('/blog'); ?>" class="footer_link">
+                        <span class="marker"></span>Blog</a></li>
+                <li><a href="#" class="footer_link">
+                        <span class="marker"></span>Client Success Stories</a></li>
             </ul>
         </div>
 
         <!-- Contact -->
         <div>
-            <h6 class="text-2xl font-semibold text-title_Clr mb-6 PoppinsMedium">
+            <h6 class="footer_title">
                 Contact
-                <span class="block border-b-2 border-title_Clr max-w-[61px] mt-3"></span>
+                <span class=""></span>
             </h6>
             <ul class="flex flex-col gap-2.5">
-                <li><a href="tel:866-225-2112"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>866-225-2112</a></li>
-                <li><a href="mailto:info@halepathpack.com" target="_blank"
-                        class="text-base font-normal text-title_Clr flex items-center gap-2 PoppinsRegular">
-                        <span class="w-[3px] bg-title_Clr h-[11px] block"></span>info@halepathpack.com</a></li>
+                <li><a href="tel:866-225-2112" class="footer_link">
+                        <span class="marker"></span>866-225-2112</a></li>
+                <li><a href="mailto:info@halepathpack.com" target="_blank" class="footer_link">
+                        <span class="marker"></span>info@halepathpack.com</a></li>
             </ul>
         </div>
 

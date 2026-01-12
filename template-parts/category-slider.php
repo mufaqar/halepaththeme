@@ -93,7 +93,7 @@ if (!empty($categories) && !is_wp_error($categories)):
                 </a>
 
                 <a href="<?php echo esc_url($category_link); ?>"
-                    class="cat_link">
+                    class="box_link">
                     <?php echo esc_html($category->name); ?>
                 </a>
             </div>

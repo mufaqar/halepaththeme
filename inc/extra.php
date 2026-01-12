@@ -24,7 +24,7 @@ class Tailwind_Nav_Walker extends Walker_Nav_Menu {
         $output .= '<div class="flex items-center justify-between">';
 
         $output .= '<a href="' . esc_url($item->url) . '"
-            class="text-[15px] font-medium uppercase text-title_Clr hover:text-primary py-2 block">
+            class="header_link">
             ' . esc_html($item->title) . '
         </a>';
 

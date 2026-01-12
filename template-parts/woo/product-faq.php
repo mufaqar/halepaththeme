@@ -23,20 +23,19 @@ $faqRes = [
     <div class="hale_container gap-6">
         <!-- FAQs -->
         <div id="faqs" class="pt-8">
-            <h2 class="text-2xl lg:text-[43px] lg:leading-[50px] mt-5 font-semibold leading-normal text-center">
+            <h2 class="h2">
                 Frequently Asked <span class="text-[#47AFC3]">Questions</span>
             </h2>
             <div class="mt-10 grid gap-1 grid-cols-2">
                 <?php foreach ($faqRes as $idx => $faq): ?>
                     <div>
-                        <div class="border border-black/15 shadow rounded-[10px] w-full bg-white faq-item">
-                            <h3
-                                class="px-6 py-6 w-full text-[#1C1C1C] text-left text-xl flex items-center gap-4 justify-between cursor-pointer faq-title">
+                        <div class="faq-item">
+                            <h3 class="faq-title">
                                 <?php echo esc_html($faq['question']); ?>
                                 <span class="text-2xl"><i class="fa fa-chevron-down"></i></span>
                             </h3>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-200">
-                                <p class="text-lg px-6 text-left text-[#1C1C1C] pb-6">
+                                <p class="">
                                     <?php echo esc_html($faq['answer']); ?>
                                 </p>
                             </div>

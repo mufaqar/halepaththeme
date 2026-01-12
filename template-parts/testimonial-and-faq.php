@@ -43,7 +43,7 @@ $faqRes = [
                     Testimonials
                     <div class="sub_title_line"></div>
                 </h6>
-                <h2 class="h2 text-left!"> 
+                <h2 class="h2 text-left!">
                     What Customers Says
                     <span class="text-[#47AFC3]">About Us</span>
                 </h2>
@@ -51,8 +51,8 @@ $faqRes = [
                 <div class="testimonials-slider">
                     <?php foreach ($testimonialsRes as $testimonial): ?>
                         <div>
-                            <div class="px-1 pb-4 md:h-[332px]">
-                                <div class="h-full p-8 bg-white mt-10 border shadow rounded-[19px] border-black/15">
+                            <div class="testi_box">
+                                <div class="testi_inner">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/qoute-icon.png"
                                         alt="" class="w-[66px] h-[54px]">
                                     <p class="mt-4"><?php echo esc_html($testimonial['review']); ?></p>
@@ -63,12 +63,12 @@ $faqRes = [
                                     </div>
                                     <div class="mt-5 flex gap-2 items-center">
                                         <figure
-                                            class="p-[2px] border-[1.5px] border-[#47AFC3] w-fit rounded-full overflow-hidden">
+                                            class="testi_img">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/user.jpg"
                                                 alt="" class="rounded-full w-[49px] h-[49px]">
                                         </figure>
                                         <div>
-                                            <h6 class="font-semibold text-2xl text-[#1C1C1C]">
+                                            <h6 class="testi_title">
                                                 <?php echo esc_html($testimonial['name']); ?>
                                             </h6>
                                             <p class="text-[#1C1C1CE8]">Co founder</p>
@@ -91,19 +91,18 @@ $faqRes = [
         <!-- FAQs -->
         <div id="faqs" class="pt-8">
             <h2 class="h2">
-                Frequently Asked    <span class="text-[#47AFC3]">Questions</span>
+                Frequently Asked <span class="text-[#47AFC3]">Questions</span>
             </h2>
             <div class="mt-10 grid gap-1 grid-cols-1">
                 <?php foreach ($faqRes as $idx => $faq): ?>
                     <div>
-                        <div class="border border-black/15 shadow rounded-[10px] w-full bg-white faq-item">
-                            <h3
-                                class="px-6 py-6 w-full text-[#1C1C1C] text-left text-xl flex items-center gap-4 justify-between cursor-pointer faq-title">
+                        <div class="faq-item">
+                            <h3 class="faq-title">
                                 <?php echo esc_html($faq['question']); ?>
                                 <span class="text-2xl"><i class="fa fa-chevron-down"></i></span>
                             </h3>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-200">
-                                <p class="text-lg px-6 text-left text-[#1C1C1C] pb-6">
+                                <p class="">
                                     <?php echo esc_html($faq['answer']); ?>
                                 </p>
                             </div>

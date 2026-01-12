@@ -32,14 +32,14 @@ $steps = [
             <div
                 class="bg-title_Clr h-full max-w-[546px] mx-auto rounded-2xl md:px-14 md:py-8 p-8 md:gap-12 gap-12 flex flex-col">
                 <?php foreach ($steps as $index => $step): ?>
-                    <div class="relative flex md:flex-row flex-col md:gap-[30px] gap-7">
+                    <div class="step">
                         <span
-                            class="text-xl font-medium text-white PoppinsMedium bg-secondary p-[18px] border-[18px] border-primary rounded-full flex items-center justify-center w-[89px] h-[89px] before_line <?php echo ($index === count($steps) - 1) ? 'before:content-none' : 'before:content-[""] '; ?>">
+                            class="before_line <?php echo ($index === count($steps) - 1) ? 'before:content-none' : 'before:content-[""] '; ?>">
                             <?php echo '0' . esc_html($step['id']); ?>
                         </span>
 
                         <div>
-                            <h4 class="text-xl font-medium text-primary mb-2 PoppinsMedium">
+                            <h4 class="">
                                 <?php echo esc_html($step['title']); ?>
                             </h4>
                             <p class="text-sm font-light text-white">
@@ -60,51 +60,42 @@ $steps = [
             </h2>
             <form onSubmit={onSubmit} class="grid w-full gap-4 items-center mt-5 bg-primary md:p-8 p-6 rounded-[19px]">
                 <div class="w-full flex md:flex-row flex-col gap-4">
-                    <div class="w-full flex flex-col">
-                        <label htmlfor="fullname" class="text-sm font-medium leading-none hidden">
+                    <div class="form_row">
+                        <label htmlfor="fullname" class="hidden">
                             Full Name
                         </label>
-                        <input
-                            class="text-lg md:leading-[56px] font-normal text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-white px-7  border border-transparent focus:border-secondary outline-none rounded-full w-full"
-                            type="text" name="fullname" id="fullname" placeholder="Full Name" />
+                        <input class="hale_input" type="text" name="fullname" id="fullname" placeholder="Full Name" />
                     </div>
-                    <div class="w-full flex flex-col">
-                        <label htmlfor="phone" class="text-sm font-medium leading-none hidden">
+                    <div class="form_row">
+                        <label htmlfor="phone" class="hidden">
                             Your Contact
                         </label>
-                        <input
-                            class="text-lg md:leading-[56px] font-normal text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-white px-7  border border-transparent focus:border-secondary outline-none rounded-full w-full"
-                            type="tel" name="phone" id="phone" placeholder="Your Contact" />
+                        <input class="hale_input" type="tel" name="phone" id="phone" placeholder="Your Contact" />
                     </div>
                 </div>
                 <div class="w-full flex md:flex-row flex-col gap-4">
-                    <div class="w-full flex flex-col">
-                        <label htmlfor="email" class="text-sm font-medium leading-none hidden">
+                    <div class="form_row">
+                        <label htmlfor="email" class="hidden">
                             Email Address
                         </label>
-                        <input
-                            class="text-lg md:leading-[56px] font-normal text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-white px-7  border border-transparent focus:border-secondary outline-none rounded-full w-full"
-                            type="email" name="email" id="email" placeholder="Email  Address" />
+                        <input class="hale_input" type="email" name="email" id="email" placeholder="Email  Address" />
                     </div>
-                    <div class="w-full flex flex-col">
-                        <label htmlfor="product" class="text-sm font-medium leading-none hidden">
+                    <div class="form_row">
+                        <label htmlfor="product" class="hidden">
                             Cosmetics Packaging
                         </label>
-                        <select
-                            class="text-lg md:leading-[56px] font-normal text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-white px-7  border border-transparent focus:border-secondary outline-none rounded-full w-full md:min-h-[58px] h-[36px]"
-                            name="product" id="product">
+                        <select class="hale_input md:min-h-[58px] h-[36px]" name="product" id="product">
                             <option value="select the Product">select the Product</option>
                             <option value="Product1">Product1</option>
                         </select>
                     </div>
                 </div>
                 <div class="w-full">
-                    <label htmlfor="message" class="text-sm font-medium leading-none hidden">
+                    <label htmlfor="message" class="hidden">
                         Your Message
                     </label>
-                    <textarea
-                        class="text-lg pt-2 font-normal text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-white px-7  border border-transparent focus:border-secondary outline-none rounded-[19px] w-full"
-                        id="message" name="message" rows="3" placeholder="Write Your Message..."></textarea>
+                    <textarea class="hale_input rounded-[19px]!" id="message" name="message" rows="3"
+                        placeholder="Write Your Message..."></textarea>
                 </div>
                 <div class="w-full">
                     <input type="checkbox"
@@ -116,8 +107,7 @@ $steps = [
                     </label>
                 </div>
                 <div class="w-full">
-                    <button type="submit"
-                        class="text-lg md:leading-[56px] font-normal text-white bg-secondary px-7  border border-transparent focus:border-secondary outline-none rounded-full w-full">
+                    <button type="submit" class="form_btn">
                         SUBMIT
                     </button>
                 </div>

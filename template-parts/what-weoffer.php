@@ -2,7 +2,7 @@
     <div class="container flex flex-col justify-center items-center mx-auto px-4">
         <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
             What We Offer
-            <div class="h-[3px] bg-[#1C2E42] w-16"></div>
+            <div class="sub_title_line"></div>
         </h6>
        <h2 class="h2">
             Sustainable Products & Services

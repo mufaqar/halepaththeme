@@ -125,3 +125,6 @@ ul.career_list li {
 .singleproducts::-webkit-scrollbar {
   display: none;
 }
+.slick-dotted.slick-slider{
+  margin-bottom: 0 !important;
+}

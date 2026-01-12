@@ -112,7 +112,7 @@ get_header();
             <div class="md:max-w-[470px] max-w-[350px] mx-auto">
                 <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
                     Testimonials
-                    <div class="h-[3px] bg-[#1C2E42] w-16"></div>
+                    <div class="sub_title_line"></div>
                 </h6>
 
                 <h2 class="text-2xl lg:text-[43px] lg:leading-[50px] mt-5 font-semibold">

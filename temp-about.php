@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="container flex flex-col justify-center items-center mx-auto px-4">
         <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
             What We Offer
-            <div class="h-[3px] bg-[#1C2E42] w-16"></div>
+            <div class="sub_title_line"></div>
         </h6>
 
         <h2 class="text-2xl lg:text-[43px] text-center font-semibold leading-normal">
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
           Testimonials
-          <div class="h-[3px] bg-[#1C2E42] w-16"></div>
+          <div class="sub_title_line"></div>
         </h6>
 
         <h2 class="text-2xl lg:text-[43px] lg:leading-[50px] mt-5 font-semibold leading-normal">

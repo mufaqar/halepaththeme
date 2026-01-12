@@ -16,7 +16,7 @@
 
         <div class="md:w-1/3 w-full">
             <a href="#"
-                class="bg-primary hover:bg-white px-5 py-4 text-lg font-medium text-white hover:text-primary rounded-full border-2 border-primary flex w-fit ml-auto md:mr-0 mr-auto items-center gap-2">
+                class="btn_primary ml-auto! md:mr-0! mr-auto">
                 Order Now
             </a>
         </div>

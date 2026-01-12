@@ -106,9 +106,9 @@ $featureproductsRes = [
 <section class="py-12">
 
     <div class="container flex flex-col justify-center items-center mx-auto px-4">
-        <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
+        <h6 class="sub_title">
             Our Products
-            <div class="h-[3px] bg-[#1C2E42] w-16"></div>
+            <div class="sub_title_line"></div>
         </h6>
         <h2 class="h2">
             Our Latest Products
@@ -257,7 +257,7 @@ $featureproductsRes = [
                 <!-- IMAGE -->
                 <figure class="h-full">
                     <img src="<?php echo get_template_directory_uri() . $slide['image']; ?>" alt="Packaging Image"
-                        class="w-full object-cover h-full" />
+                        class="img-full" />
                 </figure>
                 <!-- CONTENT -->
                 <div
@@ -287,10 +287,10 @@ $featureproductsRes = [
 <!-- Category Slider Starts -->
 <section class="py-16 bg-[#EAF6F9]">
     <div class="mb-16">
-         <h2 class="h2">
+         <h2 class="h2 md:mb-5!">
             Explore Our Custom Printing and Packaging Design
         </h2>
-        <p class="text-lg font-normal text-txt_Clr text-center md:w-5/6 mx-auto mt-5">
+        <p class="text-lg font-normal text-txt_Clr text-center md:w-5/6 mx-auto">
             Start designing unique boxes with different styles, sizes, and
             choices. Custom rigid boxes or Kraft boxes for retail products and
             many more?We can help, Custom printing and packaging services ideas
@@ -305,7 +305,7 @@ $featureproductsRes = [
 <!-- The work we do Starts -->
 <section class="py-16">
     <div class="hale_container">
-         <h2 class="h2">
+         <h2 class="h2 md:mb-5!">
             The work we do and <span class="text-primary">love doing</span>
         </h2>
         <p class="md:text-xl text-base font-normal text-title_Clr text-center max-w-[640px] mx-auto">

@@ -22,12 +22,12 @@ $productsRes = [
                 <img
                     src="<?php echo esc_url($p['image']); ?>"
                     alt="<?php echo esc_attr($p['title']); ?>"
-                    class="maskimage w-full object-cover"
+                    class="maskimage img-full"
                 >
             </a>
 
             <a href="<?php echo esc_url(site_url('/product/' . $p['slug'])); ?>"
-               class="text-xl font-normal text-title_Clr text-center block mt-6">
+               class="cat_title">
                 <?php echo esc_html($p['title']); ?>
             </a>
         </div>

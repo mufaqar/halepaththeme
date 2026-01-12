@@ -29,7 +29,7 @@ get_header();
 
 <section class="md:py-14 py-10 relative bg-center bg-no-repeat bg-cover "
     style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/qoute-bg.png')">
-    <div class="container mx-auto px-4 relative z-10 flex md:flex-row flex-col gap-7">
+    <div class="hale_container relative z-10 flex md:flex-row flex-col gap-7">
 
         <!-- LEFT -->
         <div class="md:w-1/2 w-full">
@@ -105,7 +105,7 @@ get_header();
 <!--  : TESTIMONIALS -->
 
 <section class="py-[60px] bg-[#F5F5F5]" id="testimonials">
-    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-6">
+    <div class="hale_container grid md:grid-cols-2 gap-6">
 
         <!-- LEFT: TESTIMONIALS -->
         <div>

@@ -94,7 +94,7 @@ $featureproductsRes = [
 <?php get_template_part('template-parts/about-imgscroll'); ?>
 <!-- Category Slider Starts -->
 <section class="bg-[#F5F5F5] py-10">
-    <h2 class="md:text-[43px] md:leading-normal text-3xl font-bold text-title_Clr text-center mb-14">
+    <h2 class="h2">
         Our Latest Category
     </h2>
 
@@ -104,25 +104,24 @@ $featureproductsRes = [
 <?php get_template_part('template-parts/home-cta'); ?>
 <!-- Product Slider Starts -->
 <section class="py-12">
-    
-     <div class="container flex flex-col justify-center items-center mx-auto px-4">
+
+    <div class="container flex flex-col justify-center items-center mx-auto px-4">
         <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
             Our Products
             <div class="h-[3px] bg-[#1C2E42] w-16"></div>
         </h6>
-        <h2 class="text-2xl lg:text-[43px] text-center font-semibold leading-normal">
-           Our Latest Products
+        <h2 class="h2">
+            Our Latest Products
         </h2>
     </div>
-    
+
     <?php
     get_template_part(
         'template-parts/product-slider',
         null,
         ['direction' => 'ltr', 'slidesToShow' => 5,]
     ); ?>
-    <a href="/products"
-        class="bg-secondary hover:bg-white px-9 py-3 text-lg font-medium text-white hover:text-secondary rounded-full border-2 border-secondary flex items-center gap-2 mt-12 w-fit mx-auto">
+    <a href="/products" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
         See All Products
     </a>
 </section>
@@ -176,7 +175,7 @@ $featureproductsRes = [
 <!-- Brands Section -->
 <section class="pb-12 md:px-4 px-4">
     <div class="container mx-auto md:p-8 p-8 shadow-[0_0_5px_0_rgba(0,0,0,0.31)] rounded-[19px]">
-        <h2 class="md:text-4xl text-2xl font-bold text-title_Clr text-center mb-10">
+         <h2 class="h2">
             Brand That Trust Us
         </h2>
         <div class="flex md:flex-row flex-col gap-7 justify-between">
@@ -197,14 +196,14 @@ $featureproductsRes = [
 <!-- Corrugated Packaging Starts -->
 <section class="bg-cover mt-10 bg-no-repeat about_bg"
     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/bg.png'">
-    <div class="container mx-auto px-4 pt-[110px]">
+    <div class="hale_container pt-[110px]">
         <h2 class="text-white font-bold text-3xl md:text-5xl lg:text-[51px]">
             Corrugated Packaging
         </h2>
     </div>
     <div
         class="bg-[#1C2E42] py-10 pr-8 md:p-[46px] max-w-[90%] md:max-w-[80%] lg:max-w-[70%] rounded-tr-[140px] mt-[110px]">
-        <div class="container mx-auto px-4">
+        <div class="hale_container">
             <h5 class="text-white font-bold text-xl md:text-[25px]">
                 Hale Path Provide Best Packaging Services
             </h5>
@@ -288,7 +287,7 @@ $featureproductsRes = [
 <!-- Category Slider Starts -->
 <section class="py-16 bg-[#EAF6F9]">
     <div class="mb-16">
-        <h2 class="md:text-[51px] md:leading-normal text-3xl font-semibold text-title_Clr text-center">
+         <h2 class="h2">
             Explore Our Custom Printing and Packaging Design
         </h2>
         <p class="text-lg font-normal text-txt_Clr text-center md:w-5/6 mx-auto mt-5">
@@ -305,21 +304,20 @@ $featureproductsRes = [
 
 <!-- The work we do Starts -->
 <section class="py-16">
-    <div class="container mx-auto px-4">
-        <h2 class="md:text-[51px] md:leading-normal text-3xl font-semibold text-title_Clr text-center mb-7">
+    <div class="hale_container">
+         <h2 class="h2">
             The work we do and <span class="text-primary">love doing</span>
         </h2>
         <p class="md:text-xl text-base font-normal text-title_Clr text-center max-w-[640px] mx-auto">
             Lorem Ipsum is simply dummy to text of the printing and typesetting industry. Lorem and Ipsum has been the
             industry's standard.
         </p>
-        <a href="<?php echo site_url('/products'); ?>"
-            class="bg-secondary hover:bg-white px-9 py-3 text-lg font-medium text-white hover:text-secondary rounded-full border-2 border-secondary flex items-center gap-2 mt-12 w-fit mx-auto">
+        <a href="<?php echo site_url('/products'); ?>" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
             See All Products
         </a>
     </div>
 
-    <div class="container mx-auto px-4 flex md:flex-row flex-col md:gap-40 gap-7 mt-10">
+    <div class="hale_container flex md:flex-row flex-col md:gap-40 gap-7 mt-10">
         <div class="md:w-1/2 w-full flex md:flex-row flex-col items-start gap-7 [&>*:nth-child(1)]:md:-mt-40">
             <?php foreach ([$featureproductsRes[0], $featureproductsRes[1]] as $product): ?>
                 <div class='w-full border border-[#9C9C9CEB] rounded-[32px] overflow-hidden'>
@@ -428,7 +426,8 @@ $featureproductsRes = [
             </div>
 
             <!-- Background Main Image -->
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/teammain.png" alt="teammain" class="absolute bottom-0 right-0 ml-auto mr-0 md:w-2/3">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/teammain.png" alt="teammain"
+                class="absolute bottom-0 right-0 ml-auto mr-0 md:w-2/3">
         </div>
     </div>
 </section>
@@ -436,7 +435,7 @@ $featureproductsRes = [
 <!-- Career Section Ends -->
 <!-- Instagram Starts -->
 <section class="bg-[#EAF6F9] pt-14 px-4">
-    <h2 class="text-3xl sm:text-[43px] lg:leading-[50px] mt-5 font-semibold leading-normal text-center">
+     <h2 class="h2">
         Instagram Posts
     </h2>
     <div class="mt-9 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">

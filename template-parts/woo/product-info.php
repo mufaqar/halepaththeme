@@ -236,7 +236,7 @@
 get_template_part('template-parts/woo/product-faq'); ?>
 
 <section class="mt-20 overflow-hidden">
-	<div class="container mx-auto px-4">
+	<div class="hale_container">
 		<h2 class="md:text-[51px] md:leading-normal text-3xl font-bold text-title_Clr text-center mb-4">
 			Related Products
 		</h2>

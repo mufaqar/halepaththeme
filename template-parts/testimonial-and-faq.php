@@ -35,7 +35,7 @@ $faqRes = [
 ?>
 
 <section class="py-[60px] bg-[#F5F5F5]" id="testimonials">
-    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-6">
+    <div class="hale_container grid md:grid-cols-2 gap-6">
         <!-- Testimonials -->
         <div>
             <div class="md:max-w-[470px] max-w-[350px] mx-auto">
@@ -43,7 +43,7 @@ $faqRes = [
                     Testimonials
                     <div class="h-[3px] bg-[#1C2E42] w-16"></div>
                 </h6>
-                <h2 class="text-2xl lg:text-[43px] lg:leading-[50px] mt-5 font-semibold leading-normal">
+                <h2 class="h2 text-left!"> 
                     What Customers Says
                     <span class="text-[#47AFC3]">About Us</span>
                 </h2>
@@ -90,7 +90,7 @@ $faqRes = [
 
         <!-- FAQs -->
         <div id="faqs" class="pt-8">
-           <h2 class="text-2xl lg:text-[43px] lg:leading-[50px] mt-5 font-semibold leading-normal">
+            <h2 class="h2">
                 Frequently Asked    <span class="text-[#47AFC3]">Questions</span>
             </h2>
             <div class="mt-10 grid gap-1 grid-cols-1">

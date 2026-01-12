@@ -4,7 +4,7 @@ get_header();
 ?>
 
 <section class="max_content mt-14 py-8">
-    <main class="container mx-auto px-4 flex items-center md:flex-row flex-col gap-[70px]">
+    <main class="hale_container flex items-center md:flex-row flex-col gap-[70px]">
 
         <!-- LEFT IMAGE SECTION -->
         <div class="md:w-1/2 relative w-full">
@@ -35,7 +35,7 @@ get_header();
             </div>
 
             <a href="#"
-                class="bg-secondary hover:bg-white px-9 py-3 text-lg font-medium text-white hover:text-secondary rounded-full border-2 border-secondary flex items-center gap-2 mt-5 w-fit mx-auto">
+                class="btn_secondry flex items-center gap-2 mt-5 w-fit mx-auto">
                 About Us
             </a>
         </div>
@@ -90,14 +90,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <!-- Corrugated Packaging -->
 <section class="bg-cover mt-10 bg-no-repeat about_bg">
-    <div class="container mx-auto px-4 pt-[110px]">
+    <div class="hale_container pt-[110px]">
         <h2 class="text-white font-bold text-3xl md:text-5xl lg:text-[51px]">
             Corrugated Packaging
         </h2>
     </div>
     <div
         class="bg-[#1C2E42] py-10 pr-8 md:p-[46px] max-w-[90%] md:max-w-[80%] lg:max-w-[70%] rounded-tr-[140px] mt-[110px]">
-        <div class="container mx-auto px-4">
+        <div class="hale_container">
             <h5 class="text-white font-bold text-xl md:text-[25px]">
                 Hale Path Provide Best Packaging Services
             </h5>
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </h2>
     </div>
     <div class="offerbg bg-cover bg-no-repeat mt-60 border border-black">
-        <div class="container mx-auto px-4">
+        <div class="hale_container">
             <div
                 class="p-6 bg-white grid grid-cols-1 pb-24 gap-5 xl:gap-2 sm:grid-cols-2 xl:grid-cols-4 mb-32 -mt-48 border">
                 <?php
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- Testimonials -->
 
 <section class="py-[60px] bg-[#F5F5F5]" id="testimonials">
-  <div class="container mx-auto px-4 grid md:grid-cols-2 gap-6">
+  <div class="hale_container grid md:grid-cols-2 gap-6">
 
     <!-- LEFT: TESTIMONIALS -->
     <div>

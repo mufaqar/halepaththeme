@@ -89,11 +89,11 @@ if (!empty($categories) && !is_wp_error($categories)):
             <div class="w-full p-2">
                 <a href="<?php echo esc_url($category_link); ?>">
                     <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($category->name); ?>" width="363"
-                        height="375" class="maskimage w-full object-cover h-full" loading="lazy" />
+                        height="375" class="maskimage img-full" loading="lazy" />
                 </a>
 
                 <a href="<?php echo esc_url($category_link); ?>"
-                    class="text-xl font-normal text-title_Clr text-center flex w-fit mx-auto mt-8">
+                    class="cat_link">
                     <?php echo esc_html($category->name); ?>
                 </a>
             </div>

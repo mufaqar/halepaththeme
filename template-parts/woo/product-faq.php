@@ -20,7 +20,7 @@ $faqRes = [
 ?>
 
 <section class="bg-[#F5F5F5] py-20 mt-28" id="testimonials">
-    <div class="container mx-auto px-4 gap-6">
+    <div class="hale_container gap-6">
         <!-- FAQs -->
         <div id="faqs" class="pt-8">
             <h2 class="text-2xl lg:text-[43px] lg:leading-[50px] mt-5 font-semibold leading-normal text-center">

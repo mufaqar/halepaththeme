@@ -94,7 +94,7 @@ if (is_product_category()) {
 ?>
 
 <section class="pt-14">
-    <div class="container mx-auto px-4 flex md:flex-row flex-col gap-7">
+    <div class="hale_container flex md:flex-row flex-col gap-7">
 
         <!-- LEFT CONTENT -->
         <div class="md:w-1/2 w-full">

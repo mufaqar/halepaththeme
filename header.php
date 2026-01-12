@@ -48,7 +48,7 @@
     <div id="page" class="site">
         <!-- Top Bar -->
         <div class="bg-secondary py-[18px] hidden md:block">
-            <div class="container mx-auto px-4 flex items-center justify-between">
+            <div class="hale_container flex items-center justify-between">
                 <p class="text-base font-medium text-white">
                     Welcome To Hale Path Packaging
                 </p>
@@ -80,7 +80,7 @@
 
         <!-- Header -->
         <header class="bg-white sticky top-0 z-50" style="box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;">
-            <div class="container mx-auto px-4 py-1 flex items-center justify-between gap-5">
+            <div class="hale_container py-1 flex items-center justify-between gap-5">
 
                 <!-- Logo -->
                 <div class="lg:w-[8%] w-1/2">

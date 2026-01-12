@@ -4,12 +4,12 @@
             What We Offer
             <div class="h-[3px] bg-[#1C2E42] w-16"></div>
         </h6>
-        <h2 class="text-2xl lg:text-[43px] text-center font-semibold leading-normal">
+       <h2 class="h2">
             Sustainable Products & Services
         </h2>
     </div>
     <div class="offerbg bg-cover bg-no-repeat mt-60 border" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/offer-bg.png'">
-        <div class="container mx-auto px-4">
+        <div class="hale_container">
             <div
                 class="p-6 bg-white grid grid-cols-1 pb-24 gap-5 xl:gap-2 sm:grid-cols-2 xl:grid-cols-4 mb-32 -mt-48 border border-black/10">
                 <?php for ($i = 1; $i <= 4; $i++): ?>

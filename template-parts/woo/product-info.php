@@ -1,46 +1,59 @@
 <section class="mt-20 max-w-[2200px] mx-auto px-3 lg:px-0">
-	<h2 class="text-2xl text-center mb-8 sm:text-3xl md:text-5xl font-bold">Custom Retail Boxes Gallery</h2>
+	<h2 class="text-2xl text-center mb-8 sm:text-3xl md:text-5xl font-bold">
+		Custom Retail Boxes Gallery
+	</h2>
 	<?php
-	// Get global product
-	global $product;
-	if (!$product)
+	// Static images array
+	$images = [
+		[
+			'url' => get_template_directory_uri() . '/assets/images/product/gallery1.jpg',
+			'alt' => 'Custom Retail Box 1',
+		],
+		[
+			'url' => get_template_directory_uri() . '/assets/images/product/gallery2.jpg',
+			'alt' => 'Custom Retail Box 2',
+		],
+		[
+			'url' => get_template_directory_uri() . '/assets/images/product/gallery3.jpg',
+			'alt' => 'Custom Retail Box 3',
+		],
+		[
+			'url' => get_template_directory_uri() . '/assets/images/product/gallery4.jpg',
+			'alt' => 'Custom Retail Box 4',
+		],
+		[
+			'url' => get_template_directory_uri() . '/assets/images/product/gallery5.jpg',
+			'alt' => 'Custom Retail Box 5',
+		],
+		[
+			'url' => get_template_directory_uri() . '/assets/images/product/gallery6.jpg',
+			'alt' => 'Custom Retail Box 5',
+		],
+		[
+			'url' => get_template_directory_uri() . '/assets/images/product/gallery7.jpg',
+			'alt' => 'Custom Retail Box 5',
+		],
+		[
+			'url' => get_template_directory_uri() . '/assets/images/product/gallery8.png',
+			'alt' => 'Custom Retail Box 5',
+		],
+	];
+
+	if (empty($images)) {
 		return;
-
-	// Get product gallery IDs
-	$gallery_ids = $product->get_gallery_image_ids();
-
-	// Include featured image as first slide
-	$images = [];
-
-	if (has_post_thumbnail($product->get_id())) {
-		$images[] = [
-			'url' => get_the_post_thumbnail_url($product->get_id(), 'large'),
-			'alt' => get_post_meta(get_post_thumbnail_id($product->get_id()), '_wp_attachment_image_alt', true),
-		];
 	}
-
-	// Add gallery images
-	foreach ($gallery_ids as $id) {
-		$images[] = [
-			'url' => wp_get_attachment_url($id),
-			'alt' => get_post_meta($id, '_wp_attachment_image_alt', true),
-		];
-	}
-
-	// Stop if no images
-	if (empty($images))
-		return;
 	?>
 
 	<div class="relative w-full py-8">
 		<!-- Navigation Buttons -->
 		<button
-			class="swiper-prev min-w-[32px] cursor-pointer text-xs absolute left-1 top-1/2 transform -translate-y-1/2 z-10 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-900"
+			class="swiper-prev min-w-[32px] cursor-pointer text-xs absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-900"
 			aria-label="Previous Slide">
 			<i class="fa fa-chevron-left"></i>
 		</button>
+
 		<button
-			class="swiper-next min-w-[32px] cursor-pointer text-xs absolute right-1 top-1/2 transform -translate-y-1/2 z-10 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-900"
+			class="swiper-next min-w-[32px] cursor-pointer text-xs absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-900"
 			aria-label="Next Slide">
 			<i class="fa fa-chevron-right"></i>
 		</button>
@@ -51,19 +64,17 @@
 				<?php foreach ($images as $index => $image): ?>
 					<div class="swiper-slide">
 						<figure class="rounded-2xl overflow-hidden">
-							<img src="<?php echo esc_url($image['url']); ?>"
-								alt="<?php echo esc_attr($image['alt'] ?? "Slide " . ($index + 1)); ?>" loading="lazy"
-								class="!h-[460px] w-full object-cover scale-105 rounded-2xl">
+							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+								loading="lazy" class="!h-[460px] w-full object-cover scale-105 rounded-2xl">
 						</figure>
 					</div>
 				<?php endforeach; ?>
 			</div>
 		</div>
 	</div>
-
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-			const swiper = new Swiper(".mySwiper", {
+			new Swiper(".mySwiper", {
 				effect: "coverflow",
 				grabCursor: true,
 				centeredSlides: true,

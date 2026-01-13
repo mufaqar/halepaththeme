@@ -54,6 +54,10 @@ function halepath_theme_setup()
 	register_nav_menus(
 		array(
 			'primary_menu' => esc_html__('Primary', 'halepath_theme'),
+			'company' => esc_html__('Company', 'halepath_theme'),
+			'packaging' => esc_html__('Product Packaging', 'halepath_theme'),
+			'style' => esc_html__('Product Style', 'halepath_theme'),
+			'inspiration' => esc_html__('Inspiration', 'halepath_theme'),
 		)
 	);
 

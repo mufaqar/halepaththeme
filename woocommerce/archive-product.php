@@ -298,7 +298,7 @@ get_header('shop');
 
     <div class="icon_box">
       <img alt="Easy Price Matching"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/price.png" />
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/price_icon.png" />
       <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Easy Price Matching</h6>
     </div>
 

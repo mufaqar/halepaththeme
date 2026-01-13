@@ -1,36 +1,28 @@
-<div class="container mx-auto mt-10 rounded-[19px] bg-[#CCCCCCB5]/70">
+<div class="hale_container mt-10 rounded-[19px] bg-[#CCCCCCB5]/70">
     <form id="quote-form" class="grid w-full gap-2 items-center px-3 sm:px-5 py-6 md:py-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full gap-2.5">
             <!-- Name -->
             <div>
-                <label for="name" class="text-sm font-medium leading-none hidden">Name</label>
-                <input
-                    class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-4 border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full"
-                    type="text" name="name" id="name" placeholder="Your Name" required />
+                <label for="name" class="hidden">Name</label>
+                <input class="hale_input" type="text" name="name" id="name" placeholder="Your Name" required />
             </div>
 
             <!-- Phone -->
             <div>
-                <label for="phone" class="text-sm font-medium leading-none hidden">Phone Number</label>
-                <input
-                    class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-4 border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full"
-                    type="tel" name="phone" id="phone" placeholder="Phone Number" />
+                <label for="phone" class="hidden">Phone Number</label>
+                <input class="hale_input" type="tel" name="phone" id="phone" placeholder="Phone Number" />
             </div>
 
             <!-- Email -->
             <div>
-                <label for="email" class="text-sm font-medium leading-none hidden">Email Address</label>
-                <input
-                    class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-4 border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full"
-                    type="email" name="email" id="email" placeholder="Email Address" required />
+                <label for="email" class="hidden">Email Address</label>
+                <input class="hale_input" type="email" name="email" id="email" placeholder="Email Address" required />
             </div>
 
             <!-- Select Product (WooCommerce Categories) -->
             <div class="relative">
-                <label for="Product" class="text-sm font-medium leading-none hidden">Select Product</label>
-                <select
-                    class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr cursor-pointer bg-white p-[16px] border border-[#CACACA] focus:border-secondary appearance-none outline-none rounded-full w-full"
-                    name="product" id="Product" required>
+                <label for="Product" class="hidden">Select Product</label>
+                <select class="hale_input h-full appearance-none" name="product" id="Product" required>
                     <option value="" disabled selected>Select Product</option>
                     <?php
                     $products = wc_get_products(array('limit' => -1)); // Get all WooCommerce products
@@ -44,10 +36,8 @@
 
             <!-- Colors -->
             <div class="relative">
-                <label for="Colors" class="text-sm font-medium leading-none hidden">Colors</label>
-                <select
-                    class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr cursor-pointer bg-white p-4 border border-[#CACACA] focus:border-secondary appearance-none outline-none rounded-full w-full"
-                    name="colors" id="Colors" required>
+                <label for="Colors" class="hidden">Colors</label>
+                <select class="hale_input h-full appearance-none" name="colors" id="Colors" required>
                     <option value="">Colors</option>
                     <option value="1">1 color</option>
                     <option value="2">2 colors</option>
@@ -60,32 +50,24 @@
 
             <!-- Dimensions -->
             <div>
-                <label for="Length" class="text-sm font-medium leading-none hidden">Length</label>
-                <input type="number" name="length" id="Length" placeholder="Length"
-                    class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr rounded-full bg-white p-4 border border-[#CACACA] focus:border-secondary outline-none w-full"
-                    required>
+                <label for="Length" class="hidden">Length</label>
+                <input type="number" name="length" id="Length" placeholder="Length" class="hale_input h-full" required>
             </div>
 
             <div>
-                <label for="Width" class="text-sm font-medium leading-none hidden">Width</label>
-                <input type="number" name="width" id="Width" placeholder="Width"
-                    class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-4 border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full"
-                    required>
+                <label for="Width" class="hidden">Width</label>
+                <input type="number" name="width" id="Width" placeholder="Width" class="hale_input" required>
             </div>
 
             <div>
-                <label for="Depth" class="text-sm font-medium leading-none hidden">Depth</label>
-                <input type="number" name="depth" id="Depth" placeholder="Depth"
-                    class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-4 border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full"
-                    required>
+                <label for="Depth" class="hidden">Depth</label>
+                <input type="number" name="depth" id="Depth" placeholder="Depth" class="hale_input" required>
             </div>
 
             <!-- Unit -->
             <div class="relative">
-                <label for="Unit" class="text-sm font-medium leading-none hidden">Select Unit</label>
-                <select
-                    class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-4 border border-[#CACACA] focus:border-secondary appearance-none outline-none rounded-full cursor-pointer w-full"
-                    name="unit" id="Unit" required>
+                <label for="Unit" class="hidden">Select Unit</label>
+                <select class="hale_input h-full appearance-none" name="unit" id="Unit" required>
                     <option value="">Select Unit</option>
                     <option value="inches">Inches</option>
                     <option value="cm">CM</option>
@@ -95,8 +77,7 @@
             </div>
 
             <!-- Message -->
-            <textarea name="message" id="detail" rows="1" placeholder="Write Your Message..."
-                class="text-sm font-medium rounded-full text-txt_Clr placeholder:text-txt_Clr bg-white p-4 border border-[#CACACA] focus:border-secondary outline-none w-full"
+            <textarea name="message" id="detail" rows="1" placeholder="Write Your Message..." class="hale_input"
                 required></textarea>
         </div>
 
@@ -113,9 +94,7 @@
         <!-- Submit + File Upload -->
         <section class="flex items-center gap-2 justify-between">
             <div class="w-full">
-                <button type="submit"
-                    class="text-base max-w-[600px] font-semibold text-white bg-[#1C2E42] hover:bg-secondary px-4 py-3 rounded-full w-full"
-                    id="quote-submit">
+                <button type="submit" class="btn_secondry max-w-[600px] w-full" id="quote-submit">
                     SUBMIT
                 </button>
             </div>

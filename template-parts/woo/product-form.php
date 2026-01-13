@@ -13,14 +13,11 @@ $products = wc_get_products(array('limit' => -1));
             <section class="grid grid-cols-2 gap-2.5">
                 <div>
                     <label for="name" class="text-sm font-medium hidden">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Your Name"
-                        class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-[16px] border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full"
-                        required>
+                    <input type="text" name="name" id="name" placeholder="Your Name" class="hale_input" required>
                 </div>
                 <div>
                     <label for="phone" class="text-sm font-medium hidden">Phone</label>
-                    <input type="tel" name="phone" id="phone" placeholder="Phone Number"
-                        class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-[16px] border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full">
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" class="hale_input">
                 </div>
             </section>
 
@@ -28,16 +25,13 @@ $products = wc_get_products(array('limit' => -1));
             <section class="grid grid-cols-2 gap-2.5 mt-2.5">
                 <div>
                     <label for="email" class="text-sm font-medium hidden">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email Address"
-                        class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-[16px] border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full"
-                        required>
+                    <input type="email" name="email" id="email" placeholder="Email Address" class="hale_input" required>
                 </div>
                 <div class="relative">
                     <label for="product" class="text-sm font-medium hidden">Select Product</label>
-                    <select name="product" id="product" required
-                        class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr cursor-pointer bg-white p-[16px] border border-[#CACACA] focus:border-secondary appearance-none outline-none rounded-full w-full">
+                    <select name="product" id="product" required class="hale_input h-full appearance-none">
                         <option value="" disabled selected>Select Product</option>
-                        <?php foreach ($products as $product) : ?>
+                        <?php foreach ($products as $product): ?>
                             <option value="<?php echo esc_attr($product->get_name()); ?>">
                                 <?php echo esc_html($product->get_name()); ?>
                             </option>
@@ -51,30 +45,22 @@ $products = wc_get_products(array('limit' => -1));
             <section class="grid grid-cols-3 gap-2 mt-2.5 items-start">
                 <div>
                     <label for="length" class="text-sm font-medium hidden">Length</label>
-                    <input type="number" name="length" id="length" placeholder="Length"
-                        class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-[16px] border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full"
-                        required>
+                    <input type="number" name="length" id="length" placeholder="Length" class="hale_input" required>
                 </div>
                 <div>
                     <label for="width" class="text-sm font-medium hidden">Width</label>
-                    <input type="number" name="width" id="width" placeholder="Width"
-                        class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-[16px] border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full"
-                        required>
+                    <input type="number" name="width" id="width" placeholder="Width" class="hale_input" required>
                 </div>
                 <div>
                     <label for="depth" class="text-sm font-medium hidden">Depth</label>
-                    <input type="number" name="depth" id="depth" placeholder="Depth"
-                        class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-[16px] border border-[#CACACA] focus:border-secondary outline-none rounded-full w-full"
-                        required>
+                    <input type="number" name="depth" id="depth" placeholder="Depth" class="hale_input" required>
                 </div>
             </section>
 
             <section class="grid grid-cols-3 gap-2 mt-2.5">
                 <div class="relative">
                     <label for="colors" class="text-sm font-medium hidden">Colors</label>
-                    <select name="colors" id="colors"
-                        class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr cursor-pointer bg-white p-[16px] border border-[#CACACA] focus:border-secondary appearance-none outline-none rounded-full w-full"
-                        required>
+                    <select name="colors" id="colors" class="hale_input h-full appearance-none" required>
                         <option value="">Colors</option>
                         <option value="1">1 color</option>
                         <option value="2">2 colors</option>
@@ -87,8 +73,7 @@ $products = wc_get_products(array('limit' => -1));
 
                 <div class="relative">
                     <label for="unit" class="text-sm font-medium hidden">Unit</label>
-                    <select name="unit" id="unit" required
-                        class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-[16px] border border-[#CACACA] focus:border-secondary appearance-none outline-none rounded-full cursor-pointer w-full">
+                    <select name="unit" id="unit" required class="hale_input h-full appearance-none">
                         <option value="">Select Unit</option>
                         <option value="inches">Inches</option>
                         <option value="cm">CM</option>
@@ -99,8 +84,7 @@ $products = wc_get_products(array('limit' => -1));
 
                 <div class="relative">
                     <label for="stock" class="text-sm font-medium hidden">Stock</label>
-                    <select name="stock" id="stock" required
-                        class="text-sm font-medium text-txt_Clr placeholder:text-txt_Clr bg-white p-[16px] border border-[#CACACA] focus:border-secondary appearance-none outline-none rounded-full cursor-pointer w-full">
+                    <select name="stock" id="stock" required class="hale_input h-full appearance-none">
                         <option value="">Select Stock</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -113,8 +97,7 @@ $products = wc_get_products(array('limit' => -1));
             <!-- Message -->
             <section class="col-span-2 md:col-span-1 mt-2.5">
                 <textarea name="message" id="message" rows="3" placeholder="Write Your Message..."
-                    class="text-sm font-medium rounded-[20px] h-[141px] text-txt_Clr placeholder:text-txt_Clr bg-white p-[16px] border border-[#CACACA] focus:border-secondary outline-none w-full"
-                    required></textarea>
+                    class="hale_input rounded-[20px]! h-[141px]" required></textarea>
             </section>
 
             <!-- Agree Checkbox -->
@@ -130,7 +113,7 @@ $products = wc_get_products(array('limit' => -1));
         <section class="flex items-center gap-2 justify-between mt-2.5">
             <div class="w-full">
                 <button type="submit"
-                    class="text-base max-w-full font-semibold text-white bg-[#1C2E42] hover:bg-secondary px-4 py-3 rounded-full w-full">
+                    class="btn_secondry w-full">
                     SUBMIT
                 </button>
             </div>
@@ -139,23 +122,23 @@ $products = wc_get_products(array('limit' => -1));
 </div>
 
 <script>
-jQuery(document).ready(function($){
-    $('#quote-form').on('submit', function(e){
-        e.preventDefault();
-        var formData = $(this).serialize();
+    jQuery(document).ready(function ($) {
+        $('#quote-form').on('submit', function (e) {
+            e.preventDefault();
+            var formData = $(this).serialize();
 
-        $.ajax({
-            url: '<?php echo admin_url("admin-ajax.php"); ?>',
-            type: 'POST',
-            data: formData + '&action=submit_quote_form',
-            success: function(response){
-                alert('Quote submitted successfully!');
-                $('#quote-form')[0].reset();
-            },
-            error: function(){
-                alert('Something went wrong!');
-            }
+            $.ajax({
+                url: '<?php echo admin_url("admin-ajax.php"); ?>',
+                type: 'POST',
+                data: formData + '&action=submit_quote_form',
+                success: function (response) {
+                    alert('Quote submitted successfully!');
+                    $('#quote-form')[0].reset();
+                },
+                error: function () {
+                    alert('Something went wrong!');
+                }
+            });
         });
     });
-});
 </script>

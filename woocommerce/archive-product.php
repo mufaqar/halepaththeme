@@ -24,7 +24,7 @@ get_header('shop');
 
 
 <main class="py-10 lg:py-20">
-  <div class="container mx-auto px-3 grid items-center md:grid-cols-2 gap-4 md:gap-8 lg:gap-10 xl:gap-[70px]">
+  <div class="hale_container grid items-center md:grid-cols-2 gap-4 md:gap-8 lg:gap-10 xl:gap-[70px]">
     <?php
     // Get WooCommerce product categories
     $categories = get_terms(array(
@@ -43,7 +43,7 @@ get_header('shop');
       <div class="h-full">
         <?php if ($image_url): ?>
           <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($category->name); ?>"
-            class="w-full rounded-[22px] h-full! object-cover">
+            class="img-full rounded-[22px]">
         <?php endif; ?>
       </div>
       <div>
@@ -65,7 +65,7 @@ get_header('shop');
 </main>
 <!-- Qoute Form Start-->
 <section>
-  <div class="container mx-auto px-3 ">
+  <div class="hale_container">
     <p class="font-extrabold text-4xl text-center">Get Custom Quote</p>
   </div>
   <?php get_template_part('template-parts/woo/qoute-form'); ?>
@@ -73,7 +73,7 @@ get_header('shop');
 
 <!-- Qoute Form End-->
 
-<section class="mt-20 container mx-auto px-3">
+<section class="mt-20 hale_container">
   <div>
     <h2 class="font-extrabold text-4xl text-center">Explore Packaging Solutions</h2>
   </div>
@@ -157,7 +157,7 @@ get_header('shop');
   ?>
 </section>
 <section class="my-20">
-  <div class="container md:flex items-center gap-5 md:gap-0 mx-auto px-3 flex-row-reverse">
+  <div class="hale_container md:flex items-center gap-5 md:gap-0 flex-row-reverse">
     <!-- Image Section -->
     <figure class="md:w-1/2">
       <img alt="Why Us Image" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/why-us.png">
@@ -180,7 +180,7 @@ get_header('shop');
   </div>
 </section>
 <section class="my-20">
-  <div class="container md:flex items-center gap-5 md:gap-0 mx-auto px-3">
+  <div class="hale_container md:flex items-center gap-5 md:gap-0">
     <!-- Image Section -->
     <figure class="md:w-1/2">
       <img alt="Why Us Image" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/why-us.png">
@@ -211,7 +211,7 @@ get_header('shop');
   </h2>
 
   <!-- Content Container -->
-  <div class="container px-3 desc_content mx-auto mt-5 overflow-y-scroll max_content max-h-[712px]">
+  <div class="hale_container desc_content mt-5 overflow-y-scroll max_content max-h-[712px]">
 
     <h3>Lorem ipsum dolor</h3>
     <p>
@@ -280,77 +280,73 @@ get_header('shop');
     </p>
   </div>
 </section>
- <!-- Capabilities Section Start -->
-<section class="container mx-auto px-3 mt-20">
-
+<!-- Capabilities Section Start -->
+<section class="hale_container mt-20">
   <!-- Section Title -->
   <span class="text-[#111827] font-bold text-2xl">Our Capabilities</span>
-
   <!-- Capabilities Grid -->
   <div class="mt-12 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-2">
-
     <!-- Capability Items -->
     <div class="icon_box">
       <img alt="International Sourcing"
         src="<?php echo get_template_directory_uri(); ?>/assets/images/category/glob.png" />
-      <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">International Sourcing</h6>
+      <h6 class="">International Sourcing</h6>
     </div>
 
     <div class="icon_box">
       <img alt="Easy Price Matching"
         src="<?php echo get_template_directory_uri(); ?>/assets/images/category/price_icon.png" />
-      <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Easy Price Matching</h6>
+      <h6 class="">Easy Price Matching</h6>
     </div>
 
     <div class="icon_box">
       <img alt="3D Design Studio" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/studio.png" />
-      <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">3D Design Studio</h6>
+      <h6 class="">3D Design Studio</h6>
     </div>
 
     <div class="icon_box">
       <img alt="Multiple Lead Times Option"
         src="<?php echo get_template_directory_uri(); ?>/assets/images/category/calculator.png" />
-      <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Multiple Lead Times Option to Fit Your Budget
+      <h6 class="">Multiple Lead Times Option to Fit Your Budget
       </h6>
     </div>
 
     <div class="icon_box">
-      <img alt="Printing Capacity" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/capacity.png" />
-      <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Printing Capacity of One Million Quantities in
+      <img alt="Printing Capacity"
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/capacity.png" />
+      <h6 class="">Printing Capacity of One Million Quantities in
         One Day</h6>
     </div>
 
     <div class="icon_box">
       <img alt="24/7 Service" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/agent.png" />
-      <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">24/7 Service</h6>
+      <h6 class="">24/7 Service</h6>
     </div>
 
     <div class="icon_box">
       <img alt="Flexible Payment Terms"
         src="<?php echo get_template_directory_uri(); ?>/assets/images/category/payment.png" />
-      <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Flexible Payment Terms</h6>
+      <h6 class="">Flexible Payment Terms</h6>
     </div>
 
     <div class="icon_box">
       <img alt="Warehousing and IMS"
         src="<?php echo get_template_directory_uri(); ?>/assets/images/category/house.png" />
-      <h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Warehousing and IMS</h6>
+      <h6 class="">Warehousing and IMS</h6>
     </div>
 
   </div>
-
   <!-- Buttons -->
   <div class="flex flex-col sm:flex-row text-center gap-4 mt-6">
-    <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/category/product-by-industry#">
+    <a class="btn_secondry" href="/category/product-by-industry#">
       Browse Our Catalogue
     </a>
-    <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/category/product-by-industry#">
+    <a class="btn_secondry" href="/category/product-by-industry#">
       View Company Profile
     </a>
   </div>
-
 </section>
- <!-- Capabilities Section End -->
+<!-- Capabilities Section End -->
 
 <?php
 get_template_part('template-parts/woo/product-faq');

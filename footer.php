@@ -14,91 +14,74 @@
 
 <footer class="pt-14 pb-4 relative">
     <div class="hale_container grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 justify-between gap-7">
-
         <!-- Company -->
         <div>
             <h6 class="footer_title">
                 Company
                 <span class=""></span>
             </h6>
-            <ul class="flex flex-col gap-2.5">
-                <li><a href="<?php echo home_url(); ?>" class="footer_link">
-                        <span class="marker"></span>Home</a></li>
-                <li><a href="<?php echo home_url('/about-us'); ?>" class="footer_link">
-                        <span class="marker"></span>About Us</a></li>
-                <li><a href="<?php echo home_url('/categories'); ?>" class="footer_link">
-                        <span class="marker"></span>Product By Industry</a></li>
-                <li><a href="<?php echo home_url('/products'); ?>" class="footer_link">
-                        <span class="marker"></span>Products</a></li>
-                <li><a href="<?php echo home_url('/about-us#testimonials'); ?>" class="footer_link">
-                        <span class="marker"></span>Testimonials</a></li>
-                <li><a href="<?php echo home_url('/about-us#faqs'); ?>" class="footer_link">
-                        <span class="marker"></span>FAQ's</a></li>
-                <li><a href="<?php echo home_url('/contact-us'); ?>" class="footer_link">
-                        <span class="marker"></span>Contact</a></li>
-            </ul>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'company',
+                'container' => false,
+                'menu_class' => 'flex flex-col gap-2.5',
+                'fallback_cb' => false,
+                'link_before' => '<span class="marker"></span>',
+                'link_after' => '',
+            ));
+            ?>
         </div>
-
         <!-- Products Packaging -->
         <div>
             <h6 class="footer_title">
                 Products Packaging
                 <span class=""></span>
             </h6>
-            <ul class="flex flex-col gap-2.5">
-                <li><a href="<?php echo home_url('/category/cosmetic-boxes'); ?>" class="footer_link">
-                        <span class="marker"></span>Cosmetic Boxes</a></li>
-                <li><a href="<?php echo home_url('/category/cardboard-boxes'); ?>" class="footer_link">
-                        <span class="marker"></span>Cardboard Boxes</a></li>
-                <li><a href="<?php echo home_url('/category/cbd-boxes'); ?>" class="footer_link">
-                        <span class="marker"></span>CBD Boxes</a></li>
-                <li><a href="<?php echo home_url('/category/display-boxes'); ?>" class="footer_link">
-                        <span class="marker"></span>Display Boxes</a></li>
-                <li><a href="<?php echo home_url('/category/bottle-boxes'); ?>" class="footer_link">
-                        <span class="marker"></span>Bottle Boxes</a></li>
-                <li><a href="<?php echo home_url('/category/retail-boxes'); ?>" class="footer_link">
-                        <span class="marker"></span>Retail Boxes</a></li>
-                <li><a href="#" class="footer_link">
-                        <span class="marker"></span>Sustainable Packaging</a></li>
-            </ul>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'packaging',
+                'container' => false,
+                'menu_class' => 'flex flex-col gap-2.5',
+                'fallback_cb' => false,
+                'link_before' => '<span class="marker"></span>',
+                'link_after' => '',
+            ));
+            ?>
         </div>
-
         <!-- Packaging Style -->
         <div>
             <h6 class="footer_title">
                 Packaging Style
                 <span class=""></span>
             </h6>
-            <ul class="flex flex-col gap-2.5">
-                <li><a href="#" class="footer_link">
-                        <span class="marker"></span>Sleeve & Tray</a></li>
-                <li><a href="#" class="footer_link">
-                        <span class="marker"></span>Die Cut Boxes</a></li>
-                <li><a href="#" class="footer_link">
-                        <span class="marker"></span>Cigerate Boxes</a></li>
-                <li><a href="#" class="footer_link">
-                        <span class="marker"></span>Child Resistance Boxes</a></li>
-                <li><a href="#" class="footer_link">
-                        <span class="marker"></span>Window Boxes</a></li>
-                <li><a href="#" class="footer_link">
-                        <span class="marker"></span>Gable Boxes</a></li>
-            </ul>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'style',
+                'container' => false,
+                'menu_class' => 'flex flex-col gap-2.5',
+                'fallback_cb' => false,
+                'link_before' => '<span class="marker"></span>',
+                'link_after' => '',
+            ));
+            ?>
         </div>
-
         <!-- Inspiration -->
         <div>
             <h6 class="footer_title">
                 Inspiration
                 <span class=""></span>
             </h6>
-            <ul class="flex flex-col gap-2.5">
-                <li><a href="<?php echo home_url('/blog'); ?>" class="footer_link">
-                        <span class="marker"></span>Blog</a></li>
-                <li><a href="#" class="footer_link">
-                        <span class="marker"></span>Client Success Stories</a></li>
-            </ul>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'inspiration',
+                'container' => false,
+                'menu_class' => 'flex flex-col gap-2.5',
+                'fallback_cb' => false,
+                'link_before' => '<span class="marker"></span>',
+                'link_after' => '',
+            ));
+            ?>
         </div>
-
         <!-- Contact -->
         <div>
             <h6 class="footer_title">
@@ -112,7 +95,6 @@
                         <span class="marker"></span>info@halepathpack.com</a></li>
             </ul>
         </div>
-
     </div>
 
     <!-- Reviews & Partners -->

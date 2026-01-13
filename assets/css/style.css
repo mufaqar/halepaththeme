@@ -314,6 +314,9 @@
   .my-3 {
     margin-block: calc(var(--spacing) * 3);
   }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
+  }
   .my-20 {
     margin-block: calc(var(--spacing) * 20);
   }
@@ -491,9 +494,6 @@
   .h-full {
     height: 100%;
   }
-  .h-full\! {
-    height: 100% !important;
-  }
   .\!max-h-\[435px\] {
     max-height: 435px !important;
   }
@@ -565,9 +565,6 @@
   }
   .max-w-\[2200px\] {
     max-width: 2200px;
-  }
-  .max-w-full {
-    max-width: 100%;
   }
   .min-w-\[32px\] {
     min-width: 32px;
@@ -724,6 +721,9 @@
   .rounded-\[20px\] {
     border-radius: 20px;
   }
+  .rounded-\[20px\]\! {
+    border-radius: 20px !important;
+  }
   .rounded-\[21px\] {
     border-radius: 21px;
   }
@@ -772,9 +772,6 @@
   }
   .border-\[\#47AFC3\] {
     border-color: #47AFC3;
-  }
-  .border-\[\#CACACA\] {
-    border-color: #CACACA;
   }
   .border-black {
     border-color: var(--color-black);
@@ -891,9 +888,6 @@
   }
   .p-\[2px\] {
     padding: 2px;
-  }
-  .p-\[16px\] {
-    padding: 16px;
   }
   .p-\[18px\] {
     padding: 18px;
@@ -1069,17 +1063,9 @@
     --tw-leading: 60px;
     line-height: 60px;
   }
-  .leading-none {
-    --tw-leading: 1;
-    line-height: 1;
-  }
   .leading-normal {
     --tw-leading: var(--leading-normal);
     line-height: var(--leading-normal);
-  }
-  .\!font-normal {
-    --tw-font-weight: var(--font-weight-normal) !important;
-    font-weight: var(--font-weight-normal) !important;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -1207,10 +1193,6 @@
     --tw-ease: linear;
     transition-timing-function: linear;
   }
-  .outline-none {
-    --tw-outline-style: none;
-    outline-style: none;
-  }
   .group-hover\:scale-110 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1219,11 +1201,6 @@
         --tw-scale-z: 110%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
       }
-    }
-  }
-  .placeholder\:text-txt_Clr {
-    &::placeholder {
-      color: var(--txt_Clr);
     }
   }
   .before\:absolute {
@@ -1954,8 +1931,7 @@
     max-width: 96rem;
   }
   margin-inline: auto;
-  max-width: calc(var(--spacing) * 360);
-  padding-inline: calc(var(--spacing) * 4);
+  padding-inline: calc(var(--spacing) * 3);
 }
 .h1 {
   margin-bottom: calc(var(--spacing) * 10);
@@ -1985,8 +1961,8 @@
   background-color: var(--primary);
   padding-inline: calc(var(--spacing) * 5);
   padding-block: calc(var(--spacing) * 4);
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
   --tw-font-weight: var(--font-weight-medium);
   font-weight: var(--font-weight-medium);
   color: var(--color-white);
@@ -2018,8 +1994,8 @@
   background-color: var(--secondary);
   padding-inline: calc(var(--spacing) * 9);
   padding-block: calc(var(--spacing) * 3);
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
   --tw-font-weight: var(--font-weight-medium);
   font-weight: var(--font-weight-medium);
   color: var(--color-white);
@@ -2255,10 +2231,10 @@
   border-color: transparent;
   background-color: var(--color-white);
   padding-inline: calc(var(--spacing) * 7);
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
-  --tw-font-weight: var(--font-weight-normal);
-  font-weight: var(--font-weight-normal);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
   color: #7C7C7C;
   --tw-outline-style: none;
   outline-style: none;
@@ -2504,6 +2480,15 @@
   padding-inline: calc(var(--spacing) * 1.5);
   padding-block: 15px;
 }
+.icon_box h6 {
+  margin-top: calc(var(--spacing) * 3);
+  text-align: center;
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
+  --tw-font-weight: var(--font-weight-normal) !important;
+  font-weight: var(--font-weight-normal) !important;
+  color: #111827;
+}
 .header_link {
   display: block;
   padding-block: calc(var(--spacing) * 2);
@@ -2534,8 +2519,10 @@
   border-bottom-width: 2px;
   border-color: var(--title_Clr);
 }
-.footer_link {
+footer ul li a {
   display: flex;
+  width: fit-content;
+  cursor: pointer;
   align-items: center;
   gap: calc(var(--spacing) * 2);
   font-size: var(--text-base);
@@ -2544,7 +2531,7 @@
   font-weight: var(--font-weight-normal);
   color: var(--title_Clr);
 }
-.footer_link span.marker {
+footer ul li a span.marker {
   display: block;
   height: 11px;
   width: 3px;

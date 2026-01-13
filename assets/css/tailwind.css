@@ -89,7 +89,7 @@
 ========================= */
 
 .hale_container {
-  @apply container mx-auto px-4 max-w-360;
+  @apply container mx-auto px-3;
 }
 
 .h1 {
@@ -97,7 +97,7 @@
 }
 
 .btn_primary {
-  @apply bg-primary hover:bg-white px-5 py-4 text-lg font-medium text-white hover:text-primary rounded-full border-2 border-primary flex items-center gap-2 w-fit;
+  @apply bg-primary hover:bg-white px-5 py-4 text-base font-medium text-white hover:text-primary rounded-full border-2 border-primary flex items-center gap-2 w-fit;
 }
 
 .hale_flex {
@@ -105,7 +105,7 @@
 }
 
 .btn_secondry {
-  @apply bg-secondary hover:bg-white px-9 py-3 text-lg font-medium text-white hover:text-secondary rounded-full border-2 border-secondary;
+  @apply bg-secondary hover:bg-white px-9 py-3 text-base font-medium text-white hover:text-secondary rounded-full border-2 border-secondary;
 }
 
 .h2 {
@@ -209,7 +209,7 @@
 }
 
 .hale_input {
-  @apply text-lg md:leading-[56px] font-normal text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-white px-7 border border-transparent focus:border-secondary outline-none rounded-full w-full;
+  @apply text-sm md:leading-[56px] font-medium text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-white px-7 border border-transparent focus:border-secondary outline-none rounded-full w-full;
 }
 
 .form_row {
@@ -260,40 +260,53 @@
   @apply px-6 py-6 w-full text-[#1C1C1C] text-left text-xl flex items-center gap-4 justify-between cursor-pointer;
 }
 
-.faq-item .faq-content p{
+.faq-item .faq-content p {
   @apply text-lg px-6 text-left text-[#1C1C1C] pb-6;
 }
 
-.testi_box{
+.testi_box {
   @apply px-1 pb-4 md:h-[332px];
 }
-.testi_box .testi_inner{
+
+.testi_box .testi_inner {
   @apply h-full p-8 bg-white mt-10 border shadow rounded-[19px] border-black/15;
 }
-.testi_box .testi_img{
+
+.testi_box .testi_img {
   @apply p-[2px] border-[1.5px] border-[#47AFC3] w-fit rounded-full overflow-hidden;
 }
-.testi_box .testi_title{
+
+.testi_box .testi_title {
   @apply font-semibold text-2xl text-[#1C1C1C];
 }
-.icon_box{
+
+.icon_box {
   @apply bg-[#EFEFEF] flex flex-col justify-center items-center px-1.5 py-[15px] rounded-[16px];
 }
-.header_link{
+.icon_box h6{
+  @apply text-[#111827] text-center !font-normal text-xs mt-3;
+}
+
+.header_link {
   @apply text-[15px] font-medium uppercase text-title_Clr hover:text-primary py-2 block;
 }
-.footer_title{
+
+.footer_title {
   @apply text-2xl font-semibold text-title_Clr mb-6;
 }
-.footer_title span{
+
+.footer_title span {
   @apply block border-b-2 border-title_Clr max-w-[61px] mt-3;
 }
-.footer_link{
-  @apply text-base font-normal text-title_Clr flex items-center gap-2;
+
+footer ul li a {
+  @apply text-base font-normal text-title_Clr flex items-center gap-2 w-fit cursor-pointer;
 }
-.footer_link span.marker{
+
+footer ul li a span.marker {
   @apply w-[3px] bg-title_Clr h-[11px] block;
 }
+
 /* width */
 .max_content ::-webkit-scrollbar {
   width: 6px;

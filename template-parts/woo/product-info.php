@@ -89,8 +89,8 @@
 	</script>
 </section>
 
-<section class="my-20">
-	<div class="container md:flex items-center gap-5 md:gap-0 mx-auto px-3 flex-row-reverse">
+<section class="my-10">
+	<div class="hale_container md:flex items-center gap-5 md:gap-0 flex-row-reverse">
 		<!-- Image Section -->
 		<figure class="md:w-1/2">
 			<img alt="Why Us Image" src="<?php echo get_template_directory_uri(); ?>/assets/images/product/candle.png"
@@ -112,8 +112,8 @@
 	</div>
 </section>
 
-<section class="my-20">
-	<div class="container md:flex items-center gap-5 md:gap-0 mx-auto px-3 flex-row">
+<section class="my-10">
+	<div class="hale_container md:flex items-center gap-5 md:gap-0 flex-row">
 		<!-- Image Section -->
 		<figure class="md:w-1/2">
 			<img alt="Why Us Image" src="<?php echo get_template_directory_uri(); ?>/assets/images/product/disposle.png"
@@ -138,7 +138,7 @@
 <section class="pt-16">
 	<h2 class="font-extrabold md:text-4xl text-2xl text-center text-title_Clr mb-5">Learn More About Custom Retail
 		Boxes</h2>
-	<div class="container px-3 desc_content mx-auto mt-5 overflow-y-auto max_content max-h-[812px]">
+	<div class="hale_container desc_content mt-5 overflow-y-auto max_content max-h-[812px]">
 		<h2><strong>Custom Candle Accessories Boxes: Elegant Packaging for Every Detail</strong></h2>
 		<p>In the luxury candle market, presentation extends beyond the candle itself. High-end accessories like wick
 			trimmers, snuffers, and matches also deserve packaging that reflects sophistication and purpose. At
@@ -164,10 +164,8 @@
 			brands deliver a seamless, luxurious experience—down to the smallest accessory.</p>
 	</div>
 </section>
-
-
 <!-- Capabilities Section Start -->
-<section class="container mx-auto px-3 mt-20">
+<section class="hale_container mt-20">
 	<!-- Section Title -->
 	<span class="text-[#111827] font-bold text-2xl">Our Capabilities</span>
 	<!-- Capabilities Grid -->
@@ -176,61 +174,65 @@
 		<div class="icon_box">
 			<img alt="International Sourcing"
 				src="<?php echo get_template_directory_uri(); ?>/assets/images/category/glob.png" />
-			<h6 class="text-[#111827] text-center !font-normal text-xs mt-3">International Sourcing</h6>
+			<h6 class="">International Sourcing</h6>
 		</div>
+
 		<div class="icon_box">
 			<img alt="Easy Price Matching"
 				src="<?php echo get_template_directory_uri(); ?>/assets/images/category/price_icon.png" />
-			<h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Easy Price Matching</h6>
+			<h6 class="">Easy Price Matching</h6>
 		</div>
+
 		<div class="icon_box">
 			<img alt="3D Design Studio"
 				src="<?php echo get_template_directory_uri(); ?>/assets/images/category/studio.png" />
-			<h6 class="text-[#111827] text-center !font-normal text-xs mt-3">3D Design Studio</h6>
+			<h6 class="">3D Design Studio</h6>
 		</div>
+
 		<div class="icon_box">
 			<img alt="Multiple Lead Times Option"
 				src="<?php echo get_template_directory_uri(); ?>/assets/images/category/calculator.png" />
-			<h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Multiple Lead Times Option to Fit Your
-				Budget
+			<h6 class="">Multiple Lead Times Option to Fit Your Budget
 			</h6>
 		</div>
+
 		<div class="icon_box">
 			<img alt="Printing Capacity"
 				src="<?php echo get_template_directory_uri(); ?>/assets/images/category/capacity.png" />
-			<h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Printing Capacity of One Million Quantities
-				in
+			<h6 class="">Printing Capacity of One Million Quantities in
 				One Day</h6>
 		</div>
+
 		<div class="icon_box">
 			<img alt="24/7 Service"
 				src="<?php echo get_template_directory_uri(); ?>/assets/images/category/agent.png" />
-			<h6 class="text-[#111827] text-center !font-normal text-xs mt-3">24/7 Service</h6>
+			<h6 class="">24/7 Service</h6>
 		</div>
+
 		<div class="icon_box">
 			<img alt="Flexible Payment Terms"
 				src="<?php echo get_template_directory_uri(); ?>/assets/images/category/payment.png" />
-			<h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Flexible Payment Terms</h6>
+			<h6 class="">Flexible Payment Terms</h6>
 		</div>
+
 		<div class="icon_box">
 			<img alt="Warehousing and IMS"
 				src="<?php echo get_template_directory_uri(); ?>/assets/images/category/house.png" />
-			<h6 class="text-[#111827] text-center !font-normal text-xs mt-3">Warehousing and IMS</h6>
+			<h6 class="">Warehousing and IMS</h6>
 		</div>
+
 	</div>
 	<!-- Buttons -->
 	<div class="flex flex-col sm:flex-row text-center gap-4 mt-6">
-		<a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/category/product-by-industry#">
+		<a class="btn_secondry" href="/category/product-by-industry#">
 			Browse Our Catalogue
 		</a>
-		<a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/category/product-by-industry#">
+		<a class="btn_secondry" href="/category/product-by-industry#">
 			View Company Profile
 		</a>
 	</div>
 </section>
 <!-- Capabilities Section End -->
-
-
 
 <?php
 get_template_part('template-parts/woo/product-faq'); ?>

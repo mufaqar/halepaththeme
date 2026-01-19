@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <?php if (is_search()) { ?>
-        <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="noindex, nofollow" />
     <?php } ?>
     <title>
         <?php
@@ -52,6 +52,17 @@
                 <p class="text-base font-medium text-white">
                     Welcome To Hale Path Packaging
                 </p>
+
+                <div>
+
+                    <div class="relative w-full max-w-md mx-auto">
+                        <input type="text" id="live-search" placeholder="Search products..." autocomplete="off"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                        <div id="live-search-results"
+                            class="absolute z-50 w-full mt-1 bg-white rounded-lg shadow-lg hidden"></div>
+                    </div>
+                </div>
 
                 <ul class="flex items-center divide-x-2 divide-white">
                     <li>
@@ -129,53 +140,82 @@
         </header>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
 
-                const toggleBtn = document.getElementById('menu-toggle');
-                const menu = document.getElementById('primary-menu');
+            const toggleBtn = document.getElementById('menu-toggle');
+            const menu = document.getElementById('primary-menu');
 
-                /* ===============================
-                   MAIN MOBILE MENU TOGGLE
-                =============================== */
-                if (toggleBtn && menu) {
-                    toggleBtn.addEventListener('click', function () {
-                        menu.classList.toggle('hidden');
-                    });
-                }
+            /* ===============================
+               MAIN MOBILE MENU TOGGLE
+            =============================== */
+            if (toggleBtn && menu) {
+                toggleBtn.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                });
+            }
 
-                /* ===============================
-                   SUBMENU TOGGLE (ARROW ONLY)
-                =============================== */
-                document.querySelectorAll('.submenu-toggle').forEach(btn => {
-                    const parentLi = btn.closest('li');
-                    const submenu = parentLi.querySelector('.sub-menu');
+            /* ===============================
+               SUBMENU TOGGLE (ARROW ONLY)
+            =============================== */
+            document.querySelectorAll('.submenu-toggle').forEach(btn => {
+                const parentLi = btn.closest('li');
+                const submenu = parentLi.querySelector('.sub-menu');
 
-                    if (!submenu) return;
+                if (!submenu) return;
 
-                    // Show submenu on mouse enter
-                    btn.addEventListener('mouseenter', function (e) {
-                        e.preventDefault();
-                        e.stopPropagation();
+                // Show submenu on mouse enter
+                btn.addEventListener('mouseenter', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
 
-                        // Close sibling submenus
-                        parentLi.parentElement.querySelectorAll('.sub-menu').forEach(ul => {
-                            if (ul !== submenu) {
-                                ul.classList.add('hidden');
-                            }
-                        });
-
-                        submenu.classList.remove('hidden');
-                        // btn.classList.add('-rotate-90'); // Optional rotation
+                    // Close sibling submenus
+                    parentLi.parentElement.querySelectorAll('.sub-menu').forEach(ul => {
+                        if (ul !== submenu) {
+                            ul.classList.add('hidden');
+                        }
                     });
 
-                    // Hide submenu on mouse leave
-                    parentLi.addEventListener('mouseleave', function (e) {
-                        e.preventDefault();
-                        e.stopPropagation();
+                    submenu.classList.remove('hidden');
+                    // btn.classList.add('-rotate-90'); // Optional rotation
+                });
 
-                        submenu.classList.add('hidden');
-                        // btn.classList.remove('-rotate-90'); // Optional rotation reset
-                    });
+                // Hide submenu on mouse leave
+                parentLi.addEventListener('mouseleave', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    submenu.classList.add('hidden');
+                    // btn.classList.remove('-rotate-90'); // Optional rotation reset
                 });
             });
+        });
         </script>
+
+        <script>
+jQuery(document).ready(function($){
+
+  $('#live-search').on('keyup', function(){
+
+    var keyword = $(this).val();
+
+    if(keyword.length < 2){
+      $('#live-search-results').addClass('hidden').html('');
+      return;
+    }
+
+    $.ajax({
+      url: '<?php echo admin_url("admin-ajax.php"); ?>',
+      type: 'POST',
+      data: {
+        action: 'live_search_products',
+        keyword: keyword
+      },
+      success: function(res){
+        $('#live-search-results').removeClass('hidden').html(res);
+      }
+    });
+
+  });
+
+});
+</script>

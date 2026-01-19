@@ -9,6 +9,7 @@
 
 
 include_once get_template_directory() . '/inc/extra.php';
+include_once get_template_directory() . '/inc/ajax.php';
 
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.

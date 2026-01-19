@@ -3,43 +3,48 @@
 		Custom Retail Boxes Gallery
 	</h2>
 	<?php
-	// Static images array
-	$images = [
-		[
-			'url' => get_template_directory_uri() . '/assets/images/product/gallery1.jpg',
-			'alt' => 'Custom Retail Box 1',
-		],
-		[
-			'url' => get_template_directory_uri() . '/assets/images/product/gallery2.jpg',
-			'alt' => 'Custom Retail Box 2',
-		],
-		[
-			'url' => get_template_directory_uri() . '/assets/images/product/gallery3.jpg',
-			'alt' => 'Custom Retail Box 3',
-		],
-		[
-			'url' => get_template_directory_uri() . '/assets/images/product/gallery4.jpg',
-			'alt' => 'Custom Retail Box 4',
-		],
-		[
-			'url' => get_template_directory_uri() . '/assets/images/product/gallery5.jpg',
-			'alt' => 'Custom Retail Box 5',
-		],
-		[
-			'url' => get_template_directory_uri() . '/assets/images/product/gallery6.jpg',
-			'alt' => 'Custom Retail Box 5',
-		],
-		[
-			'url' => get_template_directory_uri() . '/assets/images/product/gallery7.jpg',
-			'alt' => 'Custom Retail Box 5',
-		],
-		[
-			'url' => get_template_directory_uri() . '/assets/images/product/gallery8.png',
-			'alt' => 'Custom Retail Box 5',
-		],
-	];
 
-	if (empty($images)) {
+
+	$product_gallery =  get_field('product_gallery');
+
+	//var_dump($product_gallery);
+	// Static images array
+	// $images = [
+	// 	[
+	// 		'url' => get_template_directory_uri() . '/assets/images/product/gallery1.jpg',
+	// 		'alt' => 'Custom Retail Box 1',
+	// 	],
+	// 	[
+	// 		'url' => get_template_directory_uri() . '/assets/images/product/gallery2.jpg',
+	// 		'alt' => 'Custom Retail Box 2',
+	// 	],
+	// 	[
+	// 		'url' => get_template_directory_uri() . '/assets/images/product/gallery3.jpg',
+	// 		'alt' => 'Custom Retail Box 3',
+	// 	],
+	// 	[
+	// 		'url' => get_template_directory_uri() . '/assets/images/product/gallery4.jpg',
+	// 		'alt' => 'Custom Retail Box 4',
+	// 	],
+	// 	[
+	// 		'url' => get_template_directory_uri() . '/assets/images/product/gallery5.jpg',
+	// 		'alt' => 'Custom Retail Box 5',
+	// 	],
+	// 	[
+	// 		'url' => get_template_directory_uri() . '/assets/images/product/gallery6.jpg',
+	// 		'alt' => 'Custom Retail Box 5',
+	// 	],
+	// 	[
+	// 		'url' => get_template_directory_uri() . '/assets/images/product/gallery7.jpg',
+	// 		'alt' => 'Custom Retail Box 5',
+	// 	],
+	// 	[
+	// 		'url' => get_template_directory_uri() . '/assets/images/product/gallery8.png',
+	// 		'alt' => 'Custom Retail Box 5',
+	// 	],
+	// ];
+
+	if (empty($product_gallery)) {
 		return;
 	}
 	?>
@@ -61,7 +66,7 @@
 		<!-- Swiper -->
 		<div class="swiper mySwiper h-[480px]">
 			<div class="swiper-wrapper">
-				<?php foreach ($images as $index => $image): ?>
+				<?php foreach ($product_gallery as $index => $image): ?>
 					<div class="swiper-slide">
 						<figure class="rounded-2xl overflow-hidden">
 							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"

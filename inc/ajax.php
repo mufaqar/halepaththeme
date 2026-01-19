@@ -43,4 +43,3 @@ function live_search_products(){
 
   wp_die();
 }
-

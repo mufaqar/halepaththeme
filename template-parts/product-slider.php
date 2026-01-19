@@ -2,43 +2,72 @@
 $direction     = $args['direction'] ?? 'ltr';
 $slidesToShow  = $args['slidesToShow'] ?? 5;
 
-$productsRes = [
-    ['title' => 'Cardboard Box',     'image' => get_template_directory_uri() . '/assets/images/product/boxgal2.png', 'slug' => 'cardboard-box'],
-    ['title' => 'Custom Packaging',  'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png', 'slug' => 'custom-packaging'],
-    ['title' => 'Eco Friendly Box',  'image' => get_template_directory_uri() . '/assets/images/product/boxgal4.png', 'slug' => 'eco-friendly-box'],
-    ['title' => 'Retail Packaging',  'image' => get_template_directory_uri() . '/assets/images/product/boxgal5.png', 'slug' => 'retail-packaging'],
-    ['title' => 'Mascara Boxes',     'image' => get_template_directory_uri() . '/assets/images/product/boxgal6.png', 'slug' => 'mascara-boxes'],
-    ['title' => 'CBD Cream Boxes',   'image' => get_template_directory_uri() . '/assets/images/product/boxgal4.png', 'slug' => 'cbd-cream-boxes'],
+/**
+ * Pass category slug via $args['category']
+ * Example:
+ * get_template_part('template-parts/product-slider', null, [
+ *   'category' => 'packaging',
+ *   'slidesToShow' => 4,
+ *   'direction' => 'ltr'
+ * ]);
+ */
+$category = $args['category'] ?? '';
+
+$query_args = [
+    'post_type'      => 'product',
+    'posts_per_page' => 10,
+    'post_status'    => 'publish',
 ];
+
+if ( ! empty($category) ) {
+    $query_args['tax_query'] = [
+        [
+            'taxonomy' => 'product_cat',
+            'field'    => 'slug',
+            'terms'    => $category,
+        ]
+    ];
+}
+
+$products = new WP_Query($query_args);
 ?>
 
-<div class="product-slider"
-     data-direction="<?php echo esc_attr($direction); ?>"
-     data-slides="<?php echo esc_attr($slidesToShow); ?>">
+<?php if ( $products->have_posts() ) : ?>
+<div class="product-slider" data-direction="<?php echo esc_attr($direction); ?>"
+    data-slides="<?php echo esc_attr($slidesToShow); ?>">
 
-    <?php foreach ($productsRes as $p): ?>
-        <div class="p-3">
-            <a href="<?php echo esc_url(site_url('/product/' . $p['slug'])); ?>">
-                <img
-                    src="<?php echo esc_url($p['image']); ?>"
-                    alt="<?php echo esc_attr($p['title']); ?>"
-                    class="maskimage img-full"
-                >
-            </a>
+    <?php while ( $products->have_posts() ) : $products->the_post(); ?>
+    <?php
+        global $product;
+        if ( ! $product ) continue;
 
-            <a href="<?php echo esc_url(site_url('/product/' . $p['slug'])); ?>"
-               class="box_link">
-                <?php echo esc_html($p['title']); ?>
-            </a>
-        </div>
-    <?php endforeach; ?>
+        $image_id  = $product->get_image_id();
+        $image_url = $image_id
+            ? wp_get_attachment_image_url($image_id, 'large')
+            : wc_placeholder_img_src();
+        ?>
+    <div class="p-3">
+        <a href="<?php the_permalink(); ?>">
+            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
+                class="maskimage img-full">
+        </a>
+
+        <a href="<?php the_permalink(); ?>" class="box_link">
+            <?php the_title(); ?>
+        </a>
+    </div>
+    <?php endwhile; ?>
 
 </div>
+<?php endif; ?>
+
+<?php wp_reset_postdata(); ?>
+
 
 <script>
-jQuery(document).ready(function ($) {
-    $('.product-slider').each(function () {
-        const slides    = $(this).data('slides') || 5;
+jQuery(document).ready(function($) {
+    $('.product-slider').each(function() {
+        const slides = $(this).data('slides') || 4;
         const direction = $(this).data('direction') || 'ltr';
 
         $(this).slick({
@@ -54,11 +83,24 @@ jQuery(document).ready(function ($) {
             slidesToShow: slides,
             slidesToScroll: 1,
             rtl: direction === 'rtl',
-
-            responsive: [
-                { breakpoint: 1024, settings: { slidesToShow: 3 } },
-                { breakpoint: 600,  settings: { slidesToShow: 2 } },
-                { breakpoint: 480,  settings: { slidesToShow: 1 } }
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
             ]
         });
     });

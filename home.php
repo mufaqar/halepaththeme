@@ -221,11 +221,15 @@ $featureproductsRes = [
 <!-- Product Slider Starts -->
 <section class="py-12">
     <?php
-    get_template_part(
-        'template-parts/product-slider',
-        null,
-        ['direction' => 'ltr', 'slidesToShow' => 5,]
-    ); ?>
+        get_template_part(
+            'template-parts/product-slider',
+            null,
+            [
+                'category'     => 'custom-boxes',
+                'slidesToShow' => 5,
+                'direction'    => 'ltr'
+            ]
+        );?>
 </section>
 <!-- Product Slider end -->
 <!-- CTA Starts -->

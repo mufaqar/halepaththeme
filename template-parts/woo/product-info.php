@@ -120,9 +120,9 @@
 				$product_info_box1_description = $product_extra_info['info_box']['description'];	
 				$product_info_box1_image = $product_extra_info['info_box']['image'];
 
-				$product_info_box2_title = $product_extra_info['info_box']['title'];
-				$product_info_box2_description = $product_extra_info['info_box']['description'];	
-				$product_info_box2_image = $product_extra_info['info_box']['image'];
+				$product_info_box2_title = $product_extra_info['info_box2']['title'];
+				$product_info_box2_description = $product_extra_info['info_box2']['description'];	
+				$product_info_box2_image = $product_extra_info['info_box2']['image'];
 
 			
 				?>

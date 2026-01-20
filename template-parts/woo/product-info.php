@@ -107,20 +107,29 @@
 
 <section class="my-10">
 	<div class="hale_container md:flex items-center gap-5 md:gap-0 flex-row-reverse">
+
+	<?php 	$product_extra_info =  get_field('product_extra_info');
+
+				$product_info_box1_title = $product_extra_info['info_box']['title'];
+				$product_info_box1_description = $product_extra_info['info_box']['description'];	
+				$product_info_box1_image = $product_extra_info['info_box']['image'];
+
+				$product_info_box2_title = $product_extra_info['info_box']['title'];
+				$product_info_box2_description = $product_extra_info['info_box']['description'];	
+				$product_info_box2_image = $product_extra_info['info_box']['image'];
+
+			
+				?>
 		
 		<figure class="md:w-1/2">
-			<img alt="Why Us Image" src="<?php echo get_template_directory_uri(); ?>/assets/images/product/candle.png"
+			<img alt="Why Us Image" src="<?php echo esc_url($product_info_box1_image); ?>"
 				height="424" width="678">
 		</figure>
 		<div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
-			<h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">Premium Candle
-				Accessories Boxes for the Packaging Industry</h4>
-			<p class="mb-7 text-center md:text-left">In today’s evolving packaging industry, candle accessories boxes
-				play a vital role in brand presentation. Hale Path Packaging crafts elegant, eco-friendly boxes for
-				tools like wick trimmers, snuffers, and matches. Designed for protection and beauty, our packaging
-				enhances unboxing experiences while aligning with sustainability trends. We offer customizable shapes,
-				inserts, and luxury finishes to match your brand style. With Hale Path Packaging, elevate every element
-				of your candle offering—from scent to storage—with premium, detail-focused packaging solutions.
+			<h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4"><?php echo $product_info_box1_title; ?></h4>
+
+				
+			<p class="mb-7 text-center md:text-left"><?php echo $product_info_box1_description; ?>
 
 			</p>
 			<a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="#">Get Custom Quote</a>
@@ -132,18 +141,12 @@
 	<div class="hale_container md:flex items-center gap-5 md:gap-0 flex-row">
 	
 		<figure class="md:w-1/2">
-			<img alt="Why Us Image" src="<?php echo get_template_directory_uri(); ?>/assets/images/product/disposle.png"
+			<img alt="Why Us Image" src="<?php echo esc_url($product_info_box2_image); ?>"
 				height="424" width="678">
 		</figure>
 		<div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
-			<h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">Premium Candle
-				Accessories Boxes for the Packaging Industry</h4>
-			<p class="mb-7 text-center md:text-left">In today’s evolving packaging industry, candle accessories boxes
-				play a vital role in brand presentation. Hale Path Packaging crafts elegant, eco-friendly boxes for
-				tools like wick trimmers, snuffers, and matches. Designed for protection and beauty, our packaging
-				enhances unboxing experiences while aligning with sustainability trends. We offer customizable shapes,
-				inserts, and luxury finishes to match your brand style. With Hale Path Packaging, elevate every element
-				of your candle offering—from scent to storage—with premium, detail-focused packaging solutions.
+			<h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4"><?php echo $product_info_box2_title; ?></h4>
+			<p class="mb-7 text-center md:text-left"><?php echo $product_info_box2_description; ?>
 
 			</p>
 			<a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="#">Get Custom Quote</a>

@@ -102,14 +102,12 @@ if (is_product_category()) {
                 <?php echo esc_html($title); ?>
             </h1>
 
-            <p class="text-xl font-normal text-title_Clr mb-8">
+            <div class="text-xl font-normal text-title_Clr mb-8">
                 <?php global $product;
-                if ( $product->get_short_description() ) {
-                    echo '<div class="product-short-info">';
-                    echo wpautop( $product->get_short_description() );
-                    echo '</div>';
+                if ( $product->get_short_description() ) {               
+                    echo wpautop( $product->get_short_description() );                   
                 } ?>
-            </p>
+            </div>
 
             <!-- Product Gallery -->
             <?php get_template_part('template-parts/woo/product', 'gallery'); ?>

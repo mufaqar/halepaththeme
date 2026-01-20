@@ -152,32 +152,9 @@
 </section>
 
 <section class="pt-16">
-	<h2 class="font-extrabold md:text-4xl text-2xl text-center text-title_Clr mb-5">Learn More About Custom Retail
-		Boxes</h2>
+	<h2 class="font-extrabold md:text-4xl text-2xl text-center text-title_Clr mb-5">Learn More About <?php the_title()?></h2>
 	<div class="hale_container desc_content mt-5 overflow-y-auto max_content max-h-[812px]">
-		<h2><strong>Custom Candle Accessories Boxes: Elegant Packaging for Every Detail</strong></h2>
-		<p>In the luxury candle market, presentation extends beyond the candle itself. High-end accessories like wick
-			trimmers, snuffers, and matches also deserve packaging that reflects sophistication and purpose. At
-			<strong>Hale Path Packaging</strong>, we specialize in <strong>candle accessories boxes</strong> that
-			elevate your entire product line.
-		</p>
-		<h3><strong>Packaging Designed for Protection and Presentation</strong></h3>
-		<p>Our candle accessories boxes are crafted using sturdy, eco-conscious materials that provide secure storage
-			while enhancing visual appeal. Whether you're packaging individual accessories or offering a complete
-			candle care kit, our custom boxes ensure every piece is displayed with elegance and organized to
-			perfection.</p>
-		<h3><strong>Tailored to Modern Packaging Industry Needs</strong></h3>
-		<p>Today’s packaging industry demands sustainability, customization, and aesthetic excellence. Hale Path
-			Packaging delivers all three. We offer various box styles—magnetic closures, drawer boxes, and rigid
-			kits—with advanced finishing options like foil stamping, embossing, spot UV, and window cutouts. Each
-			design is carefully tailored to reflect your brand’s identity while providing functional excellence.</p>
-		<h3><strong>Sustainable and Brand-Driven</strong></h3>
-		<p>As eco-consciousness becomes a central theme in packaging, Hale Path Packaging stays ahead by using
-			recyclable and biodegradable materials. Our candle accessories boxes not only showcase your tools
-			beautifully but also support your commitment to sustainability.</p>
-		<h3><strong>Why Choose Hale Path Packaging?</strong></h3>
-		<p>With unmatched attention to detail and a passion for packaging innovation, Hale Path Packaging helps candle
-			brands deliver a seamless, luxurious experience—down to the smallest accessory.</p>
+		<?php the_content(); ?>
 	</div>
 </section>
 <!-- Capabilities Section Start -->

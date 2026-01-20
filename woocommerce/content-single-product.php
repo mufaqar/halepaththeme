@@ -103,9 +103,12 @@ if (is_product_category()) {
             </h1>
 
             <p class="text-xl font-normal text-title_Clr mb-8">
-                Hale Path Packaging offers custom candle accessories boxes that ensure elegance, durability, and secure
-                organization for tools like wick trimmers, snuffers, and matches. Our eco-friendly, customizable
-                packaging helps brands stand out with luxury and sustainability.
+                <?php global $product;
+                if ( $product->get_short_description() ) {
+                    echo '<div class="product-short-info">';
+                    echo wpautop( $product->get_short_description() );
+                    echo '</div>';
+                } ?>
             </p>
 
             <!-- Product Gallery -->

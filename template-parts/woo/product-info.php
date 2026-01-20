@@ -1,6 +1,6 @@
 <section class="mt-20 max-w-[2200px] mx-auto px-3 lg:px-0">
     <h2 class="text-2xl text-center mb-8 sm:text-3xl md:text-5xl font-bold">
-        Custom Retail Boxes Gallery
+        <?php the_title(); ?> Gallery
     </h2>
     <?php
 

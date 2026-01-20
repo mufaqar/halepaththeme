@@ -105,7 +105,7 @@
 	</script>
 </section>
 
-<!-- <section class="my-10">
+<section class="my-10">
 	<div class="hale_container md:flex items-center gap-5 md:gap-0 flex-row-reverse">
 		
 		<figure class="md:w-1/2">
@@ -126,9 +126,9 @@
 			<a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="#">Get Custom Quote</a>
 		</div>
 	</div>
-</section> -->
+</section>
 
-<!-- <section class="my-10">
+<section class="my-10">
 	<div class="hale_container md:flex items-center gap-5 md:gap-0 flex-row">
 	
 		<figure class="md:w-1/2">
@@ -149,7 +149,7 @@
 			<a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="#">Get Custom Quote</a>
 		</div>
 	</div>
-</section> -->
+</section>
 
 <section class="pt-16">
 	<h2 class="font-extrabold md:text-4xl text-2xl text-center text-title_Clr mb-5">Learn More About <?php the_title()?></h2>

@@ -71,7 +71,7 @@
                             class="text-sm md:leading-[46px] font-normal text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-white px-7  border border-transparent focus:border-secondary outline-none rounded-full w-full" />
 
                         <div id="live-search-results"
-                            class="absolute z-50 w-full mt-1 bg-white rounded-lg shadow-lg hidden"></div>
+                            class="absolute z-60 w-full mt-1 bg-white rounded-lg shadow-lg hidden"></div>
                     </div>
                 </div>
                 <!-- Buttons -->

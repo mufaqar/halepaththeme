@@ -128,7 +128,8 @@
 				?>
 
         <figure class="md:w-1/2">
-            <img alt="Why Us Image" src="<?php echo esc_url($product_info_box1_image); ?>" height="auto" width="100%">
+            <img alt="Why Us Image" src="<?php echo esc_url($product_info_box1_image); ?>" height="auto" width="100%"
+                class="rounded-2xl">
         </figure>
         <div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
             <h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">
@@ -144,7 +145,8 @@
     <div class="hale_container md:flex items-center gap-5 md:gap-10 flex-row">
 
         <figure class="md:w-1/2">
-            <img alt="Why Us Image" src="<?php echo esc_url($product_info_box2_image); ?>" height="auto" width="100%">
+            <img alt="Why Us Image" src="<?php echo esc_url($product_info_box2_image); ?>" height="auto" width="100%"
+                class="rounded-2xl">
         </figure>
         <div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
             <h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">

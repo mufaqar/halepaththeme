@@ -112,7 +112,7 @@
 </section>
 
 <section class="my-10">
-    <div class="hale_container md:flex items-center gap-5 md:gap-0 flex-row-reverse">
+    <div class="hale_container md:flex items-center gap-5 md:gap-10 flex-row-reverse">
 
         <?php 	$product_extra_info =  get_field('product_extra_info');
 
@@ -141,7 +141,7 @@
 </section>
 
 <section class="my-10">
-    <div class="hale_container md:flex items-center gap-5 md:gap-0 flex-row">
+    <div class="hale_container md:flex items-center gap-5 md:gap-10 flex-row">
 
         <figure class="md:w-1/2">
             <img alt="Why Us Image" src="<?php echo esc_url($product_info_box2_image); ?>" height="auto" width="100%">

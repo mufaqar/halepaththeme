@@ -157,7 +157,7 @@ get_header('shop');
   ?>
 </section>
 <section class="my-20">
-  <div class="hale_container md:flex items-center gap-5 md:gap-0 flex-row-reverse">
+  <div class="hale_container md:flex items-center gap-5 md:gap-10 flex-row-reverse">
     <!-- Image Section -->
     <figure class="md:w-1/2">
       <img alt="Why Us Image" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/why-us.png">
@@ -180,7 +180,7 @@ get_header('shop');
   </div>
 </section>
 <section class="my-20">
-  <div class="hale_container md:flex items-center gap-5 md:gap-0">
+  <div class="hale_container md:flex items-center gap-5 md:gap-10">
     <!-- Image Section -->
     <figure class="md:w-1/2">
       <img alt="Why Us Image" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/why-us.png">

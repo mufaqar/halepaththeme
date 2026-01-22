@@ -64,13 +64,13 @@
         </button>
 
         <!-- Swiper -->
-        <div class="swiper mySwiper h-[480px]">
+        <div class="swiper mySwiper h-full">
             <div class="swiper-wrapper">
                 <?php foreach ($product_gallery as $index => $image): ?>
                 <div class="swiper-slide">
                     <figure class="rounded-2xl overflow-hidden">
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
-                            loading="lazy" class="!h-[460px] w-full object-cover scale-105 rounded-2xl">
+                            loading="lazy" class="!h-full w-full object-cover scale-105 rounded-2xl">
                     </figure>
                 </div>
                 <?php endforeach; ?>

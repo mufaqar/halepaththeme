@@ -468,8 +468,8 @@
   .\!h-\[239px\] {
     height: 239px !important;
   }
-  .\!h-\[460px\] {
-    height: 460px !important;
+  .\!h-full {
+    height: 100% !important;
   }
   .h-4 {
     height: calc(var(--spacing) * 4);
@@ -503,9 +503,6 @@
   }
   .h-\[467px\] {
     height: 467px;
-  }
-  .h-\[480px\] {
-    height: 480px;
   }
   .h-auto\! {
     height: auto !important;

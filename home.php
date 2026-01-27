@@ -432,13 +432,9 @@ $featureproductsRes = [
         Instagram Posts
     </h2>
     <div class="mt-9 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        <!-- First Image -->
-        <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/i1.png"
-                alt="Instagram Post 1" class="w-full h-full" />
-        </div>
+        
         <!-- Next 4 Images -->
-        <?php for ($i = 1; $i <= 4; $i++): ?>
+        <?php for ($i = 1; $i <= 5; $i++): ?>
             <div>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/o<?php echo $i; ?>.png"
                     alt="Instagram Post <?php echo $i + 1; ?>" class="w-full h-full" />

@@ -170,3 +170,11 @@ function mytheme_add_woocommerce_support()
 }
 add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
 
+
+// Add custom image sizes
+add_action( 'after_setup_theme', 'custom_woocommerce_image_sizes', 20 );
+function custom_woocommerce_image_sizes() {    
+    add_image_size( 'hale_product', 1000, 1000, true );
+    add_image_size( 'hale_product_thumbs', 150, 150, true );
+}
+

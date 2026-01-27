@@ -20,9 +20,9 @@ if ($main_image_id) {
 
 foreach ($attachment_ids as $id) {
     $images[] = [
-        'full' => wp_get_attachment_image_url($id, 'large'),
-        'thumb' => wp_get_attachment_image_url($id, 'thumbnail'),
-        'alt' => get_post_meta($id, '_wp_attachment_image_alt', true),
+        'full'  => wp_get_attachment_image_url($id, 'hale_product'),
+        'thumb' => wp_get_attachment_image_url($id, 'hale_product_thumbs'),
+        'alt'   => get_post_meta($id, '_wp_attachment_image_alt', true),
     ];
 }
 
@@ -36,9 +36,9 @@ if (empty($images))
         <!-- MAIN SLIDER -->
         <div class="product-slider">
             <?php foreach ($images as $index => $img): ?>
-                <div class="w-full rounded-[21px] h-[435px]">
+                <div class="w-full rounded-[12px] h-[520px]">
                     <img src="<?php echo esc_url($img['full']); ?>" alt="<?php echo esc_attr($img['alt']); ?>"
-                        class="w-full !max-h-[435px] object-cover rounded-[21px]" loading="lazy">
+                        class="w-full !max-h-[520px] object-cover rounded-[12px]" loading="lazy">
                 </div>
             <?php endforeach; ?>
         </div>
@@ -46,9 +46,9 @@ if (empty($images))
         <!-- THUMBNAILS -->
         <div class="thumb-wrapper product-thumbs singleproducts">
             <?php foreach ($images as $index => $img): ?>
-                <div class="group !h-[131px] min-w-[167px] m-1.5 p-3 rounded-[11px] border-2 border-[#1C2E4230]">
+                <div class="group !h-[150px] min-w-[150px] m-1.5 rounded-[10px] ">
                     <img src="<?php echo esc_url($img['thumb']); ?>" alt="<?php echo esc_attr($img['alt']); ?>"
-                        class="w-full group-hover:scale-110 rounded-[11px] transition-all duration-200 ease-linear object-cover"
+                        class="w-full group-hover:scale-105 rounded-[10px] transition-all duration-100 ease-linear object-cover"
                         loading="lazy">
                 </div>
             <?php endforeach; ?>

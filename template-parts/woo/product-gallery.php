@@ -36,9 +36,9 @@ if (empty($images))
         <!-- MAIN SLIDER -->
         <div class="product-slider">
             <?php foreach ($images as $index => $img): ?>
-                <div class="w-full rounded-[12px] h-[520px]">
+                <div class="w-full h-full object-contain rounded-[12px]">
                     <img src="<?php echo esc_url($img['full']); ?>" alt="<?php echo esc_attr($img['alt']); ?>"
-                        class="w-full !max-h-[520px] object-cover rounded-[12px]" loading="lazy">
+                        class="w-full h-full object-contain rounded-[12px] max-h-[708px]" loading="lazy">
                 </div>
             <?php endforeach; ?>
         </div>

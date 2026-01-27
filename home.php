@@ -252,7 +252,16 @@ $featureproductsRes = [
 <?php get_template_part('template-parts/what-weoffer', ); ?>
 <!-- What We Offer end -->
 <!-- About Slider Starts -->
-<section class="about">
+<section class="about pt-[60px]">
+    <div class="hale_container flex flex-col justify-center items-center">
+        <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
+            What We Offer
+            <div class="sub_title_line"></div>
+        </h6>
+       <h2 class="h2">
+            Sustainable Products & Services
+        </h2>
+    </div>
     <div class="slider-full">
         <?php foreach ($slides as $slide): ?>
             <div class="!grid md:grid-cols-2 slider-item">

@@ -231,32 +231,21 @@ $featureproductsRes = [
             ]
         );?>
 </section>
-<!-- Product Slider end -->
 
-<!-- CTA end -->
-<!-- Product Slider Starts -->
 <section class="py-12">
     <?php
     get_template_part(
         'template-parts/product-slider',
         null,
-        ['direction' => 'ltr', 'slidesToShow' => 5,]
+        ['direction' => 'ltr', 'slidesToShow' => 4,]
     ); ?>
 </section>
-<!-- Product Slider end -->
-<!-- Qoute Section Starts -->
+
+
 <?php get_template_part('template-parts/get-qoute', ); ?>
-<!-- Qoute Section end -->
-
-<!-- What We Offer Starts -->
 <?php get_template_part('template-parts/what-weoffer', ); ?>
-
- <!-- CTA Starts -->
 <?php get_template_part('template-parts/home-cta'); ?>
-<!-- What We Offer end -->
-<!-- About Slider Starts -->
-<section class="about">
-   
+<section class="about">   
     <div class="slider-full">
         <?php foreach ($slides as $slide): ?>
             <div class="!grid md:grid-cols-2 slider-item">

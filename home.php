@@ -252,6 +252,7 @@ $featureproductsRes = [
 <?php get_template_part('template-parts/what-weoffer', ); ?>
 <!-- What We Offer end -->
 <!-- About Slider Starts -->
+ 
 <section class="about pt-[60px]">
     <div class="hale_container flex flex-col justify-center items-center">
         <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">

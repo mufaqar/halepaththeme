@@ -226,7 +226,7 @@ $featureproductsRes = [
             null,
             [
                 'category'     => 'custom-boxes',
-                'slidesToShow' => 5,
+                'slidesToShow' => 4,
                 'direction'    => 'ltr'
             ]
         );?>

@@ -103,15 +103,13 @@ if (!empty($categories) && !is_wp_error($categories)):
     </div>
 <?php endif; ?>
 
-
-
 <script>
     jQuery(document).ready(function ($) {
         $('.category-slider').slick({
             dots: false,
             arrows: false,
             infinite: true,
-            slidesToShow: 5,
+            slidesToShow: 4,  // <-- Changed here
             autoplay: true,
             speed: 12000,
             cssEase: 'linear',

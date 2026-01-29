@@ -116,7 +116,7 @@ if (is_product_category()) {
         <!-- RIGHT CONTENT -->
         <div class="md:w-1/2 w-full">
             <h2 class="md:text-[41px] md:leading-normal text-3xl font-bold text-title_Clr mb-3">
-                Get Custom Quote
+                Get Custom Quote 
             </h2>
             <?php get_template_part('template-parts/woo/product-form'); ?>
         </div>

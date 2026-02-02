@@ -16,22 +16,75 @@ $testimonialsRes = [
 
 $faqRes = [
     [
-        'question' => 'What is your return policy?',
-        'answer' => 'You can return products within 30 days of purchase.',
+        'question' => 'What are the benefits of choosing Hale Path Packaging solutions?',
+        'answer' => 'Hale Path Packaging offers high-quality custom packaging that protects products, improves branding, and boosts customer trust. We focus on durability, design, and cost-effective solutions.',
     ],
     [
-        'question' => 'Do you offer custom packaging?',
-        'answer' => 'Yes, we offer fully customizable packaging solutions.',
+        'question' => 'How does Hale Path Packaging add value beyond just a box?',
+        'answer' => 'We add value by offering smart structural designs, strong corrugated materials, custom printing, and branding support. Our packaging helps products stand out while staying protected.',
     ],
     [
-        'question' => 'How long does shipping take?',
-        'answer' => 'Shipping usually takes 5-7 business days.',
+        'question' => 'What do Hale Path Packaging solutions include?',
+        'answer' => 'Our solutions include custom box design, material selection, printing, finishing options, bulk production, and fast delivery—all under one roof.',
     ],
     [
-        'question' => 'Can I track my order?',
-        'answer' => 'Yes, once your order is shipped you will get a tracking number.',
+        'question' => 'What types of custom packaging do you offer?',
+        'answer' => 'We offer a wide range of custom packaging, including mailer boxes, rigid boxes, corrugated boxes, display packaging, and eco-friendly box solutions.',
+    ],
+    [
+        'question' => 'What packaging materials are available for custom boxes?',
+        'answer' => 'We use corrugated cardboard, kraft paper, rigid board, and recyclable materials. Each material is chosen based on product safety and branding needs.',
+    ],
+    [
+        'question' => 'Can I customize the design of my boxes?',
+        'answer' => 'Yes, you can fully customize box size, shape, colors, printing, and finishes. Our goal is to match your brand and product requirements.',
+    ],
+    [
+        'question' => 'Do you offer design support or assistance?',
+        'answer' => 'Yes, we provide free design assistance. Our packaging experts help you create professional and eye-catching designs for your custom boxes.',
+    ],
+    [
+        'question' => 'Can I request samples before placing a bulk order?',
+        'answer' => 'Yes, sample boxes are available so you can check material quality, size, and printing before moving forward with bulk production.',
+    ],
+    [
+        'question' => 'Is there a minimum order quantity (MOQ)?',
+        'answer' => 'Yes, we have a minimum order quantity, which may vary by box type and material. Bulk orders help reduce the cost per unit.',
+    ],
+    [
+        'question' => 'Can I order custom packaging in bulk?',
+        'answer' => 'Absolutely. We specialize in bulk packaging orders and offer competitive pricing for large quantities.',
+    ],
+    [
+        'question' => 'How can I determine the correct box size for my product?',
+        'answer' => 'You can share your product’s length, width, and height or send samples to our collection centers. Our team will review your product and help you select the best box size for safe packaging.',
+    ],
+    [
+        'question' => 'Are there packaging solutions for fragile items?',
+        'answer' => 'Yes, we offer strong corrugated boxes and custom inserts that provide extra protection for fragile and delicate products.',
+    ],
+    [
+        'question' => 'How long does production usually take?',
+        'answer' => 'Production usually takes around 8–12 business days after design approval. Timelines may vary depending on order size and customization.',
+    ],
+    [
+        'question' => 'Where can I buy custom printed packaging boxes?',
+        'answer' => 'You can order custom printed boxes directly from Hale Path Packaging. We provide end-to-end packaging solutions with reliable support.',
+    ],
+    [
+        'question' => 'How can I get a quote for my custom packaging needs?',
+        'answer' => 'You can request a quote by sharing box details such as size, quantity, material, and printing. Our team responds quickly with pricing.',
+    ],
+    [
+        'question' => 'Can I get a custom quote for special packaging requirements?',
+        'answer' => 'Yes, we offer custom quotes based on your specific packaging needs, budget, and order quantity.',
+    ],
+    [
+        'question' => 'How can I contact Hale Path Packaging experts?',
+        'answer' => 'You can contact our team via phone, email, or website contact form. Our packaging experts are ready to help you choose the right solution.',
     ],
 ];
+
 ?>
 
 <section class="py-[60px] bg-[#F5F5F5]" id="testimonials">

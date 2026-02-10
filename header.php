@@ -371,7 +371,7 @@ $megaMenus = [
                     }
                     ?>
                     <div id="megaMenu-<?php echo $key; ?>"
-                        class="megaMenu hidden lg:absolute left-0 top-full w-full bg-white shadow-xl z-50">
+                        class="megaMenu hidden lg:absolute left-0 top-full w-full bg-white shadow-xl z-50 overflow-y-auto min-h-[60vh] h-full">
                         <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 <?php echo $gridColsClass; ?> gap-8">
                             <?php foreach ($menu['groups'] as $groupName => $items): ?>
                                 <div>

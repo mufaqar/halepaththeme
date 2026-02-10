@@ -301,9 +301,6 @@ $megaMenus = [
             ]
         ]
     ],
-    "about_us" => [
-        "title" => "About US ",
-    ],
 ];
 ?>
 
@@ -377,7 +374,7 @@ $megaMenus = [
                             <li class="cursor-pointer flex items-center" <?php if (!empty($menu['groups'])): ?>
                                     data-mega-target="megaMenu-<?php echo $key; ?>" <?php endif; ?>>
                                 <a href="#"
-                                    class="text-[13px] font-medium uppercase text-title_Clr hover:text-primary flex items-center justify-between">
+                                    class="text-[15px] font-medium uppercase text-title_Clr hover:text-primary flex items-center justify-between">
                                     <?php echo $menu['title']; ?>
                                     <?php if (!empty($menu['groups'])): ?>
                                         <i class="fa fa-chevron-down ml-2"></i>

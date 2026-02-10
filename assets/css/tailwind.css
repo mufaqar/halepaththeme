@@ -145,7 +145,7 @@
 }
 
 .image-slide {
-  @apply absolute w-full rounded-2xl overflow-hidden h-[467px];
+  @apply absolute w-full rounded-2xl overflow-hidden h-[567px];
 }
 
 .slide_txt {

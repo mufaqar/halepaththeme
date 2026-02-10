@@ -7,12 +7,12 @@ $images = [
 ?>
 
 <section class="max_content mt-14 py-8">
-    <div class="hale_container hale_flex">
+    <div class="hale_container hale_flex items-start!">
         <!-- LEFT: IMAGES -->
-        <div class="md:w-1/2 relative w-full">
-            <div class="overflow-hidden h-[467px]" id="imageContainer">
+        <div class="md:w-2/5 relative w-full">
+            <div class="overflow-hidden h-[567px]" id="imageContainer">
                 <?php foreach ($images as $index => $img): ?>
-                <figure class="image-slide <?php echo $index === 0 ? 'block' : 'hidden'; ?>"
+                <figure class="image-slide  <?php echo $index === 0 ? 'block' : 'hidden'; ?>"
                     data-index="<?php echo $index; ?>">
                     <img src="<?php echo esc_url($img); ?>" alt="Image <?php echo $index + 1; ?>" class="rounded_img" />
                 </figure>
@@ -35,8 +35,8 @@ $images = [
             </div>
         </div>
         <!-- RIGHT: SCROLL TEXT -->
-        <div class="relative md:w-1/2">
-            <div id="scrollText" class="w-full max-h-[467px] overflow-y-scroll scroll_Left">
+        <div class="relative md:w-3/5">
+            <div id="scrollText" class="w-full max-h-[567px] overflow-y-scroll scroll_Left">
 
                 <p class="slide_txt">
                     Hale Path Packaging is the 21 st digital solution provider for all with varying types of printing

@@ -206,7 +206,7 @@ $megaMenus = [
     "flexible" => [
         "title" => "Flexible Packaging & Pouches",
         "groups" => [
-            "Packaging Bags" => [
+            "Flexible Packaging Bags" => [
                 "Stand Up Pouch",
                 "Flat Bottom Pouch",
                 "Mylar Bags",
@@ -227,8 +227,41 @@ $megaMenus = [
                 "Chocolate Bar Packaging",
                 "Candy & Sweets",
                 "Coffee & Tea Packaging",
-            ]
-        ]
+                "Beverages & Drinks",
+                "Snacks & Chips",
+                "Frozen Foods",
+                "Dairy Products",
+                "Wine & Spirits Pouch",
+                "Energy Drinks & Juice",
+                "Ice Cream & Desserts",
+                "Food Delivery Packaging",
+                "Meal Kits",
+                "Cannabis Packaging",
+                "Pet Food Packaging",
+                "Protein Powder Packaging",
+                "Nuts Packaging",
+                "Retort Pouch",
+                "Condiment Packaging",
+                "Rice Pouches",
+                "Fish, Meat & Jerky Packaging",
+                "Supplement & Protein Packaging",
+            ],
+            "Non-Food Packaging" => [
+                "Beauty & Cosmetic Packaging",
+                "Facial Mask Packaging",
+                "Detergent Packaging",
+                "Sample Sachet Packaging",
+                "Cat Litter Packaging",
+                "Mailing Bags",
+                "Bin Bags & Waste Sacks",
+                "Polythene Bags",
+                "Bubble Wrap Bags",
+                "Paper Bags",
+                "Bath & Salt Packaging",
+                "Postal Packaging",
+                "Meal Kits",
+            ],
+        ],
     ],
     "corrugated" => [
         "title" => "Corrugated Packaging ",
@@ -237,12 +270,12 @@ $megaMenus = [
         "title" => "Commercial Printing",
         "groups" => [
             "Printing" => [
-                "Offset Printing",
-                "Flexographic Printing",
-                "Gravure Printing",
+                "Offset Printing (Lithography)",
+                "Flexographic Printing (Flexo)",
+                "Gravure Printing (Flexible Packaging)",
                 "Digital Printing",
                 "Screen Printing",
-                "Letterpress",
+                "Letterpress (Specialty)",
             ]
         ]
     ],

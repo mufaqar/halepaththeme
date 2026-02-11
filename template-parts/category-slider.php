@@ -1,69 +1,4 @@
 <?php
-$categories = [
-    [
-        'title' => 'Candle Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/candle-boxes')
-    ],
-    [
-        'title' => 'Cosmetic Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/cosmetic-boxes')
-    ],
-    [
-        'title' => 'Product By Industry',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/product-by-industry')
-    ],
-    [
-        'title' => 'Retail Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/retail-boxes')
-    ],
-    [
-        'title' => 'CBD Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/cbd-boxes')
-    ],
-    [
-        'title' => 'Custom Printed Box',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/custom-printed-box')
-    ],
-    [
-        'title' => 'Box By Style',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/box-by-style')
-    ],
-    [
-        'title' => 'Brand Finishes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/brand-finishes')
-    ],
-    [
-        'title' => 'Cardboard Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/cardboard-boxes')
-    ],
-    [
-        'title' => 'Display Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/display-boxes')
-    ],
-    [
-        'title' => 'Bottle Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/bottle-boxes')
-    ],
-    [
-        'title' => 'Bottle Boxes',
-        'image' => get_template_directory_uri() . '/assets/images/category/1.png',
-        'link' => site_url('/category/bottle-boxes')
-    ],
-];
-?>
-
-<?php
 // Get WooCommerce product categories
 $categories = get_terms([
     'taxonomy' => 'product_cat',
@@ -83,13 +18,13 @@ if (!empty($categories) && !is_wp_error($categories)):
             $thumbnail_id = get_term_meta($category->term_id, 'thumbnail_id', true);
             $image_url = $thumbnail_id
                 ? wp_get_attachment_url($thumbnail_id)
-                : get_template_directory_uri() . '/assets/images/category/1.png';
+                : get_template_directory_uri() . '/assets/images/category.jpg';
             ?>
 
             <div class="w-full p-2">
                 <a href="<?php echo esc_url($category_link); ?>">
                     <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($category->name); ?>" width="363"
-                        height="375" class="maskimage img-full" loading="lazy" />
+                        height="375" class="cat_image img-full" loading="lazy" />
                 </a>
 
                 <a href="<?php echo esc_url($category_link); ?>"

@@ -110,7 +110,7 @@ $featureproductsRes = [
             <div class="sub_title_line"></div>
         </h6>
         <h2 class="h2">
-            Our Latest Products
+            Offset Printing
         </h2>
     </div>
 
@@ -121,7 +121,7 @@ $featureproductsRes = [
         ['direction' => 'ltr', 'slidesToShow' => 4,]
     ); ?>
     <a href="/products" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
-        See All Products
+        See All Offset Printing
     </a>
 </section>
 <!-- Product Slider end -->
@@ -244,6 +244,30 @@ $featureproductsRes = [
 
 <?php get_template_part('template-parts/get-qoute', ); ?>
 <?php get_template_part('template-parts/what-weoffer', ); ?>
+
+<section class="py-12">
+    <div class="hale_container flex flex-col justify-center items-center">
+        <h6 class="sub_title">
+            Our Products
+            <div class="sub_title_line"></div>
+        </h6>
+        <h2 class="h2">
+            Offset Printing
+        </h2>
+    </div>
+
+    <?php
+    get_template_part(
+        'template-parts/product-slider',
+        null,
+        ['direction' => 'ltr', 'slidesToShow' => 4,]
+    ); ?>
+    <a href="/products" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
+        See All Offset Printing
+    </a>
+</section>
+
+
 <?php get_template_part('template-parts/home-cta'); ?>
 <section class="about">   
     <div class="slider-full">

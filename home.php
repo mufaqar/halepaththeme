@@ -210,16 +210,22 @@ $featureproductsRes = [
                 industry. Lorem Ipsum has been the industry's. Lorem Ipsum has
                 been the industry's.
             </p>
-            <a href="<?php echo site_url('/about-us'); ?>"
-                class="bg-[#53B6C9] px-[35px] rounded-full font-medium text-[17px] py-[14px] inline-block">
-                About Us
-            </a>
+
         </div>
     </div>
 </section>
 <!-- Corrugated Packaging End -->
 <!-- Product Slider Starts -->
 <section class="py-12">
+    <div class="hale_container flex flex-col justify-center items-center">
+        <h6 class="sub_title">
+            Our Products
+            <div class="sub_title_line"></div>
+        </h6>
+        <h2 class="h2">
+            Corrugated Packaging
+        </h2>
+    </div>
     <?php
         get_template_part(
             'template-parts/product-slider',
@@ -239,6 +245,10 @@ $featureproductsRes = [
         null,
         ['direction' => 'ltr', 'slidesToShow' => 4,]
     ); ?>
+
+    <a href="/products" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
+        See All Corrugated Packaging
+    </a>
 </section>
 
 
@@ -252,7 +262,7 @@ $featureproductsRes = [
             <div class="sub_title_line"></div>
         </h6>
         <h2 class="h2">
-            Offset Printing
+            Flexible Packaging / Maylar bags
         </h2>
     </div>
 
@@ -263,40 +273,40 @@ $featureproductsRes = [
         ['direction' => 'ltr', 'slidesToShow' => 4,]
     ); ?>
     <a href="/products" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
-        See All Offset Printing
+        See All Flexible Packaging
     </a>
 </section>
 
 
 <?php get_template_part('template-parts/home-cta'); ?>
-<section class="about">   
+<section class="about">
     <div class="slider-full">
         <?php foreach ($slides as $slide): ?>
-            <div class="!grid md:grid-cols-2 slider-item">
-                <!-- IMAGE -->
-                <figure class="h-full">
-                    <img src="<?php echo get_template_directory_uri() . $slide['image']; ?>" alt="Packaging Image"
-                        class="img-full" />
-                </figure>
-                <!-- CONTENT -->
-                <div
-                    class="bg-cover bg-no-repeat flex justify-center md:items-center flex-col px-10 md:px-5 pb-14 md:pb-10 py-10 p-5 <?php echo $slide['bg']; ?>">
-                    <div class="<?php echo $slide['text']; ?> slider-content">
-                        <h6 class="animate-slide">
-                            Hale Path Packaging
-                        </h6>
-                        <h2 class="animate-slide delay-200">
-                            <?php echo esc_html($slide['title']); ?>
-                        </h2>
-                        <div class="flex mt-5 animate-slide delay-400">
-                            <a href="<?php echo esc_url($slide['link']); ?>" class="btn_secondry">
-                                Learn more
-                            </a>
-                        </div>
-
+        <div class="!grid md:grid-cols-2 slider-item">
+            <!-- IMAGE -->
+            <figure class="h-full">
+                <img src="<?php echo get_template_directory_uri() . $slide['image']; ?>" alt="Packaging Image"
+                    class="img-full" />
+            </figure>
+            <!-- CONTENT -->
+            <div
+                class="bg-cover bg-no-repeat flex justify-center md:items-center flex-col px-10 md:px-5 pb-14 md:pb-10 py-10 p-5 <?php echo $slide['bg']; ?>">
+                <div class="<?php echo $slide['text']; ?> slider-content">
+                    <h6 class="animate-slide">
+                        Hale Path Packaging
+                    </h6>
+                    <h2 class="animate-slide delay-200">
+                        <?php echo esc_html($slide['title']); ?>
+                    </h2>
+                    <div class="flex mt-5 animate-slide delay-400">
+                        <a href="<?php echo esc_url($slide['link']); ?>" class="btn_secondry">
+                            Learn more
+                        </a>
                     </div>
+
                 </div>
             </div>
+        </div>
         <?php endforeach; ?>
     </div>
 </section>
@@ -305,7 +315,7 @@ $featureproductsRes = [
 <section class="py-16 bg-[#EAF6F9]">
     <div class="mb-16">
         <h2 class="h2 md:mb-5!">
-            Explore Our Custom Printing and Packaging Design
+            Print & Advertising & Office Supplies
         </h2>
         <p class="text-lg font-normal text-txt_Clr text-center md:w-5/6 mx-auto">
             Start designing unique boxes with different styles, sizes, and
@@ -316,6 +326,9 @@ $featureproductsRes = [
     </div>
 
     <?php get_template_part('template-parts/category-slider'); ?>
+    <a href="/products" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
+        See All Print & Advertising & Office Supplies
+    </a>
 </section>
 <!-- Category Slider end -->
 
@@ -337,45 +350,45 @@ $featureproductsRes = [
     <div class="hale_container flex md:flex-row flex-col md:gap-40 gap-7 mt-10">
         <div class="md:w-1/2 w-full flex md:flex-row flex-col items-start gap-7 [&>*:nth-child(1)]:md:-mt-40">
             <?php foreach ([$featureproductsRes[0], $featureproductsRes[1]] as $product): ?>
-                <div class='feature_box'>
-                    <div>
-                        <a href="<?php echo esc_url($product['slug']['current']); ?>">
-                            <img src="<?php echo esc_url($product['gallery'][0]['asset']['url']); ?>" alt="img"
-                                class='img-full h-auto!' width="292" height="226" />
-                        </a>
-                    </div>
-                    <div class='md:p-8 p-6'>
-                        <h3 class=''>
-                            <a
-                                href="<?php echo esc_url($product['slug']['current']); ?>"><?php echo esc_html($product['title']); ?></a>
-                        </h3>
-                        <p class='md:text-xl text-lg font-normal text-title_Clr'>
-                            <?php echo esc_html($product['excerpt']); ?>
-                        </p>
-                    </div>
+            <div class='feature_box'>
+                <div>
+                    <a href="<?php echo esc_url($product['slug']['current']); ?>">
+                        <img src="<?php echo esc_url($product['gallery'][0]['asset']['url']); ?>" alt="img"
+                            class='img-full h-auto!' width="292" height="226" />
+                    </a>
                 </div>
+                <div class='md:p-8 p-6'>
+                    <h3 class=''>
+                        <a
+                            href="<?php echo esc_url($product['slug']['current']); ?>"><?php echo esc_html($product['title']); ?></a>
+                    </h3>
+                    <p class='md:text-xl text-lg font-normal text-title_Clr'>
+                        <?php echo esc_html($product['excerpt']); ?>
+                    </p>
+                </div>
+            </div>
             <?php endforeach; ?>
         </div>
 
         <div class="md:w-1/2 w-full flex md:flex-row flex-col items-start gap-7 [&>*:nth-child(2)]:md:-mt-40">
             <?php foreach ([$featureproductsRes[2], $featureproductsRes[3]] as $product): ?>
-                <div class='feature_box'>
-                    <div>
-                        <a href="<?php echo esc_url($product['slug']['current']); ?>">
-                            <img src="<?php echo esc_url($product['gallery'][0]['asset']['url']); ?>" alt="img"
-                                class='img-full h-auto!' width="292" height="226" />
-                        </a>
-                    </div>
-                    <div class='md:p-8 p-6'>
-                        <h3 class=''>
-                            <a
-                                href="<?php echo esc_url($product['slug']['current']); ?>"><?php echo esc_html($product['title']); ?></a>
-                        </h3>
-                        <p class=''>
-                            <?php echo esc_html($product['excerpt']); ?>
-                        </p>
-                    </div>
+            <div class='feature_box'>
+                <div>
+                    <a href="<?php echo esc_url($product['slug']['current']); ?>">
+                        <img src="<?php echo esc_url($product['gallery'][0]['asset']['url']); ?>" alt="img"
+                            class='img-full h-auto!' width="292" height="226" />
+                    </a>
                 </div>
+                <div class='md:p-8 p-6'>
+                    <h3 class=''>
+                        <a
+                            href="<?php echo esc_url($product['slug']['current']); ?>"><?php echo esc_html($product['title']); ?></a>
+                    </h3>
+                    <p class=''>
+                        <?php echo esc_html($product['excerpt']); ?>
+                    </p>
+                </div>
+            </div>
             <?php endforeach; ?>
         </div>
     </div>
@@ -456,13 +469,13 @@ $featureproductsRes = [
         Instagram Posts
     </h2>
     <div class="mt-9 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        
+
         <!-- Next 4 Images -->
         <?php for ($i = 1; $i <= 5; $i++): ?>
-            <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/o<?php echo $i; ?>.png"
-                    alt="Instagram Post <?php echo $i + 1; ?>" class="w-full h-full" />
-            </div>
+        <div>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/o<?php echo $i; ?>.png"
+                alt="Instagram Post <?php echo $i + 1; ?>" class="w-full h-full" />
+        </div>
         <?php endfor; ?>
     </div>
 </section>
@@ -470,15 +483,15 @@ $featureproductsRes = [
 <?php get_footer() ?>
 
 <script>
-    jQuery(document).ready(function ($) {
-        $('.slider-full').slick({
-            dots: true,
-            arrows: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            adaptiveHeight: true
-        });
+jQuery(document).ready(function($) {
+    $('.slider-full').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true
     });
+});
 </script>

@@ -49,6 +49,7 @@ $megaMenus = [
 
     "industries" => [
         "title" => "Industries We Serve",
+       
         "groups" => [
             "Beauty & Personal Care" => [
                 "Cosmetics",
@@ -206,6 +207,7 @@ $megaMenus = [
 
     "flexible" => [
         "title" => "Flexible Packaging & Pouches",
+       
         "groups" => [
             "Flexible Packaging Bags" => [
                 "Stand Up Pouch",
@@ -269,6 +271,7 @@ $megaMenus = [
     ],
     "printing" => [
         "title" => "Commercial Printing",
+       
         "groups" => [
             "Printing" => [
                 "Offset Printing (Lithography)",
@@ -283,6 +286,7 @@ $megaMenus = [
 
     "advertising" => [
         "title" => "Print & Advertising",
+       
         "groups" => [
             "Advertising" => ["Office Supplies ", "Tissue & Hygiene",]
         ]
@@ -290,6 +294,7 @@ $megaMenus = [
 
     "innovation" => [
         "title" => "Innovation",
+       
         "groups" => [
             "Branding" => [
                 "Branded Finishes",

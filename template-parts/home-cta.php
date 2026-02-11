@@ -1,4 +1,4 @@
-<section class="bg-secondary py-7">
+<section class="bg-secondary py-7 mb-6">
     <div class="hale_container flex md:flex-row flex-col items-center gap-7 justify-between">
         <div class="md:w-2/3 w-full flex flex-wrap items-center gap-3">
             <h6 class="md:text-xl text-lg font-normal text-white mr-4">

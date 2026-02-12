@@ -358,3 +358,6 @@ footer ul li a span.marker {
 .slick-slide {
   height: fit-content !important;
 }
+.active{
+  @apply text-primary font-bold border-b-2 border-primary;
+}

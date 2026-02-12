@@ -525,8 +525,8 @@
   .max-h-\[812px\] {
     max-height: 812px;
   }
-  .min-h-\[100vh\] {
-    min-height: 100vh;
+  .min-h-\[90vh\] {
+    min-height: 90vh;
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -563,9 +563,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .max-w-7xl {
-    max-width: var(--container-7xl);
   }
   .max-w-\[61px\] {
     max-width: 61px;
@@ -1032,6 +1029,9 @@
   }
   .py-\[14px\] {
     padding-block: 14px;
+  }
+  .py-\[15px\] {
+    padding-block: 15px;
   }
   .py-\[60px\] {
     padding-block: 60px;
@@ -2784,6 +2784,14 @@ footer ul li a span.marker {
 }
 .slick-slide {
   height: fit-content !important;
+}
+.active {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 2px;
+  border-color: var(--primary);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary);
 }
 @property --tw-translate-x {
   syntax: "*";

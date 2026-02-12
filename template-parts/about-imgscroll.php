@@ -39,22 +39,23 @@ $images = [
             <div id="scrollText" class="w-full max-h-[567px] overflow-y-scroll scroll_Left">
 
                 <p class="slide_txt">
-                    Hale Path Packaging is the 21 st digital solution provider for all with varying types of printing
-                    and packaging needs. So you have the perfect product, but do you have the perfect packaging? Enter:
-                    Hale Path Packaging. Our business idea is achieving and excelling in 100% of everything – we do not
-                    believe in second bests,
+                    Hale Path PackagingLtd manufacture every box inhouse production facility of 32000 square foot,
+                    Our12–14-day timeline isn't marketing talk. It's what happens when you control production instead of
+                    reselling someone else's work. When a candle company needed urgent reorders for Christmas, we had
+                    1,500000 custom boxes delivered in 10 days. Their Instagram engagement jumped 340% that quarter.
+                    Coincidence? We don't think so.
                 </p>
                 <p class="slide_txt">
 
-                    and that’s what we introduce in the market, nothing but the best! Whether it’s the customizable
-                    options, the design, the service, the technology or the material, we have put great mind in getting
-                    the best of everything for our clients. Hale Path Packaging proudly offers a large series of options
-                    in textures, materials, designs, innovations and outlooks for our clients’ needs.
+                    MoreoverHale Path Packaging is a printing & packaging company Offering five complementary print
+                    technologies– offset ,uv offset, flexo, digital & cold foil/hot foil with state of the art binding
+                    and finishing technologies
                 </p>
-                <p class="slide_txt">We cater to a wide clientele and have managed to acquire a huge customer base with
-                    glowing reviews. Our printing and packaging solutions are for all. So if you’re a home-based start
-                    up business, a flourishing business with wholesale custom packaging needs, an individual with
-                    packaging needs for events and occasions, Hale Path Packaging has got the answer for you! </p>
+                <p class="slide_txt">We're UK manufacturers, not middlemen. That means we control quality, timelines,
+                    and costs from raw material to your doorstep. No overseas delays, no communication nightmares, no
+                    surprise fees doubling your invoice. When you call us, you talk to the people who make your boxes.
+                    When you need adjustments, we make them. When you have urgent deadlines, we hit them. That's the
+                    difference between working with a manufacturer and a reseller.</p>
 
             </div>
 

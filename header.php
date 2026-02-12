@@ -450,7 +450,7 @@ $megaMenus = [
     <div id="page" class="site">
         <?php get_template_part('template-parts/theme/top-bar'); ?>
         <!-- Header -->
-        <header class="bg-white sticky top-0 z-50">
+        <header class="bg-white sticky top-0 z-50 py-[15px]">
             <div class="hale_container py-1 flex lg:flex-col flex-row items-center justify-between gap-5">
                 <!-- Logo -->
                 <div class="lg:hidden w-1/2">
@@ -488,21 +488,20 @@ $megaMenus = [
                     </ul>
                 </nav>
             </div>
-
             <!-- Desktop Mega Menus -->
             <?php foreach ($megaMenus as $key => $menu): ?>
                 <?php if (!empty($menu['groups'])): ?>
                     <div id="megaMenu-<?php echo $key; ?>"
-                        class="megaMenu hidden lg:absolute left-0 top-full w-full bg-white shadow-xl z-50 overflow-y-auto min-h-[100vh] h-full">
-                        <div class="max-w-7xl mx-auto px-6 py-6 grid grid-cols-3 gap-8">
+                        class="megaMenu hidden lg:absolute left-0 top-full w-full bg-white shadow-xl z-50 overflow-y-auto min-h-[90vh] h-full">
+                        <div class="hale_container mx-auto px-6 py-6 grid grid-cols-3 gap-8">
                             <!-- Column 1: Parent Groups -->
                             <div>
                                 <ul class="space-y-1">
-                                    <?php $i = 0;
-                                    foreach ($menu['groups'] as $groupName => $items): ?>
-                                        <li class="mainCat w-fit" data-index="<?php echo $i; ?>">
+                                    <?php $i = 0; ?>
+                                    <?php foreach ($menu['groups'] as $groupName => $items): ?>
+                                        <li class="mainCat w-fit flex items-center gap-2" data-index="<?php echo $i; ?>">
                                             <a href="<?php echo esc_url($items['link']); ?>"
-                                                class="text-sm capitalize hover:text-primary cursor-pointer">
+                                                class="text-sm capitalize hover:text-primary cursor-pointer flex items-center gap-2">
                                                 <?php echo $groupName; ?>
                                             </a>
                                         </li>
@@ -530,13 +529,18 @@ $megaMenus = [
                             <!-- Column 3: Images -->
                             <?php if ($key !== false): ?>
                                 <div>
-                                    <?php $i = 0;
-                                    foreach ($menu['groups'] as $groupName => $items): ?>
-                                        <div class="hidden menuImage rounded-lg" data-image="<?php echo $i; ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal3.png"
-                                                class="rounded-lg">
-                                        </div>
-                                        <?php $i++; endforeach; ?>
+                                    <?php $i = 0; ?>
+                                    <?php foreach ($menu['groups'] as $groupName => $items): ?>
+                                        <?php if (!empty($items['image']) && $items['image'] === true): ?>
+                                            <div class="hidden menuImage rounded-lg grid grid-cols-2 gap-4" data-image="<?php echo $i; ?>">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal3.png"
+                                                    class="rounded-lg">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal5.png"
+                                                    class="rounded-lg">
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php $i++; ?>
+                                    <?php endforeach; ?>
                                 </div>
                             <?php endif; ?>
                         </div>
@@ -599,23 +603,39 @@ $megaMenus = [
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const allMegaMenus = document.querySelectorAll('.megaMenu');
-
                 allMegaMenus.forEach(menu => {
                     const parents = menu.querySelectorAll('.mainCat');
                     const groups = menu.querySelectorAll('.childGroups');
                     const images = menu.querySelectorAll('.menuImage');
-
+                    // Create a single arrow element
+                    const arrow = document.createElement('i');
+                    arrow.className = 'fa-solid fa-arrow-up-right-from-square ml-2';
+                    parents[0].querySelector('a')?.appendChild(arrow); // first item
                     // Show first group/image by default
                     groups[0]?.classList.remove('hidden');
                     images[0]?.classList.remove('hidden');
 
+                    // Make first parent active by default
+                    parents[0]?.classList.add('active');
+
                     parents.forEach(p => {
                         p.addEventListener('mouseenter', () => {
-                            const i = p.dataset.index;
+                            const index = p.dataset.index;
+
+                            // ✅ Remove active from all parents
+                            parents.forEach(parentEl => parentEl.classList.remove('active'));
+
+                            // ✅ Add active to the hovered parent
+                            p.classList.add('active');
+                            // Move arrow to current active
+                            p.querySelector('a')?.appendChild(arrow);
+                            // Hide all groups & images
                             groups.forEach(g => g.classList.add('hidden'));
                             images.forEach(img => img.classList.add('hidden'));
-                            menu.querySelector(`[data-group="${i}"]`)?.classList.remove('hidden');
-                            menu.querySelector(`[data-image="${i}"]`)?.classList.remove('hidden');
+
+                            // Show the current group's children & image
+                            menu.querySelector(`[data-group="${index}"]`)?.classList.remove('hidden');
+                            menu.querySelector(`[data-image="${index}"]`)?.classList.remove('hidden');
                         });
                     });
                 });
@@ -632,9 +652,9 @@ $megaMenus = [
                         megaMenu.classList.remove('hidden');
                     });
 
-                    li.addEventListener('mouseleave', (e) => {
-                        if (!megaMenu.contains(e.relatedTarget)) megaMenu.classList.add('hidden');
-                    });
+                    // li.addEventListener('mouseleave', (e) => {
+                    //     if (!megaMenu.contains(e.relatedTarget)) megaMenu.classList.add('hidden');
+                    // });
 
                     megaMenu.addEventListener('mouseleave', () => {
                         megaMenu.classList.add('hidden');

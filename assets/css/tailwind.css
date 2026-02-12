@@ -197,7 +197,7 @@
 }
 
 .step span {
-  @apply text-xl font-medium text-white bg-secondary p-[18px] border-[18px] border-primary rounded-full flex items-center justify-center w-[89px] h-[89px];
+  @apply text-xl font-medium text-white bg-secondary p-[18px] border-[18px] border-[#CCCCCCB5]/70 rounded-full flex items-center justify-center w-[89px] h-[89px];
 }
 
 .step h4 {
@@ -348,7 +348,7 @@ footer ul li a span.marker {
 ========================= */
 
 .before_line {
-  @apply relative md:before:block before:hidden before:absolute before:h-full before:top-[71px] before:left-1/2 before:border-l before:border-dashed before:border-primary;
+  @apply relative md:before:block before:hidden before:absolute before:h-full before:top-[81px] before:left-1/2 before:border-l before:border-dashed before:border-[#CCCCCCB5]/70;
 }
 
 .video_overlay {

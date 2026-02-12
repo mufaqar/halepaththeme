@@ -492,10 +492,10 @@ $megaMenus = [
             <?php foreach ($megaMenus as $key => $menu): ?>
                 <?php if (!empty($menu['groups'])): ?>
                     <div id="megaMenu-<?php echo $key; ?>"
-                        class="megaMenu hidden lg:absolute left-0 top-full w-full bg-white shadow-xl z-50 overflow-y-auto min-h-[90vh] h-full">
-                        <div class="hale_container mx-auto px-6 py-6 grid grid-cols-3 gap-8">
+                        class="megaMenu hidden lg:absolute left-0 top-[58px] w-full   z-50 overflow-y-auto min-h-[90vh] h-full">
+                        <div class="hale_container mx-auto !px-0  grid grid-cols-4 gap-8 rounded-b-2xl shadow-xl bg-white">
                             <!-- Column 1: Parent Groups -->
-                            <div>
+                            <div class="bg-[#f5f5f5] px-6 py-4 rounded-bl-2xl " >
                                 <ul class="space-y-1">
                                     <?php $i = 0; ?>
                                     <?php foreach ($menu['groups'] as $groupName => $items): ?>
@@ -509,7 +509,7 @@ $megaMenus = [
                                 </ul>
                             </div>
                             <!-- Column 2: Child Items -->
-                            <div>
+                            <div class="col-span-2 py-4" >
                                 <?php $i = 0;
                                 foreach ($menu['groups'] as $groupName => $groupData): ?>
                                     <div class="hidden childGroups" data-group="<?php echo $i; ?>">
@@ -528,7 +528,7 @@ $megaMenus = [
                             </div>
                             <!-- Column 3: Images -->
                             <?php if ($key !== false): ?>
-                                <div>
+                                <div class=" py-4 px-4" >
                                     <?php $i = 0; ?>
                                     <?php foreach ($menu['groups'] as $groupName => $items): ?>
                                         <?php if (!empty($items['image']) && $items['image'] === true): ?>

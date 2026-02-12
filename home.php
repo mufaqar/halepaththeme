@@ -5,23 +5,23 @@
 $steps = [
     [
         "id" => 1,
-        "title" => "Book Online",
-        "description" => "Lpsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."
+        "title" => "Place Your Order",
+        "description" => "Place your order online quickly and easily, share your requirements, receive a fast quote, and start your packaging project confidently."
     ],
     [
         "id" => 2,
-        "title" => "Choose Design",
-        "description" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "title" => "Artwork Creation",
+        "description" => "Our expert team creates custom packaging designs, provides mockups for approval, and ensures your branding looks professional and impactful."
     ],
     [
         "id" => 3,
-        "title" => "Confirmation",
-        "description" => "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        "title" => "Production",
+        "description" => "Review final details, approve artwork and specifications, confirm pricing, and give production approval before we begin manufacturing your packaging."
     ],
     [
         "id" => 4,
-        "title" => "Delivery",
-        "description" => "Lpsum is simply dummy text of the printing and typesetting is industry. Lorem Ipsum has been."
+        "title" => "Fast Doorstep Delivery",
+        "description" => "Your finished packaging is carefully produced, securely packed, and delivered on time across the UK with reliable tracking."
     ],
 ];
 ?>
@@ -254,30 +254,7 @@ $featureproductsRes = [
 
 <?php get_template_part('template-parts/get-qoute', ); ?>
 <?php get_template_part('template-parts/what-weoffer', ); ?>
-
-<section class="py-12">
-    <div class="hale_container flex flex-col justify-center items-center">
-        <h6 class="sub_title">
-            Our Products
-            <div class="sub_title_line"></div>
-        </h6>
-        <h2 class="h2">
-            Flexible Packaging / Maylar bags
-        </h2>
-    </div>
-
-    <?php
-    get_template_part(
-        'template-parts/product-slider',
-        null,
-        ['direction' => 'ltr', 'slidesToShow' => 4,]
-    ); ?>
-    <a href="/products" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
-        See All Flexible Packaging
-    </a>
-</section>
-
-
+<?php get_template_part('template-parts/home-flexible', ); ?>
 <?php get_template_part('template-parts/home-cta'); ?>
 <section class="about">
     <div class="slider-full">
@@ -310,7 +287,7 @@ $featureproductsRes = [
         <?php endforeach; ?>
     </div>
 </section>
-<!-- About Slider end -->
+
 <!-- Category Slider Starts -->
 <section class="py-16 bg-[#EAF6F9]">
     <div class="mb-16">

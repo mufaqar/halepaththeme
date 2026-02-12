@@ -1,24 +1,24 @@
 <?php
 $steps = [
     [
-        'id' => 1,
-        'title' => 'Book Online',
-        'description' => 'Lpsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.',
+        "id" => 1,
+        "title" => "Place Your Order",
+        "description" => "Place your order online quickly and easily, share your requirements, receive a fast quote, and start your packaging project confidently."
     ],
     [
-        'id' => 2,
-        'title' => 'Choose Design',
-        'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        "id" => 2,
+        "title" => "Artwork Creation",
+        "description" => "Our expert team creates custom packaging designs, provides mockups for approval, and ensures your branding looks professional and impactful."
     ],
     [
-        'id' => 3,
-        'title' => 'Confirmation',
-        'description' => 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
+        "id" => 3,
+        "title" => "Production",
+        "description" => "Review final details, approve artwork and specifications, confirm pricing, and give production approval before we begin manufacturing your packaging."
     ],
     [
-        'id' => 4,
-        'title' => 'Delivery',
-        'description' => 'Lpsum is simply dummy text of the printing and typesetting is industry. Lorem Ipsum has been.',
+        "id" => 4,
+        "title" => "Fast Doorstep Delivery",
+        "description" => "Your finished packaging is carefully produced, securely packed, and delivered on time across the UK with reliable tracking."
     ],
 ];
 ?>
@@ -32,31 +32,31 @@ $steps = [
             <div
                 class="bg-title_Clr h-full max-w-[546px] mx-auto rounded-2xl md:px-14 md:py-8 p-8 md:gap-12 gap-12 flex flex-col">
                 <?php foreach ($steps as $index => $step): ?>
-                    <div class="step">
-                        <span
-                            class="before_line <?php echo ($index === count($steps) - 1) ? 'before:content-none' : 'before:content-[""] '; ?>">
-                            <?php echo '0' . esc_html($step['id']); ?>
-                        </span>
+                <div class="step">
+                    <span
+                        class="before_line <?php echo ($index === count($steps) - 1) ? 'before:content-none' : 'before:content-[""] '; ?>">
+                        <?php echo '0' . esc_html($step['id']); ?>
+                    </span>
 
-                        <div>
-                            <h4 class="">
-                                <?php echo esc_html($step['title']); ?>
-                            </h4>
-                            <p class="text-sm font-light text-white">
-                                <?php echo esc_html($step['description']); ?>
-                            </p>
-                        </div>
+                    <div>
+                        <h4 class="">
+                            <?php echo esc_html($step['title']); ?>
+                        </h4>
+                        <p class="text-sm font-light text-white">
+                            <?php echo esc_html($step['description']); ?>
+                        </p>
                     </div>
+                </div>
                 <?php endforeach; ?>
             </div>
         </div>
         <div class="md:w-1/2 w-full">
             <h4 class="text-xl font-semibold text-white mb-4 flex items-center gap-3">
-                <span>Contact Us </span>
+                <span> Stronger Protection. </span>
                 <span class="block border-b-2 border-white max-w-[61px] w-full"></span>
             </h4>
             <h2 class="md:text-4xl text-3xl font-bold text-white mb-8">
-                Request Your Any Query Now!
+                Smarter Branding. Guaranteed Impact.
             </h2>
             <form onSubmit={onSubmit} class="grid w-full gap-4 items-center mt-5 bg-primary md:p-8 p-6 rounded-[19px]">
                 <div class="w-full flex md:flex-row flex-col gap-4">

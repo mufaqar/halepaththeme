@@ -229,7 +229,7 @@
 }
 
 .service_inner .content h5 {
-  @apply flex cursor-pointer md:text-xl lg:text-2xl font-medium justify-between border-b-[3px] py-3 pt-1 border-black;
+  @apply flex cursor-pointer md:text-xl lg:text-xl font-medium justify-between border-b-[3px] py-3 pt-1 border-black;
 }
 
 .slider-full h6 {

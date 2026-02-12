@@ -10,9 +10,10 @@
                 <div class="hale_container relative z-10">
                     <div class="md:w-1/2 w-full">
                         <h1 class="h1">
-                            Custom cardboard packaging solutions
+                          Custom Cardboard packaging solutions
                         </h1>
-                        <a href="#"
+                        <p class="text-white text-2xl font-medium mb-8">UK-Manufactured Custom Packaging That Turns First-Time Buyers Into Loyal Customers</p>
+                        <a href="/get-a-quote"
                             class="btn_primary">
                             Enquire Now <i class="fa fa-chevron-right"></i>
                         </a>

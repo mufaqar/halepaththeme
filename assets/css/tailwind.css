@@ -245,11 +245,11 @@
 }
 
 .feature_box h3 {
-  @apply md:text-[31px] md:leading-none text-2xl font-semibold text-title_Clr mb-6;
+  @apply md:text-xl text-lg font-semibold text-title_Clr mb-3;
 }
 
 .feature_box p {
-  @apply md:text-xl text-lg font-normal text-title_Clr;
+  @apply md:text-lg text-base font-normal text-title_Clr;
 }
 
 .faq-item {
@@ -257,11 +257,11 @@
 }
 
 .faq-item .faq-title {
-  @apply px-6 py-6 w-full text-[#1C1C1C] text-left text-xl flex items-center gap-4 justify-between cursor-pointer;
+  @apply px-4 py-2.5 w-full text-[#1C1C1C] text-left text-sm flex items-center gap-2 justify-between cursor-pointer;
 }
 
 .faq-item .faq-content p {
-  @apply text-lg px-6 text-left text-[#1C1C1C] pb-6;
+  @apply text-sm px-4 text-left text-[#1C1C1C] pb-2.5;
 }
 
 .testi_box {

@@ -152,7 +152,7 @@ $faqRes = [
                         <div class="faq-item">
                             <h3 class="faq-title">
                                 <?php echo esc_html($faq['question']); ?>
-                                <span class="text-2xl"><i class="fa fa-chevron-down"></i></span>
+                                <span class="text-xl"><i class="fa fa-chevron-down"></i></span>
                             </h3>
                             <div class="faq-content max-h-0 overflow-hidden transition-all duration-200">
                                 <p class="">

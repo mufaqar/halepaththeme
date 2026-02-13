@@ -30,7 +30,7 @@ $steps = [
         <div class="md:w-1/2 w-full">
 
             <div
-                class="bg-title_Clr/80 h-full max-w-[546px] mx-auto rounded-2xl md:px-14 md:py-8 p-8 md:gap-12 gap-12 flex flex-col">
+                class="bg-title_Clr/30 backdrop-blur-sm h-full max-w-[546px] mx-auto rounded-2xl md:px-14 md:py-8 p-8 md:gap-12 gap-12 flex flex-col">
                 <?php foreach ($steps as $index => $step): ?>
                 <div class="step">
                     <span
@@ -58,7 +58,7 @@ $steps = [
             <h2 class="md:text-4xl text-3xl font-bold text-white mb-8">
                 Smarter Branding. Guaranteed Impact.
             </h2>
-            <form onSubmit={onSubmit} class="grid w-full gap-4 items-center mt-5 bg-[#CCCCCCB5]/70 md:p-8 p-6 rounded-[19px]">
+            <form onSubmit={onSubmit} class="grid w-full gap-4 items-center mt-5 bg-white/30 backdrop-blur-sm md:p-8 p-6 rounded-[19px]">
                 <div class="w-full flex md:flex-row flex-col gap-4">
                     <div class="form_row">
                         <label htmlfor="fullname" class="hidden">

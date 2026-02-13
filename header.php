@@ -48,9 +48,7 @@ $megaMenus = [
     "industries" => [
         "title" => "Industries We Serve",
         "link" => "/industries",
-
         "groups" => [
-
             "Beauty & Personal Care" => [
                 "link" => "/industries/beauty",
                 "image" => true,
@@ -300,7 +298,6 @@ $megaMenus = [
         "title" => "Flexible Packaging & Pouches",
         "link" => "/flexible-packaging",
         "groups" => [
-
             "Flexible Packaging Bags" => [
                 "link" => "/flexible/packaging-bags",
                 "image" => true,
@@ -374,71 +371,49 @@ $megaMenus = [
 
         ],
     ],
-
-
     "custom_packaging" => [
         "title" => "Custom Packaging",
         "link" => "/custom-packaging",
-        "groups" => [],
     ],
 
     "corrugated" => [
         "title" => "Corrugated Packaging",
         "link" => "/corrugated-packaging",
-        "groups" => [],
     ],
 
     "printing" => [
         "title" => "Commercial Printing",
         "link" => "/commercial-printing",
-        "groups" => [
-            "Printing" => [
-                "link" => "/commercial-printing/printing",
-                "image" => false,
-                "items" => [
-                    ["title" => "Offset Printing (Lithography)", "link" => "/commercial-printing/printing/offset"],
-                    ["title" => "Flexographic Printing (Flexo)", "link" => "/commercial-printing/printing/flexo"],
-                    ["title" => "Gravure Printing (Flexible Packaging)", "link" => "/commercial-printing/printing/gravure"],
-                    ["title" => "Digital Printing", "link" => "/commercial-printing/printing/digital"],
-                    ["title" => "Screen Printing", "link" => "/commercial-printing/printing/screen"],
-                    ["title" => "Letterpress (Specialty)", "link" => "/commercial-printing/printing/letterpress"],
-                ],
-            ],
+        "items" => [
+            ["title" => "Offset Printing (Lithography)", "link" => "/commercial-printing/printing/offset", "image" => true,],
+            ["title" => "Flexographic Printing (Flexo)", "link" => "/commercial-printing/printing/flexo", "image" => true,],
+            ["title" => "Gravure Printing (Flexible Packaging)", "link" => "/commercial-printing/printing/gravure"],
+            ["title" => "Digital Printing", "link" => "/commercial-printing/printing/digital"],
+            ["title" => "Screen Printing", "link" => "/commercial-printing/printing/screen"],
+            ["title" => "Letterpress (Specialty)", "link" => "/commercial-printing/printing/letterpress"],
         ],
     ],
 
     "advertising" => [
         "title" => "Print & Advertising",
         "link" => "/print-advertising",
-        "groups" => [
-            "Advertising" => [
-                "link" => "/print-advertising/advertising",
-                "image" => false,
-                "items" => [
-                    ["title" => "Office Supplies", "link" => "/print-advertising/advertising/office-supplies"],
-                    ["title" => "Tissue & Hygiene", "link" => "/print-advertising/advertising/tissue-hygiene"],
-                ],
-            ],
+        "items" => [
+            ["title" => "Office Supplies", "link" => "/print-advertising/advertising/office-supplies"],
+            ["title" => "Tissue & Hygiene", "link" => "/print-advertising/advertising/tissue-hygiene"],
         ],
     ],
 
     "innovation" => [
         "title" => "Innovation",
         "link" => "/innovation",
-        "groups" => [
-            "Branding" => [
-                "link" => "/innovation/branding",
-                "image" => false,
-                "items" => [
-                    ["title" => "Branded Finishes", "link" => "/innovation/branding/branded-finishes"],
-                    ["title" => "UV Printing", "link" => "/innovation/branding/uv-printing"],
-                    ["title" => "Foil Printing", "link" => "/innovation/branding/foil-printing"],
-                    ["title" => "Privacy Printing", "link" => "/innovation/branding/privacy-printing"],
-                    ["title" => "Experience Centers", "link" => "/innovation/branding/experience-centers"],
-                    ["title" => "Client Success Stories", "link" => "/innovation/branding/client-success"],
-                    ["title" => "Design 2 Markets", "link" => "/innovation/branding/design-2-markets"],
-                ],
-            ],
+        "items" => [
+            ["title" => "Branded Finishes", "link" => "/innovation/branding/branded-finishes", "image" => true,],
+            ["title" => "UV Printing", "link" => "/innovation/branding/uv-printing"],
+            ["title" => "Foil Printing", "link" => "/innovation/branding/foil-printing"],
+            ["title" => "Privacy Printing", "link" => "/innovation/branding/privacy-printing"],
+            ["title" => "Experience Centers", "link" => "/innovation/branding/experience-centers", "image" => true,],
+            ["title" => "Client Success Stories", "link" => "/innovation/branding/client-success"],
+            ["title" => "Design 2 Markets", "link" => "/innovation/branding/design-2-markets"],
         ],
     ],
 
@@ -473,18 +448,38 @@ $megaMenus = [
                                 d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    <ul class="hidden lg:flex gap-5 justify-between w-full">
+                    <ul id="desktopNav" class="hidden lg:flex gap-5 justify-between w-full">
                         <?php foreach ($megaMenus as $key => $menu): ?>
-                            <li class="cursor-pointer flex items-center" <?php if (!empty($menu['groups'])): ?>data-mega-target="megaMenu-<?php echo $key; ?>" <?php endif; ?>>
+                            <?php
+                            $isMega = !empty($menu['groups']);
+                            $isDropdown = empty($menu['groups']) && !empty($menu['items']);
+                            ?>
+                            <li class="relative cursor-pointer flex items-center" <?php if ($isMega): ?>data-mega-target="megaMenu-<?php echo $key; ?>" <?php endif; ?>     <?php if ($isDropdown): ?>data-dropdown="true" <?php endif; ?>>
+
                                 <a href="<?php echo esc_url($menu['link']); ?>"
-                                    class="text-sm font-normal capitalize text-title_Clr hover:text-primary flex items-center justify-between">
+                                    class="text-sm font-normal capitalize text-title_Clr hover:text-primary flex items-center">
                                     <?php echo $menu['title']; ?>
-                                    <?php if (!empty($menu['groups'])): ?>
+                                    <?php if ($isMega || $isDropdown): ?>
                                         <i class="fa fa-chevron-down ml-2"></i>
                                     <?php endif; ?>
                                 </a>
+                                <!-- NORMAL DROPDOWN -->
+                                <?php if ($isDropdown): ?>
+                                    <ul
+                                        class="dropdownMenu hidden absolute right-0 top-full mt-2 bg-black/50 backdrop-blur-smbg-white/50 backdrop-blur-sm shadow-xl rounded-lg p-4 min-w-[300px] space-y-2 z-50">
+                                        <?php foreach ($menu['items'] as $item): ?>
+                                            <li>
+                                                <a href="<?php echo esc_url($item['link']); ?>"
+                                                    class="block text-sm capitalize text-white hover:text-primary">
+                                                    <?php echo $item['title']; ?>
+                                                </a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
                             </li>
                         <?php endforeach; ?>
+
                     </ul>
                 </nav>
             </div>
@@ -492,16 +487,17 @@ $megaMenus = [
             <?php foreach ($megaMenus as $key => $menu): ?>
                 <?php if (!empty($menu['groups'])): ?>
                     <div id="megaMenu-<?php echo $key; ?>"
-                        class="megaMenu hidden lg:absolute left-0 top-[58px] w-full   z-50 overflow-y-auto min-h-[90vh] h-full">
-                        <div class="hale_container mx-auto !px-0  grid grid-cols-4 gap-8 rounded-b-2xl shadow-xl bg-white">
+                        class="megaMenu hidden lg:absolute left-0 top-[58px] w-full  z-50 overflow-y-auto min-h-[90vh] h-full">
+                        <div
+                            class="hale_container mx-auto !px-0  grid grid-cols-4 gap-8 rounded-b-2xl shadow-xl bg-black/50 backdrop-blur-sm">
                             <!-- Column 1: Parent Groups -->
-                            <div class="bg-[#f5f5f5] px-6 py-4 rounded-bl-2xl " >
+                            <div class="px-6 py-4 rounded-bl-2xl ">
                                 <ul class="space-y-1">
                                     <?php $i = 0; ?>
                                     <?php foreach ($menu['groups'] as $groupName => $items): ?>
                                         <li class="mainCat w-fit flex items-center gap-2" data-index="<?php echo $i; ?>">
                                             <a href="<?php echo esc_url($items['link']); ?>"
-                                                class="text-sm capitalize hover:text-primary cursor-pointer flex items-center gap-2">
+                                                class="text-sm capitalize text-white hover:text-primary cursor-pointer flex items-center gap-2">
                                                 <?php echo $groupName; ?>
                                             </a>
                                         </li>
@@ -509,7 +505,7 @@ $megaMenus = [
                                 </ul>
                             </div>
                             <!-- Column 2: Child Items -->
-                            <div class="col-span-2 py-4" >
+                            <div class="col-span-1 py-4">
                                 <?php $i = 0;
                                 foreach ($menu['groups'] as $groupName => $groupData): ?>
                                     <div class="hidden childGroups" data-group="<?php echo $i; ?>">
@@ -517,7 +513,7 @@ $megaMenus = [
                                             <?php foreach ($groupData['items'] as $item): ?>
                                                 <li>
                                                     <a href="<?php echo esc_url($item['link']); ?>"
-                                                        class="text-sm capitalize hover:text-primary">
+                                                        class="text-sm capitalize text-white hover:text-primary">
                                                         <?php echo $item['title']; ?>
                                                     </a>
                                                 </li>
@@ -528,15 +524,15 @@ $megaMenus = [
                             </div>
                             <!-- Column 3: Images -->
                             <?php if ($key !== false): ?>
-                                <div class=" py-4 px-4" >
+                                <div class="col-span-2 py-4 px-4">
                                     <?php $i = 0; ?>
                                     <?php foreach ($menu['groups'] as $groupName => $items): ?>
                                         <?php if (!empty($items['image']) && $items['image'] === true): ?>
-                                            <div class="hidden menuImage rounded-lg grid grid-cols-2 gap-4" data-image="<?php echo $i; ?>">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal3.png"
-                                                    class="rounded-lg">
+                                            <div class="hidden menuImage rounded-lg grid grid-cols-5 gap-4" data-image="<?php echo $i; ?>">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal4.png"
+                                                    class="rounded-2xl h-full w-full object-cover col-span-2">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal5.png"
-                                                    class="rounded-lg">
+                                                    class="rounded-2xl h-full w-full object-cover col-span-3">
                                             </div>
                                         <?php endif; ?>
                                         <?php $i++; ?>
@@ -547,7 +543,6 @@ $megaMenus = [
                     </div>
                 <?php endif; ?>
             <?php endforeach; ?>
-
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden lg:hidden bg-white px-4 pt-5">
                 <ul class="space-y-3 h-full overflow-y-scroll">
@@ -598,69 +593,90 @@ $megaMenus = [
                 </ul>
             </div>
         </header>
-
         <!-- Scripts -->
         <script>
             document.addEventListener('DOMContentLoaded', () => {
+                const desktopNav = document.getElementById('desktopNav');
+                const allNavItems = desktopNav.querySelectorAll('li');
+
                 const allMegaMenus = document.querySelectorAll('.megaMenu');
+
+                // Helper to close all menus
+                function closeAllMenus() {
+                    allNavItems.forEach(item => {
+                        const dropdown = item.querySelector('.dropdownMenu');
+                        if (dropdown) dropdown.classList.add('hidden');
+                    });
+                    allMegaMenus.forEach(menu => menu.classList.add('hidden'));
+                }
+
+                allNavItems.forEach(item => {
+                    const dropdown = item.querySelector('.dropdownMenu');
+                    const megaTarget = item.dataset.megaTarget;
+                    const megaMenu = megaTarget ? document.getElementById(megaTarget) : null;
+
+                    item.addEventListener('mouseenter', () => {
+                        // Close all other menus
+                        closeAllMenus();
+
+                        // Open current menu
+                        if (dropdown) dropdown.classList.remove('hidden');
+                        if (megaMenu) megaMenu.classList.remove('hidden');
+                    });
+                });
+
+                // Close dropdowns when mouse leaves them
+                allNavItems.forEach(item => {
+                    const dropdown = item.querySelector('.dropdownMenu');
+                    if (dropdown) {
+                        dropdown.addEventListener('mouseleave', () => {
+                            dropdown.classList.add('hidden');
+                        });
+                    }
+                });
+
+                // Close mega menus when mouse leaves them
+                allMegaMenus.forEach(menu => {
+                    menu.addEventListener('mouseleave', () => {
+                        menu.classList.add('hidden');
+                    });
+                });
+
+                // ===== MEGA MENU CHILD SWITCHING =====
                 allMegaMenus.forEach(menu => {
                     const parents = menu.querySelectorAll('.mainCat');
                     const groups = menu.querySelectorAll('.childGroups');
                     const images = menu.querySelectorAll('.menuImage');
-                    // Create a single arrow element
+
                     const arrow = document.createElement('i');
                     arrow.className = 'fa-solid fa-arrow-up-right-from-square ml-2';
-                    parents[0].querySelector('a')?.appendChild(arrow); // first item
-                    // Show first group/image by default
+
+                    if (parents[0]) {
+                        parents[0].querySelector('a')?.appendChild(arrow);
+                        parents[0].classList.add('active');
+                    }
+
                     groups[0]?.classList.remove('hidden');
                     images[0]?.classList.remove('hidden');
-
-                    // Make first parent active by default
-                    parents[0]?.classList.add('active');
 
                     parents.forEach(p => {
                         p.addEventListener('mouseenter', () => {
                             const index = p.dataset.index;
 
-                            // ✅ Remove active from all parents
-                            parents.forEach(parentEl => parentEl.classList.remove('active'));
-
-                            // ✅ Add active to the hovered parent
-                            p.classList.add('active');
-                            // Move arrow to current active
-                            p.querySelector('a')?.appendChild(arrow);
-                            // Hide all groups & images
                             groups.forEach(g => g.classList.add('hidden'));
                             images.forEach(img => img.classList.add('hidden'));
+                            parents.forEach(pr => pr.classList.remove('active'));
 
-                            // Show the current group's children & image
                             menu.querySelector(`[data-group="${index}"]`)?.classList.remove('hidden');
                             menu.querySelector(`[data-image="${index}"]`)?.classList.remove('hidden');
+
+                            p.classList.add('active');
+                            p.querySelector('a')?.appendChild(arrow);
                         });
                     });
                 });
-
-                // Show/Hide Mega Menus when hovering main nav items
-                const desktopMenuItems = document.querySelectorAll('li[data-mega-target]');
-                desktopMenuItems.forEach(li => {
-                    const targetId = li.dataset.megaTarget;
-                    const megaMenu = document.getElementById(targetId);
-                    if (!megaMenu) return;
-
-                    li.addEventListener('mouseenter', () => {
-                        allMegaMenus.forEach(menu => menu.classList.add('hidden'));
-                        megaMenu.classList.remove('hidden');
-                    });
-
-                    // li.addEventListener('mouseleave', (e) => {
-                    //     if (!megaMenu.contains(e.relatedTarget)) megaMenu.classList.add('hidden');
-                    // });
-
-                    megaMenu.addEventListener('mouseleave', () => {
-                        megaMenu.classList.add('hidden');
-                    });
-                });
             });
+
 
             // Mobile Menu Toggle
             document.addEventListener('DOMContentLoaded', () => {

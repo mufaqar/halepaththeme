@@ -434,6 +434,8 @@ $megaMenus = [
                             height="60" width="60" />
                     </a>
                 </div>
+
+                
                 <!-- Navigation -->
                 <nav class="lg:w-full w-1/2 flex lg:justify-center justify-end items-center">
                     <button id="mobileMenuBtn" class="lg:hidden">
@@ -454,7 +456,7 @@ $megaMenus = [
                             $isMega = !empty($menu['groups']);
                             $isDropdown = empty($menu['groups']) && !empty($menu['items']);
                             ?>
-                            <li class="relative cursor-pointer flex items-center" <?php if ($isMega): ?>data-mega-target="megaMenu-<?php echo $key; ?>" <?php endif; ?>     <?php if ($isDropdown): ?>data-dropdown="true" <?php endif; ?>>
+                            <li class="relative cursor-pointer flex items-center " <?php if ($isMega): ?>data-mega-target="megaMenu-<?php echo $key; ?>" <?php endif; ?>     <?php if ($isDropdown): ?>data-dropdown="true" <?php endif; ?>>
 
                                 <a href="<?php echo esc_url($menu['link']); ?>"
                                     class="text-sm font-normal capitalize text-title_Clr hover:text-primary flex items-center">

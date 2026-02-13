@@ -2851,6 +2851,15 @@ footer ul li a span.marker {
   font-weight: var(--font-weight-bold);
   color: var(--primary);
 }
+.main-active {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 2px;
+  border-color: var(--primary);
+  background-color: var(--primary);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;

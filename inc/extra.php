@@ -62,3 +62,51 @@ function mytheme_remove_add_to_cart_buttons() {
     }
 }
 add_action( 'wp', 'mytheme_remove_add_to_cart_buttons' );
+
+
+
+// Mega meunu logic
+function is_menu_active($url) {
+    $current_url = trailingslashit(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+    $menu_url    = trailingslashit($url);
+
+    return $current_url === $menu_url;
+}
+
+function is_parent_active($menu) {
+    $current_url = trailingslashit(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+
+    // Check main link
+    if (!empty($menu['link']) && trailingslashit($menu['link']) === $current_url) {
+        return true;
+    }
+
+    // Check dropdown items
+    if (!empty($menu['items'])) {
+        foreach ($menu['items'] as $item) {
+            if (trailingslashit($item['link']) === $current_url) {
+                return true;
+            }
+        }
+    }
+
+    // Check mega groups
+    if (!empty($menu['groups'])) {
+        foreach ($menu['groups'] as $group) {
+            if (trailingslashit($group['link']) === $current_url) {
+                return true;
+            }
+
+            if (!empty($group['items'])) {
+                foreach ($group['items'] as $item) {
+                    if (trailingslashit($item['link']) === $current_url) {
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+
+    return false;
+}
+?>

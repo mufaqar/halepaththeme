@@ -598,9 +598,7 @@ $megaMenus = [
             document.addEventListener('DOMContentLoaded', () => {
                 const desktopNav = document.getElementById('desktopNav');
                 const allNavItems = desktopNav.querySelectorAll('li');
-
                 const allMegaMenus = document.querySelectorAll('.megaMenu');
-
                 // Helper to close all menus
                 function closeAllMenus() {
                     allNavItems.forEach(item => {
@@ -714,11 +712,8 @@ $megaMenus = [
         </script>
         <script>
             jQuery(document).ready(function ($) {
-
                 $('#live-search').on('keyup', function () {
-
                     var keyword = $(this).val();
-
                     if (keyword.length < 2) {
                         $('#live-search-results').addClass('hidden').html('');
                         return;

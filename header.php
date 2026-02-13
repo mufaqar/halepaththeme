@@ -433,7 +433,7 @@ $megaMenus = [
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo"
                             height="60" width="60" />
                     </a>
-                </div>               
+                </div>
                 <!-- Navigation -->
                 <nav class="lg:w-full w-1/2 flex lg:justify-center justify-end items-center">
                     <button id="mobileMenuBtn" class="lg:hidden">
@@ -448,7 +448,7 @@ $megaMenus = [
                                 d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    <ul id="desktopNav" class="hidden lg:flex gap-5 justify-between w-full">
+                    <ul id="desktopNav" class="hidden lg:flex gap-3 justify-between w-full">
                         <?php foreach ($megaMenus as $key => $menu): ?>
                             <?php
                             $isMega = !empty($menu['groups']);
@@ -457,7 +457,7 @@ $megaMenus = [
                             <li class="relative cursor-pointer flex items-center " <?php if ($isMega): ?>data-mega-target="megaMenu-<?php echo $key; ?>" <?php endif; ?>     <?php if ($isDropdown): ?>data-dropdown="true" <?php endif; ?>>
 
                                 <a href="<?php echo esc_url($menu['link']); ?>"
-                                    class="text-sm font-normal capitalize text-title_Clr hover:text-primary flex items-center">
+                                    class="text-sm font-normal capitalize text-title_Clr hover:text-white hover:bg-primary px-2.5 py-2 rounded-[30px] flex items-center">
                                     <?php echo $menu['title']; ?>
                                     <?php if ($isMega || $isDropdown): ?>
                                         <i class="fa fa-chevron-down ml-2"></i>

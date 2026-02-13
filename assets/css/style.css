@@ -842,6 +842,9 @@
   .rounded-\[22px\] {
     border-radius: 22px;
   }
+  .rounded-\[30px\] {
+    border-radius: 30px;
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -1058,6 +1061,9 @@
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-2\.5 {
+    padding-inline: calc(var(--spacing) * 2.5);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);

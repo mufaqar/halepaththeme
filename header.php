@@ -433,9 +433,7 @@ $megaMenus = [
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo"
                             height="60" width="60" />
                     </a>
-                </div>
-
-                
+                </div>               
                 <!-- Navigation -->
                 <nav class="lg:w-full w-1/2 flex lg:justify-center justify-end items-center">
                     <button id="mobileMenuBtn" class="lg:hidden">

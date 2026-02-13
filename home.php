@@ -52,17 +52,3 @@ $steps = [
 <?php get_template_part('template-parts/home-career'); ?>
 <?php get_template_part('template-parts/temp-instagram'); ?>
 <?php get_footer() ?>
-
-<script>
-jQuery(document).ready(function($) {
-    $('.slider-full').slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        adaptiveHeight: true
-    });
-});
-</script>

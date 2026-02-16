@@ -124,7 +124,7 @@
     </div>
 
     <!-- Logo & Social -->
-    <div class="hale_container flex md:flex-row flex-col md:items-center justify-between gap-7 mt-7 py-2.5 bg-[#e7e7e7]">
+    <div class="hale_container flex md:flex-row flex-col md:items-center justify-between gap-7 mt-7 py-2.5">
         <div class="flex gap-3 items-center">
             <a href="<?php echo home_url(); ?>"><img
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo"></a>

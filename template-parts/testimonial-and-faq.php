@@ -47,42 +47,6 @@ $faqRes = [
         'question' => 'Can I request samples before placing a bulk order?',
         'answer' => 'Yes, sample boxes are available so you can check material quality, size, and printing before moving forward with bulk production.',
     ],
-    [
-        'question' => 'Is there a minimum order quantity (MOQ)?',
-        'answer' => 'Yes, we have a minimum order quantity, which may vary by box type and material. Bulk orders help reduce the cost per unit.',
-    ],
-    [
-        'question' => 'Can I order custom packaging in bulk?',
-        'answer' => 'Absolutely. We specialize in bulk packaging orders and offer competitive pricing for large quantities.',
-    ],
-    [
-        'question' => 'How can I determine the correct box size for my product?',
-        'answer' => 'You can share your product’s length, width, and height or send samples to our collection centers. Our team will review your product and help you select the best box size for safe packaging.',
-    ],
-    [
-        'question' => 'Are there packaging solutions for fragile items?',
-        'answer' => 'Yes, we offer strong corrugated boxes and custom inserts that provide extra protection for fragile and delicate products.',
-    ],
-    [
-        'question' => 'How long does production usually take?',
-        'answer' => 'Production usually takes around 8–12 business days after design approval. Timelines may vary depending on order size and customization.',
-    ],
-    [
-        'question' => 'Where can I buy custom printed packaging boxes?',
-        'answer' => 'You can order custom printed boxes directly from Hale Path Packaging. We provide end-to-end packaging solutions with reliable support.',
-    ],
-    [
-        'question' => 'How can I get a quote for my custom packaging needs?',
-        'answer' => 'You can request a quote by sharing box details such as size, quantity, material, and printing. Our team responds quickly with pricing.',
-    ],
-    [
-        'question' => 'Can I get a custom quote for special packaging requirements?',
-        'answer' => 'Yes, we offer custom quotes based on your specific packaging needs, budget, and order quantity.',
-    ],
-    [
-        'question' => 'How can I contact Hale Path Packaging experts?',
-        'answer' => 'You can contact our team via phone, email, or website contact form. Our packaging experts are ready to help you choose the right solution.',
-    ],
 ];
 
 ?>
@@ -115,8 +79,7 @@ $faqRes = [
                                         <?php endfor; ?>
                                     </div>
                                     <div class="mt-5 flex gap-2 items-center">
-                                        <figure
-                                            class="testi_img">
+                                        <figure class="testi_img">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/user.jpg"
                                                 alt="" class="rounded-full w-[49px] h-[49px]">
                                         </figure>

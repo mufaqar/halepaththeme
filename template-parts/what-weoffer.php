@@ -35,7 +35,7 @@
                 ?>
 
                 <?php foreach ($services as $index => $service): ?>
-                    <div class="service_box h-[520px] p-6 bg-white/5 backdrop-blur-[10px]">
+                    <div class="service_box h-[520px] p-3 bg-white/5 backdrop-blur-[10px]">
                         <div class="h-full w-full bg-no-repeat bg-center bg-cover flex items-end justify-end pt-6 pb-1"
                             style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/o<?php echo $index + 1; ?>.png'">
                             <div class="service_inner">

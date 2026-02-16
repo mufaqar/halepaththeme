@@ -237,7 +237,7 @@
 }
 
 .slider-full h2 {
-  @apply font-semibold relative my-2 xl:text-[80px] max-w-[580px] text-[50px] leading-none lg:text-[70px] ;
+  @apply font-semibold relative my-2 xl:text-[70px] max-w-[580px] text-3xl leading-none lg:text-[70px] ;
 }
 
 .feature_box {

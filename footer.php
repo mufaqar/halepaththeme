@@ -34,7 +34,7 @@
         <!-- Products Packaging -->
         <div>
             <h6 class="footer_title">
-                Products Packaging
+                Innovation
                 <span class=""></span>
             </h6>
             <?php
@@ -51,7 +51,7 @@
         <!-- Packaging Style -->
         <div>
             <h6 class="footer_title">
-                Packaging Style
+               Packaging Products
                 <span class=""></span>
             </h6>
             <?php

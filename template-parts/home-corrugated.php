@@ -6,7 +6,7 @@
         </h2>
     </div>
     <div
-        class="bg-secondary/50 backdrop-blur-sm py-10 pr-8 md:p-[46px] max-w-[90%] md:max-w-[80%] lg:max-w-[70%] rounded-tr-[140px] mt-[110px]">
+        class="bg-secondary/20 backdrop-blur-[10px] py-10 pr-8 md:p-[46px] max-w-[90%] md:max-w-[80%] lg:max-w-[70%] rounded-tr-[140px] mt-[110px]">
         <div class="hale_container">
             <h5 class="text-white font-bold text-xl md:text-[25px]">
                 Hale Path Provide Best Packaging Services

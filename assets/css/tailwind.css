@@ -209,7 +209,7 @@
 }
 
 .hale_input {
-  @apply text-sm md:leading-[56px] font-medium text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-white px-7 border border-transparent focus:border-secondary outline-none rounded-full w-full;
+  @apply text-sm md:leading-[56px] font-medium text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-[#f3f2ee] px-7 border border-transparent focus:border-secondary outline-none rounded-full w-full;
 }
 
 .form_row {

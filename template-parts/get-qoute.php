@@ -24,7 +24,7 @@ $steps = [
 ?>
 
 <section
-    class='md:py-14 py-10 relative bg-center bg-no-repeat bg-cover before:content-[""] before:absolute before:w-full before:bg-[#081d29bd]  before:h-full before:top-0'
+    class='md:py-14 py-10 relative bg-center bg-no-repeat bg-cover before:content-[""] before:absolute before:w-full before:bg-[#191919]  before:h-full before:top-0'
     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/qoute-bg.png'">
     <div class="hale_container relative z-10 flex md:flex-row flex-col gap-7">
         <div class="md:w-1/2 w-full">

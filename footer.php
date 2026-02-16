@@ -68,7 +68,7 @@
         <!-- Inspiration -->
         <div>
             <h6 class="footer_title">
-                Inspiration
+                Services
                 <span class=""></span>
             </h6>
             <?php
@@ -85,7 +85,7 @@
         <!-- Contact -->
         <div>
             <h6 class="footer_title">
-                Contact
+                Connect With Us
                 <span class=""></span>
             </h6>
             <ul class="flex flex-col gap-2.5">

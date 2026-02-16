@@ -201,7 +201,7 @@
 }
 
 .step h4 {
-  @apply text-xl font-medium text-primary mb-2;
+  @apply text-xl font-medium text-white mb-2;
 }
 
 .step p {
@@ -209,7 +209,7 @@
 }
 
 .hale_input {
-  @apply text-sm md:leading-[56px] font-medium text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-[#f3f2ee] px-7 border border-transparent focus:border-secondary outline-none rounded-full w-full h-full;
+  @apply text-sm min-h-[50px] font-medium text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-[#f3f2ee] px-7 border border-transparent focus:border-secondary outline-none rounded-full w-full;
 }
 
 .form_row {
@@ -229,7 +229,7 @@
 }
 
 .service_inner .content h5 {
-  @apply flex text-white cursor-pointer md:text-base text-base font-normal justify-between border-b-[3px] py-3 pt-1 border-white;
+  @apply flex text-white cursor-pointer md:text-base md:leading-none text-base font-normal justify-between border-b pb-1.5 border-white;
 }
 
 .slider-full h6 {

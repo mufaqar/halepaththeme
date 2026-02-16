@@ -84,7 +84,7 @@ $steps = [
                         <label htmlfor="product" class="hidden">
                             Cosmetics Packaging
                         </label>
-                        <select class="hale_input md:min-h-[58px] h-[36px]" name="product" id="product">
+                        <select class="hale_input" name="product" id="product">
                             <option value="select the Product">select the Product</option>
                             <option value="Product1">Product1</option>
                         </select>
@@ -94,7 +94,7 @@ $steps = [
                     <label htmlfor="message" class="hidden">
                         Your Message
                     </label>
-                    <textarea class="hale_input rounded-[19px]!" id="message" name="message" rows="3"
+                    <textarea class="hale_input rounded-[19px]! !min-h-[170px] md:pt-2" id="message" name="message" rows="3"
                         placeholder="Write Your Message..."></textarea>
                 </div>
                 <div class="w-full">

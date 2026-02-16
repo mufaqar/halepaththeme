@@ -1,22 +1,15 @@
 <?php
-
-
 add_action('wp_ajax_live_search_products', 'live_search_products');
 add_action('wp_ajax_nopriv_live_search_products', 'live_search_products');
-
 function live_search_products(){
-
   $keyword = sanitize_text_field($_POST['keyword']);
-
   $args = array(
     'post_type'      => 'product',
     'posts_per_page' => 5,
     's'              => $keyword,
     'post_status'    => 'publish',
   );
-
   $query = new WP_Query($args);
-
   if($query->have_posts()){
     echo '<ul class="divide-y divide-gray-200">';
     while($query->have_posts()){
@@ -40,6 +33,5 @@ function live_search_products(){
   } else {
     echo '<p class="p-2 text-gray-500">No products found.</p>';
   }
-
   wp_die();
 }

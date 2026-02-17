@@ -10,7 +10,7 @@
     </div>
     <div class="offerbg bg-cover bg-no-repeat mt-44 border"
         style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/offer-bg.png'">
-        <div class="hale_container !px-0">
+        <div class="hale_container ">
             <div
                 class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4 mb-32 -mt-48 ">
                 <?php
@@ -35,7 +35,7 @@
                 ?>
 
                 <?php foreach ($services as $index => $service): ?>
-                    <div class="service_box h-[520px] p-3 bg-white/5 backdrop-blur-[10px]">
+                    <div class="service_box h-[520px] p-5 bg-white/5 backdrop-blur-[10px]">
                         <div class="h-full w-full bg-no-repeat bg-center bg-cover flex items-end justify-end pt-6 pb-1"
                             style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/o<?php echo $index + 1; ?>.png'">
                             <div class="service_inner">

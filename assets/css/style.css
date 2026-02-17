@@ -2504,7 +2504,7 @@
   }
 }
 .service_inner {
-  padding-inline: calc(var(--spacing) * 4);
+  padding-inline: calc(var(--spacing) * 2);
 }
 .service_inner .content {
   border-style: var(--tw-border-style);
@@ -2518,7 +2518,7 @@
     background-color: color-mix(in oklab, var(--color-white) 5%, transparent);
   }
   padding: calc(var(--spacing) * 3);
-  padding-inline: calc(var(--spacing) * 5);
+  padding-inline: calc(var(--spacing) * 3);
   --tw-backdrop-blur: blur(10px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);

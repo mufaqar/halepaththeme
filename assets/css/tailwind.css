@@ -221,11 +221,11 @@
 }
 
 .service_inner {
-  @apply px-4;
+  @apply px-2;
 }
 
 .service_inner .content {
-  @apply border border-white/10 bg-white/5 backdrop-blur-[10px] p-3 px-5;
+  @apply border border-white/10 bg-white/5 backdrop-blur-[10px] p-3 px-3;
 }
 
 .service_inner .content h5 {

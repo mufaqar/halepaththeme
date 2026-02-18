@@ -825,7 +825,7 @@ $megaMenus = [
             <?php foreach ($megaMenus as $key => $menu): ?>
                 <?php if (!empty($menu['groups'])): ?>
                     <div id="megaMenu-<?php echo $key; ?>"
-                        class="megaMenu hidden lg:absolute left-0 md:top-[94px] xl:top-[74px] w-full  z-50 overflow-y-auto min-h-[90vh] h-full">
+                        class="megaMenu hidden lg:absolute left-0 min-lg:top-[75px] top-[94px] w-full  z-50 overflow-y-auto min-h-[65vh] h-full">
                         <?php
                         $hasImage = false;
 

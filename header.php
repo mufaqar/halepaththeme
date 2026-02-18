@@ -68,7 +68,7 @@ $megaMenus = [
 
             "Food & Beverage" => [
                 "link" => "/industries/food",
-                "image" => true,
+                "image" => false,
                 "items" => [
                     ["title" => "Food & Restaurant", "link" => "/industries/food/restaurant"],
                     ["title" => "Bakery & Confectionery", "link" => "/industries/food/bakery"],
@@ -89,7 +89,7 @@ $megaMenus = [
 
             "Retail & E-commerce" => [
                 "link" => "/industries/retail",
-                "image" => true,
+                "image" => false,
                 "items" => [
                     ["title" => "E-commerce Packaging", "link" => "/industries/retail/ecommerce"],
                     ["title" => "Retail Boxes", "link" => "/industries/retail/boxes"],
@@ -102,7 +102,7 @@ $megaMenus = [
 
             "Cannabis & CBD" => [
                 "link" => "/industries/cbd",
-                "image" => true,
+                "image" => false,
                 "items" => [
                     ["title" => "CBD Products", "link" => "/industries/cbd/products"],
                     ["title" => "Marijuana & Cannabis Packaging", "link" => "/industries/cbd/packaging"],
@@ -114,7 +114,7 @@ $megaMenus = [
 
             "Tobacco & Vaping" => [
                 "link" => "/industries/tobacco",
-                "image" => true,
+                "image" => false,
                 "items" => [
                     ["title" => "Tobacco Products", "link" => "/industries/tobacco/products"],
                     ["title" => "Cigars", "link" => "/industries/tobacco/cigars"],
@@ -299,7 +299,7 @@ $megaMenus = [
         "groups" => [
             "Flexible Packaging Bags" => [
                 "link" => "/flexible-packaging/bags",
-                "image" => true,
+                "image" => false,
                 "items" => [
                     ["title" => "Stand Up Pouch", "link" => "/flexible-packaging/bags/stand-up"],
                     ["title" => "Flat Bottom Pouch", "link" => "/flexible-packaging/bags/flat-bottom"],
@@ -355,7 +355,7 @@ $megaMenus = [
         "groups" => [
             "Box Styles" => [
                 "link" => "/custom-packaging/box-styles",
-                "image" => true,
+                "image" => false,
                 "items" => [
                     ["title" => "Folding Carton Boxes", "link" => "/custom-packaging/box-styles/folding-carton"],
                     ["title" => "Tuck End", "link" => "/custom-packaging/box-styles/tuck-end"],
@@ -459,7 +459,7 @@ $megaMenus = [
         "groups" => [
             "Food & Beverage Packaging" => [
                 "link" => "/corrugated-packaging/food",
-                "image" => true,
+                "image" => false,
                 "items" => [
                     ["title" => "Fresh Produce", "link" => "/corrugated-packaging/food/fresh-produce"],
                     ["title" => "Frozen & Chilled", "link" => "/corrugated-packaging/food/frozen"],
@@ -597,7 +597,7 @@ $megaMenus = [
 
             "Office Supplies" => [
                 "link" => "/print-advertising/office",
-                "image" => true,
+                "image" => false,
                 "items" => [
                     ["title" => "Workspace Accessories", "link" => "/print-advertising/office/workspace"],
                     ["title" => "Pens, Pencils & Markers", "link" => "/print-advertising/office/pens"],
@@ -825,17 +825,27 @@ $megaMenus = [
             <?php foreach ($megaMenus as $key => $menu): ?>
                 <?php if (!empty($menu['groups'])): ?>
                     <div id="megaMenu-<?php echo $key; ?>"
-                        class="megaMenu hidden lg:absolute left-0 top-[58px] w-full  z-50 overflow-y-auto min-h-[90vh] h-full">
+                        class="megaMenu hidden lg:absolute left-0 md:top-[94px] xl:top-[74px] w-full  z-50 overflow-y-auto min-h-[90vh] h-full">
+                        <?php
+                        $hasImage = false;
+
+                        foreach ($menu['groups'] as $groupName => $items) {
+                            if (!empty($items['image']) && $items['image'] === true) {
+                                $hasImage = true;
+                                break;
+                            }
+                        }
+                        ?>
                         <div
-                            class="hale_container mx-auto !px-0  grid grid-cols-4 gap-8 rounded-b-2xl shadow-xl bg-black/20 backdrop-blur-[10px]">
+                            class="mx-auto !px-0 grid <?php echo $hasImage ? 'grid-cols-4 hale_container' : 'grid-cols-2 w-fit'; ?> gap-8 rounded-b-2xl shadow-xl bg-black/20 backdrop-blur-[10px]">
                             <!-- Column 1: Parent Groups -->
                             <div class="px-6 py-4 rounded-bl-2xl ">
                                 <ul class="space-y-1">
                                     <?php $i = 0; ?>
                                     <?php foreach ($menu['groups'] as $groupName => $items): ?>
-                                        <li class="mainCat w-fit flex items-center gap-2" data-index="<?php echo $i; ?>">
+                                        <li class="mainCat w-fit flex items-center gap-2 text-white" data-index="<?php echo $i; ?>">
                                             <a href="<?php echo esc_url($items['link']); ?>"
-                                                class="text-sm capitalize text-white hover:text-primary cursor-pointer flex items-center gap-2">
+                                                class="text-sm capitalize  cursor-pointer flex items-center gap-2">
                                                 <?php echo $groupName; ?>
                                             </a>
                                         </li>
@@ -861,7 +871,7 @@ $megaMenus = [
                                     <?php $i++; endforeach; ?>
                             </div>
                             <!-- Column 3: Images -->
-                            <?php if ($key !== false): ?>
+                            <?php if ($hasImage): ?>
                                 <div class="col-span-2 py-4 px-4">
                                     <?php $i = 0; ?>
                                     <?php foreach ($menu['groups'] as $groupName => $items): ?>
@@ -945,21 +955,30 @@ $megaMenus = [
                     });
                     allMegaMenus.forEach(menu => menu.classList.add('hidden'));
                 }
-
                 allNavItems.forEach(item => {
                     const dropdown = item.querySelector('.dropdownMenu');
                     const megaTarget = item.dataset.megaTarget;
                     const megaMenu = megaTarget ? document.getElementById(megaTarget) : null;
+                    const link = item.querySelector('a');
 
                     item.addEventListener('mouseenter', () => {
-                        // Close all other menus
+
+                        // Remove active from all links
+                        allNavItems.forEach(nav => {
+                            nav.querySelector('a')?.classList.remove('main_active');
+                        });
+
                         closeAllMenus();
 
-                        // Open current menu
+                        // Show menu
                         if (dropdown) dropdown.classList.remove('hidden');
                         if (megaMenu) megaMenu.classList.remove('hidden');
+
+                        // Add active class
+                        link?.classList.add('main_active');
                     });
                 });
+
 
                 // Close dropdowns when mouse leaves them
                 allNavItems.forEach(item => {
@@ -967,6 +986,7 @@ $megaMenus = [
                     if (dropdown) {
                         dropdown.addEventListener('mouseleave', () => {
                             dropdown.classList.add('hidden');
+                            item.querySelector('a')?.classList.remove('main_active');
                         });
                     }
                 });
@@ -975,6 +995,10 @@ $megaMenus = [
                 allMegaMenus.forEach(menu => {
                     menu.addEventListener('mouseleave', () => {
                         menu.classList.add('hidden');
+
+                        allNavItems.forEach(nav => {
+                            nav.querySelector('a')?.classList.remove('main_active');
+                        });
                     });
                 });
 

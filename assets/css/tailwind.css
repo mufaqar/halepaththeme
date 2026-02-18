@@ -359,9 +359,9 @@ footer ul li a span.marker {
   height: fit-content !important;
 }
 .active{
-  @apply text-primary font-bold border-b-2 border-primary;
+  @apply !text-primary font-bold border-b-2 border-primary;
 }
 
-.main-active{
-  @apply  font-bold border-b-2 border-primary bg-primary text-white ;
+.main_active{
+  @apply  bg-primary text-white ;
 }

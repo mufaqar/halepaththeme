@@ -342,7 +342,9 @@ footer ul li a span.marker {
   direction: ltr;
 }
 
-
+.megaMenu::-webkit-scrollbar {
+  width: 0px;
+}
 /* =========================
    UTILITIES
 ========================= */

@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-900: oklch(39.6% 0.141 25.723);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -234,9 +233,6 @@
   .top-\[60\%\] {
     top: 60%;
   }
-  .top-\[74px\] {
-    top: 74px;
-  }
   .top-\[94px\] {
     top: 94px;
   }
@@ -257,6 +253,12 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
+  }
+  .left-1\/2 {
+    left: calc(1/2 * 100%);
   }
   .left-3 {
     left: calc(var(--spacing) * 3);
@@ -540,14 +542,8 @@
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
   }
-  .max-h-\[240px\] {
-    max-height: 240px;
-  }
   .max-h-\[300px\] {
     max-height: 300px;
-  }
-  .max-h-\[420px\] {
-    max-height: 420px;
   }
   .max-h-\[467px\] {
     max-height: 467px;
@@ -564,26 +560,11 @@
   .max-h-\[812px\] {
     max-height: 812px;
   }
-  .max-h-fit {
-    max-height: fit-content;
-  }
   .\!min-h-\[170px\] {
     min-height: 170px !important;
   }
-  .min-h-\[50vh\] {
-    min-height: 50vh;
-  }
-  .min-h-\[55vh\] {
-    min-height: 55vh;
-  }
-  .min-h-\[60vh\] {
-    min-height: 60vh;
-  }
   .min-h-\[65vh\] {
     min-height: 65vh;
-  }
-  .min-h-\[90vh\] {
-    min-height: 90vh;
   }
   .w-1 {
     width: calc(var(--spacing) * 1);
@@ -662,6 +643,14 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .-translate-x-1 {
+    --tw-translate-x: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1 {
     --tw-translate-y: calc(var(--spacing) * -1);
@@ -966,9 +955,6 @@
   }
   .bg-primary {
     background-color: var(--primary);
-  }
-  .bg-red-900 {
-    background-color: var(--color-red-900);
   }
   .bg-secondary {
     background-color: var(--secondary);
@@ -1595,11 +1581,6 @@
       border-color: var(--secondary);
     }
   }
-  .sm\:top-\[94px\] {
-    @media (width >= 40rem) {
-      top: 94px;
-    }
-  }
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1634,16 +1615,6 @@
   .sm\:text-\[43px\] {
     @media (width >= 40rem) {
       font-size: 43px;
-    }
-  }
-  .md\:top-\[74px\] {
-    @media (width >= 48rem) {
-      top: 74px;
-    }
-  }
-  .md\:top-\[94px\] {
-    @media (width >= 48rem) {
-      top: 94px;
     }
   }
   .md\:col-span-1 {
@@ -2024,21 +1995,6 @@
       position: absolute;
     }
   }
-  .lg\:top-\[74px\] {
-    @media (width >= 64rem) {
-      top: 74px;
-    }
-  }
-  .min-lg\:top-0 {
-    @media (width >= 64rem) {
-      top: calc(var(--spacing) * 0);
-    }
-  }
-  .min-lg\:top-\[0\] {
-    @media (width >= 64rem) {
-      top: 0;
-    }
-  }
   .min-lg\:top-\[75px\] {
     @media (width >= 64rem) {
       top: 75px;
@@ -2151,16 +2107,6 @@
     @media (width >= 64rem) {
       --tw-leading: 80px;
       line-height: 80px;
-    }
-  }
-  .xl\:top-\[74px\] {
-    @media (width >= 80rem) {
-      top: 74px;
-    }
-  }
-  .xl\:top-\[94px\] {
-    @media (width >= 80rem) {
-      top: 94px;
     }
   }
   .xl\:grid-cols-4 {
@@ -3001,12 +2947,9 @@ footer ul li a span.marker {
   height: fit-content !important;
 }
 .active {
-  border-bottom-style: var(--tw-border-style);
-  border-bottom-width: 2px;
-  border-color: var(--primary);
-  --tw-font-weight: var(--font-weight-bold);
-  font-weight: var(--font-weight-bold);
-  color: var(--primary) !important;
+  background-color: var(--primary);
+  padding-inline: calc(var(--spacing) * 5);
+  padding-block: calc(var(--spacing) * 2);
 }
 .main_active {
   background-color: var(--primary);

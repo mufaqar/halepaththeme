@@ -299,7 +299,7 @@ $megaMenus = [
         "groups" => [
             "Flexible Packaging Bags" => [
                 "link" => "/flexible-packaging/bags",
-                "image" => false,
+                 "image" => true,
                 "items" => [
                     ["title" => "Stand Up Pouch", "link" => "/flexible-packaging/bags/stand-up"],
                     ["title" => "Flat Bottom Pouch", "link" => "/flexible-packaging/bags/flat-bottom"],
@@ -355,7 +355,7 @@ $megaMenus = [
         "groups" => [
             "Box Styles" => [
                 "link" => "/custom-packaging/box-styles",
-                "image" => false,
+                  "image" => true,
                 "items" => [
                     ["title" => "Folding Carton Boxes", "link" => "/custom-packaging/box-styles/folding-carton"],
                     ["title" => "Tuck End", "link" => "/custom-packaging/box-styles/tuck-end"],
@@ -459,7 +459,7 @@ $megaMenus = [
         "groups" => [
             "Food & Beverage Packaging" => [
                 "link" => "/corrugated-packaging/food",
-                "image" => false,
+                  "image" => true,
                 "items" => [
                     ["title" => "Fresh Produce", "link" => "/corrugated-packaging/food/fresh-produce"],
                     ["title" => "Frozen & Chilled", "link" => "/corrugated-packaging/food/frozen"],
@@ -597,7 +597,7 @@ $megaMenus = [
 
             "Office Supplies" => [
                 "link" => "/print-advertising/office",
-                "image" => false,
+                  "image" => true,
                 "items" => [
                     ["title" => "Workspace Accessories", "link" => "/print-advertising/office/workspace"],
                     ["title" => "Pens, Pencils & Markers", "link" => "/print-advertising/office/pens"],
@@ -825,7 +825,7 @@ $megaMenus = [
             <?php foreach ($megaMenus as $key => $menu): ?>
                 <?php if (!empty($menu['groups'])): ?>
                     <div id="megaMenu-<?php echo $key; ?>"
-                        class="megaMenu hidden lg:absolute left-0 min-lg:top-[75px] top-[94px] w-full  z-50 overflow-y-auto min-h-[65vh] h-full">
+                        class="megaMenu hidden lg:absolute left-1/2 -translate-x-1/2 min-lg:top-[75px] top-[94px] hale_container mx-auto  z-50 overflow-y-auto min-h-[65vh] h-full">
                         <?php
                         $hasImage = false;
 
@@ -837,15 +837,15 @@ $megaMenus = [
                         }
                         ?>
                         <div
-                            class="mx-auto !px-0 grid <?php echo $hasImage ? 'grid-cols-4 hale_container' : 'grid-cols-2 w-fit'; ?> gap-8 rounded-b-2xl shadow-xl bg-black/20 backdrop-blur-[10px]">
+                            class="mx-auto !px-0 grid <?php echo $hasImage ? 'grid-cols-4 hale_container' : 'grid-cols-4 hale_container'; ?> gap-8 rounded-b-2xl shadow-xl bg-black/20 backdrop-blur-[10px]">
                             <!-- Column 1: Parent Groups -->
                             <div class="px-6 py-4 rounded-bl-2xl ">
-                                <ul class="space-y-1">
+                                <ul class="space-y-2">
                                     <?php $i = 0; ?>
                                     <?php foreach ($menu['groups'] as $groupName => $items): ?>
-                                        <li class="mainCat w-fit flex items-center gap-2 text-white" data-index="<?php echo $i; ?>">
+                                        <li class="mainCat w-fit flex items-center gap-2 " data-index="<?php echo $i; ?>">
                                             <a href="<?php echo esc_url($items['link']); ?>"
-                                                class="text-sm capitalize  cursor-pointer flex items-center gap-2">
+                                                class="text-sm capitalize text-white cursor-pointer flex items-center gap-2">
                                                 <?php echo $groupName; ?>
                                             </a>
                                         </li>

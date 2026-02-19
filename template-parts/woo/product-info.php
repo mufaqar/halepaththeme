@@ -21,7 +21,7 @@
                             <img src="<?php echo esc_url($image['url']); ?>"
                                  alt="<?php echo esc_attr($image['alt']); ?>"
                                  loading="lazy"
-                                 class="!h-full w-full object-cover scale-105 rounded-2xl">
+                                 class="!h-full w-full object-cover scale-105 rounded-2xl max-h-[550px]">
                         </figure>
                     </div>
                 <?php endforeach; ?>

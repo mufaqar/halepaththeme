@@ -51,58 +51,8 @@ $faqRes = [
 
 ?>
 
-<section class="py-[60px] bg-[#F5F5F5]" id="testimonials">
+<section class="py-[60px] bg-[#F5F5F5]">
     <div class="hale_container grid md:grid-cols-1 gap-6">
-        <!-- Testimonials -->
-        <!-- <div>
-            <div class="md:max-w-[470px] max-w-[350px] mx-auto">
-                <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
-                    Testimonials
-                    <div class="sub_title_line"></div>
-                </h6>
-                <h2 class="h2 text-left!">
-                    What Customers Says
-                    <span class="text-[#47AFC3]">About Us</span>
-                </h2>
-
-                <div class="testimonials-sliders">
-                    <?php foreach ($testimonialsRes as $testimonial): ?>
-                        <div>
-                            <div class="testi_box">
-                                <div class="testi_inner">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/qoute-icon.png"
-                                        alt="" class="w-[66px] h-[54px]">
-                                    <p class="mt-4"><?php echo esc_html($testimonial['review']); ?></p>
-                                    <div class="mt-2 flex gap-1">
-                                        <?php for ($i = 0; $i < 5; $i++): ?>
-                                            <span class="text-[#FFAE00]">&#9733;</span>
-                                        <?php endfor; ?>
-                                    </div>
-                                    <div class="mt-5 flex gap-2 items-center">
-                                        <figure class="testi_img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-page/user.jpg"
-                                                alt="" class="rounded-full w-[49px] h-[49px]">
-                                        </figure>
-                                        <div>
-                                            <h6 class="testi_title">
-                                                <?php echo esc_html($testimonial['name']); ?>
-                                            </h6>
-                                            <p class="text-[#1C1C1CE8]">Co founder</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-
-                <div class="flex justify-center gap-2 text-4xl">
-                    <button class="prev hover:text-[#47AFC3]">&#8592;</button>
-                    <button class="next hover:text-[#47AFC3]">&#8594;</button>
-                </div>
-            </div>
-        </div> -->
-
         <!-- FAQs -->
         <div id="faqs" class="pt-8">
             <h2 class="h2">
@@ -132,24 +82,6 @@ $faqRes = [
 
 <script>
     jQuery(document).ready(function ($) {
-        // Initialize Slick slider
-        var $slider = $('.testimonials-sliders'); // cache slider
-
-        $slider.slick({
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 4000
-        });
-
-        // Arrows navigation
-        $('.prev').click(function () { $slider.slick('slickPrev'); });
-        $('.next').click(function () { $slider.slick('slickNext'); });
-
         // FAQ toggle
         $('.faq-title').click(function () {
             var parent = $(this).closest('.faq-item');

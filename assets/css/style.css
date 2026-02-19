@@ -545,14 +545,29 @@
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
   }
+  .max-h-\[0\] {
+    max-height: 0;
+  }
+  .max-h-\[20\] {
+    max-height: 20;
+  }
   .max-h-\[300px\] {
     max-height: 300px;
+  }
+  .max-h-\[450px\] {
+    max-height: 450px;
   }
   .max-h-\[467px\] {
     max-height: 467px;
   }
+  .max-h-\[550px\] {
+    max-height: 550px;
+  }
   .max-h-\[567px\] {
     max-height: 567px;
+  }
+  .max-h-\[620px\] {
+    max-height: 620px;
   }
   .max-h-\[708px\] {
     max-height: 708px;
@@ -1982,6 +1997,11 @@
   .md\:text-\[27px\] {
     @media (width >= 48rem) {
       font-size: 27px;
+    }
+  }
+  .md\:text-\[28px\] {
+    @media (width >= 48rem) {
+      font-size: 28px;
     }
   }
   .md\:text-\[29px\] {

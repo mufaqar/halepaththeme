@@ -98,25 +98,24 @@ if (is_product_category()) {
 
         <!-- LEFT CONTENT -->
         <div class="md:w-1/2 w-full">
-            <h1 class="md:text-[40px] md:leading-normal text-3xl font-bold text-title_Clr mb-4">
-                <?php echo esc_html($title); ?>
-            </h1>
-
-            <div class="text-xl font-normal text-title_Clr mb-8">
-                <?php global $product;
-                if ( $product->get_short_description() ) {               
-                    echo wpautop( $product->get_short_description() );                   
-                } ?>
-            </div>
-
             <!-- Product Gallery -->
             <?php get_template_part('template-parts/woo/product', 'gallery'); ?>
         </div>
 
         <!-- RIGHT CONTENT -->
         <div class="md:w-1/2 w-full">
-            <h2 class="md:text-[41px] md:leading-normal text-3xl font-bold text-title_Clr mb-3">
-                Get Custom Quote 
+            <h1 class="md:text-[40px] md:leading-normal text-3xl font-bold text-title_Clr">
+                <?php echo esc_html($title); ?>
+            </h1>
+
+            <div class="text-lg font-normal text-title_Clr mb-5">
+                <?php global $product;
+                if ($product->get_short_description()) {
+                    echo wpautop($product->get_short_description());
+                } ?>
+            </div>
+            <h2 class="md:text-[28px] md:leading-normal text-2xl font-bold text-title_Clr">
+                Get Custom Quote
             </h2>
             <?php get_template_part('template-parts/woo/product-form'); ?>
         </div>

@@ -7,10 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-900: oklch(39.6% 0.141 25.723);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-800: oklch(27.8% 0.033 256.848);
@@ -537,9 +537,6 @@
   .h-auto\! {
     height: auto !important;
   }
-  .h-fit {
-    height: fit-content;
-  }
   .h-full {
     height: 100%;
   }
@@ -549,26 +546,8 @@
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
   }
-  .max-h-\[0\] {
-    max-height: 0;
-  }
-  .max-h-\[20\] {
-    max-height: 20;
-  }
-  .max-h-\[25vh\] {
-    max-height: 25vh;
-  }
-  .max-h-\[70\] {
-    max-height: 70;
-  }
-  .max-h-\[75vh\] {
-    max-height: 75vh;
-  }
   .max-h-\[300px\] {
     max-height: 300px;
-  }
-  .max-h-\[450px\] {
-    max-height: 450px;
   }
   .max-h-\[467px\] {
     max-height: 467px;
@@ -582,20 +561,8 @@
   .max-h-\[605px\] {
     max-height: 605px;
   }
-  .max-h-\[620px\] {
-    max-height: 620px;
-  }
-  .max-h-\[708px\] {
-    max-height: 708px;
-  }
   .max-h-\[712px\] {
     max-height: 712px;
-  }
-  .max-h-\[812px\] {
-    max-height: 812px;
-  }
-  .max-h-\[5520px\] {
-    max-height: 5520px;
   }
   .\!min-h-\[170px\] {
     min-height: 170px !important;
@@ -766,9 +733,6 @@
   }
   .items-start\! {
     align-items: flex-start !important;
-  }
-  .items-stretch {
-    align-items: stretch;
   }
   .justify-between {
     justify-content: space-between;
@@ -957,6 +921,10 @@
     border-style: var(--tw-border-style);
     border-width: 18px;
   }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
   .border-b-2 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
@@ -980,6 +948,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-black) 15%, transparent);
     }
+  }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
   }
   .border-primary {
     border-color: var(--primary);
@@ -1019,9 +990,6 @@
   }
   .bg-primary {
     background-color: var(--primary);
-  }
-  .bg-red-900 {
-    background-color: var(--color-red-900);
   }
   .bg-secondary {
     background-color: var(--secondary);
@@ -1286,6 +1254,9 @@
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
   }
+  .\!text-left {
+    text-align: left !important;
+  }
   .text-center {
     text-align: center;
   }
@@ -1407,6 +1378,9 @@
   }
   .text-\[\#FFAE00\]\/50 {
     color: color-mix(in oklab, #FFAE00 50%, transparent);
+  }
+  .text-gray-300 {
+    color: var(--color-gray-300);
   }
   .text-gray-500 {
     color: var(--color-gray-500);
@@ -2037,11 +2011,6 @@
   .md\:text-\[40px\] {
     @media (width >= 48rem) {
       font-size: 40px;
-    }
-  }
-  .md\:text-\[41px\] {
-    @media (width >= 48rem) {
-      font-size: 41px;
     }
   }
   .md\:text-\[51px\] {
@@ -3062,6 +3031,33 @@ footer ul li a span.marker {
 }
 .testimonials-slider .slick-slide {
   height: 100% !important;
+}
+.tab-btn {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 2px;
+  border-color: transparent;
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--title_Clr);
+  @supports (color: color-mix(in lab, red, red)) {
+    color: color-mix(in oklab, var(--title_Clr) 80%, transparent);
+  }
+  @media (width >= 48rem) {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  @media (width >= 48rem) {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+}
+.tab_active {
+  border-color: var(--secondary);
+  background-color: #F5F5F5;
+  color: var(--title_Clr);
 }
 @property --tw-translate-x {
   syntax: "*";

@@ -371,3 +371,9 @@ footer ul li a span.marker {
 .testimonials-slider .slick-slide {
   height: 100% !important;
 }
+.tab-btn{
+  @apply md:text-lg text-sm md:px-6 px-4 py-2 font-medium text-title_Clr/80 border-b-2 border-transparent;
+}
+.tab_active{
+  @apply bg-[#F5F5F5] text-title_Clr border-secondary;
+}

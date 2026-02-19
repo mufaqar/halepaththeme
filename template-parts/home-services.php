@@ -5,7 +5,7 @@ $slides = [
     "title" => "Offset Printing",
     "link" => "#",
     "bg" => "slider_bg",
-    "text" => "",
+    "text" => "text-white",
     "desc" => "Discover top-notch custom offset printing services for your packaging needs right here. We deliver sharp, vibrant colors on boxes and labels that make your products pop on shelves. Ideal for big orders, this method cuts costs while ensuring consistent quality across paperboard and cardstock. Count on us for precise details that boost your brand visibility in retail settings."
   ],
   [
@@ -40,14 +40,16 @@ $slides = [
     <div class="slider-wrapper sticky top-0 h-screen">
       <div class="slider-full">
         <?php foreach ($slides as $slide): ?>
-          <div class="!grid md:grid-cols-2 slider-item">
+          <div class="!grid md:grid-cols-2 slider-item bg-cover bg-no-repeat bg-right"
+            style="background-image: url('<?php echo get_template_directory_uri() . $slide['image']; ?>');">
             <figure class="h-full">
-              <img src="<?php echo get_template_directory_uri() . $slide['image']; ?>" alt="Packaging Image"
-                class="img-full " />
+              <!-- <img src="<?php //echo get_template_directory_uri() . $slide['image']; ?>" alt="Packaging Image"
+                class="img-full " /> -->
             </figure>
             <div
-              class="bg-cover bg-no-repeat flex justify-center md:items-center flex-col px-5 md:px-5 pb-14 md:pb-10 py-10 p-5 <?php echo $slide['bg']; ?>">
-              <div class="<?php echo $slide['text']; ?> slider-content">
+              class="flex justify-center md:items-center flex-col px-5 md:px-5 pb-14 md:pb-10 py-10 p-5 <?php //echo $slide['bg']; ?>">
+              <div
+                class="<?php echo $slide['text']; ?> slider-content bg-white/5 backdrop-blur-[10px] py-10 p-10 rounded-lg">
                 <h6 class="animate-slide">Hale Path Packaging</h6>
                 <h2 class="animate-slide delay-200"><?php echo esc_html($slide['title']); ?></h2>
                 <p class="animate-slide delay-200 md:max-w-4/5"><?php echo esc_html($slide['desc']); ?></p>

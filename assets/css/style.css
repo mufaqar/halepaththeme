@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-900: oklch(39.6% 0.141 25.723);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -536,6 +537,9 @@
   .h-auto\! {
     height: auto !important;
   }
+  .h-fit {
+    height: fit-content;
+  }
   .h-full {
     height: 100%;
   }
@@ -550,6 +554,15 @@
   }
   .max-h-\[20\] {
     max-height: 20;
+  }
+  .max-h-\[25vh\] {
+    max-height: 25vh;
+  }
+  .max-h-\[70\] {
+    max-height: 70;
+  }
+  .max-h-\[75vh\] {
+    max-height: 75vh;
   }
   .max-h-\[300px\] {
     max-height: 300px;
@@ -566,6 +579,9 @@
   .max-h-\[567px\] {
     max-height: 567px;
   }
+  .max-h-\[605px\] {
+    max-height: 605px;
+  }
   .max-h-\[620px\] {
     max-height: 620px;
   }
@@ -577,6 +593,9 @@
   }
   .max-h-\[812px\] {
     max-height: 812px;
+  }
+  .max-h-\[5520px\] {
+    max-height: 5520px;
   }
   .\!min-h-\[170px\] {
     min-height: 170px !important;
@@ -747,6 +766,9 @@
   }
   .items-start\! {
     align-items: flex-start !important;
+  }
+  .items-stretch {
+    align-items: stretch;
   }
   .justify-between {
     justify-content: space-between;
@@ -997,6 +1019,9 @@
   }
   .bg-primary {
     background-color: var(--primary);
+  }
+  .bg-red-900 {
+    background-color: var(--color-red-900);
   }
   .bg-secondary {
     background-color: var(--secondary);

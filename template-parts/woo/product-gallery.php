@@ -38,7 +38,7 @@ if (empty($images))
             <?php foreach ($images as $index => $img): ?>
             <div class="w-full h-full object-contain rounded-[12px]">
                 <img src="<?php echo esc_url($img['full']); ?>" alt="<?php echo esc_attr($img['alt']); ?>"
-                    class="w-full h-full object-cover rounded-[12px] max-h-[620px]" loading="lazy">
+                    class="w-full h-full object-cover rounded-[12px] max-h-[605px]" loading="lazy">
             </div>
             <?php endforeach; ?>
         </div>

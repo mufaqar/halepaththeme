@@ -299,7 +299,7 @@ $megaMenus = [
         "groups" => [
             "Flexible Packaging Bags" => [
                 "link" => "/flexible-packaging/bags",
-                 "image" => true,
+                "image" => true,
                 "items" => [
                     ["title" => "Stand Up Pouch", "link" => "/flexible-packaging/bags/stand-up"],
                     ["title" => "Flat Bottom Pouch", "link" => "/flexible-packaging/bags/flat-bottom"],
@@ -355,7 +355,7 @@ $megaMenus = [
         "groups" => [
             "Box Styles" => [
                 "link" => "/custom-packaging/box-styles",
-                  "image" => true,
+                "image" => true,
                 "items" => [
                     ["title" => "Folding Carton Boxes", "link" => "/custom-packaging/box-styles/folding-carton"],
                     ["title" => "Tuck End", "link" => "/custom-packaging/box-styles/tuck-end"],
@@ -459,7 +459,7 @@ $megaMenus = [
         "groups" => [
             "Food & Beverage Packaging" => [
                 "link" => "/corrugated-packaging/food",
-                  "image" => true,
+                "image" => true,
                 "items" => [
                     ["title" => "Fresh Produce", "link" => "/corrugated-packaging/food/fresh-produce"],
                     ["title" => "Frozen & Chilled", "link" => "/corrugated-packaging/food/frozen"],
@@ -597,7 +597,7 @@ $megaMenus = [
 
             "Office Supplies" => [
                 "link" => "/print-advertising/office",
-                  "image" => true,
+                "image" => true,
                 "items" => [
                     ["title" => "Workspace Accessories", "link" => "/print-advertising/office/workspace"],
                     ["title" => "Pens, Pencils & Markers", "link" => "/print-advertising/office/pens"],
@@ -792,7 +792,9 @@ $megaMenus = [
                             $isMega = !empty($menu['groups']);
                             $isDropdown = empty($menu['groups']) && !empty($menu['items']);
                             ?>
-                            <li class="relative cursor-pointer flex items-center " <?php if ($isMega): ?>data-mega-target="megaMenu-<?php echo $key; ?>" <?php endif; ?>     <?php if ($isDropdown): ?>data-dropdown="true" <?php endif; ?>>
+                            <li class="relative cursor-pointer flex items-center" <?php if ($isMega): ?>
+                                    data-mega-target="megaMenu-<?php echo $key; ?>" <?php endif; ?>     <?php if ($isDropdown): ?>
+                                    data-sub-target="subMenu-<?php echo $key; ?>" <?php endif; ?>>
 
                                 <a href="<?php echo esc_url($menu['link']); ?>"
                                     class="text-sm font-normal capitalize text-title_Clr hover:text-white hover:bg-primary px-2 py-2 rounded-[30px] flex items-center">
@@ -801,31 +803,33 @@ $megaMenus = [
                                         <i class="fa fa-chevron-down ml-1.5"></i>
                                     <?php endif; ?>
                                 </a>
-                                <!-- NORMAL DROPDOWN -->
+                                <!-- subMenu Menus -->
                                 <?php if ($isDropdown): ?>
-                                    <ul
-                                        class="dropdownMenu hidden absolute right-0 top-full mt-2 bg-black/20 backdrop-blur-[10px] shadow-xl rounded-lg p-4 min-w-[300px] space-y-2 z-50">
-                                        <?php foreach ($menu['items'] as $item): ?>
-                                            <li>
-                                                <a href="<?php echo esc_url($item['link']); ?>"
-                                                    class="block text-sm capitalize text-white hover:text-primary">
-                                                    <?php echo $item['title']; ?>
-                                                </a>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
+                                    <div id="subMenu-<?php echo $key; ?>"
+                                        class="subMenu hidden absolute right-0 top-full translate-y-5 pt-2 bg-black/20 backdrop-blur-[10px] shadow-xl rounded-lg p-4 min-w-[300px] space-y-2 z-50">
+                                        <ul>
+                                            <?php foreach ($menu['items'] as $item): ?>
+                                                <li>
+                                                    <a href="<?php echo esc_url($item['link']); ?>"
+                                                        class="block text-sm capitalize text-white hover:text-primary">
+                                                        <?php echo $item['title']; ?>
+                                                    </a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>
                                 <?php endif; ?>
                             </li>
                         <?php endforeach; ?>
-
                     </ul>
                 </nav>
             </div>
+
             <!-- Desktop Mega Menus -->
             <?php foreach ($megaMenus as $key => $menu): ?>
                 <?php if (!empty($menu['groups'])): ?>
                     <div id="megaMenu-<?php echo $key; ?>"
-                        class="megaMenu hidden lg:absolute left-1/2 -translate-x-1/2 min-lg:top-[75px] top-[94px] hale_container mx-auto  z-50 overflow-y-auto min-h-[65vh] h-full">
+                        class="megaMenu hidden lg:absolute left-1/2 -translate-x-1/2 2xl:top-[74px]  top-[94px] hale_container mx-auto  z-50 overflow-y-auto min-h-[65vh] h-full">
                         <?php
                         $hasImage = false;
 
@@ -944,56 +948,54 @@ $megaMenus = [
         <!-- Scripts -->
         <script>
             document.addEventListener('DOMContentLoaded', () => {
+
                 const desktopNav = document.getElementById('desktopNav');
                 const allNavItems = desktopNav.querySelectorAll('li');
                 const allMegaMenus = document.querySelectorAll('.megaMenu');
-                // Helper to close all menus
+                const allSubMenus = document.querySelectorAll('.subMenu');
+
+                // =====================================
+                // CLOSE ALL MENUS
+                // =====================================
                 function closeAllMenus() {
-                    allNavItems.forEach(item => {
-                        const dropdown = item.querySelector('.dropdownMenu');
-                        if (dropdown) dropdown.classList.add('hidden');
-                    });
                     allMegaMenus.forEach(menu => menu.classList.add('hidden'));
+                    allSubMenus.forEach(menu => menu.classList.add('hidden'));
+
+                    allNavItems.forEach(nav => {
+                        nav.querySelector('a')?.classList.remove('main_active');
+                    });
                 }
+
+                // =====================================
+                // OPEN MENU ON LI HOVER
+                // =====================================
                 allNavItems.forEach(item => {
-                    const dropdown = item.querySelector('.dropdownMenu');
+
                     const megaTarget = item.dataset.megaTarget;
+                    const subTarget = item.dataset.subTarget;
+
                     const megaMenu = megaTarget ? document.getElementById(megaTarget) : null;
+                    const subMenu = subTarget ? document.getElementById(subTarget) : null;
+
                     const link = item.querySelector('a');
 
                     item.addEventListener('mouseenter', () => {
 
-                        // Remove active from all links
-                        allNavItems.forEach(nav => {
-                            nav.querySelector('a')?.classList.remove('main_active');
-                        });
-
                         closeAllMenus();
 
-                        // Show menu
-                        if (dropdown) dropdown.classList.remove('hidden');
                         if (megaMenu) megaMenu.classList.remove('hidden');
+                        if (subMenu) subMenu.classList.remove('hidden');
 
-                        // Add active class
                         link?.classList.add('main_active');
                     });
                 });
 
-
-                // Close dropdowns when mouse leaves them
-                allNavItems.forEach(item => {
-                    const dropdown = item.querySelector('.dropdownMenu');
-                    if (dropdown) {
-                        dropdown.addEventListener('mouseleave', () => {
-                            dropdown.classList.add('hidden');
-                            item.querySelector('a')?.classList.remove('main_active');
-                        });
-                    }
-                });
-
-                // Close mega menus when mouse leaves them
-                allMegaMenus.forEach(menu => {
+                // =====================================
+                // CLOSE SUBMENU ONLY WHEN LEAVING IT
+                // =====================================
+                allSubMenus.forEach(menu => {
                     menu.addEventListener('mouseleave', () => {
+
                         menu.classList.add('hidden');
 
                         allNavItems.forEach(nav => {
@@ -1002,8 +1004,25 @@ $megaMenus = [
                     });
                 });
 
-                // ===== MEGA MENU CHILD SWITCHING =====
+                // =====================================
+                // CLOSE MEGA ONLY WHEN LEAVING IT
+                // =====================================
                 allMegaMenus.forEach(menu => {
+                    menu.addEventListener('mouseleave', () => {
+
+                        menu.classList.add('hidden');
+
+                        allNavItems.forEach(nav => {
+                            nav.querySelector('a')?.classList.remove('main_active');
+                        });
+                    });
+                });
+
+                // =====================================
+                // ===== MEGA MENU CHILD SWITCHING =====
+                // =====================================
+                allMegaMenus.forEach(menu => {
+
                     const parents = menu.querySelectorAll('.mainCat');
                     const groups = menu.querySelectorAll('.childGroups');
                     const images = menu.querySelectorAll('.menuImage');
@@ -1011,35 +1030,46 @@ $megaMenus = [
                     const arrow = document.createElement('i');
                     arrow.className = 'fa-solid fa-arrow-up-right-from-square ml-2';
 
-                    if (parents[0]) {
-                        parents[0].querySelector('a')?.appendChild(arrow);
+                    // Default first active
+                    if (parents.length > 0) {
+
                         parents[0].classList.add('active');
+                        parents[0].querySelector('a')?.appendChild(arrow);
+
+                        groups[0]?.classList.remove('hidden');
+                        images[0]?.classList.remove('hidden');
                     }
 
-                    groups[0]?.classList.remove('hidden');
-                    images[0]?.classList.remove('hidden');
-
                     parents.forEach(p => {
+
                         p.addEventListener('mouseenter', () => {
+
                             const index = p.dataset.index;
 
+                            // Hide all
                             groups.forEach(g => g.classList.add('hidden'));
                             images.forEach(img => img.classList.add('hidden'));
                             parents.forEach(pr => pr.classList.remove('active'));
 
+                            // Show selected
                             menu.querySelector(`[data-group="${index}"]`)?.classList.remove('hidden');
                             menu.querySelector(`[data-image="${index}"]`)?.classList.remove('hidden');
 
                             p.classList.add('active');
                             p.querySelector('a')?.appendChild(arrow);
                         });
+
                     });
+
                 });
+
             });
 
-
-            // Mobile Menu Toggle
+            // ==========================================
+            // MOBILE MENU
+            // ==========================================
             document.addEventListener('DOMContentLoaded', () => {
+
                 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
                 const mobileMenu = document.getElementById('mobileMenu');
                 const hamburgerIcon = document.getElementById('hamburgerIcon');
@@ -1048,30 +1078,39 @@ $megaMenus = [
                 if (mobileMenuBtn && mobileMenu) {
                     mobileMenuBtn.addEventListener('click', () => {
                         mobileMenu.classList.toggle('hidden');
-
-                        // Toggle icons
                         hamburgerIcon.classList.toggle('hidden');
                         closeIcon.classList.toggle('hidden');
                     });
                 }
 
-                // Mobile Mega Menu Toggle
+                // Mobile Mega Toggle
                 const mobileMenuItems = document.querySelectorAll('#mobileMenu > ul > li');
+
                 mobileMenuItems.forEach(li => {
+
                     const toggleIcon = li.querySelector('i.fa-chevron-down');
                     const content = li.querySelector('.mobileMegaContent');
+
                     if (toggleIcon && content) {
                         toggleIcon.addEventListener('click', () => {
+
+                            // Close others
                             mobileMenuItems.forEach(otherLi => {
                                 const otherContent = otherLi.querySelector('.mobileMegaContent');
-                                if (otherContent && otherContent !== content) otherContent.classList.add('hidden');
+                                if (otherContent && otherContent !== content) {
+                                    otherContent.classList.add('hidden');
+                                }
                             });
+
                             content.classList.toggle('hidden');
                         });
                     }
+
                 });
+
             });
         </script>
+
         <script>
             jQuery(document).ready(function ($) {
                 $('#live-search').on('keyup', function () {

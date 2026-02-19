@@ -104,7 +104,7 @@ if (is_product_category()) {
 
         <!-- RIGHT CONTENT -->
         <div class="md:w-1/2 w-full">
-            <h1 class="md:text-[40px] md:leading-normal text-3xl font-bold text-title_Clr">
+            <h1 class="md:text-[40px] md:leading-none text-3xl font-bold text-title_Clr">
                 <?php echo esc_html($title); ?>
             </h1>
 

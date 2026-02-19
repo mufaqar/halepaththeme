@@ -2041,6 +2041,12 @@
       line-height: 41px;
     }
   }
+  .md\:leading-none {
+    @media (width >= 48rem) {
+      --tw-leading: 1;
+      line-height: 1;
+    }
+  }
   .md\:leading-normal {
     @media (width >= 48rem) {
       --tw-leading: var(--leading-normal);

@@ -52,9 +52,9 @@ $faqRes = [
 ?>
 
 <section class="py-[60px] bg-[#F5F5F5]" id="testimonials">
-    <div class="hale_container grid md:grid-cols-2 gap-6">
+    <div class="hale_container grid md:grid-cols-1 gap-6">
         <!-- Testimonials -->
-        <div>
+        <!-- <div>
             <div class="md:max-w-[470px] max-w-[350px] mx-auto">
                 <h6 class="text-[#1C2E42] font-semibold flex gap-2 items-center">
                     Testimonials
@@ -65,7 +65,7 @@ $faqRes = [
                     <span class="text-[#47AFC3]">About Us</span>
                 </h2>
 
-                <div class="testimonials-slider">
+                <div class="testimonials-sliders">
                     <?php foreach ($testimonialsRes as $testimonial): ?>
                         <div>
                             <div class="testi_box">
@@ -96,20 +96,19 @@ $faqRes = [
                     <?php endforeach; ?>
                 </div>
 
-                <!-- arrows buttons -->
                 <div class="flex justify-center gap-2 text-4xl">
                     <button class="prev hover:text-[#47AFC3]">&#8592;</button>
                     <button class="next hover:text-[#47AFC3]">&#8594;</button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- FAQs -->
         <div id="faqs" class="pt-8">
             <h2 class="h2">
                 Frequently Asked <span class="text-[#47AFC3]">Questions</span>
             </h2>
-            <div class="mt-10 grid gap-1 grid-cols-1">
+            <div class="mt-10 grid gap-1 md:grid-cols-2 grid-cols-1">
                 <?php foreach ($faqRes as $idx => $faq): ?>
                     <div>
                         <div class="faq-item">
@@ -134,7 +133,7 @@ $faqRes = [
 <script>
     jQuery(document).ready(function ($) {
         // Initialize Slick slider
-        var $slider = $('.testimonials-slider'); // cache slider
+        var $slider = $('.testimonials-sliders'); // cache slider
 
         $slider.slick({
             dots: false,

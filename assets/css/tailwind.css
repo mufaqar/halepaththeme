@@ -367,3 +367,7 @@ footer ul li a span.marker {
 .main_active{
   @apply  bg-primary text-white ;
 }
+
+.testimonials-slider .slick-slide {
+  height: 100% !important;
+}

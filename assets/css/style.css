@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-900: oklch(39.6% 0.141 25.723);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -231,9 +230,6 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
-  .top-5 {
-    top: calc(var(--spacing) * 5);
-  }
   .top-\[60\%\] {
     top: 60%;
   }
@@ -413,6 +409,9 @@
   }
   .mr-auto {
     margin-right: auto;
+  }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -779,6 +778,20 @@
   .gap-\[70px\] {
     gap: 70px;
   }
+  .space-y-0 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 0) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 0) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-0\.5 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 0.5) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 0.5) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
   .space-y-1 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -924,6 +937,12 @@
   }
   .border-black {
     border-color: var(--color-black);
+  }
+  .border-black\/15 {
+    border-color: color-mix(in srgb, #000 15%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-black) 15%, transparent);
+    }
   }
   .border-primary {
     border-color: var(--primary);
@@ -1346,6 +1365,9 @@
   .text-\[\#FFAE00\] {
     color: #FFAE00;
   }
+  .text-\[\#FFAE00\]\/50 {
+    color: color-mix(in oklab, #FFAE00 50%, transparent);
+  }
   .text-gray-500 {
     color: var(--color-gray-500);
   }
@@ -1375,6 +1397,9 @@
   }
   .uppercase {
     text-transform: uppercase;
+  }
+  .italic {
+    font-style: italic;
   }
   .underline {
     text-decoration-line: underline;
@@ -1688,6 +1713,11 @@
       width: calc(1/3 * 100%);
     }
   }
+  .md\:w-1\/4 {
+    @media (width >= 48rem) {
+      width: calc(1/4 * 100%);
+    }
+  }
   .md\:w-2\/3 {
     @media (width >= 48rem) {
       width: calc(2/3 * 100%);
@@ -1696,6 +1726,11 @@
   .md\:w-2\/5 {
     @media (width >= 48rem) {
       width: calc(2/5 * 100%);
+    }
+  }
+  .md\:w-3\/4 {
+    @media (width >= 48rem) {
+      width: calc(3/4 * 100%);
     }
   }
   .md\:w-3\/5 {
@@ -1726,6 +1761,11 @@
   .md\:max-w-\[470px\] {
     @media (width >= 48rem) {
       max-width: 470px;
+    }
+  }
+  .md\:grid-cols-1 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
     }
   }
   .md\:grid-cols-2 {
@@ -2006,11 +2046,6 @@
       position: absolute;
     }
   }
-  .lg\:top-\[74px\] {
-    @media (width >= 64rem) {
-      top: 74px;
-    }
-  }
   .lg\:block {
     @media (width >= 64rem) {
       display: block;
@@ -2120,11 +2155,6 @@
       line-height: 80px;
     }
   }
-  .xl\:top-\[74px\] {
-    @media (width >= 80rem) {
-      top: 74px;
-    }
-  }
   .xl\:grid-cols-4 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2138,11 +2168,6 @@
   .xl\:gap-\[70px\] {
     @media (width >= 80rem) {
       gap: 70px;
-    }
-  }
-  .xl\:bg-red-900 {
-    @media (width >= 80rem) {
-      background-color: var(--color-red-900);
     }
   }
   .xl\:text-\[19px\] {
@@ -2161,24 +2186,9 @@
       line-height: 105px;
     }
   }
-  .\32 xl\:top-\[47px\] {
-    @media (width >= 96rem) {
-      top: 47px;
-    }
-  }
   .\32 xl\:top-\[74px\] {
     @media (width >= 96rem) {
       top: 74px;
-    }
-  }
-  .\32 xl\:top-\[94px\] {
-    @media (width >= 96rem) {
-      top: 94px;
-    }
-  }
-  .\32 xl\:bg-red-900 {
-    @media (width >= 96rem) {
-      background-color: var(--color-red-900);
     }
   }
   .\[\&\>\*\:nth-child\(1\)\]\:md\:-mt-40 {
@@ -2998,6 +3008,9 @@ footer ul li a span.marker {
 .main_active {
   background-color: var(--primary);
   color: var(--color-white);
+}
+.testimonials-slider .slick-slide {
+  height: 100% !important;
 }
 @property --tw-translate-x {
   syntax: "*";

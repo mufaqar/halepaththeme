@@ -48,6 +48,7 @@ $steps = [
 <?php get_template_part('template-parts/home-services'); ?>
 <?php get_template_part('template-parts/home-printadvertising'); ?>
 <?php get_template_part('template-parts/home-work'); ?>
+<?php get_template_part('template-parts/home-reviews'); ?>
 <?php get_template_part('template-parts/testimonial-and-faq'); ?>
 <?php get_template_part('template-parts/home-career'); ?>
 <?php get_template_part('template-parts/temp-instagram'); ?>

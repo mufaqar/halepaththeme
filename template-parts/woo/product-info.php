@@ -54,33 +54,32 @@
         });
     </script>
 </section>
-<section class="mt-20 hale_container">
+<section class="mt-10 ">
     <!-- Tabs Buttons -->
-    <div class="flex border-b border-gray-300">
+    <div class="hale_container !px-0 flex border-b border-gray-300">
         <button class="tab-btn tab_active" data-tab="tab1">
-            Overview
+            Details
         </button>
         <button class="tab-btn" data-tab="tab2">
-            Specifications
+            Available Options
         </button>
         <button class="tab-btn" data-tab="tab3">
-            Reviews
+            Order Process
         </button>
     </div>
     <!-- Tabs Content -->
     <div class="tab-content mt-6">
-
-        <!-- Tab 1 Panel (Overview) -->
+        <!-- Tab 1 Panel (Details) -->
         <div class="tab-panel" id="tab1">
             <?php get_template_part('template-parts/woo/pro-tab1'); ?>
         </div>
 
-        <!-- Tab 2 Panel (Specifications) -->
+        <!-- Tab 2 Panel (Available Options) -->
         <div class="tab-panel hidden" id="tab2">
             <?php get_template_part('template-parts/woo/pro-tab2'); ?>
         </div>
 
-        <!-- Tab 3 Panel (Reviews) -->
+        <!-- Tab 3 Panel (Order Process) -->
         <div class="tab-panel hidden" id="tab3">
             <?php get_template_part('template-parts/woo/pro-tab3'); ?>
         </div>

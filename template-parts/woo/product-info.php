@@ -107,8 +107,7 @@
     });
 </script>
 
-
-<!-- <section class="mt-20 overflow-hidden">
+<section class="py-16 overflow-hidden">
     <div class="hale_container">
         <h2 class="md:text-[51px] md:leading-normal text-3xl font-bold text-title_Clr text-center mb-4">
             Related Products
@@ -116,74 +115,85 @@
     </div>
 
     <?php
-    // Static array of products
-    $products = [
-        ['title' => 'Product One', 'slug' => 'product-one', 'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png'],
-        ['title' => 'Product Two', 'slug' => 'product-two', 'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png'],
-        ['title' => 'Product Three', 'slug' => 'product-three', 'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png'],
-        ['title' => 'Product Four', 'slug' => 'product-four', 'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png'],
-        ['title' => 'Product Five', 'slug' => 'product-five', 'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png'],
-        ['title' => 'Product Six', 'slug' => 'product-six', 'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png'],
-        ['title' => 'Product Seven', 'slug' => 'product-seven', 'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png'],
-        ['title' => 'Product Eight', 'slug' => 'product-eight', 'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png'],
-        ['title' => 'Product Nine', 'slug' => 'product-nine', 'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png'],
-        ['title' => 'Product Ten', 'slug' => 'product-ten', 'image' => get_template_directory_uri() . '/assets/images/product/boxgal3.png'],
-    ];
-    ?>
+    global $product;
 
-    <div class="slider-center">
-        <?php foreach ($products as $item): ?>
-        <div class="">
-            <a href="<?php echo esc_url(home_url('/' . $item['slug'])); ?>" class="block">
-                <div class="w-full !h-[239px]">
-                    <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['title']); ?>"
-                        class="w-full object-cover !h-[239px]" width="363" height="369" loading="lazy" />
+    if (!$product)
+        return;
+
+    // Get related product IDs
+    $related_ids = wc_get_related_products($product->get_id(), 10);
+
+    if ($related_ids):
+
+        $args = [
+            'post_type' => 'product',
+            'post__in' => $related_ids,
+            'posts_per_page' => 10,
+            'orderby' => 'post__in'
+        ];
+
+        $related_query = new WP_Query($args);
+        ?>
+
+        <div class="slider-center">
+            <?php while ($related_query->have_posts()):
+                $related_query->the_post();
+                global $product; ?>
+
+                <div>
+                    <a href="<?php the_permalink(); ?>" class="block">
+                        <div class="w-full !h-[239px]">
+                            <?php echo woocommerce_get_product_thumbnail('medium', [
+                                'class' => 'w-full object-cover !h-[239px]'
+                            ]); ?>
+                        </div>
+                    </a>
+
+                    <h4 class="text-xl text-center mt-6">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </h4>
                 </div>
-            </a>
-            <h4 class="text-xl text-center mt-6">
-                <a href="<?php echo esc_url(home_url('/' . $item['slug'])); ?>">
-                    <?php echo esc_html($item['title']); ?>
-                </a>
-            </h4>
-        </div>
-        <?php endforeach; ?>
-    </div>
 
-    <script>
-    jQuery(document).ready(function($) {
+            <?php endwhile;
+            wp_reset_postdata(); ?>
+        </div>
+
+    <?php endif; ?>
+</section>
+
+<script>
+    jQuery(document).ready(function ($) {
         $('.slider-center').slick({
-            className: "center",
             centerMode: true,
             slidesToShow: 5,
             speed: 500,
             infinite: true,
             arrows: true,
-            responsive: [{
+            responsive: [
+                {
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 3,
-                        infinite: false,
-                        arrows: true
+                        infinite: false
                     }
                 },
                 {
                     breakpoint: 700,
                     settings: {
                         slidesToShow: 2,
-                        infinite: false,
-                        arrows: true
+                        infinite: false
                     }
                 },
                 {
                     breakpoint: 400,
                     settings: {
                         slidesToShow: 1,
-                        infinite: false,
-                        arrows: true
+                        infinite: false
                     }
                 }
             ]
         });
     });
-    </script>
-</section> -->
+</script>

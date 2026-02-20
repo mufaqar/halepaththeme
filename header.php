@@ -747,14 +747,20 @@ $megaMenus = [
     "about_us" => [
         "title" => "About Us",
         "link" => "/about-us",
-        "items" => [
-            ["title" => "Company Overview", "link" => "/about-us/company-overview", "image" => true],
-            ["title" => "Quality Commitment", "link" => "/about-us/quality-commitment", "image" => true],
-            ["title" => "Innovation Approach", "link" => "/about-us/innovation-approach"],
-            ["title" => "Sustainability Focus", "link" => "/about-us/sustainability"],
-            ["title" => "Why Choose Us", "link" => "/about-us/why-choose-us"],
-        ],
-    ],
+        "groups" => [
+            "Company Overview" => [
+                "link" => "/about-us/company-overview",
+                "image" => true,
+                "items" => [
+                    ["title" => "Company Overview", "link" => "/about-us/company-overview"],
+                    ["title" => "Quality Commitment", "link" => "/about-us/quality-commitment", "image" => true],
+                    ["title" => "Innovation Approach", "link" => "/about-us/innovation-approach"],
+                    ["title" => "Sustainability Focus", "link" => "/about-us/sustainability"],
+                    ["title" => "Why Choose Us", "link" => "/about-us/why-choose-us"],
+                ],
+            ]
+        ]
+    ]
 ];
 ?>
 
@@ -844,10 +850,10 @@ $megaMenus = [
                             class="mx-auto !px-0 grid <?php echo $hasImage ? 'grid-cols-4 hale_container' : 'grid-cols-4 hale_container'; ?> gap-8 rounded-b-2xl shadow-xl bg-black/20 backdrop-blur-[10px]">
                             <!-- Column 1: Parent Groups -->
                             <div class="px-6 py-4 rounded-bl-2xl ">
-                                <ul class="space-y-2">
+                                <ul class="space-y-0">
                                     <?php $i = 0; ?>
                                     <?php foreach ($menu['groups'] as $groupName => $items): ?>
-                                        <li class="mainCat w-fit flex items-center gap-2 " data-index="<?php echo $i; ?>">
+                                        <li class="mainCat w-fit flex items-center gap-2 py-2 px-5 " data-index="<?php echo $i; ?>">
                                             <a href="<?php echo esc_url($items['link']); ?>"
                                                 class="text-sm capitalize text-white cursor-pointer flex items-center gap-2">
                                                 <?php echo $groupName; ?>

@@ -96,36 +96,17 @@ $testimonialsRes = [
         </div>
     </div>
 </section>
-
 <script>
     jQuery(document).ready(function ($) {
         $('.testimonials-slider').slick({
-            dots: false,
-            arrows: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 3, // Show 1 slide at a time
+            slidesToShow: 2,
             slidesToScroll: 1,
-            centerMode: false, // Disable partial left/right slides
-            adaptiveHeight: true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-            ]
+            arrows: true,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next'),
+            dots: false,
+            infinite: true,
+            adaptiveHeight: true
         });
-
-        // Optional custom arrows
-        $('.prev').click(function () { $('.testimonials-slider').slick('slickPrev'); });
-        $('.next').click(function () { $('.testimonials-slider').slick('slickNext'); });
     });
 </script>

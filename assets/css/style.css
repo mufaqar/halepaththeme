@@ -382,9 +382,6 @@
   .mt-14 {
     margin-top: calc(var(--spacing) * 14);
   }
-  .mt-16 {
-    margin-top: calc(var(--spacing) * 16);
-  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
@@ -631,8 +628,8 @@
   .max-w-\[600px\] {
     max-width: 600px;
   }
-  .max-w-\[640px\] {
-    max-width: 640px;
+  .max-w-\[880px\] {
+    max-width: 880px;
   }
   .max-w-\[2200px\] {
     max-width: 2200px;
@@ -953,12 +950,6 @@
       border-color: color-mix(in oklab, var(--color-black) 15%, transparent);
     }
   }
-  .border-black\/20 {
-    border-color: color-mix(in srgb, #000 20%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-black) 20%, transparent);
-    }
-  }
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
@@ -997,12 +988,6 @@
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-black) 20%, transparent);
     }
-  }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
-  }
-  .bg-gray-300 {
-    background-color: var(--color-gray-300);
   }
   .bg-primary {
     background-color: var(--primary);
@@ -1320,10 +1305,6 @@
   .text-\[50px\] {
     font-size: 50px;
   }
-  .leading-0 {
-    --tw-leading: calc(var(--spacing) * 0);
-    line-height: calc(var(--spacing) * 0);
-  }
   .leading-\[60px\] {
     --tw-leading: 60px;
     line-height: 60px;
@@ -1418,12 +1399,6 @@
   .text-title_Clr {
     color: var(--title_Clr);
   }
-  .text-title_Clr\/6 {
-    color: var(--title_Clr);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--title_Clr) 6%, transparent);
-    }
-  }
   .text-title_Clr\/80 {
     color: var(--title_Clr);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1450,10 +1425,6 @@
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-\[0_0_2px_0_rgb\(23\,43\,77\,0\.4\%\)\] {
-    --tw-shadow: 0 0 2px 0 var(--tw-shadow-color, rgb(23,43,77,0.4%));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-\[0_0_2px_0_rgba\(23\,43\,77\,0\.4\)\] {
@@ -3092,8 +3063,6 @@ footer ul li a span.marker {
 }
 .active {
   background-color: var(--primary);
-  padding-inline: calc(var(--spacing) * 5);
-  padding-block: calc(var(--spacing) * 2);
 }
 .main_active {
   background-color: var(--primary);

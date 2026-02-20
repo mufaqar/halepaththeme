@@ -361,7 +361,7 @@ footer ul li a span.marker {
   height: fit-content !important;
 }
 .active{
-  @apply bg-primary px-5 py-2;
+  @apply bg-primary;
 }
 
 .main_active{

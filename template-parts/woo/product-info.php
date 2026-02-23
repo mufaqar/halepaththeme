@@ -12,7 +12,70 @@
     ?>
 
     <div class="relative w-full py-8">
-        <!-- Swiper -->
+        <div class="full_gallery">
+            <?php foreach ($product_gallery as $image): ?>
+                <div class="px-2">
+                    <figure class="rounded-2xl h-[450px]">
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                            loading="lazy" class="!h-full w-full object-cover rounded-2xl">
+                    </figure>
+                </div>
+            <?php endforeach; ?>
+
+
+        </div>
+        <!-- Arrows -->
+        <div class="flex justify-center gap-4 text-3xl mt-4">
+            <button class="gallery-prev hover:text-[#47AFC3] cursor-pointer">&#8592;</button>
+            <button class="gallery-next hover:text-[#47AFC3] cursor-pointer">&#8594;</button>
+        </div>
+    </div>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.full_gallery').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: $('.gallery-prev'),
+                nextArrow: $('.gallery-next'),
+                dots: false,
+                infinite: true,
+                adaptiveHeight: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: { slidesToShow: 3 }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: { slidesToShow: 2 }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: { slidesToShow: 1 }
+                    }
+                ]
+            });
+        });
+    </script>
+</section>
+
+<!-- <section class="mt-20 max-w-[2200px] mx-auto px-3 lg:px-0">
+    <h2 class="text-2xl text-center mb-8 sm:text-3xl md:text-5xl font-bold">
+        <?php the_title(); ?> Gallery
+    </h2>
+
+    <?php
+    $product_gallery = get_field('product_gallery');
+
+    if (empty($product_gallery)) {
+        return;
+    }
+    ?>
+
+    <div class="relative w-full py-8">
+        Swiper
         <div class="swiper mySwiper h-full">
             <div class="swiper-wrapper">
                 <?php foreach ($product_gallery as $image): ?>
@@ -53,7 +116,8 @@
             });
         });
     </script>
-</section>
+</section> -->
+
 <section class="mt-10 ">
     <!-- Tabs Buttons -->
     <div class="hale_container !px-0 flex border-b border-gray-300">
@@ -107,93 +171,3 @@
     });
 </script>
 
-<section class="py-16 overflow-hidden">
-    <div class="hale_container">
-        <h2 class="md:text-[51px] md:leading-normal text-3xl font-bold text-title_Clr text-center mb-4">
-            Related Products
-        </h2>
-    </div>
-
-    <?php
-    global $product;
-
-    if (!$product)
-        return;
-
-    // Get related product IDs
-    $related_ids = wc_get_related_products($product->get_id(), 10);
-
-    if ($related_ids):
-
-        $args = [
-            'post_type' => 'product',
-            'post__in' => $related_ids,
-            'posts_per_page' => 10,
-            'orderby' => 'post__in'
-        ];
-
-        $related_query = new WP_Query($args);
-        ?>
-
-        <div class="slider-center">
-            <?php while ($related_query->have_posts()):
-                $related_query->the_post();
-                global $product; ?>
-
-                <div>
-                    <a href="<?php the_permalink(); ?>" class="block">
-                        <div class="w-full !h-[239px]">
-                            <?php echo woocommerce_get_product_thumbnail('medium', [
-                                'class' => 'w-full object-cover !h-[239px]'
-                            ]); ?>
-                        </div>
-                    </a>
-
-                    <h4 class="text-xl text-center mt-6">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_title(); ?>
-                        </a>
-                    </h4>
-                </div>
-
-            <?php endwhile;
-            wp_reset_postdata(); ?>
-        </div>
-
-    <?php endif; ?>
-</section>
-
-<script>
-    jQuery(document).ready(function ($) {
-        $('.slider-center').slick({
-            centerMode: true,
-            slidesToShow: 5,
-            speed: 500,
-            infinite: true,
-            arrows: true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        infinite: false
-                    }
-                },
-                {
-                    breakpoint: 700,
-                    settings: {
-                        slidesToShow: 2,
-                        infinite: false
-                    }
-                },
-                {
-                    breakpoint: 400,
-                    settings: {
-                        slidesToShow: 1,
-                        infinite: false
-                    }
-                }
-            ]
-        });
-    });
-</script>

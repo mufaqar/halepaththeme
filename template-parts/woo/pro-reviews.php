@@ -85,8 +85,8 @@ $testimonialsRes = [
 
                 <!-- Arrows -->
                 <div class="flex justify-center gap-4 text-3xl mt-4">
-                    <button class="prev hover:text-[#47AFC3]">&#8592;</button>
-                    <button class="next hover:text-[#47AFC3]">&#8594;</button>
+                    <button class="testi-prev hover:text-[#47AFC3]">&#8592;</button>
+                    <button class="testi-next hover:text-[#47AFC3]">&#8594;</button>
                 </div>
             </div>
 
@@ -100,11 +100,25 @@ $testimonialsRes = [
             slidesToShow: 2,
             slidesToScroll: 1,
             arrows: true,
-            prevArrow: $('.prev'),
-            nextArrow: $('.next'),
+            prevArrow: $('.testi-prev'),
+            nextArrow: $('.testi-next'),
             dots: false,
             infinite: true,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: { slidesToShow: 3 }
+                },
+                {
+                    breakpoint: 768,
+                    settings: { slidesToShow: 2 }
+                },
+                {
+                    breakpoint: 480,
+                    settings: { slidesToShow: 1 }
+                }
+            ]
         });
     });
 </script>

@@ -149,7 +149,7 @@
 }
 
 .slide_txt {
-  @apply md:text-[29px] md:leading-[41px] text-lg font-normal text-title_Clr mb-2;
+  @apply md:text-3xl text-lg font-normal text-title_Clr mb-2;
 }
 
 .slide_txt_overlay {
@@ -376,4 +376,7 @@ footer ul li a span.marker {
 }
 .tab_active{
   @apply bg-[#F5F5F5] text-title_Clr border-secondary;
+}
+.slider-scroll-area .slider-wrapper .slick-slide{
+  height: 100vh !important;
 }

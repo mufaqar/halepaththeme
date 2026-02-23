@@ -578,17 +578,22 @@ $megaMenus = [
     "commercial_printing" => [
         "title" => "Commercial Printing",
         "link" => "/commercial-printing",
-        "items" => [
-            ["title" => "Offset Printing (Lithography)", "link" => "/commercial-printing/offset", "image" => true],
-            ["title" => "Digital Printing", "link" => "/commercial-printing/digital", "image" => true],
-            ["title" => "Flexographic Printing (Flexo)", "link" => "/commercial-printing/flexo"],
-            ["title" => "Gravure Printing (Flexible Packaging)", "link" => "/commercial-printing/gravure"],
-            ["title" => "Spot UV", "link" => "/commercial-printing/spot-uv"],
-            ["title" => "Screen Printing", "link" => "/commercial-printing/screen"],
-            ["title" => "Letterpress (Specialty)", "link" => "/commercial-printing/letterpress"],
-            ["title" => "UV Offset Printing", "link" => "/commercial-printing/uv-offset"],
-            ["title" => "Foil Printing", "link" => "/commercial-printing/foil"],
-        ],
+        "groups" => [
+            "Offset Printing (Lithography)" => [
+                "link" => "/commercial-printing/offset",
+                "image" => true,
+                "items" => [
+                    ["title" => "Digital Printing", "link" => "/commercial-printing/digital", "image" => true],
+                    ["title" => "Flexographic Printing (Flexo)", "link" => "/commercial-printing/flexo"],
+                    ["title" => "Gravure Printing (Flexible Packaging)", "link" => "/commercial-printing/gravure"],
+                    ["title" => "Spot UV", "link" => "/commercial-printing/spot-uv"],
+                    ["title" => "Screen Printing", "link" => "/commercial-printing/screen"],
+                    ["title" => "Letterpress (Specialty)", "link" => "/commercial-printing/letterpress"],
+                    ["title" => "UV Offset Printing", "link" => "/commercial-printing/uv-offset"],
+                    ["title" => "Foil Printing", "link" => "/commercial-printing/foil"],
+                ],
+            ],
+        ]
     ],
     "print_advertising" => [
         "title" => "Print & Advertising",
@@ -723,26 +728,31 @@ $megaMenus = [
     "innovation" => [
         "title" => "Innovation",
         "link" => "/innovation",
-        "items" => [
-            ["title" => "Branded Finishes", "link" => "/innovation/branded-finishes", "image" => true],
-            ["title" => "UV Printing Technology", "link" => "/innovation/uv-printing", "image" => true],
-            ["title" => "Foil Printing Solutions", "link" => "/innovation/foil-printing"],
-            ["title" => "Privacy Printing", "link" => "/innovation/privacy-printing"],
-            ["title" => "Research & Development (R&D)", "link" => "/innovation/research-development"],
-            ["title" => "Sustainable Innovation", "link" => "/innovation/sustainable"],
-            ["title" => "Material Innovation", "link" => "/innovation/material"],
-            ["title" => "Structural Innovation", "link" => "/innovation/structural"],
-            ["title" => "Smart Packaging Technology", "link" => "/innovation/smart-packaging"],
-            ["title" => "Digital Printing Advancement", "link" => "/innovation/digital-printing"],
-            ["title" => "Surface Coating Technology", "link" => "/innovation/surface-coating"],
-            ["title" => "Security Printing Solutions", "link" => "/innovation/security-printing"],
-            ["title" => "Prototype Development", "link" => "/innovation/prototype"],
-            ["title" => "Automation & Technology Integration", "link" => "/innovation/automation"],
-            ["title" => "Color Management Systems", "link" => "/innovation/color-management"],
-            ["title" => "Experience Centers", "link" => "/innovation/experience-centers"],
-            ["title" => "Client Success Stories", "link" => "/innovation/success-stories"],
-            ["title" => "Blogs", "link" => "/innovation/blogs"],
-        ],
+        "groups" => [
+            "Branded Finishes" => [
+                "link" => "/innovation/branded-finishes",
+                "image" => true,
+                "items" => [
+                    ["title" => "UV Printing Technology", "link" => "/innovation/uv-printing", "image" => true],
+                    ["title" => "Foil Printing Solutions", "link" => "/innovation/foil-printing"],
+                    ["title" => "Privacy Printing", "link" => "/innovation/privacy-printing"],
+                    ["title" => "Research & Development (R&D)", "link" => "/innovation/research-development"],
+                    ["title" => "Sustainable Innovation", "link" => "/innovation/sustainable"],
+                    ["title" => "Material Innovation", "link" => "/innovation/material"],
+                    ["title" => "Structural Innovation", "link" => "/innovation/structural"],
+                    ["title" => "Smart Packaging Technology", "link" => "/innovation/smart-packaging"],
+                    ["title" => "Digital Printing Advancement", "link" => "/innovation/digital-printing"],
+                    ["title" => "Surface Coating Technology", "link" => "/innovation/surface-coating"],
+                    ["title" => "Security Printing Solutions", "link" => "/innovation/security-printing"],
+                    ["title" => "Prototype Development", "link" => "/innovation/prototype"],
+                    ["title" => "Automation & Technology Integration", "link" => "/innovation/automation"],
+                    ["title" => "Color Management Systems", "link" => "/innovation/color-management"],
+                    ["title" => "Experience Centers", "link" => "/innovation/experience-centers"],
+                    ["title" => "Client Success Stories", "link" => "/innovation/success-stories"],
+                    ["title" => "Blogs", "link" => "/innovation/blogs"],
+                ],
+            ],
+        ]
     ],
     "about_us" => [
         "title" => "About Us",
@@ -752,7 +762,6 @@ $megaMenus = [
                 "link" => "/about-us/company-overview",
                 "image" => true,
                 "items" => [
-                    ["title" => "Company Overview", "link" => "/about-us/company-overview"],
                     ["title" => "Quality Commitment", "link" => "/about-us/quality-commitment", "image" => true],
                     ["title" => "Innovation Approach", "link" => "/about-us/innovation-approach"],
                     ["title" => "Sustainability Focus", "link" => "/about-us/sustainability"],
@@ -888,7 +897,7 @@ $megaMenus = [
                                         <?php if (!empty($items['image']) && $items['image'] === true): ?>
                                             <div class="hidden menuImage rounded-lg grid grid-cols-5 gap-4" data-image="<?php echo $i; ?>">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal4.png"
-                                                    class="rounded-2xl h-full w-full object-cover col-span-2">
+                                                    class="rounded-2xl !h-full w-full object-cover col-span-2">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal5.png"
                                                     class="rounded-2xl h-full w-full object-cover col-span-3">
                                             </div>

@@ -118,56 +118,71 @@
     </script>
 </section> -->
 
-<section class="mt-10 ">
+<section id="product-tabs" class="mt-10">
+
     <!-- Tabs Buttons -->
-    <div class="hale_container !px-0 flex border-b border-gray-300">
-        <button class="tab-btn tab_active" data-tab="tab1">
-            Details
-        </button>
-        <button class="tab-btn" data-tab="tab2">
-            Available Options
-        </button>
-        <button class="tab-btn" data-tab="tab3">
-            Order Process
-        </button>
+    <div id="tabs-header" class="hale_container !px-0 flex border-b border-gray-300 bg-white z-40">
+        <button class="tab-btn tab_active" data-tab="tab1">Details</button>
+        <button class="tab-btn" data-tab="tab2">Available Options</button>
+        <button class="tab-btn" data-tab="tab3">Order Process</button>
     </div>
+
     <!-- Tabs Content -->
     <div class="tab-content mt-6">
-        <!-- Tab 1 Panel (Details) -->
         <div class="tab-panel" id="tab1">
             <?php get_template_part('template-parts/woo/pro-tab1'); ?>
         </div>
 
-        <!-- Tab 2 Panel (Available Options) -->
         <div class="tab-panel hidden" id="tab2">
             <?php get_template_part('template-parts/woo/pro-tab2'); ?>
         </div>
 
-        <!-- Tab 3 Panel (Order Process) -->
         <div class="tab-panel hidden" id="tab3">
             <?php get_template_part('template-parts/woo/pro-tab3'); ?>
         </div>
-
     </div>
 </section>
+<style>
+   #tabs-header.sticky-tabs {
+    position: sticky;
+    top: 0; /* will be updated dynamically via JS */
+    background: white;
+    z-index: 999;
+}
+</style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const tabPanels = document.querySelectorAll('.tab-panel');
+document.addEventListener('DOMContentLoaded', function () {
 
-        function openTab(tabId) {
-            tabPanels.forEach(panel => panel.classList.add('hidden'));
-            tabButtons.forEach(btn => btn.classList.remove('tab_active'));
-            document.getElementById(tabId).classList.remove('hidden');
-            document.querySelector(`.tab-btn[data-tab="${tabId}"]`).classList.add('tab_active');
-        }
+    // ======= TABS SWITCHING =======
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
 
-        if (tabButtons.length > 0) openTab(tabButtons[0].dataset.tab);
+    function openTab(tabId) {
+        tabPanels.forEach(panel => panel.classList.add('hidden'));
+        tabButtons.forEach(btn => btn.classList.remove('tab_active'));
+        document.getElementById(tabId).classList.remove('hidden');
+        document.querySelector(`.tab-btn[data-tab="${tabId}"]`).classList.add('tab_active');
+    }
 
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => openTab(button.dataset.tab));
-        });
+    if (tabButtons.length > 0) openTab(tabButtons[0].dataset.tab);
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => openTab(button.dataset.tab));
     });
+
+    // ======= STICKY TABS =======
+    const header = document.getElementById('tabs-header');
+    const siteHeader = document.querySelector('header'); // main site header
+
+    function handleSticky() {
+        const siteHeaderHeight = siteHeader.offsetHeight; // dynamic header height
+        header.style.top = siteHeaderHeight + "px"; // offset sticky tabs below header
+        header.classList.add('sticky-tabs'); // sticky is always active
+    }
+
+    handleSticky(); // initial call
+    window.addEventListener('resize', handleSticky); // recalc on resize
+});
 </script>
 

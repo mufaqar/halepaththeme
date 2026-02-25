@@ -1,8 +1,8 @@
 <?php
 $images = [
-    get_template_directory_uri() . '/assets/images/about-page/about-bg-img_2.png',
-    get_template_directory_uri() . '/assets/images/about-page/image_1.png',
-    get_template_directory_uri() . '/assets/images/about-page/about-bg-img.png',
+    get_template_directory_uri() . '/assets/images/slid1.jpeg',
+    get_template_directory_uri() . '/assets/images/slid2.jpeg',
+    get_template_directory_uri() . '/assets/images/slid3.jpeg',
 ];
 ?>
 

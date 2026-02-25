@@ -149,7 +149,7 @@
 }
 
 .slide_txt {
-  @apply md:text-3xl text-lg font-normal text-title_Clr mb-2;
+  @apply md:text-2xl text-lg font-normal text-title_Clr mb-2;
 }
 
 .slide_txt_overlay {

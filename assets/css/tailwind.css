@@ -145,7 +145,7 @@
 }
 
 .image-slide {
-  @apply absolute w-full rounded-2xl overflow-hidden h-[567px];
+  @apply absolute w-full rounded-2xl overflow-hidden h-[400px];
 }
 
 .slide_txt {
@@ -161,7 +161,7 @@
 }
 
 .fixed_img {
-  @apply mx-auto h-[467px] absolute z-[-1] scale-105 rounded-3xl left-1/2 -translate-x-1/2;
+  @apply mx-auto h-[400px] absolute z-[-1] scale-105 rounded-3xl left-1/2 -translate-x-1/2;
 }
 
 .img-full {

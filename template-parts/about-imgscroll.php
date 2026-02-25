@@ -10,7 +10,7 @@ $images = [
     <div class="hale_container hale_flex items-start!">
         <!-- LEFT: IMAGES -->
         <div class="md:w-2/5 relative w-full">
-            <div class="overflow-hidden h-[567px]" id="imageContainer">
+            <div class="overflow-hidden h-[400px]" id="imageContainer">
                 <?php foreach ($images as $index => $img): ?>
                 <figure class="image-slide  <?php echo $index === 0 ? 'block' : 'hidden'; ?>"
                     data-index="<?php echo $index; ?>">
@@ -36,7 +36,7 @@ $images = [
         </div>
         <!-- RIGHT: SCROLL TEXT -->
         <div class="relative md:w-3/5">
-            <div id="scrollText" class="w-full max-h-[567px] overflow-y-scroll scroll_Left">
+            <div id="scrollText" class="w-full max-h-[400px] overflow-y-scroll scroll_Left">
 
                 <p class="slide_txt">
                     Hale Path PackagingLtd manufacture every box inhouse production facility of 32000 square foot,

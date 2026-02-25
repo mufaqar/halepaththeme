@@ -495,9 +495,6 @@
   .h-\[520px\] {
     height: 520px;
   }
-  .h-\[567px\] {
-    height: 567px;
-  }
   .h-auto\! {
     height: auto !important;
   }
@@ -513,11 +510,11 @@
   .max-h-\[300px\] {
     max-height: 300px;
   }
+  .max-h-\[400px\] {
+    max-height: 400px;
+  }
   .max-h-\[550px\] {
     max-height: 550px;
-  }
-  .max-h-\[567px\] {
-    max-height: 567px;
   }
   .max-h-\[605px\] {
     max-height: 605px;
@@ -2303,7 +2300,7 @@
 }
 .image-slide {
   position: absolute;
-  height: 567px;
+  height: 400px;
   width: 100%;
   overflow: hidden;
   border-radius: var(--radius-2xl);
@@ -2350,7 +2347,7 @@
   left: calc(1/2 * 100%);
   z-index: -1;
   margin-inline: auto;
-  height: 467px;
+  height: 400px;
   --tw-translate-x: calc(calc(1/2 * 100%) * -1);
   translate: var(--tw-translate-x) var(--tw-translate-y);
   --tw-scale-x: 105%;

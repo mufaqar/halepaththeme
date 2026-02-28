@@ -41,7 +41,7 @@ $featureproductsRes = [
         <h2 class="h2 md:mb-5!">
             The work we do and <span class="text-primary">love doing</span>
         </h2>
-        <p class="md:text-xl text-base font-normal text-title_Clr text-center max-w-[640px] mx-auto">
+        <p class="md:text-xl text-base font-normal text-title_Clr text-center max-w-[880px] mx-auto">
             We thrive on turning ideas into standout packaging. Our R&D department boosts branding with innovative
             research, creating strategies that elevate your market presence. Dive into graphic designing and custom
             manufacturing where our experts build tailored boxes from scratch. Rely on top-tier commercial printing for

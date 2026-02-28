@@ -145,11 +145,11 @@
 }
 
 .image-slide {
-  @apply absolute w-full rounded-2xl overflow-hidden h-[567px];
+  @apply absolute w-full rounded-2xl overflow-hidden h-[400px];
 }
 
 .slide_txt {
-  @apply md:text-[29px] md:leading-[41px] text-lg font-normal text-title_Clr mb-2;
+  @apply md:text-2xl text-lg font-normal text-title_Clr mb-2;
 }
 
 .slide_txt_overlay {
@@ -161,7 +161,7 @@
 }
 
 .fixed_img {
-  @apply mx-auto h-[467px] absolute z-[-1] scale-105 rounded-3xl left-1/2 -translate-x-1/2;
+  @apply mx-auto h-[400px] absolute z-[-1] scale-105 rounded-3xl left-1/2 -translate-x-1/2;
 }
 
 .img-full {
@@ -201,7 +201,7 @@
 }
 
 .step h4 {
-  @apply text-xl font-medium text-primary mb-2;
+  @apply text-xl font-medium text-white mb-2;
 }
 
 .step p {
@@ -209,7 +209,7 @@
 }
 
 .hale_input {
-  @apply text-sm md:leading-[56px] font-medium text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-white px-7 border border-transparent focus:border-secondary outline-none rounded-full w-full;
+  @apply text-sm min-h-[50px] font-medium text-[#7C7C7C] placeholder:text-[#7C7C7C] bg-[#f3f2ee] px-7 border border-transparent focus:border-secondary outline-none rounded-full w-full;
 }
 
 .form_row {
@@ -221,15 +221,15 @@
 }
 
 .service_inner {
-  @apply px-4 absolute -bottom-28 left-4 right-4 z-10;
+  @apply px-2;
 }
 
 .service_inner .content {
-  @apply border border-black/10 bg-white p-3 px-5;
+  @apply border border-white/10 bg-white/5 backdrop-blur-[10px] p-3 px-3;
 }
 
 .service_inner .content h5 {
-  @apply flex cursor-pointer md:text-xl lg:text-xl font-medium justify-between border-b-[3px] py-3 pt-1 border-black;
+  @apply flex text-white cursor-pointer md:text-base md:leading-none text-base font-normal justify-between border-b pb-1.5 border-white;
 }
 
 .slider-full h6 {
@@ -237,7 +237,7 @@
 }
 
 .slider-full h2 {
-  @apply font-semibold relative my-2 xl:text-[80px] max-w-[580px] text-[50px] leading-none lg:text-[70px] ;
+  @apply font-semibold relative my-2 xl:text-[70px] max-w-[580px] text-3xl leading-none lg:text-[70px] ;
 }
 
 .feature_box {
@@ -342,7 +342,9 @@ footer ul li a span.marker {
   direction: ltr;
 }
 
-
+.megaMenu::-webkit-scrollbar {
+  width: 0px;
+}
 /* =========================
    UTILITIES
 ========================= */
@@ -359,9 +361,22 @@ footer ul li a span.marker {
   height: fit-content !important;
 }
 .active{
-  @apply text-primary font-bold border-b-2 border-primary;
+  @apply bg-primary;
 }
 
-.main-active{
-  @apply  font-bold border-b-2 border-primary bg-primary text-white ;
+.main_active{
+  @apply  bg-primary text-white ;
+}
+
+.testimonials-slider .slick-slide {
+  height: 100% !important;
+}
+.tab-btn{
+  @apply md:text-lg text-sm md:px-6 px-3 py-2 font-medium text-title_Clr/80 border-b-2 border-transparent;
+}
+.tab_active{
+  @apply bg-[#F5F5F5] text-title_Clr border-secondary;
+}
+.slider-scroll-area .slider-wrapper .slick-slide{
+  height: 100vh !important;
 }

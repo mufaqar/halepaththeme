@@ -12,7 +12,7 @@
 ?>
 
 
-<footer class="pt-14 pb-4 relative">
+<footer class="pt-14 relative bg-[#f5f5f5]">
     <div class="hale_container grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 justify-between gap-7">
         <!-- Company -->
         <div>
@@ -34,7 +34,24 @@
         <!-- Products Packaging -->
         <div>
             <h6 class="footer_title">
-                Products Packaging
+                Innovation
+                <span class=""></span>
+            </h6>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'innovation',
+                'container' => false,
+                'menu_class' => 'flex flex-col gap-2.5',
+                'fallback_cb' => false,
+                'link_before' => '<span class="marker"></span>',
+                'link_after' => '',
+            ));
+            ?>
+        </div>
+        <!-- Packaging Style -->
+        <div>
+            <h6 class="footer_title">
+                Packaging Products
                 <span class=""></span>
             </h6>
             <?php
@@ -48,32 +65,15 @@
             ));
             ?>
         </div>
-        <!-- Packaging Style -->
-        <div>
-            <h6 class="footer_title">
-                Packaging Style
-                <span class=""></span>
-            </h6>
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'style',
-                'container' => false,
-                'menu_class' => 'flex flex-col gap-2.5',
-                'fallback_cb' => false,
-                'link_before' => '<span class="marker"></span>',
-                'link_after' => '',
-            ));
-            ?>
-        </div>
         <!-- Inspiration -->
         <div>
             <h6 class="footer_title">
-                Inspiration
+                Services
                 <span class=""></span>
             </h6>
             <?php
             wp_nav_menu(array(
-                'theme_location' => 'inspiration',
+                'theme_location' => 'services',
                 'container' => false,
                 'menu_class' => 'flex flex-col gap-2.5',
                 'fallback_cb' => false,
@@ -85,10 +85,13 @@
         <!-- Contact -->
         <div>
             <h6 class="footer_title">
-                Contact
+                Connect With Us
                 <span class=""></span>
             </h6>
             <ul class="flex flex-col gap-2.5">
+                <li>
+                    <span class="marker"></span>5955 Alpha Rd Suite 102, Unit 5092 Dallas, TX 75240, United States
+                </li>
                 <li><a href="tel:866-225-2112" class="footer_link">
                         <span class="marker"></span>866-225-2112</a></li>
                 <li><a href="mailto:info@halepathpack.com" target="_blank" class="footer_link">
@@ -121,22 +124,28 @@
     </div>
 
     <!-- Logo & Social -->
-    <div class="hale_container flex md:flex-row flex-col md:items-center justify-between gap-7 mt-7">
-        <div class="flex gap-5 items-center">
+    <div class="hale_container flex md:flex-row flex-col md:items-center justify-between gap-7 mt-7 py-2.5">
+        <div class="flex gap-3 items-center">
             <a href="<?php echo home_url(); ?>"><img
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo"></a>
-            <ul class="flex items-center gap-5">
-                <li><a href="#" class="text-2xl inline-flex text-[#9C9C9C] hover:text-primary"><i
-                            class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" class="text-2xl inline-flex text-[#9C9C9C] hover:text-primary"><i
-                            class="fab fa-instagram"></i></a></li>
-                <li><a href="#" class="text-2xl inline-flex text-[#9C9C9C] hover:text-primary"><i
-                            class="fab fa-twitter"></i></a></li>
+            <ul class="flex items-center gap-3">
+                <li><a href="#" target="_blank" class="text-2xl inline-flex">
+                        <i class="fab fa-facebook-f text-title_Clr hover:text-primary"></i></a></li>
+                <li><a href="#" target="_blank" class="text-2xl inline-flex">
+                        <i class="fab fa-instagram text-title_Clr hover:text-primary"></i></a></li>
+                <li><a href="#" target="_blank" class="text-2xl inline-flex">
+                        <i class="fa-brands fa-linkedin-in text-title_Clr hover:text-primary"></i></a></li>
+                <li><a href="#" target="_blank" class="text-2xl inline-flex">
+                        <i class="fa-brands fa-whatsapp text-title_Clr hover:text-primary"></i></a></li>
             </ul>
         </div>
-        <div class="flex justify-end items-end">
-            <p class="md:text-lg text-sm font-normal text-title_Clr">
-                Copyright <?php echo date('Y'); ?> Hale Path Packaging © All Rights Reserved
+        <div class="">
+            <p class="md:text-base text-sm font-normal text-title_Clr md:text-end">
+                © 2026 Hale Path Packaging. All Rights Reserved.
+            </p>
+            <p class="md:text-base text-sm font-normal text-title_Clr md:text-end">
+                <a href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a> | <a
+                    href="<?php echo site_url('/terms-conditions'); ?>">Terms & Conditions</a>
             </p>
         </div>
     </div>

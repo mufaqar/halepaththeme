@@ -1,6 +1,6 @@
 <?php
 // Initialize wrapper class (you can also make it conditional if needed)
-$quote_form_class = "container mx-auto mt-10 rounded-[19px] bg-[#CCCCCCB5]/70";
+$quote_form_class = "container mx-auto mt-5 rounded-[19px] bg-[#CCCCCCB5]/70";
 
 // Get all WooCommerce products
 $products = wc_get_products(array('limit' => -1));

@@ -24,13 +24,13 @@ $steps = [
 ?>
 
 <section
-    class='md:py-14 py-10 relative bg-center bg-no-repeat bg-cover before:content-[""] before:absolute before:w-full before:bg-[#081d29bd]  before:h-full before:top-0'
+    class='md:py-14 py-10 relative bg-center bg-no-repeat bg-cover before:content-[""] before:absolute before:w-full before:bg-[#191919]  before:h-full before:top-0'
     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/qoute-bg.png'">
     <div class="hale_container relative z-10 flex md:flex-row flex-col gap-7">
         <div class="md:w-1/2 w-full">
 
             <div
-                class="bg-title_Clr/30 backdrop-blur-sm h-full max-w-[546px] mx-auto rounded-2xl md:px-14 md:py-8 p-8 md:gap-12 gap-12 flex flex-col">
+                class="bg-white/5 backdrop-blur-[10px] h-full max-w-[546px] mx-auto rounded-2xl md:px-14 md:py-8 p-8 md:gap-12 gap-12 flex flex-col">
                 <?php foreach ($steps as $index => $step): ?>
                 <div class="step">
                     <span
@@ -58,7 +58,7 @@ $steps = [
             <h2 class="md:text-4xl text-3xl font-bold text-white mb-8">
                 Smarter Branding. Guaranteed Impact.
             </h2>
-            <form onSubmit={onSubmit} class="grid w-full gap-4 items-center mt-5 bg-white/30 backdrop-blur-sm md:p-8 p-6 rounded-[19px]">
+            <form onSubmit={onSubmit} class="grid w-full gap-4 items-center mt-5 bg-white/5 backdrop-blur-[10px] md:p-8 p-6 rounded-[19px]">
                 <div class="w-full flex md:flex-row flex-col gap-4">
                     <div class="form_row">
                         <label htmlfor="fullname" class="hidden">
@@ -84,7 +84,7 @@ $steps = [
                         <label htmlfor="product" class="hidden">
                             Cosmetics Packaging
                         </label>
-                        <select class="hale_input md:min-h-[58px] h-[36px]" name="product" id="product">
+                        <select class="hale_input" name="product" id="product">
                             <option value="select the Product">select the Product</option>
                             <option value="Product1">Product1</option>
                         </select>
@@ -94,7 +94,7 @@ $steps = [
                     <label htmlfor="message" class="hidden">
                         Your Message
                     </label>
-                    <textarea class="hale_input rounded-[19px]!" id="message" name="message" rows="3"
+                    <textarea class="hale_input rounded-[19px]! !min-h-[170px] md:pt-2" id="message" name="message" rows="3"
                         placeholder="Write Your Message..."></textarea>
                 </div>
                 <div class="w-full">

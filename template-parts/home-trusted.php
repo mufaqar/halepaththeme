@@ -2,7 +2,7 @@
     <div
         class="hale_container md:p-14! p-8! bg-secondary flex md:flex-row flex-col gap-7 justify-between items-center rounded-[19px]">
         <!-- Left Text + Button -->
-        <div>
+        <div class="md:w-1/2 w-full">
             <p class="md:text-4xl text-2xl font-normal text-white mb-5">
                 Globally Expertise Delivered Locally
             </p>
@@ -15,7 +15,7 @@
         </div>
 
         <!-- Right Stats -->
-        <div class="flex md:flex-row flex-col gap-7 justify-between">
+        <div class="md:w-1/2 w-full flex md:flex-row flex-col gap-7 justify-between">
             <div class="count_box">
                 <span></span>
                 <h3>

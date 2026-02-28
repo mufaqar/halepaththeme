@@ -5,7 +5,7 @@ function live_search_products(){
   $keyword = sanitize_text_field($_POST['keyword']);
   $args = array(
     'post_type'      => 'product',
-    'posts_per_page' => 5,
+    'posts_per_page' => 6,
     's'              => $keyword,
     'post_status'    => 'publish',
   );

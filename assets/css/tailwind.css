@@ -361,11 +361,11 @@ footer ul li a span.marker {
   height: fit-content !important;
 }
 .active{
-  @apply bg-primary;
+  @apply bg-secondary;
 }
 
 .main_active{
-  @apply  bg-primary text-white ;
+  @apply  bg-secondary text-white ;
 }
 
 .testimonials-slider .slick-slide {

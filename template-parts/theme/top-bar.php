@@ -10,10 +10,10 @@
                 </a>
             </li>
             <li>
-                <a href="mailto:loremipsum@gmail.com"
+                <a href="mailto:info@halepathpack.com"
                     class="text-sm font-normal text-white flex items-center gap-1 px-2 cursor-pointer">
                     <i class="fas fa-envelope"></i>
-                    loremipsum@gmail.com
+                    info@halepathpack.com
                 </a>
             </li>
         </ul>
@@ -40,11 +40,11 @@
         <!-- Buttons -->
         <div class="lg:w-1/4 hidden lg:flex gap-5 justify-end">
             <a href="/contact-us"
-                class="border-2 border-primary px-5 py-2 text-[13px] uppercase font-medium text-primary rounded-full hover:bg-primary hover:text-white">
+                class="border-2 border-secondary px-5 py-2 text-[13px] uppercase font-medium text-secondary rounded-full hover:bg-secondary hover:text-white">
                 Contact Us
             </a>
             <a href="/get-qoute"
-                class="border-2 border-primary bg-primary px-5 py-2 text-[13px] uppercase font-medium text-white rounded-full hover:bg-transparent hover:text-primary">
+                class="border-2 border-secondary bg-secondary px-5 py-2 text-[13px] uppercase font-medium text-white rounded-full hover:bg-transparent hover:text-secondary">
                 Get Quote Now
             </a>
         </div>

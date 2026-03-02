@@ -293,6 +293,128 @@ $megaMenus = [
 
         ]
     ],
+    "corrugated_packaging" => [
+        "title" => "Corrugated Packaging",
+        "link" => "/corrugated-packaging",
+        "groups" => [
+            "Food & Beverage Packaging" => [
+                "link" => "/corrugated-packaging/food",
+                "image" => true,
+                "items" => [
+                    ["title" => "Fresh Produce", "link" => "/corrugated-packaging/food/fresh-produce"],
+                    ["title" => "Frozen & Chilled", "link" => "/corrugated-packaging/food/frozen"],
+                    ["title" => "Bakery & Confectionery", "link" => "/corrugated-packaging/food/bakery"],
+                    ["title" => "Meat, Poultry & Seafood", "link" => "/corrugated-packaging/food/meat"],
+                    ["title" => "Dairy Products", "link" => "/corrugated-packaging/food/dairy"],
+                    ["title" => "Dry / Cupboard Foods", "link" => "/corrugated-packaging/food/dry"],
+                ]
+            ],
+
+            "Beverage Multipacks & Systems" => [
+                "link" => "/corrugated-packaging/beverage",
+                "image" => false,
+                "items" => [
+                    ["title" => "Bottle Carriers", "link" => "/corrugated-packaging/beverage/bottle"],
+                    ["title" => "Can Multipacks", "link" => "/corrugated-packaging/beverage/cans"],
+                    ["title" => "Bag-in-Box Outer Packaging", "link" => "/corrugated-packaging/beverage/bag-in-box"],
+                    ["title" => "Plastic-Free Carriers", "link" => "/corrugated-packaging/beverage/plastic-free"],
+                ]
+            ],
+
+            "E-Commerce Packaging" => [
+                "link" => "/corrugated-packaging/ecommerce",
+                "image" => false,
+                "items" => [
+                    ["title" => "Standard Mailing Boxes", "link" => "/corrugated-packaging/ecommerce/mailing"],
+                    ["title" => "Crash-Lock Mailers", "link" => "/corrugated-packaging/ecommerce/crash-lock"],
+                    ["title" => "Pizza-Style / Flat Postal Boxes", "link" => "/corrugated-packaging/ecommerce/pizza"],
+                    ["title" => "Letterbox-Sized Packs", "link" => "/corrugated-packaging/ecommerce/letterbox"],
+                    ["title" => "Returns & Resealable Packaging", "link" => "/corrugated-packaging/ecommerce/returns"],
+                    ["title" => "Frustration-Free / Amazon-Compatible", "link" => "/corrugated-packaging/ecommerce/sioc"],
+                ]
+            ],
+
+            "Shipping & Transport" => [
+                "link" => "/corrugated-packaging/shipping",
+                "image" => false,
+                "items" => [
+                    ["title" => "Standard Shipping Boxes", "link" => "/corrugated-packaging/shipping/standard"],
+                    ["title" => "Hazardous Goods / UN Certified", "link" => "/corrugated-packaging/shipping/hazardous"],
+                    ["title" => "Pallet Boxes & Large Containers", "link" => "/corrugated-packaging/shipping/pallet"],
+                    ["title" => "Export / Moisture-Resistant", "link" => "/corrugated-packaging/shipping/export"],
+                ]
+            ],
+
+            "Wall Constructions" => [
+                "link" => "/corrugated-packaging/walls",
+                "image" => false,
+                "items" => [
+                    ["title" => "Single Wall Boxes", "link" => "/corrugated-packaging/walls/single"],
+                    ["title" => "Double Wall Boxes", "link" => "/corrugated-packaging/walls/double"],
+                    ["title" => "Tri Wall Boxes", "link" => "/corrugated-packaging/walls/tri"],
+                    ["title" => "Custom Multi-Wall Options", "link" => "/corrugated-packaging/walls/custom"],
+                ]
+            ],
+
+            "Slotted & Standard Boxes" => [
+                "link" => "/corrugated-packaging/slotted",
+                "image" => false,
+                "items" => [
+                    ["title" => "Regular Slotted Containers", "link" => "/corrugated-packaging/slotted/rsc"],
+                    ["title" => "Half Slotted Containers", "link" => "/corrugated-packaging/slotted/hsc"],
+                    ["title" => "Full Overlap Slotted", "link" => "/corrugated-packaging/slotted/fol"],
+                    ["title" => "Center Special Slotted", "link" => "/corrugated-packaging/slotted/css"],
+                    ["title" => "Heavy-Duty Shipping Containers", "link" => "/corrugated-packaging/slotted/heavy"],
+                ]
+            ],
+
+            "Functional & Automation-Friendly Boxes" => [
+                "link" => "/corrugated-packaging/automation",
+                "image" => false,
+                "items" => [
+                    ["title" => "Crash Lock Boxes", "link" => "/corrugated-packaging/automation/crash-lock"],
+                    ["title" => "Wrap Around Boxes", "link" => "/corrugated-packaging/automation/wrap"],
+                    ["title" => "Load-Sharing Wraparounds", "link" => "/corrugated-packaging/automation/load-sharing"],
+                    ["title" => "Wrap 8 / Multi-Sided Wraparounds", "link" => "/corrugated-packaging/automation/wrap8"],
+                    ["title" => "SRP Split Wrap", "link" => "/corrugated-packaging/automation/srp"],
+                ]
+            ],
+
+            "Trays & Retail Ready Solutions" => [
+                "link" => "/corrugated-packaging/trays",
+                "image" => false,
+                "items" => [
+                    ["title" => "Corrugated Trays", "link" => "/corrugated-packaging/trays/corrugated"],
+                    ["title" => "Retail Ready Packaging", "link" => "/corrugated-packaging/trays/retail"],
+                    ["title" => "Shelf-Ready Trays", "link" => "/corrugated-packaging/trays/shelf"],
+                    ["title" => "High-Graphic Retail Boxes", "link" => "/corrugated-packaging/trays/graphic"],
+                ]
+            ],
+
+            "Bulk & Industrial Solutions" => [
+                "link" => "/corrugated-packaging/bulk",
+                "image" => false,
+                "items" => [
+                    ["title" => "Bulk Bins & Containers", "link" => "/corrugated-packaging/bulk/bins"],
+                    ["title" => "Laminated Bulk Bins", "link" => "/corrugated-packaging/bulk/laminated"],
+                    ["title" => "Heavy-Duty Industrial Boxes", "link" => "/corrugated-packaging/bulk/industrial"],
+                    ["title" => "Protective Inserts & Dividers", "link" => "/corrugated-packaging/bulk/inserts"],
+                ]
+            ],
+
+            "Specialty Corrugated Packaging" => [
+                "link" => "/corrugated-packaging/specialty",
+                "image" => false,
+                "items" => [
+                    ["title" => "eCommerce Mailer Boxes", "link" => "/corrugated-packaging/specialty/mailers"],
+                    ["title" => "Bag-in-Box Outer Corrugated Boxes", "link" => "/corrugated-packaging/specialty/bag-box"],
+                    ["title" => "Display & Point-of-Sale Units", "link" => "/corrugated-packaging/specialty/pos"],
+                    ["title" => "Custom Die-Cut & Protective Packaging", "link" => "/corrugated-packaging/specialty/diecut"],
+                ]
+            ],
+
+        ]
+    ],
     "flexible_packaging" => [
         "title" => "Flexible Packaging & Pouches",
         "link" => "/flexible-packaging",
@@ -448,128 +570,6 @@ $megaMenus = [
                     ["title" => "Foil Stamping", "link" => "/custom-packaging/services/foil"],
                     ["title" => "Embossing / Debossing", "link" => "/custom-packaging/services/emboss"],
                     ["title" => "Lamination & Varnish", "link" => "/custom-packaging/services/lamination"],
-                ]
-            ],
-
-        ]
-    ],
-    "corrugated_packaging" => [
-        "title" => "Corrugated Packaging",
-        "link" => "/corrugated-packaging",
-        "groups" => [
-            "Food & Beverage Packaging" => [
-                "link" => "/corrugated-packaging/food",
-                "image" => true,
-                "items" => [
-                    ["title" => "Fresh Produce", "link" => "/corrugated-packaging/food/fresh-produce"],
-                    ["title" => "Frozen & Chilled", "link" => "/corrugated-packaging/food/frozen"],
-                    ["title" => "Bakery & Confectionery", "link" => "/corrugated-packaging/food/bakery"],
-                    ["title" => "Meat, Poultry & Seafood", "link" => "/corrugated-packaging/food/meat"],
-                    ["title" => "Dairy Products", "link" => "/corrugated-packaging/food/dairy"],
-                    ["title" => "Dry / Cupboard Foods", "link" => "/corrugated-packaging/food/dry"],
-                ]
-            ],
-
-            "Beverage Multipacks & Systems" => [
-                "link" => "/corrugated-packaging/beverage",
-                "image" => false,
-                "items" => [
-                    ["title" => "Bottle Carriers", "link" => "/corrugated-packaging/beverage/bottle"],
-                    ["title" => "Can Multipacks", "link" => "/corrugated-packaging/beverage/cans"],
-                    ["title" => "Bag-in-Box Outer Packaging", "link" => "/corrugated-packaging/beverage/bag-in-box"],
-                    ["title" => "Plastic-Free Carriers", "link" => "/corrugated-packaging/beverage/plastic-free"],
-                ]
-            ],
-
-            "E-Commerce Packaging" => [
-                "link" => "/corrugated-packaging/ecommerce",
-                "image" => false,
-                "items" => [
-                    ["title" => "Standard Mailing Boxes", "link" => "/corrugated-packaging/ecommerce/mailing"],
-                    ["title" => "Crash-Lock Mailers", "link" => "/corrugated-packaging/ecommerce/crash-lock"],
-                    ["title" => "Pizza-Style / Flat Postal Boxes", "link" => "/corrugated-packaging/ecommerce/pizza"],
-                    ["title" => "Letterbox-Sized Packs", "link" => "/corrugated-packaging/ecommerce/letterbox"],
-                    ["title" => "Returns & Resealable Packaging", "link" => "/corrugated-packaging/ecommerce/returns"],
-                    ["title" => "Frustration-Free / Amazon-Compatible", "link" => "/corrugated-packaging/ecommerce/sioc"],
-                ]
-            ],
-
-            "Shipping & Transport" => [
-                "link" => "/corrugated-packaging/shipping",
-                "image" => false,
-                "items" => [
-                    ["title" => "Standard Shipping Boxes", "link" => "/corrugated-packaging/shipping/standard"],
-                    ["title" => "Hazardous Goods / UN Certified", "link" => "/corrugated-packaging/shipping/hazardous"],
-                    ["title" => "Pallet Boxes & Large Containers", "link" => "/corrugated-packaging/shipping/pallet"],
-                    ["title" => "Export / Moisture-Resistant", "link" => "/corrugated-packaging/shipping/export"],
-                ]
-            ],
-
-            "Wall Constructions" => [
-                "link" => "/corrugated-packaging/walls",
-                "image" => false,
-                "items" => [
-                    ["title" => "Single Wall Boxes", "link" => "/corrugated-packaging/walls/single"],
-                    ["title" => "Double Wall Boxes", "link" => "/corrugated-packaging/walls/double"],
-                    ["title" => "Tri Wall Boxes", "link" => "/corrugated-packaging/walls/tri"],
-                    ["title" => "Custom Multi-Wall Options", "link" => "/corrugated-packaging/walls/custom"],
-                ]
-            ],
-
-            "Slotted & Standard Boxes" => [
-                "link" => "/corrugated-packaging/slotted",
-                "image" => false,
-                "items" => [
-                    ["title" => "Regular Slotted Containers", "link" => "/corrugated-packaging/slotted/rsc"],
-                    ["title" => "Half Slotted Containers", "link" => "/corrugated-packaging/slotted/hsc"],
-                    ["title" => "Full Overlap Slotted", "link" => "/corrugated-packaging/slotted/fol"],
-                    ["title" => "Center Special Slotted", "link" => "/corrugated-packaging/slotted/css"],
-                    ["title" => "Heavy-Duty Shipping Containers", "link" => "/corrugated-packaging/slotted/heavy"],
-                ]
-            ],
-
-            "Functional & Automation-Friendly Boxes" => [
-                "link" => "/corrugated-packaging/automation",
-                "image" => false,
-                "items" => [
-                    ["title" => "Crash Lock Boxes", "link" => "/corrugated-packaging/automation/crash-lock"],
-                    ["title" => "Wrap Around Boxes", "link" => "/corrugated-packaging/automation/wrap"],
-                    ["title" => "Load-Sharing Wraparounds", "link" => "/corrugated-packaging/automation/load-sharing"],
-                    ["title" => "Wrap 8 / Multi-Sided Wraparounds", "link" => "/corrugated-packaging/automation/wrap8"],
-                    ["title" => "SRP Split Wrap", "link" => "/corrugated-packaging/automation/srp"],
-                ]
-            ],
-
-            "Trays & Retail Ready Solutions" => [
-                "link" => "/corrugated-packaging/trays",
-                "image" => false,
-                "items" => [
-                    ["title" => "Corrugated Trays", "link" => "/corrugated-packaging/trays/corrugated"],
-                    ["title" => "Retail Ready Packaging", "link" => "/corrugated-packaging/trays/retail"],
-                    ["title" => "Shelf-Ready Trays", "link" => "/corrugated-packaging/trays/shelf"],
-                    ["title" => "High-Graphic Retail Boxes", "link" => "/corrugated-packaging/trays/graphic"],
-                ]
-            ],
-
-            "Bulk & Industrial Solutions" => [
-                "link" => "/corrugated-packaging/bulk",
-                "image" => false,
-                "items" => [
-                    ["title" => "Bulk Bins & Containers", "link" => "/corrugated-packaging/bulk/bins"],
-                    ["title" => "Laminated Bulk Bins", "link" => "/corrugated-packaging/bulk/laminated"],
-                    ["title" => "Heavy-Duty Industrial Boxes", "link" => "/corrugated-packaging/bulk/industrial"],
-                    ["title" => "Protective Inserts & Dividers", "link" => "/corrugated-packaging/bulk/inserts"],
-                ]
-            ],
-
-            "Specialty Corrugated Packaging" => [
-                "link" => "/corrugated-packaging/specialty",
-                "image" => false,
-                "items" => [
-                    ["title" => "eCommerce Mailer Boxes", "link" => "/corrugated-packaging/specialty/mailers"],
-                    ["title" => "Bag-in-Box Outer Corrugated Boxes", "link" => "/corrugated-packaging/specialty/bag-box"],
-                    ["title" => "Display & Point-of-Sale Units", "link" => "/corrugated-packaging/specialty/pos"],
-                    ["title" => "Custom Die-Cut & Protective Packaging", "link" => "/corrugated-packaging/specialty/diecut"],
                 ]
             ],
 
@@ -812,7 +812,7 @@ $megaMenus = [
                                     data-sub-target="subMenu-<?php echo $key; ?>" <?php endif; ?>>
 
                                 <a href="<?php echo esc_url($menu['link']); ?>"
-                                    class="text-sm font-normal capitalize text-title_Clr hover:text-white hover:bg-primary px-2 py-2 rounded-[30px] flex items-center">
+                                    class="text-sm font-normal capitalize text-title_Clr hover:text-white hover:bg-secondary px-2 py-2 rounded-[30px] flex items-center">
                                     <?php echo $menu['title']; ?>
                                     <?php if ($isMega || $isDropdown): ?>
                                         <i class="fa fa-chevron-down ml-1.5"></i>
@@ -856,13 +856,13 @@ $megaMenus = [
                         }
                         ?>
                         <div
-                            class="mx-auto !px-0 grid <?php echo $hasImage ? 'grid-cols-4 hale_container' : 'grid-cols-4 hale_container'; ?> gap-8 rounded-b-2xl shadow-xl bg-black/20 backdrop-blur-[10px]">
+                            class="mx-auto !px-0 grid <?php echo $hasImage ? 'grid-cols-4 hale_container' : 'grid-cols-4 hale_container'; ?> gap-0 rounded-b-2xl shadow-xl bg-black/20 backdrop-blur-[10px]">
                             <!-- Column 1: Parent Groups -->
-                            <div class="px-6 py-4 rounded-bl-2xl ">
+                            <div class="rounded-bl-2xl ">
                                 <ul class="space-y-0">
                                     <?php $i = 0; ?>
                                     <?php foreach ($menu['groups'] as $groupName => $items): ?>
-                                        <li class="mainCat w-fit flex items-center gap-2 py-2 px-5 " data-index="<?php echo $i; ?>">
+                                        <li class="mainCat flex items-center gap-2 py-5 px-5 " data-index="<?php echo $i; ?>">
                                             <a href="<?php echo esc_url($items['link']); ?>"
                                                 class="text-sm capitalize text-white cursor-pointer flex items-center gap-2">
                                                 <?php echo $groupName; ?>
@@ -872,13 +872,13 @@ $megaMenus = [
                                 </ul>
                             </div>
                             <!-- Column 2: Child Items -->
-                            <div class="col-span-1 py-4">
+                            <div class="col-span-1 bg-secondary/30 backdrop-blur-[10px]">
                                 <?php $i = 0;
                                 foreach ($menu['groups'] as $groupName => $groupData): ?>
                                     <div class="hidden childGroups" data-group="<?php echo $i; ?>">
-                                        <ul class="space-y-1">
+                                        <ul class="space-y-0">
                                             <?php foreach ($groupData['items'] as $item): ?>
-                                                <li>
+                                                <li class="py-[18px] px-5">
                                                     <a href="<?php echo esc_url($item['link']); ?>"
                                                         class="text-sm capitalize text-white hover:text-primary">
                                                         <?php echo $item['title']; ?>
@@ -891,7 +891,7 @@ $megaMenus = [
                             </div>
                             <!-- Column 3: Images -->
                             <?php if ($hasImage): ?>
-                                <div class="col-span-2 py-4 px-4">
+                                <div class="col-span-2 py-4 px-6">
                                     <?php $i = 0; ?>
                                     <?php foreach ($menu['groups'] as $groupName => $items): ?>
                                         <?php if (!empty($items['image']) && $items['image'] === true): ?>

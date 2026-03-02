@@ -64,3 +64,84 @@ function mytheme_remove_add_to_cart_buttons() {
 add_action( 'wp', 'mytheme_remove_add_to_cart_buttons' );
 
 
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: Options.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Options", "halepathic" ),
+		"singular_name" => esc_html__( "Options", "halepathic" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "Options", "halepathic" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "product_options", "with_front" => true ],
+		"query_var" => true,
+		"supports" => [ "title", "editor", "thumbnail" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "product_options", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );
+
+
+function cptui_register_my_taxes() {
+
+	/**
+	 * Taxonomy: Types.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Types", "halepathic" ),
+		"singular_name" => esc_html__( "Types", "halepathic" ),
+	];
+
+	
+	$args = [
+		"label" => esc_html__( "Types", "halepathic" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'options_types', 'with_front' => true,  'hierarchical' => true, ],
+		"show_admin_column" => true,
+		"show_in_rest" => true,
+		"show_tagcloud" => false,
+		"rest_base" => "options_types",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"rest_namespace" => "wp/v2",
+		"show_in_quick_edit" => true,
+		"sort" => true,
+		"show_in_graphql" => false,
+	];
+	register_taxonomy( "options_types", [ "product_options" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes' );
+
+

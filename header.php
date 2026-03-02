@@ -472,7 +472,7 @@ $megaMenus = [
         ]
     ],
     "custom_packaging" => [
-        "title" => "Custom Packaging",
+        "title" => "Custom Packaging Solution",
         "link" => "/custom-packaging",
         "groups" => [
             "Box Styles" => [

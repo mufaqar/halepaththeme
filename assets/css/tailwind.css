@@ -361,7 +361,7 @@ footer ul li a span.marker {
   height: fit-content !important;
 }
 .active{
-  @apply bg-secondary;
+  @apply bg-secondary/30 backdrop-blur-[10px];
 }
 
 .main_active{

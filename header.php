@@ -295,18 +295,18 @@ $megaMenus = [
     ],
     "corrugated_packaging" => [
         "title" => "Corrugated Packaging",
-        "link" => "/corrugated-packaging",
+        "link" => "/product-category/corrugated-packaging",
         "groups" => [
             "Food & Beverage Packaging" => [
-                "link" => "/corrugated-packaging/food",
+                "link" => "/product-category/corrugated-packaging/food-beverage-packaging",
                 "image" => true,
                 "items" => [
-                    ["title" => "Fresh Produce", "link" => "/corrugated-packaging/food/fresh-produce"],
-                    ["title" => "Frozen & Chilled", "link" => "/corrugated-packaging/food/frozen"],
-                    ["title" => "Bakery & Confectionery", "link" => "/corrugated-packaging/food/bakery"],
-                    ["title" => "Meat, Poultry & Seafood", "link" => "/corrugated-packaging/food/meat"],
-                    ["title" => "Dairy Products", "link" => "/corrugated-packaging/food/dairy"],
-                    ["title" => "Dry / Cupboard Foods", "link" => "/corrugated-packaging/food/dry"],
+                    ["title" => "Fresh Produce", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/fresh-produce/"],
+                    ["title" => "Frozen & Chilled", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/frozen-chilled/"],
+                    ["title" => "Bakery & Confectionery", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/bakery/"],
+                    ["title" => "Meat, Poultry & Seafood", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/meat/"],
+                    ["title" => "Dairy Products", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/dairy/"],
+                    ["title" => "Dry / Cupboard Foods", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/dry/"],
                 ]
             ],
 

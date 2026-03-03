@@ -1,7 +1,7 @@
 <?php
 $slides = [
   [
-    "image" => "/assets/images/about-page/slider.png",
+    "image" => "/assets/images/about-page/offset.jpeg",
     "title" => "Offset Printing",
     "link" => "#",
     "bg" => "slider_bg",
@@ -9,15 +9,15 @@ $slides = [
     "desc" => "Discover top-notch custom offset printing services for your packaging needs right here. We deliver sharp, vibrant colors on boxes and labels that make your products pop on shelves. Ideal for big orders, this method cuts costs while ensuring consistent quality across paperboard and cardstock. Count on us for precise details that boost your brand visibility in retail settings."
   ],
   [
-    "image" => "/assets/images/about-page/slider.png",
-    "title" => "Good Quality Packaging",
+    "image" => "/assets/images/about-page/corrugated.jpeg",
+    "title" => "Corrugated Packaging",
     "link" => "#",
     "bg" => "slider_bg2",
     "text" => "text-white",
     "desc" => "Get durable custom corrugated printing for boxes that protect and promote your goods. Our process adds strong designs to fluted materials, perfect for shipping. Enjoy lightweight options that resist crushing, with eco-friendly inks. Tailor sizes and graphics to fit your business."
   ],
   [
-    "image" => "/assets/images/about-page/slider.png",
+    "image" => "/assets/images/about-page/flexible.jpeg",
     "title" => "Good Quality Packaging",
     "link" => "#",
     "bg" => "slider_bg3",
@@ -25,7 +25,7 @@ $slides = [
     "desc" => "Explore flexible packaging with custom Mylar bags for freshness and style. These pouches block moisture and odors to keep contents safe. Add zippers for easy use, plus bold prints of your logo for standout presence. Great for snacks or cosmetics in various sizes."
   ],
   [
-    "image" => "/assets/images/about-page/slider.png",
+    "image" => "/assets/images/about-page/print.jpeg",
     "title" => "Print & Advertising & Office Supplies",
     "link" => "#",
     "bg" => "slider_bg2",

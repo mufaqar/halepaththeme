@@ -50,19 +50,19 @@ $megaMenus = [
         "link" => "/industries",
         "groups" => [
             "Beauty & Personal Care" => [
-                "link" => "/industries/beauty",
+                "link" => "/product-category/beauty-personal-care",
                 "image" => true,
                 "items" => [
-                    ["title" => "Cosmetics", "link" => "/industries/beauty/cosmetics"],
-                    ["title" => "Fragrances & Perfumes", "link" => "/industries/beauty/fragrances"],
-                    ["title" => "Skincare", "link" => "/industries/beauty/skincare"],
-                    ["title" => "Hair Care", "link" => "/industries/beauty/hair-care"],
-                    ["title" => "Nail Care", "link" => "/industries/beauty/nail-care"],
-                    ["title" => "Soap & Body Care", "link" => "/industries/beauty/soap-body"],
-                    ["title" => "Bath Products", "link" => "/industries/beauty/bath-products"],
-                    ["title" => "Mens Grooming", "link" => "/industries/beauty/mens-grooming"],
-                    ["title" => "Spa & Wellness", "link" => "/industries/beauty/spa"],
-                    ["title" => "Tissue & Hygiene", "link" => "/industries/beauty/tissue"],
+                    ["title" => "Cosmetics", "link" => "/product-category/beauty-personal-care/cosmetics"],
+                    ["title" => "Fragrances & Perfumes", "link" => "/product-category/beauty-personal-care/fragrances"],
+                    ["title" => "Skincare", "link" => "/product-category/beauty-personal-care/skincare"],
+                    ["title" => "Hair Care", "link" => "/product-category/beauty-personal-care/hair-care"],
+                    ["title" => "Nail Care", "link" => "/product-category/beauty-personal-care/nail-care"],
+                    ["title" => "Soap & Body Care", "link" => "/product-category/beauty-personal-care/soap-body"],
+                    ["title" => "Bath Products", "link" => "/product-category/beauty-personal-care/bath-products"],
+                    ["title" => "Mens Grooming", "link" => "/product-category/beauty-personal-care/mens-grooming"],
+                    ["title" => "Spa & Wellness", "link" => "/product-category/beauty-personal-care/spa"],
+                    ["title" => "Tissue & Hygiene", "link" => "/product-category/beauty-personal-care/tissue"],
                 ]
             ],
 
@@ -295,18 +295,18 @@ $megaMenus = [
     ],
     "corrugated_packaging" => [
         "title" => "Corrugated Packaging",
-        "link" => "/corrugated-packaging",
+        "link" => "/product-category/corrugated-packaging",
         "groups" => [
             "Food & Beverage Packaging" => [
-                "link" => "/corrugated-packaging/food",
+                "link" => "/product-category/corrugated-packaging/food-beverage-packaging",
                 "image" => true,
                 "items" => [
-                    ["title" => "Fresh Produce", "link" => "/corrugated-packaging/food/fresh-produce"],
-                    ["title" => "Frozen & Chilled", "link" => "/corrugated-packaging/food/frozen"],
-                    ["title" => "Bakery & Confectionery", "link" => "/corrugated-packaging/food/bakery"],
-                    ["title" => "Meat, Poultry & Seafood", "link" => "/corrugated-packaging/food/meat"],
-                    ["title" => "Dairy Products", "link" => "/corrugated-packaging/food/dairy"],
-                    ["title" => "Dry / Cupboard Foods", "link" => "/corrugated-packaging/food/dry"],
+                    ["title" => "Fresh Produce", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/fresh-produce/"],
+                    ["title" => "Frozen & Chilled", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/frozen-chilled/"],
+                    ["title" => "Bakery & Confectionery", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/bakery/"],
+                    ["title" => "Meat, Poultry & Seafood", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/meat/"],
+                    ["title" => "Dairy Products", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/dairy/"],
+                    ["title" => "Dry / Cupboard Foods", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/dry/"],
                 ]
             ],
 

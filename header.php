@@ -50,19 +50,19 @@ $megaMenus = [
         "link" => "/industries",
         "groups" => [
             "Beauty & Personal Care" => [
-                "link" => "/industries/beauty",
+                "link" => "/product-category/beauty-personal-care",
                 "image" => true,
                 "items" => [
-                    ["title" => "Cosmetics", "link" => "/industries/beauty/cosmetics"],
-                    ["title" => "Fragrances & Perfumes", "link" => "/industries/beauty/fragrances"],
-                    ["title" => "Skincare", "link" => "/industries/beauty/skincare"],
-                    ["title" => "Hair Care", "link" => "/industries/beauty/hair-care"],
-                    ["title" => "Nail Care", "link" => "/industries/beauty/nail-care"],
-                    ["title" => "Soap & Body Care", "link" => "/industries/beauty/soap-body"],
-                    ["title" => "Bath Products", "link" => "/industries/beauty/bath-products"],
-                    ["title" => "Mens Grooming", "link" => "/industries/beauty/mens-grooming"],
-                    ["title" => "Spa & Wellness", "link" => "/industries/beauty/spa"],
-                    ["title" => "Tissue & Hygiene", "link" => "/industries/beauty/tissue"],
+                    ["title" => "Cosmetics", "link" => "/product-category/beauty-personal-care/cosmetics"],
+                    ["title" => "Fragrances & Perfumes", "link" => "/product-category/beauty-personal-care/fragrances"],
+                    ["title" => "Skincare", "link" => "/product-category/beauty-personal-care/skincare"],
+                    ["title" => "Hair Care", "link" => "/product-category/beauty-personal-care/hair-care"],
+                    ["title" => "Nail Care", "link" => "/product-category/beauty-personal-care/nail-care"],
+                    ["title" => "Soap & Body Care", "link" => "/product-category/beauty-personal-care/soap-body"],
+                    ["title" => "Bath Products", "link" => "/product-category/beauty-personal-care/bath-products"],
+                    ["title" => "Mens Grooming", "link" => "/product-category/beauty-personal-care/mens-grooming"],
+                    ["title" => "Spa & Wellness", "link" => "/product-category/beauty-personal-care/spa"],
+                    ["title" => "Tissue & Hygiene", "link" => "/product-category/beauty-personal-care/tissue"],
                 ]
             ],
 

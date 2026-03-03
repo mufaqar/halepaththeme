@@ -754,22 +754,22 @@ $megaMenus = [
             ],
         ]
     ],
-    "about_us" => [
-        "title" => "About Us",
-        "link" => "/about-us",
-        "groups" => [
-            "Company Overview" => [
-                "link" => "/about-us/company-overview",
-                "image" => true,
-                "items" => [
-                    ["title" => "Quality Commitment", "link" => "/about-us/quality-commitment", "image" => true],
-                    ["title" => "Innovation Approach", "link" => "/about-us/innovation-approach"],
-                    ["title" => "Sustainability Focus", "link" => "/about-us/sustainability"],
-                    ["title" => "Why Choose Us", "link" => "/about-us/why-choose-us"],
-                ],
-            ]
-        ]
-    ]
+    // "about_us" => [
+    //     "title" => "About Us",
+    //     "link" => "/about-us",
+    //     "groups" => [
+    //         "Company Overview" => [
+    //             "link" => "/about-us/company-overview",
+    //             "image" => true,
+    //             "items" => [
+    //                 ["title" => "Quality Commitment", "link" => "/about-us/quality-commitment", "image" => true],
+    //                 ["title" => "Innovation Approach", "link" => "/about-us/innovation-approach"],
+    //                 ["title" => "Sustainability Focus", "link" => "/about-us/sustainability"],
+    //                 ["title" => "Why Choose Us", "link" => "/about-us/why-choose-us"],
+    //             ],
+    //         ]
+    //     ]
+    // ]
 ];
 ?>
 

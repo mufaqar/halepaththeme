@@ -130,7 +130,7 @@
     <!-- Tabs Content -->
     <div class="tab-content mt-6">
         <div class="tab-panel" id="tab1">
-            <?php get_template_part('template-parts/woo/pro-tab1'); ?>
+            <?php get_template_part('template-parts/woo/pro-tab2'); ?>
         </div>
 
         <div class="tab-panel hidden" id="tab2">

@@ -22,7 +22,7 @@
 <div class="bg-white py-1.5 hidden lg:block">
     <div class="hale_container flex items-center justify-between">
         <!-- Logo -->
-        <div class="lg:block hidden lg:w-[25%] w-1/2">
+        <div class="lg:block hidden sm:w-[25%] w-1/2">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="inline-flex">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png"
                     alt="Hale Path Packaging Logo" height="90" width="90" class="h-full w-full" />
@@ -38,7 +38,7 @@
             </div>
         </div>
         <!-- Buttons -->
-        <div class="lg:w-1/4 hidden lg:flex gap-5 justify-end">
+        <div class="xl:w-1/4 sm:w-1/3 hidden lg:flex gap-5 justify-end">
             <a href="/contact-us"
                 class="border-2 border-secondary px-5 py-2 text-[13px] uppercase font-medium text-secondary rounded-full hover:bg-secondary hover:text-white">
                 Contact Us

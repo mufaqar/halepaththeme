@@ -185,7 +185,7 @@
 }
 
 .count_box h3 {
-  @apply md:text-5xl text-3xl font-bold text-white my-6;
+  @apply lg:text-5xl md:text-3xl text-3xl font-bold text-white my-6;
 }
 
 .count_box p {
@@ -245,7 +245,7 @@
 }
 
 .feature_box h3 {
-  @apply md:text-xl text-lg font-semibold text-title_Clr mb-3;
+  @apply lg:text-xl text-lg font-semibold text-title_Clr mb-3;
 }
 
 .feature_box p {
@@ -300,7 +300,7 @@
 }
 
 footer ul li a {
-  @apply text-base font-normal text-title_Clr flex items-center gap-2 w-fit cursor-pointer;
+  @apply text-base font-normal text-title_Clr flex items-center gap-2 w-fit cursor-pointer break-all leading-none;
 }
 
 .cat_image {
@@ -308,7 +308,7 @@ footer ul li a {
 }
 
 footer ul li a span.marker {
-  @apply w-[3px] bg-title_Clr h-[11px] block;
+  @apply min-w-[3px] bg-title_Clr h-[11px] block;
 }
 
 /* width */

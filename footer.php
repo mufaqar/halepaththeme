@@ -13,7 +13,7 @@
 
 
 <footer class="pt-14 relative bg-[#f5f5f5]">
-    <div class="hale_container grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 justify-between gap-7">
+    <div class="hale_container grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 justify-between 2xl:gap-7 md:gap-4 gap-7">
         <!-- Company -->
         <div>
             <h6 class="footer_title">
@@ -101,7 +101,7 @@
     </div>
 
     <!-- Reviews & Partners -->
-    <div class="hale_container flex md:flex-row flex-col md:items-center justify-between gap-7 mt-7">
+    <div class="hale_container flex md:flex-row flex-col md:items-center justify-between 2xl:gap-7 md:gap-4 gap-7 mt-7">
         <div>
             <h6 class="text-base font-semibold text-title_Clr mb-6">Where We’re Trusted</h6>
             <div class="flex flex-wrap sm:flex-nowrap gap-5 items-center">
@@ -124,7 +124,7 @@
     </div>
 
     <!-- Logo & Social -->
-    <div class="hale_container flex md:flex-row flex-col md:items-center justify-between gap-7 mt-7 py-2.5">
+    <div class="hale_container flex md:flex-row flex-col md:items-center justify-between 2xl:gap-7 md:gap-4 gap-7 mt-7 py-2.5">
         <div class="flex gap-3 items-center">
             <a href="<?php echo home_url(); ?>"><img
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo"></a>

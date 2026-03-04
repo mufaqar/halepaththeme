@@ -53,7 +53,7 @@ $featureproductsRes = [
         </a>
     </div>
 
-    <div class="hale_container flex md:flex-row flex-col md:gap-40 gap-7 mt-10">
+    <div class="hale_container flex md:flex-row flex-col lg:gap-40 gap-7 mt-10">
         <div class="md:w-1/2 w-full flex md:flex-row flex-col items-start gap-7 [&>*:nth-child(1)]:md:-mt-40">
             <?php foreach ([$featureproductsRes[0], $featureproductsRes[1]] as $product): ?>
                 <div class='feature_box'>

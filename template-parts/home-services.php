@@ -94,21 +94,41 @@ function goToSlide(index) {
     behavior: "smooth"
   });
 
-  // reset animation flag after scroll
   setTimeout(() => {
     isAnimating = false;
-  }, 800); // match smooth scroll duration
+  }, 700);
 }
 
-// Wheel event only triggers on the slider container
 scrollContainer.addEventListener("wheel", function (evt) {
-  evt.preventDefault(); // prevent page scrolling
-  if (isAnimating) return;
 
-  if (evt.deltaY > 0) {
-    goToSlide(currentIndex + 1);
-  } else {
-    goToSlide(currentIndex - 1);
+  if (isAnimating) {
+    evt.preventDefault();
+    return;
   }
+
+  // SCROLL DOWN
+  if (evt.deltaY > 0) {
+
+    // If NOT last slide → move slider
+    if (currentIndex < panels.length - 1) {
+      evt.preventDefault();
+      goToSlide(currentIndex + 1);
+    }
+    // If last slide → allow normal page scroll
+
+  }
+
+  // SCROLL UP
+  else {
+
+    // If NOT first slide → move slider
+    if (currentIndex > 0) {
+      evt.preventDefault();
+      goToSlide(currentIndex - 1);
+    }
+    // If first slide → allow normal page scroll
+
+  }
+
 }, { passive: false });
 </script>

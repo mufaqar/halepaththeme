@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <?php if (is_search()) { ?>
-        <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="noindex, nofollow" />
     <?php } ?>
     <title>
         <?php
@@ -303,113 +303,113 @@ $megaMenus = [
                 "items" => [
                     ["title" => "Fresh Produce", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/fresh-produce/"],
                     ["title" => "Frozen & Chilled", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/frozen-chilled/"],
-                    ["title" => "Bakery & Confectionery", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/bakery/"],
-                    ["title" => "Meat, Poultry & Seafood", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/meat/"],
-                    ["title" => "Dairy Products", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/dairy/"],
-                    ["title" => "Dry / Cupboard Foods", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/dry/"],
+                    ["title" => "Bakery & Confectionery", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/bakery-confectionery/"],
+                    ["title" => "Meat, Poultry & Seafood", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/meat-poultry-seafood/"],
+                    ["title" => "Dairy Products", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/dairy-products/"],
+                    ["title" => "Dry / Cupboard Foods", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/food-beverage-packaging/dry-cupboard-foods/"],
                 ]
             ],
 
             "Beverage Multipacks & Systems" => [
-                "link" => "/corrugated-packaging/beverage",
+                "link" => "/product-category/corrugated-packaging/beverage-multipacks-systems/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Bottle Carriers", "link" => "/corrugated-packaging/beverage/bottle"],
-                    ["title" => "Can Multipacks", "link" => "/corrugated-packaging/beverage/cans"],
-                    ["title" => "Bag-in-Box Outer Packaging", "link" => "/corrugated-packaging/beverage/bag-in-box"],
-                    ["title" => "Plastic-Free Carriers", "link" => "/corrugated-packaging/beverage/plastic-free"],
+                    ["title" => "Bottle Carriers", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/beverage-multipacks-systems/bottle-carriers/"],
+                    ["title" => "Can Multipacks", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/beverage-multipacks-systems/can-multipacks/"],
+                    ["title" => "Bag-in-Box Outer Packaging", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/beverage-multipacks-systems/bag-in-box-outer-packaging/"],
+                    ["title" => "Plastic-Free Carriers", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/beverage-multipacks-systems/plastic-free-carriers/"],
                 ]
             ],
 
             "E-Commerce Packaging" => [
-                "link" => "/corrugated-packaging/ecommerce",
+                "link" => "/product-category/corrugated-packaging/e-commerce-packaging/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Standard Mailing Boxes", "link" => "/corrugated-packaging/ecommerce/mailing"],
-                    ["title" => "Crash-Lock Mailers", "link" => "/corrugated-packaging/ecommerce/crash-lock"],
-                    ["title" => "Pizza-Style / Flat Postal Boxes", "link" => "/corrugated-packaging/ecommerce/pizza"],
-                    ["title" => "Letterbox-Sized Packs", "link" => "/corrugated-packaging/ecommerce/letterbox"],
-                    ["title" => "Returns & Resealable Packaging", "link" => "/corrugated-packaging/ecommerce/returns"],
-                    ["title" => "Frustration-Free / Amazon-Compatible", "link" => "/corrugated-packaging/ecommerce/sioc"],
+                    ["title" => "Standard Mailing Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/e-commerce-packaging/standard-mailing-boxes/"],
+                    ["title" => "Crash-Lock Mailers", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/e-commerce-packaging/crash-lock-mailers/"],
+                    ["title" => "Pizza-Style / Flat Postal Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/e-commerce-packaging/pizza-style-flat-postal-boxes/"],
+                    ["title" => "Letterbox-Sized Packs", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/e-commerce-packaging/letterbox-sized-packs/"],
+                    ["title" => "Returns & Resealable Packaging", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/e-commerce-packaging/returns-resealable-packaging/"],
+                    ["title" => "Frustration-Free / Amazon-Compatible", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/e-commerce-packaging/frustration-free-amazon-compatible/"],
                 ]
             ],
 
             "Shipping & Transport" => [
-                "link" => "/corrugated-packaging/shipping",
+                "link" => "/product-category/corrugated-packaging/shipping-transport/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Standard Shipping Boxes", "link" => "/corrugated-packaging/shipping/standard"],
-                    ["title" => "Hazardous Goods / UN Certified", "link" => "/corrugated-packaging/shipping/hazardous"],
-                    ["title" => "Pallet Boxes & Large Containers", "link" => "/corrugated-packaging/shipping/pallet"],
-                    ["title" => "Export / Moisture-Resistant", "link" => "/corrugated-packaging/shipping/export"],
+                    ["title" => "Standard Shipping Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/shipping-transport/standard-shipping-boxes/"],
+                    ["title" => "Hazardous Goods / UN Certified", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/shipping-transport/hazardous-goods-un-certified/"],
+                    ["title" => "Pallet Boxes & Large Containers", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/shipping-transport/pallet-boxes-large-containers/"],
+                    ["title" => "Export / Moisture-Resistant", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/shipping-transport/export-moisture-resistant/"],
                 ]
             ],
 
             "Wall Constructions" => [
-                "link" => "/corrugated-packaging/walls",
+                "link" => "/product-category/corrugated-packaging/wall-constructions/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Single Wall Boxes", "link" => "/corrugated-packaging/walls/single"],
-                    ["title" => "Double Wall Boxes", "link" => "/corrugated-packaging/walls/double"],
-                    ["title" => "Tri Wall Boxes", "link" => "/corrugated-packaging/walls/tri"],
-                    ["title" => "Custom Multi-Wall Options", "link" => "/corrugated-packaging/walls/custom"],
+                    ["title" => "Single Wall Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/wall-constructions/single-wall-boxes/"],
+                    ["title" => "Double Wall Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/wall-constructions/double-wall-boxes/"],
+                    ["title" => "Tri Wall Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/wall-constructions/tri-wall-boxes/"],
+                    ["title" => "Custom Multi-Wall Options", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/wall-constructions/custom-multi-wall-options/"],
                 ]
             ],
 
             "Slotted & Standard Boxes" => [
-                "link" => "/corrugated-packaging/slotted",
+                "link" => "/product-category/corrugated-packaging/slotted-standard-boxes/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Regular Slotted Containers", "link" => "/corrugated-packaging/slotted/rsc"],
-                    ["title" => "Half Slotted Containers", "link" => "/corrugated-packaging/slotted/hsc"],
-                    ["title" => "Full Overlap Slotted", "link" => "/corrugated-packaging/slotted/fol"],
-                    ["title" => "Center Special Slotted", "link" => "/corrugated-packaging/slotted/css"],
-                    ["title" => "Heavy-Duty Shipping Containers", "link" => "/corrugated-packaging/slotted/heavy"],
+                    ["title" => "Regular Slotted Containers", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/slotted-standard-boxes/regular-slotted-containers/"],
+                    ["title" => "Half Slotted Containers", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/slotted-standard-boxes/half-slotted-containers/"],
+                    ["title" => "Full Overlap Slotted", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/slotted-standard-boxes/full-overlap-slotted/"],
+                    ["title" => "Center Special Slotted", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/slotted-standard-boxes/center-special-slotted/"],
+                    ["title" => "Heavy-Duty Shipping Containers", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/slotted-standard-boxes/heavy-duty-shipping-containers/"],
                 ]
             ],
 
             "Functional & Automation-Friendly Boxes" => [
-                "link" => "/corrugated-packaging/automation",
+                "link" => "/product-category/corrugated-packaging/functional-automation-friendly-boxes/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Crash Lock Boxes", "link" => "/corrugated-packaging/automation/crash-lock"],
-                    ["title" => "Wrap Around Boxes", "link" => "/corrugated-packaging/automation/wrap"],
-                    ["title" => "Load-Sharing Wraparounds", "link" => "/corrugated-packaging/automation/load-sharing"],
-                    ["title" => "Wrap 8 / Multi-Sided Wraparounds", "link" => "/corrugated-packaging/automation/wrap8"],
-                    ["title" => "SRP Split Wrap", "link" => "/corrugated-packaging/automation/srp"],
+                    ["title" => "Crash Lock Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/functional-automation-friendly-boxes/crash-lock-boxes/"],
+                    ["title" => "Wrap Around Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/functional-automation-friendly-boxes/wrap-around-boxes/"],
+                    ["title" => "Load-Sharing Wraparounds", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/functional-automation-friendly-boxes/load-sharing-wraparounds/"],
+                    ["title" => "Wrap 8 / Multi-Sided Wraparounds", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/functional-automation-friendly-boxes/wrap-8-multi-sided-wraparounds/"],
+                    ["title" => "SRP Split Wrap", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/functional-automation-friendly-boxes/srp-split-wrap/"],
                 ]
             ],
 
             "Trays & Retail Ready Solutions" => [
-                "link" => "/corrugated-packaging/trays",
+                "link" => "/product-category/corrugated-packaging/trays-retail-ready-solutions/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Corrugated Trays", "link" => "/corrugated-packaging/trays/corrugated"],
-                    ["title" => "Retail Ready Packaging", "link" => "/corrugated-packaging/trays/retail"],
-                    ["title" => "Shelf-Ready Trays", "link" => "/corrugated-packaging/trays/shelf"],
-                    ["title" => "High-Graphic Retail Boxes", "link" => "/corrugated-packaging/trays/graphic"],
+                    ["title" => "Corrugated Trays", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/trays-retail-ready-solutions/corrugated-trays/"],
+                    ["title" => "Retail Ready Packaging", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/trays-retail-ready-solutions/retail-ready-packaging/"],
+                    ["title" => "Shelf-Ready Trays", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/trays-retail-ready-solutions/shelf-ready-trays/"],
+                    ["title" => "High-Graphic Retail Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/trays-retail-ready-solutions/high-graphic-retail-boxes/"],
                 ]
             ],
 
             "Bulk & Industrial Solutions" => [
-                "link" => "/corrugated-packaging/bulk",
+                "link" => "/product-category/corrugated-packaging/bulk-industrial-solutions/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Bulk Bins & Containers", "link" => "/corrugated-packaging/bulk/bins"],
-                    ["title" => "Laminated Bulk Bins", "link" => "/corrugated-packaging/bulk/laminated"],
-                    ["title" => "Heavy-Duty Industrial Boxes", "link" => "/corrugated-packaging/bulk/industrial"],
-                    ["title" => "Protective Inserts & Dividers", "link" => "/corrugated-packaging/bulk/inserts"],
+                    ["title" => "Bulk Bins & Containers", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/bulk-industrial-solutions/bulk-bins-containers/"],
+                    ["title" => "Laminated Bulk Bins", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/bulk-industrial-solutions/laminated-bulk-bins/"],
+                    ["title" => "Heavy-Duty Industrial Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/bulk-industrial-solutions/heavy-duty-industrial-boxes/"],
+                    ["title" => "Protective Inserts & Dividers", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/bulk-industrial-solutions/protective-inserts-dividers/"],
                 ]
             ],
 
             "Specialty Corrugated Packaging" => [
-                "link" => "/corrugated-packaging/specialty",
+                "link" => "/product-category/corrugated-packaging/specialty-corrugated-packaging/",
                 "image" => false,
                 "items" => [
-                    ["title" => "eCommerce Mailer Boxes", "link" => "/corrugated-packaging/specialty/mailers"],
-                    ["title" => "Bag-in-Box Outer Corrugated Boxes", "link" => "/corrugated-packaging/specialty/bag-box"],
-                    ["title" => "Display & Point-of-Sale Units", "link" => "/corrugated-packaging/specialty/pos"],
-                    ["title" => "Custom Die-Cut & Protective Packaging", "link" => "/corrugated-packaging/specialty/diecut"],
+                    ["title" => "eCommerce Mailer Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/specialty-corrugated-packaging/ecommerce-mailer-boxes/"],
+                    ["title" => "Bag-in-Box Outer Corrugated Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/specialty-corrugated-packaging/bag-in-box-outer-corrugated-boxes/"],
+                    ["title" => "Display & Point-of-Sale Units", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/specialty-corrugated-packaging/display-point-of-sale-units/"],
+                    ["title" => "Custom Die-Cut & Protective Packaging", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/specialty-corrugated-packaging/custom-die-cut-protective-packaging/"],
                 ]
             ],
 
@@ -417,55 +417,55 @@ $megaMenus = [
     ],
     "flexible_packaging" => [
         "title" => "Flexible Packaging & Pouches",
-        "link" => "/flexible-packaging",
+        "link" => "/product-category/flexible-packaging-pouches/",
         "groups" => [
-            "Flexible Packaging Bags" => [
-                "link" => "/flexible-packaging/bags",
+            "Flexible Flexible Packaging Bags" => [
+                "link" => "/product-category/flexible-packaging-pouches/flexible-packaging-bags/",
                 "image" => true,
                 "items" => [
-                    ["title" => "Stand Up Pouch", "link" => "/flexible-packaging/bags/stand-up"],
-                    ["title" => "Flat Bottom Pouch", "link" => "/flexible-packaging/bags/flat-bottom"],
-                    ["title" => "Mylar Bags", "link" => "/flexible-packaging/bags/mylar"],
-                    ["title" => "Child Resistant Bags", "link" => "/flexible-packaging/bags/child-resistant"],
-                    ["title" => "Shrink Sleeve Labels", "link" => "/flexible-packaging/bags/shrink-sleeve"],
-                    ["title" => "Spout Pouch", "link" => "/flexible-packaging/bags/spout"],
-                    ["title" => "3 Side Seal Pouch", "link" => "/flexible-packaging/bags/3-side-seal"],
-                    ["title" => "Side Gusset Bags", "link" => "/flexible-packaging/bags/side-gusset"],
-                    ["title" => "Shaped Pouch", "link" => "/flexible-packaging/bags/shaped"],
-                    ["title" => "Packaging Film Roll", "link" => "/flexible-packaging/bags/film-roll"],
-                    ["title" => "Kraft Paper Pouch", "link" => "/flexible-packaging/bags/kraft"],
-                    ["title" => "Recyclable Pouches", "link" => "/flexible-packaging/bags/recyclable"],
-                    ["title" => "Biodegradable Pouches", "link" => "/flexible-packaging/bags/biodegradable"],
+                    ["title" => "Stand Up Pouch", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/stand-up-pouch/"],
+                    ["title" => "Flat Bottom Pouch", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/flat-bottom-pouch/"],
+                    ["title" => "Mylar Bags", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/mylar-bags/"],
+                    ["title" => "Child Resistant Bags", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/child-resistant-bags/"],
+                    ["title" => "Shrink Sleeve Labels", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/shrink-sleeve-labels/"],
+                    ["title" => "Spout Pouch", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/spout-pouch/"],
+                    ["title" => "3 Side Seal Pouch", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/3-side-seal-pouch/"],
+                    ["title" => "Side Gusset Bags", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/side-gusset-bags/"],
+                    ["title" => "Shaped Pouch", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/shaped-pouch/"],
+                    ["title" => "Packaging Film Roll", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/packaging-film-roll/"],
+                    ["title" => "Kraft Paper Pouch", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/kraft-paper-pouch/"],
+                    ["title" => "Recyclable Pouches", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/recyclable-pouches/"],
+                    ["title" => "Biodegradable Pouches", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/flexible-packaging-bags/biodegradable-pouches/"],
                 ]
             ],
 
             "Food Packaging" => [
-                "link" => "/flexible-packaging/food",
+                "link" => "/product-category/flexible-packaging-pouches/food-packaging/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Coffee Packaging", "link" => "/flexible-packaging/food/coffee"],
-                    ["title" => "Bakery & Confectionery", "link" => "/flexible-packaging/food/bakery"],
-                    ["title" => "Chocolate Bar Packaging", "link" => "/flexible-packaging/food/chocolate"],
-                    ["title" => "Candy & Sweets", "link" => "/flexible-packaging/food/candy"],
-                    ["title" => "Coffee & Tea Packaging", "link" => "/flexible-packaging/food/coffee-tea"],
-                    ["title" => "Beverages & Drinks", "link" => "/flexible-packaging/food/beverages"],
-                    ["title" => "Snacks & Chips", "link" => "/flexible-packaging/food/snacks"],
-                    ["title" => "Frozen Foods", "link" => "/flexible-packaging/food/frozen"],
-                    ["title" => "Dairy Products", "link" => "/flexible-packaging/food/dairy"],
-                    ["title" => "Wine & Spirits Pouch", "link" => "/flexible-packaging/food/wine"],
-                    ["title" => "Energy Drinks & Juice", "link" => "/flexible-packaging/food/energy"],
-                    ["title" => "Ice Cream & Desserts", "link" => "/flexible-packaging/food/ice-cream"],
-                    ["title" => "Food Delivery Packaging", "link" => "/flexible-packaging/food/delivery"],
-                    ["title" => "Meal Kits", "link" => "/flexible-packaging/food/meal-kits"],
-                    ["title" => "Cannabis Packaging", "link" => "/flexible-packaging/food/cannabis"],
-                    ["title" => "Pet Food Packaging", "link" => "/flexible-packaging/food/pet"],
-                    ["title" => "Protein Powder Packaging", "link" => "/flexible-packaging/food/protein"],
-                    ["title" => "Nuts Packaging", "link" => "/flexible-packaging/food/nuts"],
-                    ["title" => "Retort Pouch", "link" => "/flexible-packaging/food/retort"],
-                    ["title" => "Condiment Packaging", "link" => "/flexible-packaging/food/condiment"],
-                    ["title" => "Rice Pouches", "link" => "/flexible-packaging/food/rice"],
-                    ["title" => "Fish, Meat & Jerky Packaging", "link" => "/flexible-packaging/food/meat"],
-                    ["title" => "Supplement & Protein Packaging", "link" => "/flexible-packaging/food/supplement"],
+                    ["title" => "Coffee Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/coffee-packaging/"],
+                    ["title" => "Bakery & Confectionery", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/bakery-confectionery-food-packaging/"],
+                    ["title" => "Chocolate Bar Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/chocolate-bar-packaging/"],
+                    ["title" => "Candy & Sweets", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/candy-sweets/"],
+                    ["title" => "Coffee & Tea Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/coffee-tea-packaging/"],
+                    ["title" => "Beverages & Drinks", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/beverages-drinks/"],
+                    ["title" => "Snacks & Chips", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/snacks-chips/"],
+                    ["title" => "Frozen Foods", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/frozen-foods/"],
+                    ["title" => "Dairy Products", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/dairy-products-food-packaging/"],
+                    ["title" => "Wine & Spirits Pouch", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/wine-spirits-pouch/"],
+                    ["title" => "Energy Drinks & Juice", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/energy-drinks-juice/"],
+                    ["title" => "Ice Cream & Desserts", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/ice-cream-desserts/"],
+                    ["title" => "Food Delivery Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/food-delivery-packaging/"],
+                    ["title" => "Meal Kits", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/meal-kits/"],
+                    ["title" => "Cannabis Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/cannabis-packaging/"],
+                    ["title" => "Pet Food Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/pet-food-packaging/"],
+                    ["title" => "Protein Powder Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/protein-powder-packaging/"],
+                    ["title" => "Nuts Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/nuts-packaging/"],
+                    ["title" => "Retort Pouch", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/retort-pouch/"],
+                    ["title" => "Condiment Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/condiment-packaging/"],
+                    ["title" => "Rice Pouches", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/rice-pouches/"],
+                    ["title" => "Fish, Meat & Jerky Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/fish-meat-jerky-packaging/"],
+                    ["title" => "Supplement & Protein Packaging", "link" => "https://halepathpackaging.co.uk/product-category/flexible-packaging-pouches/food-packaging/supplement-protein-packaging/"],
                 ]
             ],
 
@@ -473,103 +473,103 @@ $megaMenus = [
     ],
     "custom_packaging" => [
         "title" => "Custom Packaging Solution",
-        "link" => "/custom-packaging",
+        "link" => "/product-category/custom-packaging-solution/",
         "groups" => [
             "Box Styles" => [
-                "link" => "/custom-packaging/box-styles",
+                "link" => "/product-category/custom-packaging-solution/box-styles/",
                 "image" => true,
                 "items" => [
-                    ["title" => "Folding Carton Boxes", "link" => "/custom-packaging/box-styles/folding-carton"],
-                    ["title" => "Tuck End", "link" => "/custom-packaging/box-styles/tuck-end"],
-                    ["title" => "Auto Lock Bottom", "link" => "/custom-packaging/box-styles/auto-lock"],
-                    ["title" => "Snap Lock Bottom", "link" => "/custom-packaging/box-styles/snap-lock"],
-                    ["title" => "Seal End", "link" => "/custom-packaging/box-styles/seal-end"],
-                    ["title" => "Double Wall Tuck", "link" => "/custom-packaging/box-styles/double-wall"],
-                    ["title" => "Lock Cap Bottom", "link" => "/custom-packaging/box-styles/lock-cap"],
-                    ["title" => "Rigid & Premium Boxes", "link" => "/custom-packaging/box-styles/rigid"],
-                    ["title" => "Window Boxes", "link" => "/custom-packaging/box-styles/window"],
-                    ["title" => "Pillow Boxes", "link" => "/custom-packaging/box-styles/pillow"],
-                    ["title" => "Gable Boxes", "link" => "/custom-packaging/box-styles/gable"],
-                    ["title" => "Die-Cut & Custom Shape Boxes", "link" => "/custom-packaging/box-styles/die-cut"],
-                    ["title" => "Hanger Boxes", "link" => "/custom-packaging/box-styles/hanger"],
-                    ["title" => "Tray, Sleeve & Lid Boxes", "link" => "/custom-packaging/box-styles/tray-sleeve"],
-                    ["title" => "Lid Off Boxes", "link" => "/custom-packaging/box-styles/lid-off"],
-                    ["title" => "Foot Lock Tray", "link" => "/custom-packaging/box-styles/foot-lock"],
-                    ["title" => "Mailer Boxes", "link" => "/custom-packaging/box-styles/mailer"],
-                    ["title" => "Display Boxes", "link" => "/custom-packaging/box-styles/display"],
-                    ["title" => "White Cardboard Boxes", "link" => "/custom-packaging/box-styles/white-cardboard"],
-                    ["title" => "Corrugated Boxes", "link" => "/custom-packaging/box-styles/corrugated"],
-                    ["title" => "Holographic Boxes", "link" => "/custom-packaging/box-styles/holographic"],
-                    ["title" => "Paper / Kraft Bags", "link" => "/custom-packaging/box-styles/kraft-bags"],
-                    ["title" => "Shopping Bags", "link" => "/custom-packaging/box-styles/shopping-bags"],
-                    ["title" => "Stand-Up Pouches", "link" => "/custom-packaging/box-styles/standup-pouches"],
+                    ["title" => "Folding Carton Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/folding-carton-boxes/"],
+                    ["title" => "Tuck End", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/tuck-end/"],
+                    ["title" => "Auto Lock Bottom", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/auto-lock-bottom/"],
+                    ["title" => "Snap Lock Bottom", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/snap-lock-bottom/"],
+                    ["title" => "Seal End", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/seal-end/"],
+                    ["title" => "Double Wall Tuck", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/double-wall-tuck/"],
+                    ["title" => "Lock Cap Bottom", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/lock-cap-bottom/"],
+                    ["title" => "Rigid & Premium Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/rigid-premium-boxes/"],
+                    ["title" => "Window Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/window-boxes/"],
+                    ["title" => "Pillow Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/pillow-boxes-box-styles/"],
+                    ["title" => "Gable Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/gable-boxes/"],
+                    ["title" => "Die-Cut & Custom Shape Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/die-cut-custom-shape-boxes/"],
+                    ["title" => "Hanger Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/hanger-boxes/"],
+                    ["title" => "Tray, Sleeve & Lid Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/tray-sleeve-lid-boxes/"],
+                    ["title" => "Lid Off Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/lid-off-boxes/"],
+                    ["title" => "Foot Lock Tray", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/foot-lock-tray-box-styles/"],
+                    ["title" => "Mailer Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/mailer-boxes/"],
+                    ["title" => "Display Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/display-boxes/"],
+                    ["title" => "White Cardboard Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/white-cardboard-boxes/"],
+                    ["title" => "Corrugated Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/corrugated-boxes-box-styles/"],
+                    ["title" => "Holographic Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/holographic-boxes/"],
+                    ["title" => "Paper / Kraft Bags", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/paper-kraft-bags/"],
+                    ["title" => "Shopping Bags", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/shopping-bags/"],
+                    ["title" => "Stand-Up Pouches", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/box-styles/stand-up-pouches/"],
                 ]
             ],
 
             "By Industry" => [
-                "link" => "/custom-packaging/by-industry",
+                "link" => "/product-category/custom-packaging-solution/by-industry/",
                 "image" => false,
                 "items" => [
-                    ["title" => "CBD & Cannabis", "link" => "/custom-packaging/industry/cbd"],
-                    ["title" => "Cosmetic Boxes", "link" => "/custom-packaging/industry/cosmetics"],
-                    ["title" => "Candle Boxes", "link" => "/custom-packaging/industry/candles"],
-                    ["title" => "Food & Beverage", "link" => "/custom-packaging/industry/food"],
-                    ["title" => "Tobacco Products", "link" => "/custom-packaging/industry/tobacco"],
-                    ["title" => "Cigarette Boxes", "link" => "/custom-packaging/industry/cigarette"],
-                    ["title" => "Child Resistant Packaging", "link" => "/custom-packaging/industry/child-resistant"],
-                    ["title" => "Apparel & Fashion", "link" => "/custom-packaging/industry/apparel"],
-                    ["title" => "Pharmaceutical & Healthcare", "link" => "/custom-packaging/industry/pharma"],
-                    ["title" => "Pet Products", "link" => "/custom-packaging/industry/pet"],
-                    ["title" => "Electronics & Gadgets", "link" => "/custom-packaging/industry/electronics"],
-                    ["title" => "Toys & Games", "link" => "/custom-packaging/industry/toys"],
-                    ["title" => "Automotive & Office", "link" => "/custom-packaging/industry/automotive"],
-                    ["title" => "Stationery & Pen Boxes", "link" => "/custom-packaging/industry/stationery"],
+                    ["title" => "CBD & Cannabis", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/cbd-cannabis/"],
+                    ["title" => "Cosmetic Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/cosmetic-boxes-by-industry/"],
+                    ["title" => "Candle Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/candle-boxes/"],
+                    ["title" => "Food & Beverage", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/food-beverage/"],
+                    ["title" => "Tobacco Products", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/tobacco-products/"],
+                    ["title" => "Cigarette Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/cigarette-boxes/"],
+                    ["title" => "Child Resistant Packaging", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/child-resistant-packaging/"],
+                    ["title" => "Apparel & Fashion", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/apparel-fashion/"],
+                    ["title" => "Pharmaceutical & Healthcare", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/pharmaceutical-healthcare/"],
+                    ["title" => "Pet Products", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/pet-products/"],
+                    ["title" => "Electronics & Gadgets", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/electronics-gadgets/"],
+                    ["title" => "Toys & Games", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/toys-games/"],
+                    ["title" => "Automotive & Office", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/automotive-office/"],
+                    ["title" => "Stationery & Pen Boxes", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-industry/stationery-pen-boxes/"],
                 ]
             ],
 
             "By Purpose" => [
-                "link" => "/custom-packaging/by-purpose",
+                "link" => "/product-category/custom-packaging-solution/by-purpose/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Retail & Display", "link" => "/custom-packaging/purpose/retail"],
-                    ["title" => "Shipping & E-commerce", "link" => "/custom-packaging/purpose/shipping"],
-                    ["title" => "Gift & Presentation", "link" => "/custom-packaging/purpose/gift"],
-                    ["title" => "Product Protection", "link" => "/custom-packaging/purpose/protection"],
-                    ["title" => "Food & Beverage", "link" => "/custom-packaging/purpose/food"],
-                    ["title" => "Industrial & Bulk", "link" => "/custom-packaging/purpose/industrial"],
-                    ["title" => "Promotional Packaging", "link" => "/custom-packaging/purpose/promotional"],
-                    ["title" => "Seasonal & Event", "link" => "/custom-packaging/purpose/seasonal"],
+                    ["title" => "Retail & Display", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-purpose/retail-display/"],
+                    ["title" => "Shipping & E-commerce", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-purpose/shipping-e-commerce/"],
+                    ["title" => "Gift & Presentation", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-purpose/gift-presentation/"],
+                    ["title" => "Product Protection", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-purpose/product-protection/"],
+                    ["title" => "Food & Beverage", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-purpose/food-beverage-by-purpose/"],
+                    ["title" => "Industrial & Bulk", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-purpose/industrial-bulk/"],
+                    ["title" => "Promotional Packaging", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-purpose/promotional-packaging/"],
+                    ["title" => "Seasonal & Event", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/by-purpose/seasonal-event/"],
                 ]
             ],
 
             "Materials" => [
-                "link" => "/custom-packaging/materials",
+                "link" => "/product-category/custom-packaging-solution/materials/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Core Materials", "link" => "/custom-packaging/materials/core"],
-                    ["title" => "Kraft Paper", "link" => "/custom-packaging/materials/kraft"],
-                    ["title" => "Cardboard / Paperboard", "link" => "/custom-packaging/materials/cardboard"],
-                    ["title" => "Corrugated Board", "link" => "/custom-packaging/materials/corrugated"],
-                    ["title" => "Rigid Board", "link" => "/custom-packaging/materials/rigid"],
-                    ["title" => "Bux Board", "link" => "/custom-packaging/materials/bux"],
-                    ["title" => "Eco-Friendly Materials", "link" => "/custom-packaging/materials/eco"],
-                    ["title" => "Recyclable Materials", "link" => "/custom-packaging/materials/recyclable"],
-                    ["title" => "Biodegradable Packaging", "link" => "/custom-packaging/materials/biodegradable"],
-                    ["title" => "FSC-Certified Paper", "link" => "/custom-packaging/materials/fsc"],
+                    ["title" => "Core Materials", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/materials/core-materials/"],
+                    ["title" => "Kraft Paper", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/materials/kraft-paper/"],
+                    ["title" => "Cardboard / Paperboard", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/materials/cardboard-paperboard/"],
+                    ["title" => "Corrugated Board", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/materials/corrugated-board/"],
+                    ["title" => "Rigid Board", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/materials/rigid-board/"],
+                    ["title" => "Bux Board", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/materials/bux-board/"],
+                    ["title" => "Eco-Friendly Materials", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/materials/eco-friendly-materials/"],
+                    ["title" => "Recyclable Materials", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/materials/recyclable-materials/"],
+                    ["title" => "Biodegradable Packaging", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/materials/biodegradable-packaging/"],
+                    ["title" => "FSC-Certified Paper", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/materials/fsc-certified-paper/"],
                 ]
             ],
 
             "Services" => [
-                "link" => "/custom-packaging/services",
+                "link" => "/product-category/custom-packaging-solution/services/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Design & Sampling", "link" => "/custom-packaging/services/design"],
-                    ["title" => "Production & Orders", "link" => "/custom-packaging/services/production"],
-                    ["title" => "Logistics & Support", "link" => "/custom-packaging/services/logistics"],
-                    ["title" => "Printing & Finishing", "link" => "/custom-packaging/services/printing"],
-                    ["title" => "Foil Stamping", "link" => "/custom-packaging/services/foil"],
-                    ["title" => "Embossing / Debossing", "link" => "/custom-packaging/services/emboss"],
-                    ["title" => "Lamination & Varnish", "link" => "/custom-packaging/services/lamination"],
+                    ["title" => "Design & Sampling", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/services/design-sampling/"],
+                    ["title" => "Production & Orders", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/services/production-orders/"],
+                    ["title" => "Logistics & Support", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/services/logistics-support/"],
+                    ["title" => "Printing & Finishing", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/services/printing-finishing/"],
+                    ["title" => "Foil Stamping", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/services/foil-stamping/"],
+                    ["title" => "Embossing / Debossing", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/services/embossing-debossing/"],
+                    ["title" => "Lamination & Varnish", "link" => "https://halepathpackaging.co.uk/product-category/custom-packaging-solution/services/lamination-varnish/"],
                 ]
             ],
 
@@ -577,149 +577,149 @@ $megaMenus = [
     ],
     "commercial_printing" => [
         "title" => "Commercial Printing",
-        "link" => "/commercial-printing",
+        "link" => "commercial-printing/",
         "groups" => [
             "Offset Printing (Lithography)" => [
-                "link" => "/commercial-printing/offset",
+                "link" => "/product-category/commercial-printing/offset-printing-lithography/",
                 "image" => true,
                 "items" => [
-                    ["title" => "Digital Printing", "link" => "/commercial-printing/digital", "image" => true],
-                    ["title" => "Flexographic Printing (Flexo)", "link" => "/commercial-printing/flexo"],
-                    ["title" => "Gravure Printing (Flexible Packaging)", "link" => "/commercial-printing/gravure"],
-                    ["title" => "Spot UV", "link" => "/commercial-printing/spot-uv"],
-                    ["title" => "Screen Printing", "link" => "/commercial-printing/screen"],
-                    ["title" => "Letterpress (Specialty)", "link" => "/commercial-printing/letterpress"],
-                    ["title" => "UV Offset Printing", "link" => "/commercial-printing/uv-offset"],
-                    ["title" => "Foil Printing", "link" => "/commercial-printing/foil"],
+                    ["title" => "Digital Printing", "link" => "https://halepathpackaging.co.uk/product-category/commercial-printing/offset-printing-lithography/digital-printing/", "image" => true],
+                    ["title" => "Flexographic Printing (Flexo)", "link" => "https://halepathpackaging.co.uk/product-category/commercial-printing/offset-printing-lithography/flexographic-printing-flexo/"],
+                    ["title" => "Gravure Printing (Flexible Packaging)", "link" => "https://halepathpackaging.co.uk/product-category/commercial-printing/offset-printing-lithography/gravure-printing-flexible-packaging/"],
+                    ["title" => "Spot UV", "link" => "https://halepathpackaging.co.uk/product-category/commercial-printing/offset-printing-lithography/spot-uv-offset-printing-lithography/"],
+                    ["title" => "Screen Printing", "link" => "https://halepathpackaging.co.uk/product-category/commercial-printing/offset-printing-lithography/screen-printing/"],
+                    ["title" => "Letterpress (Specialty)", "link" => "https://halepathpackaging.co.uk/product-category/commercial-printing/offset-printing-lithography/letterpress-specialty/"],
+                    ["title" => "UV Offset Printing", "link" => "https://halepathpackaging.co.uk/product-category/commercial-printing/offset-printing-lithography/uv-offset-printing/"],
+                    ["title" => "Foil Printing", "link" => "https://halepathpackaging.co.uk/product-category/commercial-printing/offset-printing-lithography/foil-printing/"],
                 ],
             ],
         ]
     ],
     "print_advertising" => [
         "title" => "Print & Advertising",
-        "link" => "/print-advertising",
+        "link" => "/product-category/print-advertising/",
         "groups" => [
 
             "Office Supplies" => [
-                "link" => "/print-advertising/office",
+                "link" => "/product-category/print-advertising/office-supplies/",
                 "image" => true,
                 "items" => [
-                    ["title" => "Workspace Accessories", "link" => "/print-advertising/office/workspace"],
-                    ["title" => "Pens, Pencils & Markers", "link" => "/print-advertising/office/pens"],
-                    ["title" => "Notes & Badge Holders", "link" => "/print-advertising/office/notes"],
+                    ["title" => "Workspace Accessories", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/office-supplies/workspace-accessories/"],
+                    ["title" => "Pens, Pencils & Markers", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/office-supplies/pens-pencils-markers/"],
+                    ["title" => "Notes & Badge Holders", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/office-supplies/notes-badge-holders/"],
                 ]
             ],
 
             "Business Cards" => [
-                "link" => "/print-advertising/business-cards",
+                "link" => "/product-category/print-advertising/business-cards/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Standard Card", "link" => "/print-advertising/business-cards/standard"],
-                    ["title" => "Premium Card", "link" => "/print-advertising/business-cards/premium"],
-                    ["title" => "Deluxe Card", "link" => "/print-advertising/business-cards/deluxe"],
-                    ["title" => "Magnetic Business Card", "link" => "/print-advertising/business-cards/magnetic"],
-                    ["title" => "Loyalty Card", "link" => "/print-advertising/business-cards/loyalty"],
+                    ["title" => "Standard Card", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/business-cards/standard-card/"],
+                    ["title" => "Premium Card", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/business-cards/premium-card/"],
+                    ["title" => "Deluxe Card", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/business-cards/deluxe-card/"],
+                    ["title" => "Magnetic Business Card", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/business-cards/magnetic-business-card/"],
+                    ["title" => "Loyalty Card", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/business-cards/loyalty-card/"],
                 ]
             ],
 
             "Postcards" => [
-                "link" => "/print-advertising/postcards",
+                "link" => "/product-category/print-advertising/postcards/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Standard Postcard", "link" => "/print-advertising/postcards/standard"],
-                    ["title" => "Die Cut Postcard", "link" => "/print-advertising/postcards/die-cut"],
-                    ["title" => "Rounded Corner Postcard", "link" => "/print-advertising/postcards/rounded"],
-                    ["title" => "Mailing Postcard", "link" => "/print-advertising/postcards/mailing"],
-                    ["title" => "EDDM Postcard", "link" => "/print-advertising/postcards/eddm"],
+                    ["title" => "Standard Postcard", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/postcards/standard-postcard/"],
+                    ["title" => "Die Cut Postcard", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/postcards/die-cut-postcard/"],
+                    ["title" => "Rounded Corner Postcard", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/postcards/rounded-corner-postcard/"],
+                    ["title" => "Mailing Postcard", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/postcards/mailing-postcard/"],
+                    ["title" => "EDDM Postcard", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/postcards/eddm-postcard/"],
                 ]
             ],
 
             "Marketing Materials" => [
-                "link" => "/print-advertising/marketing",
+                "link" => "/product-category/print-advertising/marketing-materials/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Flyers", "link" => "/print-advertising/marketing/flyers"],
-                    ["title" => "Brochures", "link" => "/print-advertising/marketing/brochures"],
-                    ["title" => "Folders", "link" => "/print-advertising/marketing/folders"],
-                    ["title" => "Rack Cards", "link" => "/print-advertising/marketing/rack"],
-                    ["title" => "Door Hangers", "link" => "/print-advertising/marketing/door"],
-                    ["title" => "Custom Tickets", "link" => "/print-advertising/marketing/tickets"],
-                    ["title" => "Gift Certificates", "link" => "/print-advertising/marketing/gift"],
+                    ["title" => "Flyers", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/marketing-materials/flyers/"],
+                    ["title" => "Brochures", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/marketing-materials/brochures/"],
+                    ["title" => "Folders", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/marketing-materials/folders/"],
+                    ["title" => "Rack Cards", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/marketing-materials/rack-cards/"],
+                    ["title" => "Door Hangers", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/marketing-materials/door-hangers/"],
+                    ["title" => "Custom Tickets", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/marketing-materials/custom-tickets/"],
+                    ["title" => "Gift Certificates", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/marketing-materials/gift-certificates/"],
                 ]
             ],
 
             "Business Stationery" => [
-                "link" => "/print-advertising/stationery",
+                "link" => "/product-category/print-advertising/business-stationery/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Shipping Mailers & Envelopes", "link" => "/print-advertising/stationery/mailers"],
-                    ["title" => "Letterheads", "link" => "/print-advertising/stationery/letterheads"],
-                    ["title" => "Business Invitations", "link" => "/print-advertising/stationery/invitations"],
-                    ["title" => "Calendars, Stamps & Ink", "link" => "/print-advertising/stationery/calendar"],
+                    ["title" => "Shipping Mailers & Envelopes", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/business-stationery/shipping-mailers-envelopes/"],
+                    ["title" => "Letterheads", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/business-stationery/letterheads/"],
+                    ["title" => "Business Invitations", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/business-stationery/business-invitations/"],
+                    ["title" => "Calendars, Stamps & Ink", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/business-stationery/calendars-stamps-ink/"],
                 ]
             ],
 
             "Banners & Displays" => [
-                "link" => "/print-advertising/banners",
+                "link" => "/product-category/print-advertising/banners-displays/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Hanging Banner", "link" => "/print-advertising/banners/hanging"],
-                    ["title" => "Standing Banner", "link" => "/print-advertising/banners/standing"],
-                    ["title" => "Table Covers", "link" => "/print-advertising/banners/table"],
-                    ["title" => "Display & Tent", "link" => "/print-advertising/banners/tent"],
-                    ["title" => "Portable Counter", "link" => "/print-advertising/banners/counter"],
+                    ["title" => "Hanging Banner", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/banners-displays/hanging-banner/"],
+                    ["title" => "Standing Banner", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/banners-displays/standing-banner/"],
+                    ["title" => "Table Covers", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/banners-displays/table-covers/"],
+                    ["title" => "Display & Tent", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/banners-displays/display-tent/"],
+                    ["title" => "Portable Counter", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/banners-displays/portable-counter/"],
                 ]
             ],
 
             "Decals & Signage" => [
-                "link" => "/print-advertising/decals",
+                "link" => "/product-category/print-advertising/decals-signage/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Wall & Window Decals", "link" => "/print-advertising/decals/wall"],
-                    ["title" => "Car Decals & Magnets", "link" => "/print-advertising/decals/car"],
-                    ["title" => "Yard Signs", "link" => "/print-advertising/decals/yard"],
-                    ["title" => "Rigid Signs & Boards", "link" => "/print-advertising/decals/rigid"],
-                    ["title" => "Canvas Prints & Wall Art", "link" => "/print-advertising/decals/canvas"],
-                    ["title" => "A-Frame & Desk Signs", "link" => "/print-advertising/decals/aframe"],
+                    ["title" => "Wall & Window Decals", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/decals-signage/wall-window-decals/"],
+                    ["title" => "Car Decals & Magnets", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/decals-signage/car-decals-magnets/"],
+                    ["title" => "Yard Signs", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/decals-signage/yard-signs/"],
+                    ["title" => "Rigid Signs & Boards", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/decals-signage/rigid-signs-boards/"],
+                    ["title" => "Canvas Prints & Wall Art", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/decals-signage/canvas-prints-wall-art/"],
+                    ["title" => "A-Frame & Desk Signs", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/decals-signage/a-frame-desk-signs/"],
                 ]
             ],
 
             "Labels & Stickers" => [
-                "link" => "/print-advertising/stickers",
+                "link" => "/product-category/print-advertising/labels-stickers/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Sticker Singles", "link" => "/print-advertising/stickers/single"],
-                    ["title" => "Die-Cut Stickers", "link" => "/print-advertising/stickers/diecut"],
-                    ["title" => "Kiss-Cut Stickers", "link" => "/print-advertising/stickers/kiss"],
-                    ["title" => "Sheet Stickers", "link" => "/print-advertising/stickers/sheet"],
-                    ["title" => "Product Stickers on Sheet", "link" => "/print-advertising/stickers/product"],
-                    ["title" => "Return Address Labels", "link" => "/print-advertising/stickers/address"],
-                    ["title" => "Roll Label Stickers", "link" => "/print-advertising/stickers/roll"],
-                    ["title" => "Die-Cut Sticker Rolls", "link" => "/print-advertising/stickers/roll-diecut"],
+                    ["title" => "Sticker Singles", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/labels-stickers/sticker-singles/"],
+                    ["title" => "Die-Cut Stickers", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/labels-stickers/die-cut-stickers/"],
+                    ["title" => "Kiss-Cut Stickers", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/labels-stickers/kiss-cut-stickers/"],
+                    ["title" => "Sheet Stickers", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/labels-stickers/sheet-stickers/"],
+                    ["title" => "Product Stickers on Sheet", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/labels-stickers/product-stickers-on-sheet/"],
+                    ["title" => "Return Address Labels", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/labels-stickers/return-address-labels/"],
+                    ["title" => "Roll Label Stickers", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/labels-stickers/roll-label-stickers/"],
+                    ["title" => "Die-Cut Sticker Rolls", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/labels-stickers/die-cut-sticker-rolls/"],
                 ]
             ],
 
             "Promotional Products" => [
-                "link" => "/print-advertising/promo",
+                "link" => "/product-category/print-advertising/promotional-products/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Booklet Catalogs", "link" => "/print-advertising/promo/catalog"],
-                    ["title" => "Clothing", "link" => "/print-advertising/promo/clothing"],
-                    ["title" => "Hats", "link" => "/print-advertising/promo/hats"],
-                    ["title" => "Drinkware", "link" => "/print-advertising/promo/drinkware"],
-                    ["title" => "Snacks & Candy", "link" => "/print-advertising/promo/snacks"],
-                    ["title" => "Lifestyle & Personal Items", "link" => "/print-advertising/promo/lifestyle"],
+                    ["title" => "Booklet Catalogs", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/promotional-products/booklet-catalogs/"],
+                    ["title" => "Clothing", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/promotional-products/clothing/"],
+                    ["title" => "Hats", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/promotional-products/hats/"],
+                    ["title" => "Drinkware", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/promotional-products/drinkware/"],
+                    ["title" => "Snacks & Candy", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/promotional-products/snacks-candy/"],
+                    ["title" => "Lifestyle & Personal Items", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/promotional-products/lifestyle-personal-items/"],
                 ]
             ],
 
             "Invitations, Cards & Gifts" => [
-                "link" => "/print-advertising/invitations",
+                "link" => "/product-category/print-advertising/invitations-cards-gifts/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Invitations & Announcements", "link" => "/print-advertising/invitations/announcements"],
-                    ["title" => "Party Invitations", "link" => "/print-advertising/invitations/party"],
-                    ["title" => "Thank You & Holiday Cards", "link" => "/print-advertising/invitations/holiday"],
-                    ["title" => "Corporate Gifts", "link" => "/print-advertising/invitations/corporate"],
+                    ["title" => "Invitations & Announcements", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/invitations-cards-gifts/invitations-announcements/"],
+                    ["title" => "Party Invitations", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/invitations-cards-gifts/party-invitations/"],
+                    ["title" => "Thank You & Holiday Cards", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/invitations-cards-gifts/thank-you-holiday-cards/"],
+                    ["title" => "Corporate Gifts", "link" => "https://halepathpackaging.co.uk/product-category/print-advertising/invitations-cards-gifts/corporate-gifts/"],
                 ]
             ],
 
@@ -727,7 +727,7 @@ $megaMenus = [
     ],
     "innovation" => [
         "title" => "Innovation",
-        "link" => "/innovation",
+        "link" => "/product-category/innovation/",
         "groups" => [
             "Branded Finishes" => [
                 "link" => "/innovation/branded-finishes",
@@ -803,38 +803,38 @@ $megaMenus = [
                     </button>
                     <ul id="desktopNav" class="hidden lg:flex gap-1.5 justify-between w-full">
                         <?php foreach ($megaMenus as $key => $menu): ?>
-                            <?php
+                        <?php
                             $isMega = !empty($menu['groups']);
                             $isDropdown = empty($menu['groups']) && !empty($menu['items']);
                             ?>
-                            <li class="relative cursor-pointer flex items-center" <?php if ($isMega): ?>
-                                    data-mega-target="megaMenu-<?php echo $key; ?>" <?php endif; ?>     <?php if ($isDropdown): ?>
-                                    data-sub-target="subMenu-<?php echo $key; ?>" <?php endif; ?>>
+                        <li class="relative cursor-pointer flex items-center" <?php if ($isMega): ?>
+                            data-mega-target="megaMenu-<?php echo $key; ?>" <?php endif; ?> <?php if ($isDropdown): ?>
+                            data-sub-target="subMenu-<?php echo $key; ?>" <?php endif; ?>>
 
-                                <a href="<?php echo esc_url($menu['link']); ?>"
-                                    class="text-sm font-normal capitalize text-title_Clr hover:text-white hover:bg-secondary px-2 py-2 rounded-[30px] flex items-center">
-                                    <?php echo $menu['title']; ?>
-                                    <?php if ($isMega || $isDropdown): ?>
-                                        <i class="fa fa-chevron-down ml-1.5"></i>
-                                    <?php endif; ?>
-                                </a>
-                                <!-- subMenu Menus -->
-                                <?php if ($isDropdown): ?>
-                                    <div id="subMenu-<?php echo $key; ?>"
-                                        class="subMenu hidden absolute right-0 top-full translate-y-5 pt-2 bg-black/20 backdrop-blur-[10px] shadow-xl rounded-lg p-4 min-w-[300px] space-y-2 z-50">
-                                        <ul>
-                                            <?php foreach ($menu['items'] as $item): ?>
-                                                <li>
-                                                    <a href="<?php echo esc_url($item['link']); ?>"
-                                                        class="block text-sm capitalize text-white hover:text-primary">
-                                                        <?php echo $item['title']; ?>
-                                                    </a>
-                                                </li>
-                                            <?php endforeach; ?>
-                                        </ul>
-                                    </div>
+                            <a href="<?php echo esc_url($menu['link']); ?>"
+                                class="text-sm font-normal capitalize text-title_Clr hover:text-white hover:bg-secondary px-2 py-2 rounded-[30px] flex items-center">
+                                <?php echo $menu['title']; ?>
+                                <?php if ($isMega || $isDropdown): ?>
+                                <i class="fa fa-chevron-down ml-1.5"></i>
                                 <?php endif; ?>
-                            </li>
+                            </a>
+                            <!-- subMenu Menus -->
+                            <?php if ($isDropdown): ?>
+                            <div id="subMenu-<?php echo $key; ?>"
+                                class="subMenu hidden absolute right-0 top-full translate-y-5 pt-2 bg-black/20 backdrop-blur-[10px] shadow-xl rounded-lg p-4 min-w-[300px] space-y-2 z-50">
+                                <ul>
+                                    <?php foreach ($menu['items'] as $item): ?>
+                                    <li>
+                                        <a href="<?php echo esc_url($item['link']); ?>"
+                                            class="block text-sm capitalize text-white hover:text-primary">
+                                            <?php echo $item['title']; ?>
+                                        </a>
+                                    </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                            <?php endif; ?>
+                        </li>
                         <?php endforeach; ?>
                     </ul>
                 </nav>
@@ -842,10 +842,10 @@ $megaMenus = [
 
             <!-- Desktop Mega Menus -->
             <?php foreach ($megaMenus as $key => $menu): ?>
-                <?php if (!empty($menu['groups'])): ?>
-                    <div id="megaMenu-<?php echo $key; ?>"
-                        class="megaMenu hidden lg:absolute left-1/2 -translate-x-1/2 2xl:top-[74px]  top-[94px] hale_container mx-auto  z-50 overflow-y-auto min-h-[65vh] h-full">
-                        <?php
+            <?php if (!empty($menu['groups'])): ?>
+            <div id="megaMenu-<?php echo $key; ?>"
+                class="megaMenu hidden lg:absolute left-1/2 -translate-x-1/2 2xl:top-[74px]  top-[94px] hale_container mx-auto  z-50 overflow-y-auto min-h-[65vh] h-full">
+                <?php
                         $hasImage = false;
 
                         foreach ($menu['groups'] as $groupName => $items) {
@@ -855,299 +855,302 @@ $megaMenus = [
                             }
                         }
                         ?>
-                        <div
-                            class="mx-auto !px-0 grid <?php echo $hasImage ? 'grid-cols-4 hale_container' : 'grid-cols-4 hale_container'; ?> gap-0 rounded-b-2xl shadow-xl bg-black/20 backdrop-blur-[10px]">
-                            <!-- Column 1: Parent Groups -->
-                            <div class="rounded-bl-2xl ">
-                                <ul class="space-y-0">
-                                    <?php $i = 0; ?>
-                                    <?php foreach ($menu['groups'] as $groupName => $items): ?>
-                                        <li class="mainCat flex items-center gap-2 py-5 px-5 " data-index="<?php echo $i; ?>">
-                                            <a href="<?php echo esc_url($items['link']); ?>"
-                                                class="text-sm capitalize text-white cursor-pointer flex items-center gap-2">
-                                                <?php echo $groupName; ?>
-                                            </a>
-                                        </li>
-                                        <?php $i++; endforeach; ?>
-                                </ul>
-                            </div>
-                            <!-- Column 2: Child Items -->
-                            <div class="col-span-1 bg-secondary/30 backdrop-blur-[10px]">
-                                <?php $i = 0;
-                                foreach ($menu['groups'] as $groupName => $groupData): ?>
-                                    <div class="hidden childGroups" data-group="<?php echo $i; ?>">
-                                        <ul class="space-y-0">
-                                            <?php foreach ($groupData['items'] as $item): ?>
-                                                <li class="py-[18px] px-5">
-                                                    <a href="<?php echo esc_url($item['link']); ?>"
-                                                        class="text-sm capitalize text-white hover:text-primary">
-                                                        <?php echo $item['title']; ?>
-                                                    </a>
-                                                </li>
-                                            <?php endforeach; ?>
-                                        </ul>
-                                    </div>
-                                    <?php $i++; endforeach; ?>
-                            </div>
-                            <!-- Column 3: Images -->
-                            <?php if ($hasImage): ?>
-                                <div class="col-span-2 py-4 px-6">
-                                    <?php $i = 0; ?>
-                                    <?php foreach ($menu['groups'] as $groupName => $items): ?>
-                                        <?php if (!empty($items['image']) && $items['image'] === true): ?>
-                                            <div class="hidden menuImage rounded-lg grid grid-cols-5 gap-4" data-image="<?php echo $i; ?>">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal4.png"
-                                                    class="rounded-2xl !h-full w-full object-cover col-span-2">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal5.png"
-                                                    class="rounded-2xl h-full w-full object-cover col-span-3">
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php $i++; ?>
-                                    <?php endforeach; ?>
-                                </div>
-                            <?php endif; ?>
-                        </div>
+                <div
+                    class="mx-auto !px-0 grid <?php echo $hasImage ? 'grid-cols-4 hale_container' : 'grid-cols-4 hale_container'; ?> gap-0 rounded-b-2xl shadow-xl bg-black/20 backdrop-blur-[10px]">
+                    <!-- Column 1: Parent Groups -->
+                    <div class="rounded-bl-2xl ">
+                        <ul class="space-y-0">
+                            <?php $i = 0; ?>
+                            <?php foreach ($menu['groups'] as $groupName => $items): ?>
+                            <li class="mainCat flex items-center gap-2 py-5 px-5 " data-index="<?php echo $i; ?>">
+                                <a href="<?php echo esc_url($items['link']); ?>"
+                                    class="text-sm capitalize text-white cursor-pointer flex items-center gap-2">
+                                    <?php echo $groupName; ?>
+                                </a>
+                            </li>
+                            <?php $i++; endforeach; ?>
+                        </ul>
                     </div>
-                <?php endif; ?>
+                    <!-- Column 2: Child Items -->
+                    <div class="col-span-1 bg-secondary/30 backdrop-blur-[10px]">
+                        <?php $i = 0;
+                                foreach ($menu['groups'] as $groupName => $groupData): ?>
+                        <div class="hidden childGroups" data-group="<?php echo $i; ?>">
+                            <ul class="space-y-0">
+                                <?php foreach ($groupData['items'] as $item): ?>
+                                <li class="py-[18px] px-5">
+                                    <a href="<?php echo esc_url($item['link']); ?>"
+                                        class="text-sm capitalize text-white hover:text-primary">
+                                        <?php echo $item['title']; ?>
+                                    </a>
+                                </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                        <?php $i++; endforeach; ?>
+                    </div>
+                    <!-- Column 3: Images -->
+                    <?php if ($hasImage): ?>
+                    <div class="col-span-2 py-4 px-6">
+                        <?php $i = 0; ?>
+                        <?php foreach ($menu['groups'] as $groupName => $items): ?>
+                        <?php if (!empty($items['image']) && $items['image'] === true): ?>
+                        <div class="hidden menuImage rounded-lg grid grid-cols-5 gap-4" data-image="<?php echo $i; ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal4.png"
+                                class="rounded-2xl !h-full w-full object-cover col-span-2">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/boxgal5.png"
+                                class="rounded-2xl h-full w-full object-cover col-span-3">
+                        </div>
+                        <?php endif; ?>
+                        <?php $i++; ?>
+                        <?php endforeach; ?>
+                    </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <?php endif; ?>
             <?php endforeach; ?>
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden lg:hidden bg-white px-4 pt-5">
                 <ul class="space-y-3 h-full overflow-y-scroll">
                     <?php foreach ($megaMenus as $key => $menu): ?>
-                        <li class="flex flex-col">
-                            <span class="flex">
-                                <a href="<?php echo esc_url($menu['link']); ?>"
-                                    class="text-[15px] font-medium uppercase text-title_Clr hover:text-primary flex items-center justify-between">
-                                    <?php echo $menu['title']; ?>
+                    <li class="flex flex-col">
+                        <span class="flex">
+                            <a href="<?php echo esc_url($menu['link']); ?>"
+                                class="text-[15px] font-medium uppercase text-title_Clr hover:text-primary flex items-center justify-between">
+                                <?php echo $menu['title']; ?>
 
-                                </a>
-                                <?php if (!empty($menu['groups'])): ?>
-                                    <i class="fa fa-chevron-down ml-2"></i>
-                                <?php endif; ?>
-                            </span>
+                            </a>
                             <?php if (!empty($menu['groups'])): ?>
-                                <div class="mobileMegaContent hidden px-2 pt-2 space-y-2">
-                                    <?php foreach ($menu['groups'] as $groupName => $groupData): ?>
-                                        <div>
-                                            <ul class="space-y-2 list-none">
-                                                <li>
-                                                    <a href="<?php echo esc_url($groupData['link']); ?>"
-                                                        class="text-[15px] font-medium uppercase text-title_Clr hover:text-primary">
-                                                        <?php echo $groupName; ?>
-                                                    </a>
-                                                    <?php if (!empty($groupData['items'])): ?>
-                                                        <ul class="pt-2 px-2 space-y-2 list-none">
-                                                            <?php foreach ($groupData['items'] as $item): ?>
-                                                                <li>
-                                                                    <a href="<?php echo esc_url($item['link']); ?>"
-                                                                        class="text-[15px] font-medium uppercase text-title_Clr hover:text-primary">
-                                                                        <?php echo $item['title']; ?>
-                                                                    </a>
-                                                                </li>
-
-                                                            <?php endforeach; ?>
-                                                        </ul>
-                                                    <?php endif; ?>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    <?php endforeach; ?>
-                                </div>
+                            <i class="fa fa-chevron-down ml-2"></i>
                             <?php endif; ?>
-                        </li>
+                        </span>
+                        <?php if (!empty($menu['groups'])): ?>
+                        <div class="mobileMegaContent hidden px-2 pt-2 space-y-2">
+                            <?php foreach ($menu['groups'] as $groupName => $groupData): ?>
+                            <div>
+                                <ul class="space-y-2 list-none">
+                                    <li>
+                                        <a href="<?php echo esc_url($groupData['link']); ?>"
+                                            class="text-[15px] font-medium uppercase text-title_Clr hover:text-primary">
+                                            <?php echo $groupName; ?>
+                                        </a>
+                                        <?php if (!empty($groupData['items'])): ?>
+                                        <ul class="pt-2 px-2 space-y-2 list-none">
+                                            <?php foreach ($groupData['items'] as $item): ?>
+                                            <li>
+                                                <a href="<?php echo esc_url($item['link']); ?>"
+                                                    class="text-[15px] font-medium uppercase text-title_Clr hover:text-primary">
+                                                    <?php echo $item['title']; ?>
+                                                </a>
+                                            </li>
+
+                                            <?php endforeach; ?>
+                                        </ul>
+                                        <?php endif; ?>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
+                        <?php endif; ?>
+                    </li>
                     <?php endforeach; ?>
                 </ul>
             </div>
         </header>
         <!-- Scripts -->
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
 
-                const desktopNav = document.getElementById('desktopNav');
-                const allNavItems = desktopNav.querySelectorAll('li');
-                const allMegaMenus = document.querySelectorAll('.megaMenu');
-                const allSubMenus = document.querySelectorAll('.subMenu');
+            const desktopNav = document.getElementById('desktopNav');
+            const allNavItems = desktopNav.querySelectorAll('li');
+            const allMegaMenus = document.querySelectorAll('.megaMenu');
+            const allSubMenus = document.querySelectorAll('.subMenu');
 
-                // =====================================
-                // CLOSE ALL MENUS
-                // =====================================
-                function closeAllMenus() {
-                    allMegaMenus.forEach(menu => menu.classList.add('hidden'));
-                    allSubMenus.forEach(menu => menu.classList.add('hidden'));
+            // =====================================
+            // CLOSE ALL MENUS
+            // =====================================
+            function closeAllMenus() {
+                allMegaMenus.forEach(menu => menu.classList.add('hidden'));
+                allSubMenus.forEach(menu => menu.classList.add('hidden'));
+
+                allNavItems.forEach(nav => {
+                    nav.querySelector('a')?.classList.remove('main_active');
+                });
+            }
+
+            // =====================================
+            // OPEN MENU ON LI HOVER
+            // =====================================
+            allNavItems.forEach(item => {
+
+                const megaTarget = item.dataset.megaTarget;
+                const subTarget = item.dataset.subTarget;
+
+                const megaMenu = megaTarget ? document.getElementById(megaTarget) : null;
+                const subMenu = subTarget ? document.getElementById(subTarget) : null;
+
+                const link = item.querySelector('a');
+
+                item.addEventListener('mouseenter', () => {
+
+                    closeAllMenus();
+
+                    if (megaMenu) megaMenu.classList.remove('hidden');
+                    if (subMenu) subMenu.classList.remove('hidden');
+
+                    link?.classList.add('main_active');
+                });
+            });
+
+            // =====================================
+            // CLOSE SUBMENU ONLY WHEN LEAVING IT
+            // =====================================
+            allSubMenus.forEach(menu => {
+                menu.addEventListener('mouseleave', () => {
+
+                    menu.classList.add('hidden');
 
                     allNavItems.forEach(nav => {
                         nav.querySelector('a')?.classList.remove('main_active');
                     });
+                });
+            });
+
+            // =====================================
+            // CLOSE MEGA ONLY WHEN LEAVING IT
+            // =====================================
+            allMegaMenus.forEach(menu => {
+                menu.addEventListener('mouseleave', () => {
+
+                    menu.classList.add('hidden');
+
+                    allNavItems.forEach(nav => {
+                        nav.querySelector('a')?.classList.remove('main_active');
+                    });
+                });
+            });
+
+            // =====================================
+            // ===== MEGA MENU CHILD SWITCHING =====
+            // =====================================
+            allMegaMenus.forEach(menu => {
+
+                const parents = menu.querySelectorAll('.mainCat');
+                const groups = menu.querySelectorAll('.childGroups');
+                const images = menu.querySelectorAll('.menuImage');
+
+                const arrow = document.createElement('i');
+                arrow.className = 'fa-solid fa-arrow-up-right-from-square ml-2';
+
+                // Default first active
+                if (parents.length > 0) {
+
+                    parents[0].classList.add('active');
+                    parents[0].querySelector('a')?.appendChild(arrow);
+
+                    groups[0]?.classList.remove('hidden');
+                    images[0]?.classList.remove('hidden');
                 }
 
-                // =====================================
-                // OPEN MENU ON LI HOVER
-                // =====================================
-                allNavItems.forEach(item => {
+                parents.forEach(p => {
 
-                    const megaTarget = item.dataset.megaTarget;
-                    const subTarget = item.dataset.subTarget;
+                    p.addEventListener('mouseenter', () => {
 
-                    const megaMenu = megaTarget ? document.getElementById(megaTarget) : null;
-                    const subMenu = subTarget ? document.getElementById(subTarget) : null;
+                        const index = p.dataset.index;
 
-                    const link = item.querySelector('a');
+                        // Hide all
+                        groups.forEach(g => g.classList.add('hidden'));
+                        images.forEach(img => img.classList.add('hidden'));
+                        parents.forEach(pr => pr.classList.remove('active'));
 
-                    item.addEventListener('mouseenter', () => {
+                        // Show selected
+                        menu.querySelector(`[data-group="${index}"]`)?.classList.remove(
+                            'hidden');
+                        menu.querySelector(`[data-image="${index}"]`)?.classList.remove(
+                            'hidden');
 
-                        closeAllMenus();
-
-                        if (megaMenu) megaMenu.classList.remove('hidden');
-                        if (subMenu) subMenu.classList.remove('hidden');
-
-                        link?.classList.add('main_active');
-                    });
-                });
-
-                // =====================================
-                // CLOSE SUBMENU ONLY WHEN LEAVING IT
-                // =====================================
-                allSubMenus.forEach(menu => {
-                    menu.addEventListener('mouseleave', () => {
-
-                        menu.classList.add('hidden');
-
-                        allNavItems.forEach(nav => {
-                            nav.querySelector('a')?.classList.remove('main_active');
-                        });
-                    });
-                });
-
-                // =====================================
-                // CLOSE MEGA ONLY WHEN LEAVING IT
-                // =====================================
-                allMegaMenus.forEach(menu => {
-                    menu.addEventListener('mouseleave', () => {
-
-                        menu.classList.add('hidden');
-
-                        allNavItems.forEach(nav => {
-                            nav.querySelector('a')?.classList.remove('main_active');
-                        });
-                    });
-                });
-
-                // =====================================
-                // ===== MEGA MENU CHILD SWITCHING =====
-                // =====================================
-                allMegaMenus.forEach(menu => {
-
-                    const parents = menu.querySelectorAll('.mainCat');
-                    const groups = menu.querySelectorAll('.childGroups');
-                    const images = menu.querySelectorAll('.menuImage');
-
-                    const arrow = document.createElement('i');
-                    arrow.className = 'fa-solid fa-arrow-up-right-from-square ml-2';
-
-                    // Default first active
-                    if (parents.length > 0) {
-
-                        parents[0].classList.add('active');
-                        parents[0].querySelector('a')?.appendChild(arrow);
-
-                        groups[0]?.classList.remove('hidden');
-                        images[0]?.classList.remove('hidden');
-                    }
-
-                    parents.forEach(p => {
-
-                        p.addEventListener('mouseenter', () => {
-
-                            const index = p.dataset.index;
-
-                            // Hide all
-                            groups.forEach(g => g.classList.add('hidden'));
-                            images.forEach(img => img.classList.add('hidden'));
-                            parents.forEach(pr => pr.classList.remove('active'));
-
-                            // Show selected
-                            menu.querySelector(`[data-group="${index}"]`)?.classList.remove('hidden');
-                            menu.querySelector(`[data-image="${index}"]`)?.classList.remove('hidden');
-
-                            p.classList.add('active');
-                            p.querySelector('a')?.appendChild(arrow);
-                        });
-
+                        p.classList.add('active');
+                        p.querySelector('a')?.appendChild(arrow);
                     });
 
                 });
 
             });
 
-            // ==========================================
-            // MOBILE MENU
-            // ==========================================
-            document.addEventListener('DOMContentLoaded', () => {
+        });
 
-                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-                const mobileMenu = document.getElementById('mobileMenu');
-                const hamburgerIcon = document.getElementById('hamburgerIcon');
-                const closeIcon = document.getElementById('closeIcon');
+        // ==========================================
+        // MOBILE MENU
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
 
-                if (mobileMenuBtn && mobileMenu) {
-                    mobileMenuBtn.addEventListener('click', () => {
-                        mobileMenu.classList.toggle('hidden');
-                        hamburgerIcon.classList.toggle('hidden');
-                        closeIcon.classList.toggle('hidden');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburgerIcon = document.getElementById('hamburgerIcon');
+            const closeIcon = document.getElementById('closeIcon');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    hamburgerIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+
+            // Mobile Mega Toggle
+            const mobileMenuItems = document.querySelectorAll('#mobileMenu > ul > li');
+
+            mobileMenuItems.forEach(li => {
+
+                const toggleIcon = li.querySelector('i.fa-chevron-down');
+                const content = li.querySelector('.mobileMegaContent');
+
+                if (toggleIcon && content) {
+                    toggleIcon.addEventListener('click', () => {
+
+                        // Close others
+                        mobileMenuItems.forEach(otherLi => {
+                            const otherContent = otherLi.querySelector(
+                                '.mobileMegaContent');
+                            if (otherContent && otherContent !== content) {
+                                otherContent.classList.add('hidden');
+                            }
+                        });
+
+                        content.classList.toggle('hidden');
                     });
                 }
 
-                // Mobile Mega Toggle
-                const mobileMenuItems = document.querySelectorAll('#mobileMenu > ul > li');
-
-                mobileMenuItems.forEach(li => {
-
-                    const toggleIcon = li.querySelector('i.fa-chevron-down');
-                    const content = li.querySelector('.mobileMegaContent');
-
-                    if (toggleIcon && content) {
-                        toggleIcon.addEventListener('click', () => {
-
-                            // Close others
-                            mobileMenuItems.forEach(otherLi => {
-                                const otherContent = otherLi.querySelector('.mobileMegaContent');
-                                if (otherContent && otherContent !== content) {
-                                    otherContent.classList.add('hidden');
-                                }
-                            });
-
-                            content.classList.toggle('hidden');
-                        });
-                    }
-
-                });
-
             });
+
+        });
         </script>
 
         <script>
-            jQuery(document).ready(function ($) {
-                $('#live-search').on('keyup', function () {
-                    var keyword = $(this).val();
-                    if (keyword.length < 2) {
-                        $('#live-search-results').addClass('hidden').html('');
-                        return;
+        jQuery(document).ready(function($) {
+            $('#live-search').on('keyup', function() {
+                var keyword = $(this).val();
+                if (keyword.length < 2) {
+                    $('#live-search-results').addClass('hidden').html('');
+                    return;
+                }
+
+                $.ajax({
+                    url: '<?php echo admin_url("admin-ajax.php"); ?>',
+                    type: 'POST',
+                    data: {
+                        action: 'live_search_products',
+                        keyword: keyword
+                    },
+                    success: function(res) {
+                        $('#live-search-results').removeClass('hidden').html(res);
                     }
-
-                    $.ajax({
-                        url: '<?php echo admin_url("admin-ajax.php"); ?>',
-                        type: 'POST',
-                        data: {
-                            action: 'live_search_products',
-                            keyword: keyword
-                        },
-                        success: function (res) {
-                            $('#live-search-results').removeClass('hidden').html(res);
-                        }
-                    });
-
                 });
 
             });
+
+        });
         </script>

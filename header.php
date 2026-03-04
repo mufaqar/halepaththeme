@@ -47,247 +47,247 @@
 $megaMenus = [
     "industries" => [
         "title" => "Industries We Serve",
-        "link" => "/industries",
+        "link" => "/product-category/industries-we-serve/",
         "groups" => [
             "Beauty & Personal Care" => [
-                "link" => "/product-category/beauty-personal-care",
+                "link" => "/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/",
                 "image" => true,
                 "items" => [
-                    ["title" => "Cosmetics", "link" => "/product-category/beauty-personal-care/cosmetics"],
-                    ["title" => "Fragrances & Perfumes", "link" => "/product-category/beauty-personal-care/fragrances"],
-                    ["title" => "Skincare", "link" => "/product-category/beauty-personal-care/skincare"],
-                    ["title" => "Hair Care", "link" => "/product-category/beauty-personal-care/hair-care"],
-                    ["title" => "Nail Care", "link" => "/product-category/beauty-personal-care/nail-care"],
-                    ["title" => "Soap & Body Care", "link" => "/product-category/beauty-personal-care/soap-body"],
-                    ["title" => "Bath Products", "link" => "/product-category/beauty-personal-care/bath-products"],
-                    ["title" => "Mens Grooming", "link" => "/product-category/beauty-personal-care/mens-grooming"],
-                    ["title" => "Spa & Wellness", "link" => "/product-category/beauty-personal-care/spa"],
-                    ["title" => "Tissue & Hygiene", "link" => "/product-category/beauty-personal-care/tissue"],
+                    ["title" => "Cosmetics", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/cosmetics/"],
+                    ["title" => "Fragrances & Perfumes", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/fragrances-perfumes/"],
+                    ["title" => "Skincare", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/skincare/"],
+                    ["title" => "Hair Care", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/hair-care/"],
+                    ["title" => "Nail Care", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/nail-care/"],
+                    ["title" => "Soap & Body Care", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/soap-body-care/"],
+                    ["title" => "Bath Products", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/bath-products/"],
+                    ["title" => "Mens Grooming", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/mens-grooming/"],
+                    ["title" => "Spa & Wellness", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/spa-wellness/"],
+                    ["title" => "Tissue & Hygiene", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/beauty-personal-care-industries-we-serve/tissue-hygiene/"],
                 ]
             ],
 
             "Food & Beverage" => [
-                "link" => "/industries/food",
+                "link" => "/product-category/industries-we-serve/food-beverage-industries-we-serve/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Food & Restaurant", "link" => "/industries/food/restaurant"],
-                    ["title" => "Bakery & Confectionery", "link" => "/industries/food/bakery"],
-                    ["title" => "Chocolate", "link" => "/industries/food/chocolate"],
-                    ["title" => "Candy & Sweets", "link" => "/industries/food/candy"],
-                    ["title" => "Coffee & Tea", "link" => "/industries/food/coffee"],
-                    ["title" => "Beverages & Drinks", "link" => "/industries/food/beverages"],
-                    ["title" => "Snacks & Chips", "link" => "/industries/food/snacks"],
-                    ["title" => "Frozen Foods", "link" => "/industries/food/frozen"],
-                    ["title" => "Dairy Products", "link" => "/industries/food/dairy"],
-                    ["title" => "Wine & Spirits", "link" => "/industries/food/wine"],
-                    ["title" => "Energy Drinks & Juice", "link" => "/industries/food/energy"],
-                    ["title" => "Ice Cream & Desserts", "link" => "/industries/food/ice-cream"],
-                    ["title" => "Food Delivery Packaging", "link" => "/industries/food/delivery"],
-                    ["title" => "Meal Kits", "link" => "/industries/food/meal-kits"],
+                    ["title" => "Food & Restaurant", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/food-restaurant/"],
+                    ["title" => "Bakery & Confectionery", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/bakery-confectionery-food-beverage-industries-we-serve/"],
+                    ["title" => "Chocolate", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/chocolate/"],
+                    ["title" => "Candy & Sweets", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/candy-sweets-food-beverage-industries-we-serve/"],
+                    ["title" => "Coffee & Tea", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/coffee-tea/"],
+                    ["title" => "Beverages & Drinks", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/beverages-drinks-food-beverage-industries-we-serve/"],
+                    ["title" => "Snacks & Chips", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/snacks-chips-food-beverage-industries-we-serve/"],
+                    ["title" => "Frozen Foods", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/frozen-foods-food-beverage-industries-we-serve/"],
+                    ["title" => "Dairy Products", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/dairy-products-food-beverage-industries-we-serve/"],
+                    ["title" => "Wine & Spirits", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/wine-spirits/"],
+                    ["title" => "Energy Drinks & Juice", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/energy-drinks-juice-food-beverage-industries-we-serve/"],
+                    ["title" => "Ice Cream & Desserts", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/ice-cream-desserts-food-beverage-industries-we-serve/"],
+                    ["title" => "Food Delivery Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/food-delivery-packaging-food-beverage-industries-we-serve/"],
+                    ["title" => "Meal Kits", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/meal-kits-food-beverage-industries-we-serve/"],
                 ]
             ],
 
             "Retail & E-commerce" => [
-                "link" => "/industries/retail",
+                "link" => "/product-category/industries-we-serve/retail-e-commerce/",
                 "image" => false,
                 "items" => [
-                    ["title" => "E-commerce Packaging", "link" => "/industries/retail/ecommerce"],
-                    ["title" => "Retail Boxes", "link" => "/industries/retail/boxes"],
-                    ["title" => "Shopping Bags", "link" => "/industries/retail/bags"],
-                    ["title" => "Point of Sale Display", "link" => "/industries/retail/pos"],
-                    ["title" => "Subscription Boxes", "link" => "/industries/retail/subscription"],
-                    ["title" => "Boutique & Specialty Shops", "link" => "/industries/retail/boutique"],
+                    ["title" => "E-commerce Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/retail-e-commerce/e-commerce-packaging-retail-e-commerce/"],
+                    ["title" => "Retail Boxes", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/retail-e-commerce/retail-boxes-retail-e-commerce/"],
+                    ["title" => "Shopping Bags", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/retail-e-commerce/shopping-bags-retail-e-commerce/"],
+                    ["title" => "Point of Sale Display", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/retail-e-commerce/point-of-sale-display/"],
+                    ["title" => "Subscription Boxes", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/retail-e-commerce/subscription-boxes/"],
+                    ["title" => "Boutique & Specialty Shops", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/retail-e-commerce/boutique-specialty-shops/"],
                 ]
             ],
 
             "Cannabis & CBD" => [
-                "link" => "/industries/cbd",
+                "link" => "/product-category/industries-we-serve/cannabis-cbd/",
                 "image" => false,
                 "items" => [
-                    ["title" => "CBD Products", "link" => "/industries/cbd/products"],
-                    ["title" => "Marijuana & Cannabis Packaging", "link" => "/industries/cbd/packaging"],
-                    ["title" => "Vape & E-Cigarettes", "link" => "/industries/cbd/vape"],
-                    ["title" => "Hemp Products", "link" => "/industries/cbd/hemp"],
-                    ["title" => "Compliance Packaging", "link" => "/industries/cbd/compliance"],
+                    ["title" => "CBD Products", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/cannabis-cbd/cbd-products/"],
+                    ["title" => "Marijuana & Cannabis Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/cannabis-cbd/marijuana-cannabis-packaging/"],
+                    ["title" => "Vape & E-Cigarettes", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/cannabis-cbd/vape-e-cigarettes/"],
+                    ["title" => "Hemp Products", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/cannabis-cbd/hemp-products/"],
+                    ["title" => "Compliance Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/cannabis-cbd/compliance-packaging/"],
                 ]
             ],
 
             "Tobacco & Vaping" => [
-                "link" => "/industries/tobacco",
+                "link" => "/product-category/industries-we-serve/tobacco-vaping/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Tobacco Products", "link" => "/industries/tobacco/products"],
-                    ["title" => "Cigars", "link" => "/industries/tobacco/cigars"],
-                    ["title" => "Cigarettes", "link" => "/industries/tobacco/cigarettes"],
-                    ["title" => "Vape & E-cigarette", "link" => "/industries/tobacco/vape"],
-                    ["title" => "Smoking Accessories", "link" => "/industries/tobacco/accessories"],
+                    ["title" => "Tobacco Products", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/tobacco-vaping/tobacco-products-tobacco-vaping/"],
+                    ["title" => "Cigars", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/tobacco-vaping/cigars/"],
+                    ["title" => "Cigarettes", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/tobacco-vaping/cigarettes/"],
+                    ["title" => "Vape & E-cigarette", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/tobacco-vaping/vape-e-cigarette/"],
+                    ["title" => "Smoking Accessories", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/tobacco-vaping/smoking-accessories/"],
                 ]
             ],
 
             "Gifts & Celebrations" => [
-                "link" => "/industries/gifts",
+                "link" => "/product-category/industries-we-serve/gifts-celebrations/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Candles", "link" => "/industries/gifts/candles"],
-                    ["title" => "Gift Boxes", "link" => "/industries/gifts/boxes"],
-                    ["title" => "Holiday Packaging", "link" => "/industries/gifts/holiday"],
-                    ["title" => "Wedding & Events", "link" => "/industries/gifts/wedding"],
-                    ["title" => "Party Supplies", "link" => "/industries/gifts/party"],
-                    ["title" => "Home Decor", "link" => "/industries/gifts/home-decor"],
-                    ["title" => "Aromatherapy", "link" => "/industries/gifts/aroma"],
-                    ["title" => "Crafts & Handmade", "link" => "/industries/gifts/crafts"],
+                    ["title" => "Candles", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/gifts-celebrations/candles/"],
+                    ["title" => "Gift Boxes", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/gifts-celebrations/gift-boxes-gifts-celebrations/"],
+                    ["title" => "Holiday Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/gifts-celebrations/holiday-packaging/"],
+                    ["title" => "Wedding & Events", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/gifts-celebrations/wedding-events/"],
+                    ["title" => "Party Supplies", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/gifts-celebrations/party-supplies/"],
+                    ["title" => "Home Decor", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/gifts-celebrations/home-decor/"],
+                    ["title" => "Aromatherapy", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/gifts-celebrations/aromatherapy/"],
+                    ["title" => "Crafts & Handmade", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/gifts-celebrations/crafts-handmade/"],
                 ]
             ],
 
             "Apparel & Fashion" => [
-                "link" => "/industries/fashion",
+                "link" => "/product-category/industries-we-serve/apparel-fashion-industries-we-serve/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Garment Packaging", "link" => "/industries/fashion/garment"],
-                    ["title" => "Jewelry Packaging", "link" => "/industries/fashion/jewelry"],
-                    ["title" => "Gadgets & Accessories", "link" => "/industries/fashion/gadgets"],
-                    ["title" => "Luxury Fashion", "link" => "/industries/fashion/luxury"],
-                    ["title" => "Clothing & Hand Bags", "link" => "/industries/fashion/clothing"],
-                    ["title" => "Footwear & Shoes", "link" => "/industries/fashion/shoes"],
-                    ["title" => "Watches", "link" => "/industries/fashion/watches"],
-                    ["title" => "Activewear & Sportswear", "link" => "/industries/fashion/activewear"],
+                    ["title" => "Garment Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/apparel-fashion-industries-we-serve/garment-packaging/"],
+                    ["title" => "Jewelry Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/apparel-fashion-industries-we-serve/jewelry-packaging/"],
+                    ["title" => "Gadgets & Accessories", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/apparel-fashion-industries-we-serve/gadgets-accessories/"],
+                    ["title" => "Luxury Fashion", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/apparel-fashion-industries-we-serve/luxury-fashion/"],
+                    ["title" => "Clothing & Hand Bags", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/apparel-fashion-industries-we-serve/clothing-hand-bags/"],
+                    ["title" => "Footwear & Shoes", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/apparel-fashion-industries-we-serve/footwear-shoes/"],
+                    ["title" => "Watches", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/apparel-fashion-industries-we-serve/watches/"],
+                    ["title" => "Activewear & Sportswear", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/apparel-fashion-industries-we-serve/activewear-sportswear/"],
                 ]
             ],
 
             "Pet Products" => [
-                "link" => "/industries/pet",
+                "link" => "/product-category/industries-we-serve/pet-products-industries-we-serve/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Pet Food", "link" => "/industries/pet/food"],
-                    ["title" => "Pet Treats & Snacks", "link" => "/industries/pet/snacks"],
-                    ["title" => "Pet Accessories", "link" => "/industries/pet/accessories"],
-                    ["title" => "Pet Healthcare", "link" => "/industries/pet/healthcare"],
+                    ["title" => "Pet Food", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/pet-products-industries-we-serve/pet-food/"],
+                    ["title" => "Pet Treats & Snacks", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/pet-products-industries-we-serve/pet-treats-snacks/"],
+                    ["title" => "Pet Accessories", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/pet-products-industries-we-serve/pet-accessories/"],
+                    ["title" => "Pet Healthcare", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/pet-products-industries-we-serve/pet-healthcare/"],
                 ]
             ],
 
             "Pharmaceuticals" => [
-                "link" => "/industries/pharma",
+                "link" => "/product-category/industries-we-serve/pharmaceuticals/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Supplements & Vitamins", "link" => "/industries/pharma/supplements"],
-                    ["title" => "Prescription Medications", "link" => "/industries/pharma/prescription"],
-                    ["title" => "Healthcare Products", "link" => "/industries/pharma/healthcare"],
-                    ["title" => "Diagnostic & Surgical Equipment", "link" => "/industries/pharma/diagnostic"],
-                    ["title" => "Medical Kits", "link" => "/industries/pharma/kits"],
+                    ["title" => "Supplements & Vitamins", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/pharmaceuticals/supplements-vitamins/"],
+                    ["title" => "Prescription Medications", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/pharmaceuticals/prescription-medications/"],
+                    ["title" => "Healthcare Products", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/pharmaceuticals/healthcare-products/"],
+                    ["title" => "Diagnostic & Surgical Equipment", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/pharmaceuticals/diagnostic-surgical-equipment/"],
+                    ["title" => "Medical Kits", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/pharmaceuticals/medical-kits/"],
                 ]
             ],
 
             "Consumer Goods & Electronics" => [
-                "link" => "/industries/electronics",
+                "link" => "/product-category/industries-we-serve/consumer-goods-electronics/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Mobile Accessories", "link" => "/industries/electronics/mobile"],
-                    ["title" => "Smart Home Devices", "link" => "/industries/electronics/smart-home"],
-                    ["title" => "Audio Equipment", "link" => "/industries/electronics/audio"],
-                    ["title" => "Wearable Technology", "link" => "/industries/electronics/wearable"],
+                    ["title" => "Mobile Accessories", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/consumer-goods-electronics/mobile-accessories/"],
+                    ["title" => "Smart Home Devices", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/consumer-goods-electronics/smart-home-devices/"],
+                    ["title" => "Audio Equipment", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/consumer-goods-electronics/audio-equipment/"],
+                    ["title" => "Wearable Technology", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/consumer-goods-electronics/wearable-technology/"],
                 ]
             ],
 
             "Automotive Industry" => [
-                "link" => "/industries/automotive",
+                "link" => "/product-category/industries-we-serve/automotive-industry/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Auto Parts & Components", "link" => "/industries/automotive/parts"],
-                    ["title" => "Car Accessories", "link" => "/industries/automotive/accessories"],
-                    ["title" => "Lubricants & Fluids", "link" => "/industries/automotive/lubricants"],
-                    ["title" => "Automotive Tools", "link" => "/industries/automotive/tools"],
+                    ["title" => "Auto Parts & Components", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/automotive-industry/auto-parts-components/"],
+                    ["title" => "Car Accessories", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/automotive-industry/car-accessories/"],
+                    ["title" => "Lubricants & Fluids", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/automotive-industry/lubricants-fluids/"],
+                    ["title" => "Automotive Tools", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/automotive-industry/automotive-tools/"],
                 ]
             ],
 
             "Industrial Products" => [
-                "link" => "/industries/industrial",
+                "link" => "/product-category/industries-we-serve/industrial-products/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Manufacturing Components", "link" => "/industries/industrial/components"],
-                    ["title" => "Industrial Tools", "link" => "/industries/industrial/tools"],
-                    ["title" => "Safety Equipment", "link" => "/industries/industrial/safety"],
-                    ["title" => "Chemicals & Raw Materials", "link" => "/industries/industrial/chemicals"],
+                    ["title" => "Manufacturing Components", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/industrial-products/manufacturing-components/"],
+                    ["title" => "Industrial Tools", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/industrial-products/industrial-tools/"],
+                    ["title" => "Safety Equipment", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/industrial-products/safety-equipment/"],
+                    ["title" => "Chemicals & Raw Materials", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/industrial-products/chemicals-raw-materials/"],
                 ]
             ],
 
             "Sports & Fitness" => [
-                "link" => "/industries/sports",
+                "link" => "/product-category/industries-we-serve/sports-fitness/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Fitness Accessories", "link" => "/industries/sports/fitness"],
-                    ["title" => "Sports Equipment", "link" => "/industries/sports/equipment"],
-                    ["title" => "Athletic Footwear", "link" => "/industries/sports/footwear"],
-                    ["title" => "Sports Nutrition", "link" => "/industries/sports/nutrition"],
+                    ["title" => "Fitness Accessories", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/sports-fitness/fitness-accessories/"],
+                    ["title" => "Sports Equipment", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/sports-fitness/sports-equipment/"],
+                    ["title" => "Athletic Footwear", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/sports-fitness/athletic-footwear/"],
+                    ["title" => "Sports Nutrition", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/sports-fitness/sports-nutrition/"],
                 ]
             ],
 
             "Toys & Games" => [
-                "link" => "/industries/toys",
+                "link" => "/product-category/industries-we-serve/toys-games-industries-we-serve/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Board Games & Puzzles", "link" => "/industries/toys/board"],
-                    ["title" => "Electronic Games & Video Games", "link" => "/industries/toys/electronic"],
-                    ["title" => "Educational Toys", "link" => "/industries/toys/educational"],
-                    ["title" => "Playing & Education Cards", "link" => "/industries/toys/cards"],
+                    ["title" => "Board Games & Puzzles", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/toys-games-industries-we-serve/board-games-puzzles/"],
+                    ["title" => "Electronic Games & Video Games", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/toys-games-industries-we-serve/electronic-games-video-games/"],
+                    ["title" => "Educational Toys", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/toys-games-industries-we-serve/educational-toys/"],
+                    ["title" => "Playing & Education Cards", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/toys-games-industries-we-serve/playing-education-cards/"],
                 ]
             ],
 
             "Stationery & Office Supplies" => [
-                "link" => "/industries/stationery",
+                "link" => "/product-category/industries-we-serve/stationery-office-supplies/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Paper Products", "link" => "/industries/stationery/paper"],
-                    ["title" => "School Supplies", "link" => "/industries/stationery/school"],
-                    ["title" => "Cards & Envelopes", "link" => "/industries/stationery/cards"],
-                    ["title" => "Labels & Tags", "link" => "/industries/stationery/labels"],
+                    ["title" => "Paper Products", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/stationery-office-supplies/paper-products/"],
+                    ["title" => "School Supplies", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/stationery-office-supplies/school-supplies/"],
+                    ["title" => "Cards & Envelopes", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/stationery-office-supplies/cards-envelopes/"],
+                    ["title" => "Labels & Tags", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/stationery-office-supplies/labels-tags/"],
                 ]
             ],
 
             "Print, Advertising & Marketing" => [
-                "link" => "/industries/print",
+                "link" => "/product-category/industries-we-serve/print-advertising-marketing/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Business Cards & Stationery", "link" => "/industries/print/business"],
-                    ["title" => "Brochures & Catalogs", "link" => "/industries/print/brochures"],
-                    ["title" => "Promotional Materials", "link" => "/industries/print/promotional"],
-                    ["title" => "Clothing & Sports Teamwears", "link" => "/industries/print/teamwear"],
+                    ["title" => "Business Cards & Stationery", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/print-advertising-marketing/business-cards-stationery/"],
+                    ["title" => "Brochures & Catalogs", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/print-advertising-marketing/brochures-catalogs/"],
+                    ["title" => "Promotional Materials", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/print-advertising-marketing/promotional-materials/"],
+                    ["title" => "Clothing & Sports Teamwears", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/print-advertising-marketing/clothing-sports-teamwears/"],
                 ]
             ],
 
             "Transport & Shipping Industry" => [
-                "link" => "/industries/shipping",
+                "link" => "/product-category/industries-we-serve/transport-shipping-industry/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Corrugated Boxes & Containers", "link" => "/industries/shipping/corrugated"],
-                    ["title" => "Shipping Carton", "link" => "/industries/shipping/carton"],
-                    ["title" => "Hazardous Materials Packaging", "link" => "/industries/shipping/hazardous"],
-                    ["title" => "Industrial Packaging", "link" => "/industries/shipping/industrial"],
-                    ["title" => "Pallets & Crates", "link" => "/industries/shipping/pallets"],
-                    ["title" => "Protective Packaging Materials", "link" => "/industries/shipping/protective"],
+                    ["title" => "Corrugated Boxes & Containers", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/transport-shipping-industry/corrugated-boxes-containers/"],
+                    ["title" => "Shipping Carton", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/transport-shipping-industry/shipping-carton/"],
+                    ["title" => "Hazardous Materials Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/transport-shipping-industry/hazardous-materials-packaging/"],
+                    ["title" => "Industrial Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/transport-shipping-industry/industrial-packaging/"],
+                    ["title" => "Pallets & Crates", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/transport-shipping-industry/pallets-crates/"],
+                    ["title" => "Protective Packaging Materials", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/transport-shipping-industry/protective-packaging-materials/"],
                 ]
             ],
 
             "Furniture Packaging" => [
-                "link" => "/industries/furniture",
+                "link" => "/product-category/industries-we-serve/furniture-packaging/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Office & Home Furniture Packaging", "link" => "/industries/furniture/office"],
-                    ["title" => "Sofas & Armchairs Packaging", "link" => "/industries/furniture/sofas"],
-                    ["title" => "Storage Solutions", "link" => "/industries/furniture/storage"],
-                    ["title" => "Decorative Furniture", "link" => "/industries/furniture/decorative"],
+                    ["title" => "Office & Home Furniture Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/furniture-packaging/office-home-furniture-packaging/"],
+                    ["title" => "Sofas & Armchairs Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/furniture-packaging/sofas-armchairs-packaging/"],
+                    ["title" => "Storage Solutions", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/furniture-packaging/storage-solutions/"],
+                    ["title" => "Decorative Furniture", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/furniture-packaging/decorative-furniture/"],
                 ]
             ],
 
             "Sustainable Solutions" => [
-                "link" => "/industries/sustainable",
+                "link" => "/product-category/industries-we-serve/sustainable-solutions/",
                 "image" => false,
                 "items" => [
-                    ["title" => "Eco-Friendly Materials", "link" => "/industries/sustainable/eco"],
-                    ["title" => "Recyclable Packaging", "link" => "/industries/sustainable/recyclable"],
-                    ["title" => "Biodegradable Options", "link" => "/industries/sustainable/biodegradable"],
-                    ["title" => "Compostable Packaging", "link" => "/industries/sustainable/compostable"],
-                    ["title" => "Reusable Packaging", "link" => "/industries/sustainable/reusable"],
-                    ["title" => "Hemp Paper Packaging", "link" => "/industries/sustainable/hemp"],
+                    ["title" => "Eco-Friendly Materials", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/sustainable-solutions/eco-friendly-materials-sustainable-solutions/"],
+                    ["title" => "Recyclable Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/sustainable-solutions/recyclable-packaging/"],
+                    ["title" => "Biodegradable Options", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/sustainable-solutions/biodegradable-options/"],
+                    ["title" => "Compostable Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/sustainable-solutions/compostable-packaging/"],
+                    ["title" => "Reusable Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/sustainable-solutions/reusable-packaging/"],
+                    ["title" => "Hemp Paper Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/sustainable-solutions/hemp-paper-packaging/"],
                 ]
             ],
 

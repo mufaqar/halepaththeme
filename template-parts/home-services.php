@@ -1,7 +1,7 @@
 <?php
 $slides = [
   [
-    "image" => "/assets/images/about-page/slider.png",
+    "image" => "/assets/images/about-page/offset.jpeg",
     "title" => "Offset Printing",
     "link" => "#",
     "bg" => "slider_bg",
@@ -9,15 +9,15 @@ $slides = [
     "desc" => "Discover top-notch custom offset printing services for your packaging needs right here. We deliver sharp, vibrant colors on boxes and labels that make your products pop on shelves. Ideal for big orders, this method cuts costs while ensuring consistent quality across paperboard and cardstock. Count on us for precise details that boost your brand visibility in retail settings."
   ],
   [
-    "image" => "/assets/images/about-page/slider.png",
-    "title" => "Good Quality Packaging",
+    "image" => "/assets/images/about-page/corrugated.jpeg",
+    "title" => "Corrugated Packaging",
     "link" => "#",
     "bg" => "slider_bg2",
     "text" => "text-white",
     "desc" => "Get durable custom corrugated printing for boxes that protect and promote your goods. Our process adds strong designs to fluted materials, perfect for shipping. Enjoy lightweight options that resist crushing, with eco-friendly inks. Tailor sizes and graphics to fit your business."
   ],
   [
-    "image" => "/assets/images/about-page/slider.png",
+    "image" => "/assets/images/about-page/flexible.jpeg",
     "title" => "Good Quality Packaging",
     "link" => "#",
     "bg" => "slider_bg3",
@@ -25,7 +25,7 @@ $slides = [
     "desc" => "Explore flexible packaging with custom Mylar bags for freshness and style. These pouches block moisture and odors to keep contents safe. Add zippers for easy use, plus bold prints of your logo for standout presence. Great for snacks or cosmetics in various sizes."
   ],
   [
-    "image" => "/assets/images/about-page/slider.png",
+    "image" => "/assets/images/about-page/print.jpeg",
     "title" => "Print & Advertising & Office Supplies",
     "link" => "#",
     "bg" => "slider_bg2",
@@ -38,15 +38,15 @@ $slides = [
 
 <main class="Main_hori slider-full ">
   <?php foreach ($slides as $slide): ?>
-    <section class="panel bg-cover bg-no-repeat bg-right" style="background-image: url('<?php echo get_template_directory_uri() . $slide['image']; ?>');">
-      <div class="!grid md:grid-cols-2 justify-center h-full">
+    <section class="panel bg-cover bg-no-repeat bg-center" style="background-image: url('<?php echo get_template_directory_uri() . $slide['image']; ?>');">
+      <div class="w-full grid md:grid-cols-2 justify-center gap-8 h-full">
         <figure class="h-full">
           <!-- <img src="<?php //echo get_template_directory_uri() . $slide['image']; ?>" alt="Packaging Image"
                 class="img-full " /> -->
         </figure>
         <div
-          class="flex justify-center md:items-center flex-col px-5 md:px-5 pb-14 md:pb-10 py-10 p-5 <?php //echo $slide['bg']; ?>">
-          <div class="<?php echo $slide['text']; ?> slider-content bg-white/5 backdrop-blur-[10px] py-10 p-10 rounded-lg">
+          class="flex justify-center md:items-center flex-col h-full <?php //echo $slide['bg']; ?>">
+          <div class="<?php echo $slide['text']; ?> slider-content h-full bg-white/5 backdrop-blur-[10px] py-10 p-10 rounded-lg">
             <h6 class="animate-slide">Hale Path Packaging</h6>
             <h2 class="animate-slide delay-200"><?php echo esc_html($slide['title']); ?></h2>
             <p class="animate-slide delay-200 md:max-w-4/5"><?php echo esc_html($slide['desc']); ?></p>

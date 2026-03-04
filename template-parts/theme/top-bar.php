@@ -3,17 +3,17 @@
     <div class="hale_container flex items-center justify-between">
         <ul class="flex items-center divide-x-2 divide-white">
             <li>
-                <a href="tel:+9212312312345"
+                <a href="tel:+4401213186768"
                     class="text-sm font-normal text-white flex items-center gap-1 px-2 cursor-pointer">
                     <i class="fas fa-phone-alt"></i>
-                    +92 123 123 12345
+                    01213186768
                 </a>
             </li>
             <li>
-                <a href="mailto:info@halepathpack.com"
+                <a href="mailto:info@halepathpackaging.co.uk"
                     class="text-sm font-normal text-white flex items-center gap-1 px-2 cursor-pointer">
                     <i class="fas fa-envelope"></i>
-                    info@halepathpack.com
+                    info@halepathpackaging.co.uk
                 </a>
             </li>
         </ul>

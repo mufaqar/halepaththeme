@@ -90,12 +90,12 @@
             </h6>
             <ul class="flex flex-col gap-2.5">
                 <li>
-                    <span class="marker"></span>5955 Alpha Rd Suite 102, Unit 5092 Dallas, TX 75240, United States
+                    <span class="marker"></span>Unit 229, 32A Birmingham Road Bromsgrove B61 0DD
                 </li>
-                <li><a href="tel:866-225-2112" class="footer_link">
-                        <span class="marker"></span>866-225-2112</a></li>
-                <li><a href="mailto:info@halepathpack.com" target="_blank" class="footer_link">
-                        <span class="marker"></span>info@halepathpack.com</a></li>
+                <li><a href="tel:+4401213186768" class="footer_link">
+                        <span class="marker"></span>01213186768</a></li>
+                <li><a href="mailto:info@halepathpackaging.co.uk" target="_blank" class="footer_link">
+                        <span class="marker"></span>info@halepathpackaging.co.uk</a></li>
             </ul>
         </div>
     </div>

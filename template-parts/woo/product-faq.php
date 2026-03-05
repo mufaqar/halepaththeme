@@ -1,14 +1,4 @@
-<?php 
-
-$cat_faqs = $args['cat_faqs'] ?? '';
-
-print_r($cat_faqs);
-
-
-
-
-
-if( have_rows('faqs_sections') ): ?>
+<?php if( have_rows('faqs_sections') ): ?>
 <section class="bg-[#F5F5F5] py-20 mt-28" id="faqs-section">
     <div class="hale_container gap-6">
         <!-- FAQs -->

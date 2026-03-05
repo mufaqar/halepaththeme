@@ -29,7 +29,7 @@ $images = [
             </div>
 
             <div class="mt-10 flex justify-center">
-                <a href="/about-us/" class="btn_secondry">
+                <a href="<?php echo home_url('/about-us'); ?>" class="btn_secondry">
                     About Us
                 </a>
             </div>

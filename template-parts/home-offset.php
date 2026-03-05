@@ -10,12 +10,16 @@
     </div>
 
     <?php
-    get_template_part(
-        'template-parts/product-slider',
-        null,
-        ['direction' => 'ltr', 'slidesToShow' => 4,]
-    ); ?>
-    <a href="/products" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
+     get_template_part(
+            'template-parts/product-slider',
+            null,
+            [
+                'category'     => 'commercial-printing',
+                'slidesToShow' => 4,
+                'direction'    => 'ltr'
+            ]
+        );?>
+    <a href="<?php echo home_url('/product-category/commercial-printing/'); ?>" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
         See All Offset Printing
     </a>
 </section>

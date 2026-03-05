@@ -12,13 +12,17 @@
         </p>
     </div>
 
-     <?php
-    get_template_part(
-        'template-parts/product-slider',
-        null,
-        ['direction' => 'ltr', 'slidesToShow' => 4,]
-    ); ?>
-    <a href="/products" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
+    <?php
+        get_template_part(
+            'template-parts/product-slider',
+            null,
+            [
+                'category'     => 'print-advertising',
+                'slidesToShow' => 4,
+                'direction'    => 'ltr'
+            ]
+        );?>
+    <a href="<?php echo home_url('/product-category/print-advertising/'); ?>" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
         See All Print & Advertising & Office Supplies
     </a>
 </section>

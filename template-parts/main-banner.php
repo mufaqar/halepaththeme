@@ -13,7 +13,7 @@
                           Custom Cardboard packaging solutions
                         </h1>
                         <p class="text-white text-2xl font-medium mb-8">UK-Manufactured Custom Packaging That Turns First-Time Buyers Into Loyal Customers</p>
-                        <a href="/get-a-quote"
+                        <a href="<?php echo home_url('/get-quote-now'); ?>"
                             class="btn_primary">
                             Enquire Now <i class="fa fa-chevron-right"></i>
                         </a>

@@ -39,11 +39,11 @@
         </div>
         <!-- Buttons -->
         <div class="xl:w-1/4 sm:w-1/3 hidden lg:flex gap-5 justify-end">
-            <a href="/contact-us"
+            <a href="<?php echo home_url('/contact-us'); ?>"
                 class="border-2 border-secondary px-5 py-2 text-[13px] uppercase font-medium text-secondary rounded-full hover:bg-secondary hover:text-white">
                 Contact Us
             </a>
-            <a href="/get-qoute"
+            <a href="<?php echo home_url('/get-quote-now'); ?>"
                 class="border-2 border-secondary bg-secondary px-5 py-2 text-[13px] uppercase font-medium text-white rounded-full hover:bg-transparent hover:text-secondary">
                 Get Quote Now
             </a>

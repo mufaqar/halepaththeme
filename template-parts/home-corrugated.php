@@ -32,27 +32,21 @@
             Corrugated Packaging
         </h2>
     </div>
+    </section>
+
+<section class="py-12">
     <?php
         get_template_part(
             'template-parts/product-slider',
             null,
             [
-                'category'     => 'custom-boxes',
+                'category'     => 'corrugated-packaging',
                 'slidesToShow' => 4,
                 'direction'    => 'ltr'
             ]
         );?>
-</section>
 
-<section class="py-12">
-    <?php
-    get_template_part(
-        'template-parts/product-slider',
-        null,
-        ['direction' => 'ltr', 'slidesToShow' => 4,]
-    ); ?>
-
-    <a href="/products" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
+    <a href="<?php echo home_url('/product-category/corrugated-packaging'); ?>" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
         See All Corrugated Packaging
     </a>
 </section>

@@ -68,7 +68,7 @@ $megaMenus = [
 
             "Food & Beverage" => [
                 "link" => "/product-category/industries-we-serve/food-beverage-industries-we-serve/",
-                "image" => false,
+                "image" => true,
                 "items" => [
                     ["title" => "Food & Restaurant", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/food-restaurant/"],
                     ["title" => "Bakery & Confectionery", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/food-beverage-industries-we-serve/bakery-confectionery-food-beverage-industries-we-serve/"],
@@ -89,7 +89,7 @@ $megaMenus = [
 
             "Retail & E-commerce" => [
                 "link" => "/product-category/industries-we-serve/retail-e-commerce/",
-                "image" => false,
+               "image" => true,
                 "items" => [
                     ["title" => "E-commerce Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/retail-e-commerce/e-commerce-packaging-retail-e-commerce/"],
                     ["title" => "Retail Boxes", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/retail-e-commerce/retail-boxes-retail-e-commerce/"],
@@ -102,7 +102,7 @@ $megaMenus = [
 
             "Cannabis & CBD" => [
                 "link" => "/product-category/industries-we-serve/cannabis-cbd/",
-                "image" => false,
+                "image" => true,
                 "items" => [
                     ["title" => "CBD Products", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/cannabis-cbd/cbd-products/"],
                     ["title" => "Marijuana & Cannabis Packaging", "link" => "https://halepathpackaging.co.uk/product-category/industries-we-serve/cannabis-cbd/marijuana-cannabis-packaging/"],
@@ -844,7 +844,7 @@ $megaMenus = [
             <?php foreach ($megaMenus as $key => $menu): ?>
             <?php if (!empty($menu['groups'])): ?>
             <div id="megaMenu-<?php echo $key; ?>"
-                class="megaMenu hidden lg:absolute left-1/2 -translate-x-1/2 2xl:top-[74px]  top-[94px] hale_container mx-auto  z-50 overflow-y-auto min-h-[65vh] h-full">
+                class="megaMenu hidden lg:absolute left-1/2 -translate-x-1/2 2xl:top-[74px]  top-[94px] hale_container mx-auto  z-50 overflow-y-auto min-h-fit h-full">
                 <?php
                         $hasImage = false;
 
@@ -862,9 +862,9 @@ $megaMenus = [
                         <ul class="space-y-0">
                             <?php $i = 0; ?>
                             <?php foreach ($menu['groups'] as $groupName => $items): ?>
-                            <li class="mainCat flex items-center gap-2 py-5 px-5 " data-index="<?php echo $i; ?>">
+                            <li class="mainCat flex items-center gap-2 py-2 px-5 " data-index="<?php echo $i; ?>">
                                 <a href="<?php echo esc_url($items['link']); ?>"
-                                    class="text-sm capitalize text-white cursor-pointer flex items-center gap-2">
+                                    class="text-xs capitalize text-white cursor-pointer flex items-center gap-2">
                                     <?php echo $groupName; ?>
                                 </a>
                             </li>
@@ -878,9 +878,9 @@ $megaMenus = [
                         <div class="hidden childGroups" data-group="<?php echo $i; ?>">
                             <ul class="space-y-0">
                                 <?php foreach ($groupData['items'] as $item): ?>
-                                <li class="py-[18px] px-5">
+                                <li class="py-1 px-5">
                                     <a href="<?php echo esc_url($item['link']); ?>"
-                                        class="text-sm capitalize text-white hover:text-primary">
+                                        class="text-xs capitalize text-white hover:text-primary">
                                         <?php echo $item['title']; ?>
                                     </a>
                                 </li>

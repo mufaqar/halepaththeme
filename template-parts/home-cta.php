@@ -15,7 +15,7 @@
         </div>
 
         <div class="md:w-1/3 w-full">
-            <a href="<?php echo site_url('/get-quote'); ?>" class="btn_primary ml-auto! md:mr-0! mr-auto">
+            <a href="<?php echo site_url('/get-quote-now'); ?>" class="btn_primary ml-auto! md:mr-0! mr-auto">
                 Order Now
             </a>
         </div>

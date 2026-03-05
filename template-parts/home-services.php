@@ -18,7 +18,7 @@ $slides = [
   ],
   [
     "image" => "/assets/images/about-page/flexible.jpeg",
-    "title" => "Good Quality Packaging",
+    "title" => "Flexible Packaging / Mylar Bags",
     "link" => "#",
     "bg" => "slider_bg3",
     "text" => "text-white",

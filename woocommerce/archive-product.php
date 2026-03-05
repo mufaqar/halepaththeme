@@ -20,50 +20,124 @@ defined('ABSPATH') || exit;
 get_header('shop');
 
 
-  $term = get_queried_object();
-  $category_id = get_queried_object()->term_id;
-  $category = get_term($category_id, 'product_cat');
-  $cat_info = get_field('category_info', 'product_cat_' . $category_id);
-  $cat_faqs = get_field('faqs_sections', 'product_cat_' . $category_id);  
-        $product_extra_info = $cat_info;
-        $product_info_box1_title = $product_extra_info['info_box']['title'];
-        $product_info_box1_description = $product_extra_info['info_box']['description'];
-        $product_info_box1_image = $product_extra_info['info_box']['image'];
-        $product_info_box2_title = $product_extra_info['info_box2']['title'];
-        $product_info_box2_description = $product_extra_info['info_box2']['description'];
-        $product_info_box2_image = $product_extra_info['info_box2']['image'];
-       
+$term = get_queried_object();
+$category_id = get_queried_object()->term_id;
+$category = get_term($category_id, 'product_cat');
+$cat_info = get_field('category_info', 'product_cat_' . $category_id);
+$cat_faqs = get_field('faqs_sections', 'product_cat_' . $category_id);
+$product_extra_info = $cat_info;
+$product_info_box1_title = $product_extra_info['info_box']['title'];
+$product_info_box1_description = $product_extra_info['info_box']['description'];
+$product_info_box1_image = $product_extra_info['info_box']['image'];
+$product_info_box2_title = $product_extra_info['info_box2']['title'];
+$product_info_box2_description = $product_extra_info['info_box2']['description'];
+$product_info_box2_image = $product_extra_info['info_box2']['image'];
+
+?>
+<?php
+$Cate_gallery = [
+  [
+    'url' => 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    'alt' => 'Video 1'
+  ],
+  [
+    'url' => 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    'alt' => 'Video 2'
+  ],
+  [
+    'url' => 'https://player.vimeo.com/video/dQw4w9WgXcQ',
+    'alt' => 'Video 3'
+  ],
+  [
+    'url' => 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    'alt' => 'Video 1'
+  ],
+  [
+    'url' => 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    'alt' => 'Video 2'
+  ],
+  [
+    'url' => 'https://player.vimeo.com/video/dQw4w9WgXcQ',
+    'alt' => 'Video 3'
+  ],
+];
 ?>
 
-
-<main class="py-10 lg:py-20">
+<section class="py-10 lg:py-20">
   <div class="hale_container grid items-center md:grid-cols-2 gap-4 md:gap-8 lg:gap-10 xl:gap-[70px]">
     <?php
-   
-    
-      // Get category image
-      $thumbnail_id = get_term_meta($category_id, 'thumbnail_id', true);
-      $image_url = $thumbnail_id ? wp_get_attachment_url($thumbnail_id) : '';
-
-  
-
-
-      ?>
-      <div class="h-full">
-        <?php if ($image_url): ?>
-          <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($category->name); ?>"
-            class="img-full rounded-[22px]">
-        <?php endif; ?>
-      </div>
-      <div>
-        <h4 class="font-bold text-3xl lg:text-5xl">
-          <?php echo esc_html($category->name); ?> 
-        </h4>
-        <p class="xl:text-[19px] mt-4"><?php echo esc_html($category->description); ?></p>
-      </div>
-
+    // Get category image
+    $thumbnail_id = get_term_meta($category_id, 'thumbnail_id', true);
+    $image_url = $thumbnail_id ? wp_get_attachment_url($thumbnail_id) : '';
+    ?>
+    <div class="h-full">
+      <?php if ($image_url): ?>
+        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($category->name); ?>"
+          class="img-full rounded-[22px]">
+      <?php endif; ?>
+    </div>
+    <div>
+      <h4 class="font-bold text-3xl lg:text-5xl">
+        <?php echo esc_html($category->name); ?>
+      </h4>
+      <p class="xl:text-[19px] mt-4"><?php echo esc_html($category->description); ?></p>
+    </div>
   </div>
-</main>
+</section>
+<section class="mt-20 max-w-[2200px] mx-auto px-3 lg:px-0">
+  <h2 class="text-2xl text-center mb-8 sm:text-3xl md:text-5xl font-bold">
+    <?php the_title(); ?> Gallery
+  </h2>
+  <?php
+  ?>
+
+  <div class="relative w-full py-8">
+    <div class="cat_gallery">
+      <?php foreach ($Cate_gallery as $video): ?>
+        <div class="px-2">
+          <div class="rounded-2xl h-[450px] w-full overflow-hidden">
+            <iframe src="<?php echo esc_url($video['url']); ?>" class="h-full w-full rounded-2xl" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <!-- Arrows -->
+    <div class="flex justify-center gap-4 text-3xl mt-4">
+      <button class="cat-prev hover:text-[#47AFC3] cursor-pointer">&#8592;</button>
+      <button class="cat-next hover:text-[#47AFC3] cursor-pointer">&#8594;</button>
+    </div>
+  </div>
+
+  <script>
+    jQuery(document).ready(function ($) {
+      $('.cat_gallery').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: $('.cat-prev'),
+        nextArrow: $('.cat-next'),
+        dots: false,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: { slidesToShow: 3 }
+          },
+          {
+            breakpoint: 768,
+            settings: { slidesToShow: 2 }
+          },
+          {
+            breakpoint: 480,
+            settings: { slidesToShow: 1 }
+          }
+        ]
+      });
+    });
+  </script>
+</section>
 <!-- Qoute Form Start-->
 <section>
   <div class="hale_container">
@@ -71,9 +145,7 @@ get_header('shop');
   </div>
   <?php get_template_part('template-parts/woo/qoute-form'); ?>
 </section>
-
 <!-- Qoute Form End-->
-
 <section class="mt-20 hale_container">
   <div>
     <h2 class="font-extrabold text-4xl text-center">Explore <?php echo esc_html($category->name); ?></h2>
@@ -157,49 +229,44 @@ get_header('shop');
   //do_action('woocommerce_sidebar');
   ?>
 </section>
-
-
-
-
-
 <section class="my-20">
   <div class="hale_container md:flex items-center gap-5 md:gap-10 flex-row-reverse">
     <!-- Image Section -->
-     <figure class="md:w-1/2">
-            <img alt="Why Us Image" src="<?php echo esc_url($product_info_box1_image); ?>" height="auto" width="100%"
-                class="rounded-2xl">
-        </figure>
-        <div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
-            <h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">
-                <?php echo $product_info_box1_title; ?>
-            </h4>
-            <p class="mb-7 text-center md:text-left"><?php echo $product_info_box1_description; ?>
-            </p>
-            <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/get-quote-now">Get Custom Quote</a>
-        </div>
+    <figure class="md:w-1/2">
+      <img alt="Why Us Image" src="<?php echo esc_url($product_info_box1_image); ?>" height="auto" width="100%"
+        class="rounded-2xl">
+    </figure>
+    <div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
+      <h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">
+        <?php echo $product_info_box1_title; ?>
+      </h4>
+      <p class="mb-7 text-center md:text-left"><?php echo $product_info_box1_description; ?>
+      </p>
+      <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/get-quote-now">Get Custom Quote</a>
+    </div>
   </div>
 </section>
 <section class="my-20">
   <div class="hale_container md:flex items-center gap-5 md:gap-10">
     <figure class="md:w-1/2">
-            <img alt="Why Us Image" src="<?php echo esc_url($product_info_box2_image); ?>" height="auto" width="100%"
-                class="rounded-2xl">
-        </figure>
-        <div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
-            <h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">
-                <?php echo $product_info_box2_title; ?>
-            </h4>
-            <p class="mb-7 text-center md:text-left"><?php echo $product_info_box2_description; ?>
-            </p>
-            <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/get-quote-now">Get Custom Quote</a>
-        </div>
+      <img alt="Why Us Image" src="<?php echo esc_url($product_info_box2_image); ?>" height="auto" width="100%"
+        class="rounded-2xl">
+    </figure>
+    <div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
+      <h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">
+        <?php echo $product_info_box2_title; ?>
+      </h4>
+      <p class="mb-7 text-center md:text-left"><?php echo $product_info_box2_description; ?>
+      </p>
+      <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/get-quote-now">Get Custom Quote</a>
+    </div>
   </div>
 </section>
 <?php get_template_part(
-    'template-parts/woo/cat-faqs',
-    null,
-    array(
-        'cat_faqs' => $cat_faqs
-    )
-);?>
+  'template-parts/woo/cat-faqs',
+  null,
+  array(
+    'cat_faqs' => $cat_faqs
+  )
+); ?>
 <?php get_footer('shop'); ?>

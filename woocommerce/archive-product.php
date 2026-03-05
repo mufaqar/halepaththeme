@@ -20,25 +20,34 @@ defined('ABSPATH') || exit;
 get_header('shop');
 
 
+  $term = get_queried_object();
+  $category_id = get_queried_object()->term_id;
+  $category = get_term($category_id, 'product_cat');
+  $cat_info = get_field('category_info', 'product_cat_' . $category_id);
+  $cat_faqs = get_field('faqs_sections', 'product_cat_' . $category_id);  
+        $product_extra_info = $cat_info;
+        $product_info_box1_title = $product_extra_info['info_box']['title'];
+        $product_info_box1_description = $product_extra_info['info_box']['description'];
+        $product_info_box1_image = $product_extra_info['info_box']['image'];
+        $product_info_box2_title = $product_extra_info['info_box2']['title'];
+        $product_info_box2_description = $product_extra_info['info_box2']['description'];
+        $product_info_box2_image = $product_extra_info['info_box2']['image'];
+       
 ?>
 
 
 <main class="py-10 lg:py-20">
   <div class="hale_container grid items-center md:grid-cols-2 gap-4 md:gap-8 lg:gap-10 xl:gap-[70px]">
     <?php
-    // Get WooCommerce product categories
-    $categories = get_terms(array(
-      'taxonomy' => 'product_cat',
-      'hide_empty' => false,
-    ));
-
-    // Loop through categories (example: just showing the first one)
-    if (!empty($categories) && !is_wp_error($categories)) {
-      $category = $categories[0]; // get the first category
+   
     
       // Get category image
-      $thumbnail_id = get_term_meta($category->term_id, 'thumbnail_id', true);
+      $thumbnail_id = get_term_meta($category_id, 'thumbnail_id', true);
       $image_url = $thumbnail_id ? wp_get_attachment_url($thumbnail_id) : '';
+
+  
+
+
       ?>
       <div class="h-full">
         <?php if ($image_url): ?>
@@ -48,19 +57,11 @@ get_header('shop');
       </div>
       <div>
         <h4 class="font-bold text-3xl lg:text-5xl">
-          <?php echo esc_html($category->name); ?>
+          <?php echo esc_html($category->name); ?> 
         </h4>
-        <p class="xl:text-[19px] mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it to
-          make a type specimen book. It has survived not only five centuries, but
-          also the leap into electronic typesetting, remaining essentially unchanged.
-          It was popularized in the 1960s with the release of Letraset sheets containing
-          Lorem Ipsum passages, and more recently with desktop publishing software
-          like Aldus PageMaker including versions of Lorem Ipsum</p>
+        <p class="xl:text-[19px] mt-4"><?php echo esc_html($category->description); ?></p>
       </div>
-    <?php } ?>
+
   </div>
 </main>
 <!-- Qoute Form Start-->
@@ -75,7 +76,7 @@ get_header('shop');
 
 <section class="mt-20 hale_container">
   <div>
-    <h2 class="font-extrabold text-4xl text-center">Explore Packaging Solutions</h2>
+    <h2 class="font-extrabold text-4xl text-center">Explore <?php echo esc_html($category->name); ?></h2>
   </div>
   <?php
 
@@ -156,200 +157,49 @@ get_header('shop');
   //do_action('woocommerce_sidebar');
   ?>
 </section>
+
+
+
+
+
 <section class="my-20">
   <div class="hale_container md:flex items-center gap-5 md:gap-10 flex-row-reverse">
     <!-- Image Section -->
-    <figure class="md:w-1/2">
-      <img alt="Why Us Image" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/why-us.png">
-    </figure>
-    <!-- Content Section -->
-    <div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
-      <h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">
-        Why Us?
-      </h4>
-      <p class="mb-7 text-center md:text-left">
-        Half Price Packaging offers wholesale discounts, low MOQs, free packaging design support,
-        and free shipping services in the USA, Australia, and Canada. We only make high-quality
-        designs and take pride in offering a client-centric approach and a proven history of 5000+
-        satisfied clients that has taken us to a 4.9 rating on TrustPilot, and a 4.6 rating on REVIEWS.io
-      </p>
-      <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/category/product-by-industry#">
-        Get Custom Quote
-      </a>
-    </div>
+     <figure class="md:w-1/2">
+            <img alt="Why Us Image" src="<?php echo esc_url($product_info_box1_image); ?>" height="auto" width="100%"
+                class="rounded-2xl">
+        </figure>
+        <div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
+            <h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">
+                <?php echo $product_info_box1_title; ?>
+            </h4>
+            <p class="mb-7 text-center md:text-left"><?php echo $product_info_box1_description; ?>
+            </p>
+            <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/get-quote-now">Get Custom Quote</a>
+        </div>
   </div>
 </section>
 <section class="my-20">
   <div class="hale_container md:flex items-center gap-5 md:gap-10">
-    <!-- Image Section -->
     <figure class="md:w-1/2">
-      <img alt="Why Us Image" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/why-us.png">
-    </figure>
-    <!-- Content Section -->
-    <div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
-      <h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">
-        Get Prominent in the Market with Custom
-      </h4>
-      <p class="mb-7 text-center md:text-left">
-        Our premium quality retail box packaging with extensive customizations in shapes, styles,
-        sizes, and printing can be a game-changer for your brand. We let you choose packaging
-        materials that are appropriate, economical, and eco-friendly. The exquisite design, chic
-        color combination, and perfect branding technique are sure to boost your sales.
-        Personalized custom retail packaging boxes encourage you to develop brand loyalty, so
-        create something that appeals to your target demographic while still including your brand visuals.
-      </p>
-      <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/category/product-by-industry#">
-        Get Custom Quote
-      </a>
-    </div>
+            <img alt="Why Us Image" src="<?php echo esc_url($product_info_box2_image); ?>" height="auto" width="100%"
+                class="rounded-2xl">
+        </figure>
+        <div class="flex md:w-1/2 justify-center md:justify-start items-center md:items-start flex-col">
+            <h4 class="text-[#111827] mt-5 md:mt-0 font-bold text-3xl text-center md:text-left mb-4">
+                <?php echo $product_info_box2_title; ?>
+            </h4>
+            <p class="mb-7 text-center md:text-left"><?php echo $product_info_box2_description; ?>
+            </p>
+            <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/get-quote-now">Get Custom Quote</a>
+        </div>
   </div>
 </section>
-<section class="pt-16">
-  <!-- Section Title -->
-  <h2 class="font-extrabold md:text-4xl text-2xl text-center text-title_Clr mb-5">
-    Learn More About Custom Retail Boxes
-  </h2>
-
-  <!-- Content Container -->
-  <div class="hale_container desc_content mt-5 overflow-y-scroll max_content max-h-[712px]">
-
-    <h3>Lorem ipsum dolor</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit elittellus, luctus nec ullamc
-      mattis pulvinar dapibus cras risus dui euismo et sapien molestie sollicitudin sodale
-      dolor aliquam nec sagittis felis pellentesque ultricies. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit elittellus, luctus nec ullamc mattis pulvinar dapibus cras
-      risus dui euismo et sapien molestie sollicitudin sodale dolor aliquam nec sagittis felis
-      pellentesque ultricies.
-    </p>
-
-    <p>
-      <br>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit elittellus, luctus nec ullamc
-      mattis pulvinar dapibus cras risus dui euismo et sapien molestie sollicitudin sodale
-      dolor aliquam nec sagittis felis pellentesque ultricies. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit elittellus, luctus nec ullamc mattis pulvinar dapibus cras
-      risus dui euismo et sapien molestie sollicitudin sodale dolor aliquam nec sagittis felis
-      pellentesque ultricies.
-    </p>
-
-    <h4>
-      <br>Lorem ipsum dolor
-    </h4>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit elittellus, luctus nec ullamc
-      mattis pulvinar dapibus cras risus dui euismo et sapien molestie sollicitudin sodale
-      dolor aliquam nec sagittis felis pellentesque ultricies. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit elittellus, luctus nec ullamc mattis pulvinar dapibus cras
-      risus dui euismo et sapien molestie sollicitudin sodale dolor aliquam nec sagittis felis
-      pellentesque ultricies.
-    </p>
-
-    <h3>
-      <br>Lorem ipsum dolor
-    </h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit elittellus, luctus nec ullamc
-      mattis pulvinar dapibus cras risus dui euismo et sapien molestie sollicitudin sodale
-      dolor aliquam nec sagittis felis pellentesque ultricies. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit elittellus, luctus nec ullamc mattis pulvinar dapibus cras
-      risus dui euismo et sapien molestie sollicitudin sodale dolor aliquam nec sagittis felis
-      pellentesque ultricies.
-    </p>
-    <h3>
-      <br>Lorem ipsum dolor
-    </h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit elittellus, luctus nec ullamc
-      mattis pulvinar dapibus cras risus dui euismo et sapien molestie sollicitudin sodale
-      dolor aliquam nec sagittis felis pellentesque ultricies. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit elittellus, luctus nec ullamc mattis pulvinar dapibus cras
-      risus dui euismo et sapien molestie sollicitudin sodale dolor aliquam nec sagittis felis
-      pellentesque ultricies.
-    </p>
-    <h3>
-      <br>Lorem ipsum dolor
-    </h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit elittellus, luctus nec ullamc
-      mattis pulvinar dapibus cras risus dui euismo et sapien molestie sollicitudin sodale
-      dolor aliquam nec sagittis felis pellentesque ultricies. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit elittellus, luctus nec ullamc mattis pulvinar dapibus cras
-      risus dui euismo et sapien molestie sollicitudin sodale dolor aliquam nec sagittis felis
-      pellentesque ultricies.
-    </p>
-  </div>
-</section>
-<!-- Capabilities Section Start -->
-<section class="hale_container mt-20">
-  <!-- Section Title -->
-  <span class="text-[#111827] font-bold text-2xl">Our Capabilities</span>
-  <!-- Capabilities Grid -->
-  <div class="mt-12 grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-2">
-    <!-- Capability Items -->
-    <div class="icon_box">
-      <img alt="International Sourcing"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/glob.png" />
-      <h6 class="">International Sourcing</h6>
-    </div>
-
-    <div class="icon_box">
-      <img alt="Easy Price Matching"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/price_icon.png" />
-      <h6 class="">Easy Price Matching</h6>
-    </div>
-
-    <div class="icon_box">
-      <img alt="3D Design Studio" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/studio.png" />
-      <h6 class="">3D Design Studio</h6>
-    </div>
-
-    <div class="icon_box">
-      <img alt="Multiple Lead Times Option"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/calculator.png" />
-      <h6 class="">Multiple Lead Times Option to Fit Your Budget
-      </h6>
-    </div>
-
-    <div class="icon_box">
-      <img alt="Printing Capacity"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/capacity.png" />
-      <h6 class="">Printing Capacity of One Million Quantities in
-        One Day</h6>
-    </div>
-
-    <div class="icon_box">
-      <img alt="24/7 Service" src="<?php echo get_template_directory_uri(); ?>/assets/images/category/agent.png" />
-      <h6 class="">24/7 Service</h6>
-    </div>
-
-    <div class="icon_box">
-      <img alt="Flexible Payment Terms"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/payment.png" />
-      <h6 class="">Flexible Payment Terms</h6>
-    </div>
-
-    <div class="icon_box">
-      <img alt="Warehousing and IMS"
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/category/house.png" />
-      <h6 class="">Warehousing and IMS</h6>
-    </div>
-
-  </div>
-  <!-- Buttons -->
-  <div class="flex flex-col sm:flex-row text-center gap-4 mt-6">
-    <a class="btn_secondry" href="/category/product-by-industry#">
-      Browse Our Catalogue
-    </a>
-    <a class="btn_secondry" href="/category/product-by-industry#">
-      View Company Profile
-    </a>
-  </div>
-</section>
-<!-- Capabilities Section End -->
-
-<?php
-get_template_part('template-parts/woo/product-faq');
-
-
-get_footer('shop');
+<?php get_template_part(
+    'template-parts/woo/product-faq',
+    null,
+    array(
+        'cat_faqs' => $cat_faqs
+    )
+);?>
+<?php get_footer('shop'); ?>

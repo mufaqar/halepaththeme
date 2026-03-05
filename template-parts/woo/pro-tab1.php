@@ -24,7 +24,7 @@
             </h4>
             <p class="mb-7 text-center md:text-left"><?php echo $product_info_box1_description; ?>
             </p>
-            <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="#">Get Custom Quote</a>
+            <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/get-quote-now">Get Custom Quote</a>
         </div>
     </div>
 </section>
@@ -42,7 +42,7 @@
             </h4>
             <p class="mb-7 text-center md:text-left"><?php echo $product_info_box2_description; ?>
             </p>
-            <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="#">Get Custom Quote</a>
+            <a class="py-[9px] px-[41px] text-white bg-[#1C2E42] rounded-md" href="/get-quote-now">Get Custom Quote</a>
         </div>
     </div>
 </section>
@@ -79,65 +79,64 @@
         $related_query = new WP_Query($args);
         ?>
 
-        <div class="slider-center">
-            <?php while ($related_query->have_posts()):
+    <div class="slider-center">
+        <?php while ($related_query->have_posts()):
                 $related_query->the_post();
                 global $product; ?>
 
-                <div>
-                    <a href="<?php the_permalink(); ?>" class="block">
-                        <div class="w-full ">
-                            <?php echo woocommerce_get_product_thumbnail('medium', [
+        <div>
+            <a href="<?php the_permalink(); ?>" class="block">
+                <div class="w-full ">
+                    <?php echo woocommerce_get_product_thumbnail('medium', [
                                 'class' => 'maskimage img-full'
                             ]); ?>
-                        </div>
-                    </a>
-
-                    <h4 class="text-xl text-center mt-6">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_title(); ?>
-                        </a>
-                    </h4>
                 </div>
+            </a>
 
-            <?php endwhile;
-            wp_reset_postdata(); ?>
+            <h4 class="text-xl text-center mt-6">
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?>
+                </a>
+            </h4>
         </div>
+
+        <?php endwhile;
+            wp_reset_postdata(); ?>
+    </div>
 
     <?php endif; ?>
 </section>
 
 <script>
-    jQuery(document).ready(function ($) {
-        $('.slider-center').slick({
-            centerMode: true,
-            slidesToShow: 5,
-            speed: 500,
-            infinite: true,
-            arrows: true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        infinite: false
-                    }
-                },
-                {
-                    breakpoint: 700,
-                    settings: {
-                        slidesToShow: 2,
-                        infinite: false
-                    }
-                },
-                {
-                    breakpoint: 400,
-                    settings: {
-                        slidesToShow: 1,
-                        infinite: false
-                    }
+jQuery(document).ready(function($) {
+    $('.slider-center').slick({
+        centerMode: true,
+        slidesToShow: 5,
+        speed: 500,
+        infinite: true,
+        arrows: true,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    infinite: false
                 }
-            ]
-        });
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: false
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    infinite: false
+                }
+            }
+        ]
     });
+});
 </script>

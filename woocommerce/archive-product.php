@@ -196,7 +196,7 @@ get_header('shop');
   </div>
 </section>
 <?php get_template_part(
-    'template-parts/woo/product-faq',
+    'template-parts/woo/cat-faqs',
     null,
     array(
         'cat_faqs' => $cat_faqs

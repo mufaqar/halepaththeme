@@ -1,4 +1,8 @@
-<!-- Category Slider Starts -->
+<?php
+$advertising_products = get_field('print_advertising');
+?>
+
+
 <section class="py-16 bg-[#EAF6F9]">
     <div class="mb-16">
         <h2 class="h2 md:mb-5!">
@@ -17,7 +21,7 @@
             'template-parts/product-slider',
             null,
             [
-                'category'     => 'print-advertising',
+                'products'     => $advertising_products,
                 'slidesToShow' => 4,
                 'direction'    => 'ltr'
             ]

@@ -1,3 +1,6 @@
+<?php
+$offset_products = get_field('offset_printing_products');
+?>
 <section class="py-12">
     <div class="hale_container flex flex-col justify-center items-center">
         <h6 class="sub_title">
@@ -10,16 +13,17 @@
     </div>
 
     <?php
-     get_template_part(
-            'template-parts/product-slider',
-            null,
-            [
-                'category'     => 'commercial-printing',
-                'slidesToShow' => 4,
-                'direction'    => 'ltr'
-            ]
-        );?>
-    <a href="<?php echo home_url('/product-category/commercial-printing/'); ?>" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
+    get_template_part(
+        'template-parts/product-slider',
+        null,
+        [
+            'products' => $offset_products,
+            'slidesToShow' => 4,
+            'direction' => 'ltr'
+        ]
+    ); ?>
+    <a href="<?php echo home_url('/product-category/commercial-printing/'); ?>"
+        class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
         See All Offset Printing
     </a>
 </section>

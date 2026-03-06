@@ -1,3 +1,7 @@
+<?php
+$corrugated_products = get_field('corrugated_packaging');
+?>
+
 <section class="bg-cover mt-10 bg-no-repeat about_bg"
     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/bg.png'">
     <div class="hale_container pt-[110px]!">
@@ -20,9 +24,7 @@
         </div>
     </div>
 </section>
-
-
-<section class="py-12">
+<section class="pt-12">
     <div class="hale_container flex flex-col justify-center items-center">
         <h6 class="sub_title">
             Our Products
@@ -32,21 +34,22 @@
             Corrugated Packaging
         </h2>
     </div>
-    </section>
+</section>
 
-<section class="py-12">
+<section class="pb-12">
     <?php
-        get_template_part(
-            'template-parts/product-slider',
-            null,
-            [
-                'category'     => 'corrugated-packaging',
-                'slidesToShow' => 4,
-                'direction'    => 'ltr'
-            ]
-        );?>
+    get_template_part(
+        'template-parts/product-slider',
+        null,
+        [
+            'products' => $corrugated_products,
+            'slidesToShow' => 4,
+            'direction' => 'ltr'
+        ]
+    ); ?>
 
-    <a href="<?php echo home_url('/product-category/corrugated-packaging'); ?>" class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
+    <a href="<?php echo home_url('/product-category/corrugated-packaging'); ?>"
+        class="btn_secondry flex items-center gap-2 mt-12 w-fit mx-auto">
         See All Corrugated Packaging
     </a>
 </section>

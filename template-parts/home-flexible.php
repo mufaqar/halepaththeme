@@ -1,6 +1,9 @@
+<?php
+$flexible_products = get_field('flexible_packaging');
+?>
+
 <section class="py-12">
     <div class="hale_container flex flex-col justify-center items-center">
-       
         <h2 class="h2">
             Flexible Packaging / Maylar bags
         </h2>
@@ -14,7 +17,7 @@
             'template-parts/product-slider',
             null,
             [
-                'category'     => 'flexible-packaging-pouches',
+                'products'     => $flexible_products,
                 'slidesToShow' => 4,
                 'direction'    => 'ltr'
             ]

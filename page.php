@@ -14,21 +14,24 @@
 
 get_header();
 ?>
-
-<section class="mt-14 py-8">
-    <main class="hale_container">
-
-        <?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-		endwhile; // End of the loop.
-		?>
-
-    </main><!-- #main -->
-</section><!-- #primary -->
+<main class="">
+	<section
+		class="py-16 sm:h-[350px] h-[260px] flex items-center justify-center bg-cover bg-no-repeat bg-center bg-black/50 bg-blend-overlay"
+		style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/s2.webp'">
+		<div class="hale_container">
+			<h1 class="text-white font-bold text-3xl md:text-5xl lg:text-[51px]">
+				<?php the_title(); ?>
+			</h1>
+		</div>
+	</section>
+	<section class="py-16">
+		<div class="hale_container page_content">
+			<?php
+			the_content();
+			?>
+		</div>
+	</section>
+</main>
 <?php
 
 get_footer();

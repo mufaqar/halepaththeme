@@ -2907,7 +2907,28 @@ footer ul li a span.marker {
     line-height: 1;
   }
 }
-.page_content p, .page_content ul li, .page_content span {
+.page_content ul {
+  margin-bottom: calc(var(--spacing) * 5);
+  list-style-position: inside;
+  list-style-type: disc;
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.page_content ul li {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--title_Clr);
+  @media (width >= 48rem) {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+}
+.page_content p, .page_content span {
   margin-bottom: calc(var(--spacing) * 5);
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));

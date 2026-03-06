@@ -406,7 +406,13 @@ footer ul li a span.marker {
 .page_content h6 {
   @apply md:text-xl md:leading-none text-lg font-bold text-title_Clr mb-5;
 }
-.page_content p, .page_content ul li, .page_content span{
+.page_content ul {
+  @apply list-inside list-disc mb-5 space-y-4;
+}
+.page_content ul li{
+   @apply md:text-lg text-base font-normal text-title_Clr;
+}
+.page_content p, .page_content span{
   @apply md:text-lg text-base font-normal text-title_Clr mb-5;
 }
 .page_content a{

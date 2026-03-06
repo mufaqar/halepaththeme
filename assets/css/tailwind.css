@@ -410,5 +410,5 @@ footer ul li a span.marker {
   @apply md:text-lg text-base font-normal text-title_Clr mb-5;
 }
 .page_content a{
-  @apply text-title_Clr hover:text-primary underline;
+  @apply text-title_Clr hover:text-primary underline inline-flex;
 }

@@ -1,5 +1,8 @@
 <?php
 $offset_products = get_field('offset_printing_products');
+
+print_r($offset_products);
+
 ?>
 <section class="py-12">
     <div class="hale_container flex flex-col justify-center items-center">

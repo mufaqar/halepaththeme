@@ -237,7 +237,7 @@
 }
 
 .slider-full h2 {
-  @apply font-semibold relative my-2 xl:text-[70px] max-w-[580px] text-3xl leading-none lg:text-[70px] ;
+  @apply font-semibold relative my-2 xl:text-[70px] max-w-[580px] text-3xl leading-none lg:text-[70px];
 }
 
 .feature_box {
@@ -283,7 +283,8 @@
 .icon_box {
   @apply bg-[#EFEFEF] flex flex-col justify-center items-center px-1.5 py-[15px] rounded-[16px];
 }
-.icon_box h6{
+
+.icon_box h6 {
   @apply text-[#111827] text-center !font-normal text-xs mt-3;
 }
 
@@ -345,6 +346,7 @@ footer ul li a span.marker {
 .megaMenu::-webkit-scrollbar {
   width: 0px;
 }
+
 /* =========================
    UTILITIES
 ========================= */
@@ -360,23 +362,59 @@ footer ul li a span.marker {
 .slick-slide {
   height: fit-content !important;
 }
-.active{
+
+.active {
   @apply bg-secondary/30 backdrop-blur-[10px];
 }
 
-.main_active{
-  @apply  bg-secondary text-white ;
+.main_active {
+  @apply bg-secondary text-white;
 }
 
 .testimonials-slider .slick-slide {
   height: 100% !important;
 }
-.tab-btn{
+
+.tab-btn {
   @apply md:text-lg text-sm md:px-6 px-3 py-2 font-medium text-title_Clr/80 border-b-2 border-transparent;
 }
-.tab_active{
+
+.tab_active {
   @apply bg-[#F5F5F5] text-title_Clr border-secondary;
 }
-.slider-scroll-area .slider-wrapper .slick-slide{
+
+.slider-scroll-area .slider-wrapper .slick-slide {
   height: 100vh !important;
+}
+
+.page_content h2 {
+  @apply md:text-[42px] md:leading-none text-3xl font-bold text-title_Clr mb-5;
+}
+
+.page_content h3 {
+  @apply md:text-[36px] md:leading-none text-2xl font-bold text-title_Clr mb-5;
+}
+
+.page_content h4 {
+  @apply md:text-[28px] md:leading-none text-xl font-bold text-title_Clr mb-5;
+}
+
+.page_content h5 {
+  @apply md:text-2xl md:leading-none text-xl font-bold text-title_Clr mb-5;
+}
+
+.page_content h6 {
+  @apply md:text-xl md:leading-none text-lg font-bold text-title_Clr mb-5;
+}
+.page_content ul {
+  @apply list-inside list-disc mb-5 space-y-4;
+}
+.page_content ul li{
+   @apply md:text-lg text-base font-normal text-title_Clr;
+}
+.page_content p, .page_content span{
+  @apply md:text-lg text-base font-normal text-title_Clr mb-5;
+}
+.page_content a{
+  @apply text-title_Clr hover:text-primary underline inline-flex;
 }

@@ -577,7 +577,7 @@ $megaMenus = [
     ],
     "commercial_printing" => [
         "title" => "Commercial Printing",
-        "link" => "commercial-printing/",
+        "link" => "https://halepathpackaging.co.uk/commercial-printing/",
         "groups" => [
             "Offset Printing (Lithography)" => [
                 "link" => "https://halepathpackaging.co.uk/commercial-printing/offset-printing-lithography/",

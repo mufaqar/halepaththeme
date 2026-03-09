@@ -178,3 +178,19 @@ function custom_woocommerce_image_sizes() {
     add_image_size( 'hale_product_thumbs', 150, 150, true );
 }
 
+
+add_filter('term_link', 'remove_product_category_slug', 10, 3);
+
+function remove_product_category_slug($url, $term, $taxonomy) {
+    if ($taxonomy == 'product_cat') {
+        $url = str_replace('/product-category/', '/', $url);
+    }
+    return $url;
+}
+
+add_action('init', 'product_category_rewrite_rules');
+function product_category_rewrite_rules() {
+    global $wp_rewrite;
+    $wp_rewrite->extra_permastructs['product_cat']['struct'] = '%product_cat%';
+}
+

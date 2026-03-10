@@ -179,17 +179,114 @@ function custom_woocommerce_image_sizes() {
 }
 
 
-// add_filter('term_link', 'remove_product_category_slug', 10, 3);
 
-// function remove_product_category_slug($url, $term, $taxonomy) {
-//     if ($taxonomy == 'product_cat') {
-//         $url = str_replace('/product-category/', '/', $url);
-//     }
-//     return $url;
-// }
+/**
+ * WooCommerce: remove /product-category/ from category URLs
+ * while keeping pages/posts/products working first.
+ */
 
-// add_action('init', 'product_category_rewrite_rules');
-// function product_category_rewrite_rules() {
-//     global $wp_rewrite;
-//     $wp_rewrite->extra_permastructs['product_cat']['struct'] = '%product_cat%';
-// }
+if (!defined('ABSPATH')) {
+	exit;
+}
+
+/**
+ * 1) Output clean product category links
+ */
+add_filter('term_link', function ($url, $term, $taxonomy) {
+	if ($taxonomy !== 'product_cat' || empty($url)) {
+		return $url;
+	}
+
+	$home_path = trim((string) wp_parse_url(home_url('/'), PHP_URL_PATH), '/');
+	$path      = trim((string) wp_parse_url($url, PHP_URL_PATH), '/');
+
+	if ($home_path && strpos($path, $home_path . '/') === 0) {
+		$path = substr($path, strlen($home_path) + 1);
+	}
+
+	$path = preg_replace('#^product-category/#', '', $path);
+
+	return home_url(user_trailingslashit($path));
+}, 10, 3);
+
+/**
+ * 2) If WP thinks the request is a page/post/etc, convert it to product_cat
+ * ONLY when there is no real page/post/product using that path.
+ */
+add_filter('request', function ($vars) {
+	if (is_admin()) {
+		return $vars;
+	}
+
+	$candidate = '';
+
+	if (!empty($vars['pagename'])) {
+		$candidate = $vars['pagename'];
+	} elseif (!empty($vars['category_name'])) {
+		$candidate = $vars['category_name'];
+	} elseif (!empty($vars['attachment'])) {
+		$candidate = $vars['attachment'];
+	} elseif (!empty($vars['name'])) {
+		$candidate = $vars['name'];
+	}
+
+	if ($candidate === '') {
+		return $vars;
+	}
+
+	$candidate = trim($candidate, '/');
+
+	// Respect real hierarchical pages first.
+	$page_path = get_page_by_path($candidate, OBJECT, 'page');
+	if ($page_path) {
+		return $vars;
+	}
+
+	// Respect real posts/products/attachments by last slug segment.
+	$parts     = explode('/', $candidate);
+	$last_slug = end($parts);
+
+	$post_types_to_protect = ['post', 'product', 'attachment'];
+	foreach ($post_types_to_protect as $pt) {
+		$existing = get_page_by_path($last_slug, OBJECT, $pt);
+		if ($existing) {
+			return $vars;
+		}
+	}
+
+	// Match full hierarchical product_cat path.
+	$term = get_term_by('slug', $last_slug, 'product_cat');
+	if (!$term || is_wp_error($term)) {
+		return $vars;
+	}
+
+	$term_link = get_term_link($term, 'product_cat');
+	if (is_wp_error($term_link)) {
+		return $vars;
+	}
+
+	$term_path = trim((string) wp_parse_url($term_link, PHP_URL_PATH), '/');
+	$home_path = trim((string) wp_parse_url(home_url('/'), PHP_URL_PATH), '/');
+
+	if ($home_path && strpos($term_path, $home_path . '/') === 0) {
+		$term_path = substr($term_path, strlen($home_path) + 1);
+	}
+
+	$term_path = preg_replace('#^product-category/#', '', $term_path);
+	$term_path = trim($term_path, '/');
+
+	if ($term_path !== $candidate) {
+		return $vars;
+	}
+
+	$new_vars = ['product_cat' => $last_slug];
+
+	// Preserve paging/sorting.
+	foreach (['paged', 'page', 'orderby', 'order'] as $key) {
+		if (!empty($vars[$key])) {
+			$new_vars[$key] = $vars[$key];
+		}
+	}
+
+	return $new_vars;
+}, 99);

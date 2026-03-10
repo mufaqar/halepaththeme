@@ -91,6 +91,9 @@ if (!empty($image_url) || !empty($category->name) || !empty($category->descripti
             <?php echo esc_html($category->description); ?>
           </p>
         <?php endif; ?>
+        <div class="mt-8">
+          <?php get_template_part('template-parts/woo/product-form'); ?>
+        </div>
       </div>
     </div>
   </section>

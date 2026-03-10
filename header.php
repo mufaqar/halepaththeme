@@ -178,7 +178,7 @@ $megaMenus = [
             ],
 
             "Consumer Goods & Electronics" => [
-                "link" => "/product-category/industries/consumer-goods-electronics/",
+                "link" => "/product-category/industries/goods-electronics",
                 "image" => false,
                 "items" => [
                     ["title" => "Mobile Accessories", "link" => "https://halepathpackaging.co.uk/product-category/industries/mobile-accessories/"],
@@ -189,7 +189,7 @@ $megaMenus = [
             ],
 
             "Automotive Industry" => [
-                "link" => "/product-category/industries/automotive-industry/",
+                "link" => "/product-category/industries/automotive/",
                 "image" => false,
                 "items" => [
                     ["title" => "Auto Parts & Components", "link" => "https://halepathpackaging.co.uk/product-category/industries/auto-parts-components/"],
@@ -200,7 +200,7 @@ $megaMenus = [
             ],
 
             "Industrial Products" => [
-                "link" => "/product-category/industries/industrial-products/",
+                "link" => "/product-category/industries/industrial/",
                 "image" => false,
                 "items" => [
                     ["title" => "Manufacturing Components", "link" => "https://halepathpackaging.co.uk/product-category/industries/manufacturing-components/"],
@@ -233,7 +233,7 @@ $megaMenus = [
             ],
 
             "Stationery & Office Supplies" => [
-                "link" => "/product-category/industries/stationery-office-supplies/",
+                "link" => "/product-category/industries/stationery/",
                 "image" => false,
                 "items" => [
                     ["title" => "Paper Products", "link" => "https://halepathpackaging.co.uk/product-category/industries/paper-products/"],
@@ -244,7 +244,7 @@ $megaMenus = [
             ],
 
             "Print, Advertising & Marketing" => [
-                "link" => "/product-category/industries/print-advertising-marketing/",
+                "link" => "/product-category/industries/print-advertising/",
                 "image" => false,
                 "items" => [
                     ["title" => "Business Cards & Stationery", "link" => "https://halepathpackaging.co.uk/product-category/industries/business-cards-stationery/"],
@@ -255,7 +255,7 @@ $megaMenus = [
             ],
 
             "Transport & Shipping Industry" => [
-                "link" => "/product-category/industries/transport-shipping-industry/",
+                "link" => "/product-category/industries/transport-shipping/",
                 "image" => false,
                 "items" => [
                     ["title" => "Corrugated Boxes & Containers", "link" => "https://halepathpackaging.co.uk/product-category/industries/corrugated-boxes-containers/"],
@@ -415,7 +415,7 @@ $megaMenus = [
             ],
 
             "Beverage Multipacks & Systems" => [
-                "link" => "/product-category/corrugated-packaging/beverage-multipacks-systems/",
+                "link" => "/product-category/corrugated-packaging/beverage-multipacks/",
                 "image" => false,
                 "items" => [
                     ["title" => "Bottle Carriers", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/bottle-carriers/"],
@@ -426,7 +426,7 @@ $megaMenus = [
             ],
 
             "E-Commerce Packaging" => [
-                "link" => "/product-category/corrugated-packaging/e-commerce-packaging/",
+                "link" => "/product-category/corrugated-packaging/e-commerce/",
                 "image" => false,
                 "items" => [
                     ["title" => "Standard Mailing Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/standard-mailing-boxes/"],
@@ -473,7 +473,7 @@ $megaMenus = [
             ],
 
             "Functional & Automation-Friendly Boxes" => [
-                "link" => "/product-category/corrugated-packaging/functional-automation-friendly-boxes/",
+                "link" => "/product-category/corrugated-packaging/functional-automation/",
                 "image" => false,
                 "items" => [
                     ["title" => "Crash Lock Boxes", "link" => "https://halepathpackaging.co.uk/product-category/corrugated-packaging/crash-lock-boxes/"],

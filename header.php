@@ -67,7 +67,7 @@ $megaMenus = [
             ],
 
             "Food & Beverage" => [
-                "link" => "/industries/food-beverage-industries-we-serve/",
+                "link" => "/industries/food-beverage/",
                 "image" => true,
                 "items" => [
                     ["title" => "Food & Restaurant", "link" => "https://halepathpackaging.co.uk/industries/food-restaurant/"],
@@ -101,7 +101,7 @@ $megaMenus = [
             ],
 
             "Cannabis & CBD" => [
-                "link" => "/industries/cannabis-cbd/",
+                "link" => "/industries/cannabis/",
                 "image" => true,
                 "items" => [
                     ["title" => "CBD Products", "link" => "https://halepathpackaging.co.uk/industries/cbd-products/"],
@@ -113,7 +113,7 @@ $megaMenus = [
             ],
 
             "Tobacco & Vaping" => [
-                "link" => "/industries/tobacco-vaping/",
+                "link" => "/industries/tobacco/",
                 "image" => false,
                 "items" => [
                     ["title" => "Tobacco Products", "link" => "https://halepathpackaging.co.uk/industries/tobacco-products-tobacco-vaping/"],

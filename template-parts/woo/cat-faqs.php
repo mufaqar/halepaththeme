@@ -72,6 +72,6 @@ jQuery(document).ready(function ($) {
 
 <?php else : ?>
 
-<p class="text-center py-10">No FAQs available at the moment.</p>
+
 
 <?php endif; ?>

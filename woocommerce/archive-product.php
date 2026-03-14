@@ -88,7 +88,7 @@ if (!empty($image_url) || !empty($category->name) || !empty($category->descripti
 
         <?php if (!empty($category->description)): ?>
           <p class="xl:text-[19px] mt-4">
-            <?php echo esc_html($category->description); ?>
+            <?php echo $category->description; ?>
           </p>
         <?php endif; ?>
         <div class="mt-8">

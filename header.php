@@ -50,7 +50,7 @@ $megaMenus = [
         "link" => "/industries/",
         "groups" => [
             "Beauty & Personal Care" => [
-                "link" => "/industries/beauty-personal-care-industries-we-serve/",
+                "link" => "/industries/beauty-care/",
                 "image" => true,
                 "items" => [
                     ["title" => "Cosmetics", "link" => "https://halepathpackaging.co.uk/industries/cosmetics/"],

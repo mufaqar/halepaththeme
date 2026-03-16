@@ -1,26 +1,22 @@
 <?php
 $corrugated_products = get_field('corrugated_packaging');
+$corrug = get_field('corrugated_section');
+$title = $corrug['title'] ?? '';
+$content = $corrug['content'] ?? '';
+$btn_link = $corrug['aboutlink'] ?? '';
 ?>
 
 <section class="bg-cover mt-10 bg-no-repeat about_bg"
     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/about-page/bg.png'">
     <div class="hale_container pt-[110px]!">
         <h2 class="text-white font-bold text-3xl md:text-5xl lg:text-[51px]">
-            Corrugated Packaging
+           <?php echo esc_html($title); ?>
         </h2>
     </div>
     <div
         class="bg-secondary/20 backdrop-blur-[10px] py-10 pr-8 md:p-[46px] max-w-[90%] md:max-w-[80%] lg:max-w-[70%] rounded-tr-[140px] mt-[110px]">
-        <div class="hale_container">
-            <h5 class="text-white font-bold text-xl md:text-[25px]">
-                Hale Path Provide Best Packaging Services
-            </h5>
-            <p class="font-medium text-white text-xl md:text-[27px] mb-6 mt-2 leading-normal">
-                At Hale Path Packaging, we deliver premium corrugated packaging across the UK& whole Europe, combining
-                strength, precision printing, and luxury finishes. Our custom boxes protect your products, elevate your
-                brand, and ensure reliable nationwide delivery with trusted quality.
-            </p>
-
+        <div class="hale_container corru_content">
+           <?php echo $content; ?>
         </div>
     </div>
 </section>

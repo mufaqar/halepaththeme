@@ -418,3 +418,9 @@ footer ul li a span.marker {
 .page_content a{
   @apply text-title_Clr hover:text-primary underline inline-flex;
 }
+.corru_content h5{
+  @apply text-white font-bold text-xl md:text-[25px];
+}
+.corru_content p{
+  @apply font-medium text-white text-xl md:text-[27px] mb-6 mt-2 leading-normal;
+}

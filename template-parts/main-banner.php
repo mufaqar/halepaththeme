@@ -1,12 +1,8 @@
 <?php
 $home = get_field('banner_slider');
-
 $title = $home['title'] ?? '';
 $desc = $home['desc'] ?? '';
 $btn_link = $home['btnlink'] ?? '';
-
-
-
 ?>
 
 <section class="Main_slider">

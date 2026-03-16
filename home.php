@@ -1,35 +1,6 @@
 <?php /** Template Name: Home */ get_header();
 
 ?>
-<?php
-$steps = [
-    [
-        "id" => 1,
-        "title" => "Place Your Order",
-        "description" => "Place your order online quickly and easily, share your requirements, receive a fast quote, and start your packaging project confidently."
-    ],
-    [
-        "id" => 2,
-        "title" => "Artwork Creation",
-        "description" => "Our expert team creates custom packaging designs, provides mockups for approval, and ensures your branding looks professional and impactful."
-    ],
-    [
-        "id" => 3,
-        "title" => "Production",
-        "description" => "Review final details, approve artwork and specifications, confirm pricing, and give production approval before we begin manufacturing your packaging."
-    ],
-    [
-        "id" => 4,
-        "title" => "Fast Doorstep Delivery",
-        "description" => "Your finished packaging is carefully produced, securely packed, and delivered on time across the UK with reliable tracking."
-    ],
-];
-?>
-
-
-
-
-
 <?php get_template_part('template-parts/main-banner'); ?>
 <?php get_template_part('template-parts/about-imgscroll'); ?>
     <section class="bg-[#F5F5F5] py-10">

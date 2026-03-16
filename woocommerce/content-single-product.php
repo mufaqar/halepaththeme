@@ -114,9 +114,7 @@ if (is_product_category()) {
                     echo wpautop($product->get_short_description());
                 } ?>
             </div>
-            <h2 class="md:text-[28px] md:leading-normal text-2xl font-bold text-title_Clr">
-                Get Custom Quote
-            </h2>
+           
             <?php get_template_part('template-parts/woo/product-form'); ?>
         </div>
     </div>

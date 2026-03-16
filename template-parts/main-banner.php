@@ -1,9 +1,12 @@
 <?php
-$home = get_field('home');
+$page_id = 1649;
+$home = get_field('home', $page_id);
 
 $title = $home['banner_title'] ?? '';
 $desc = $home['banner_desc'] ?? '';
 $btn_link = $home['btnlink'] ?? '';
+
+
 ?>
 
 <section class="Main_slider">

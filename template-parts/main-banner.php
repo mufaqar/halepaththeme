@@ -1,10 +1,13 @@
 <?php
-$page_id = 1649;
+global $post;
+$post_id = $post->ID;
 $home = get_field('home', $page_id);
 
 $title = $home['banner_title'] ?? '';
 $desc = $home['banner_desc'] ?? '';
 $btn_link = $home['btnlink'] ?? '';
+
+var_dump($post_id);
 
 
 ?>

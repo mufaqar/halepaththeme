@@ -572,6 +572,20 @@ $megaMenus = [
                     ["title" => "Supplement & Protein Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/supplement-protein-packaging/"],
                 ]
             ],
+            "Non Food Packaging" => [
+                "link" => "/flexible-packaging-pouches/non-food-packaging/",
+                "image" => false,
+                "items" => [
+                    ["title" => "Detergent Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/detergent-packaging/"],
+                    ["title" => "Simple Sachet Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/simple-sachet-packaging/"],
+                    ["title" => "Cat Litter Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/cat-litter-packaging/"],
+                    ["title" => "Lawn & Garden Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/lawn-garden-packaging/"],
+                    ["title" => "Construction & Hardware Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/construction-hardware-packaging/"],
+                    ["title" => "Agriculture Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/agriculture-packaging/"],
+                    ["title" => "Household Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/household-packaging/"],
+                    ["title" => "Cleaning Product Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/cleaning-product-packaging/"]
+                ]
+            ],
 
         ]
     ],

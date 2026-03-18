@@ -129,12 +129,12 @@ if (have_rows('categories_videos', 'product_cat_' . $term_id)): ?>
   </section>
 <?php endif; ?>
 <!-- Qoute Form Start-->
-<section>
+<!-- <section>
   <div class="hale_container">
     <p class="font-extrabold text-4xl text-center">Get Custom Quote</p>
   </div>
-  <?php get_template_part('template-parts/woo/qoute-form'); ?>
-</section>
+  <?php //get_template_part('template-parts/woo/qoute-form'); ?>
+</section> -->
 <!-- Qoute Form End-->
 
 <section class="mt-20 hale_container">

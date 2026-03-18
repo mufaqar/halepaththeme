@@ -4,6 +4,11 @@ $quote_form_class = "container mx-auto mt-5 rounded-[19px] bg-[#CCCCCCB5]/70";
 
 // Get all WooCommerce products
 $products = wc_get_products(array('limit' => -1));
+
+global $product;
+
+$product_name = $product ? $product->get_name() : 'Product';
+$product_price = $product ? $product->get_regular_price() : 0;
 ?>
 
 
@@ -17,12 +22,100 @@ $products = wc_get_products(array('limit' => -1));
 
     <!-- Tabs Content -->
     <div class="tab-content mt-6">
-        <div class="form_tab-panel" id="tab1">
+        <div class="form_tab-panel hidden" id="tab1">
+
+            <div class="<?php echo esc_attr($quote_form_class); ?>">
+                <form id="sizes-form" class="grid w-full gap-2 items-center px-3 sm:px-5 py-6 md:py-10" method="POST">
+                    <h2 class="md:text-[28px] md:leading-normal text-2xl font-bold text-title_Clr">
+                        Available Sizes for <?php echo esc_html($product_name); ?>
+                    </h2>
+                    <p>
+                        Choose from our popular Standard Sizes for a quick, off-the-shelf solution, or request a Custom
+                        Quote
+                        for a perfect, tailored fit. Whether you need something immediately or designed specifically for
+                        your
+                        brand, we provide flexible options to meet every need and budget.
+                    </p>
+                    <div class="w-full gap-2.5">
+                        <section class="grid md:grid-cols-4 grid-cols-2 gap-2 mt-2.5">
+                            <div class="relative">
+                                <label for="dimension" class="text-sm font-medium hidden">dimension</label>
+                                <select name="dimension" id="dimension" class="hale_input h-full appearance-none"
+                                    required>
+                                    <option value="5 x 4 x 1">5 x 4 x 1</option>
+                                    <option value="6 x 5 x 2">6 x 5 x 2</option>
+                                </select>
+                                <i
+                                    class="absolute right-4 top-1/2 text-xl text-gray-500 -translate-y-1/2 fa fa-chevron-down"></i>
+                            </div>
+                            <div class="relative">
+                                <label for="box_stock" class="text-sm font-medium hidden">Box Stock</label>
+
+                                <select name="box_stock" id="box_stock" class="hale_input h-full appearance-none"
+                                    required>
+                                    <option value="Rigid">Rigid</option>
+                                    <option value="Foldable">Foldable</option>
+                                </select>
+                                <i
+                                    class="absolute right-4 top-1/2 text-xl text-gray-500 -translate-y-1/2 fa fa-chevron-down"></i>
+                            </div>
+                            <div class="relative">
+                                <label for="quantity" class="text-sm font-medium hidden">Quantity</label>
+                                <select name="quantity" id="quantity" class="hale_input h-full appearance-none"
+                                    required>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                </select>
+                                <i
+                                    class="absolute right-4 top-1/2 text-xl text-gray-500 -translate-y-1/2 fa fa-chevron-down"></i>
+                            </div>
+                            <div class="relative">
+                                <label for="printing" class="text-sm font-medium hidden">Printing</label>
+                                <select name="printing" id="printing" class="hale_input h-full appearance-none"
+                                    required>
+                                    <option value="Outside only">Outside only</option>
+                                    <option value="Inside &amp; outside">Inside &amp; outside</option>
+                                </select>
+                                <i
+                                    class="absolute right-4 top-1/2 text-xl text-gray-500 -translate-y-1/2 fa fa-chevron-down"></i>
+                            </div>
+                        </section>
+                        <p id="price-display" data-price="<?php echo esc_attr($product_price); ?>"
+                            style="margin-top:20px; font-size:16px;">
+                            <strong>Price:</strong> £<?php echo esc_html($product_price); ?> for 1 item
+                        </p>
+                    </div>
+                    <!-- Submit Button -->
+                    <section class="flex items-center gap-2 justify-between mt-2.5">
+                        <div class="w-full">
+                            <button type="submit" class="btn_secondry w-1/2">
+                                Proceed to Checkout
+                            </button>
+                        </div>
+                    </section>
+                    <div class="grid md:grid-cols-3 grid-cols-2 gap-5 mt-8">
+                        <div class="text-center text-title_Clr space-y-2.5">
+                            <i class="fa fa-clock" style="font-size:32px;"></i>
+                            <p><strong>Quick</strong><br>Turnaround</p>
+                        </div>
+                        <div class="text-center text-title_Clr space-y-2.5">
+                            <i class="fa fa-pencil-square" style="font-size:32px;"></i>
+                            <p><strong>Free</strong><br>Designing</p>
+                        </div>
+                        <div class="text-center text-title_Clr space-y-2.5">
+                            <i class="fa fa-truck" style="font-size:32px;"></i>
+                            <p><strong>Free</strong><br>Shipping</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="form_tab-panel" id="tab2">
             <h2 class="md:text-[28px] md:leading-normal text-2xl font-bold text-title_Clr">
                 Get Custom Quote
             </h2>
             <div class="<?php echo esc_attr($quote_form_class); ?>">
-                <form id="sizes-form" class="grid w-full gap-2 items-center px-3 sm:px-5 py-6 md:py-10" method="POST">
+                <form id="quote-form" class="grid w-full gap-2 items-center px-3 sm:px-5 py-6 md:py-10" method="POST">
                     <div class="w-full gap-2.5">
                         <!-- Name + Phone -->
                         <section class="grid grid-cols-2 gap-2.5">
@@ -132,7 +225,9 @@ $products = wc_get_products(array('limit' => -1));
                             </label>
                         </div>
                     </div>
-
+                    <p id="quote-price-display" style="margin-top:20px; font-size:16px;">
+                        <strong>Estimated Price:</strong> £0
+                    </p>
                     <!-- Submit Button -->
                     <section class="flex items-center gap-2 justify-between mt-2.5">
                         <div class="w-full">
@@ -145,153 +240,161 @@ $products = wc_get_products(array('limit' => -1));
             </div>
         </div>
 
-        <div class="form_tab-panel hidden" id="tab2">
 
-            <div class="<?php echo esc_attr($quote_form_class); ?>">
-                <form id="quote-form" class="grid w-full gap-2 items-center px-3 sm:px-5 py-6 md:py-10" method="POST">
-                    <h2 class="md:text-[28px] md:leading-normal text-2xl font-bold text-title_Clr">
-                        Available Sizes for Rigid Foldable Boxes
-                    </h2>
-                    <p>
-                        Choose from our popular Standard Sizes for a quick, off-the-shelf solution, or request a Custom
-                        Quote
-                        for a perfect, tailored fit. Whether you need something immediately or designed specifically for
-                        your
-                        brand, we provide flexible options to meet every need and budget.
-                    </p>
-                    <div class="w-full gap-2.5">
-                        <section class="grid md:grid-cols-4 grid-cols-2 gap-2 mt-2.5">
-                            <div class="relative">
-                                <label for="dimension" class="text-sm font-medium hidden">dimension</label>
-                                <select name="dimension" id="dimension" class="hale_input h-full appearance-none"
-                                    required>
-                                    <option value="5 x 4 x 1">5 x 4 x 1</option>
-                                    <option value="6 x 5 x 2">6 x 5 x 2</option>
-                                </select>
-                                <i
-                                    class="absolute right-4 top-1/2 text-xl text-gray-500 -translate-y-1/2 fa fa-chevron-down"></i>
-                            </div>
-                            <div class="relative">
-                                <label for="box_stock" class="text-sm font-medium hidden">Box Stock</label>
-
-                                <select name="box_stock" id="box_stock" class="hale_input h-full appearance-none"
-                                    required>
-                                    <option value="Rigid">Rigid</option>
-                                    <option value="Foldable">Foldable</option>
-                                </select>
-                                <i
-                                    class="absolute right-4 top-1/2 text-xl text-gray-500 -translate-y-1/2 fa fa-chevron-down"></i>
-                            </div>
-                            <div class="relative">
-                                <label for="quantity" class="text-sm font-medium hidden">Quantity</label>
-                                <select name="quantity" id="quantity" class="hale_input h-full appearance-none"
-                                    required>
-                                    <option value="1">100</option>
-                                    <option value="2">200</option>
-                                </select>
-                                <i
-                                    class="absolute right-4 top-1/2 text-xl text-gray-500 -translate-y-1/2 fa fa-chevron-down"></i>
-                            </div>
-                            <div class="relative">
-                                <label for="printing" class="text-sm font-medium hidden">Printing</label>
-                                <select name="printing" id="printing" class="hale_input h-full appearance-none"
-                                    required>
-                                    <option value="Outside only">Outside only</option>
-                                    <option value="Inside &amp; outside">Inside &amp; outside</option>
-                                </select>
-                                <i
-                                    class="absolute right-4 top-1/2 text-xl text-gray-500 -translate-y-1/2 fa fa-chevron-down"></i>
-                            </div>
-                        </section>
-                        <p style="margin-top:20px; font-size:16px;">
-                            <strong>Price:</strong> $650 for 100 items
-                        </p>
-                    </div>
-                    <!-- Submit Button -->
-                    <section class="flex items-center gap-2 justify-between mt-2.5">
-                        <div class="w-full">
-                            <button type="submit" class="btn_secondry w-1/2">
-                                Proceed to Checkout
-                            </button>
-                        </div>
-                    </section>
-                    <div class="grid md:grid-cols-3 grid-cols-2 gap-5 mt-8">
-                        <div class="text-center text-title_Clr space-y-2.5">
-                            <i class="fa fa-clock" style="font-size:32px;"></i>
-                            <p><strong>Quick</strong><br>Turnaround</p>
-                        </div>
-                        <div class="text-center text-title_Clr space-y-2.5">
-                            <i class="fa fa-pencil-square" style="font-size:32px;"></i>
-                            <p><strong>Free</strong><br>Designing</p>
-                        </div>
-                        <div class="text-center text-title_Clr space-y-2.5">
-                            <i class="fa fa-truck" style="font-size:32px;"></i>
-                            <p><strong>Free</strong><br>Shipping</p>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
 
 
     </div>
 </section>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
 
-    /* ========= TAB SWITCHING ========= */
+        /* ========= TAB SWITCHING ========= */
 
-    const tabButtons = document.querySelectorAll('.form_tab-btn');
-    const tabPanels = document.querySelectorAll('.form_tab-panel');
+        const tabButtons = document.querySelectorAll('.form_tab-btn');
+        const tabPanels = document.querySelectorAll('.form_tab-panel');
 
-    function openTab(tabId) {
+        function openTab(tabId) {
+            tabPanels.forEach(panel => panel.classList.add('hidden'));
+            tabButtons.forEach(btn => btn.classList.remove('form_tab_active'));
 
-        tabPanels.forEach(panel => panel.classList.add('hidden'));
-        tabButtons.forEach(btn => btn.classList.remove('form_tab_active'));
+            const activePanel = document.getElementById(tabId);
+            const activeBtn = document.querySelector(`.form_tab-btn[data-tab="${tabId}"]`);
 
-        const activePanel = document.getElementById(tabId);
-        const activeBtn = document.querySelector(`.form_tab-btn[data-tab="${tabId}"]`);
+            if (activePanel) activePanel.classList.remove('hidden');
+            if (activeBtn) activeBtn.classList.add('form_tab_active');
+        }
 
-        if (activePanel) activePanel.classList.remove('hidden');
-        if (activeBtn) activeBtn.classList.add('form_tab_active');
-    }
+        if (tabButtons.length > 0) {
+            openTab(tabButtons[0].dataset.tab);
+        }
 
-    if (tabButtons.length > 0) {
-        openTab(tabButtons[0].dataset.tab);
-    }
-
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            openTab(this.dataset.tab);
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                openTab(this.dataset.tab);
+            });
         });
-    });
 
 
-    /* ========= FORM DATA CONSOLE TEST ========= */
+        /* ========= PRICE + TITLE UPDATE ========= */
 
-    const forms = document.querySelectorAll('#sizes-form, #quote-form');
+        const quantitySelect = document.getElementById('quantity');
+        const priceDisplay = document.getElementById('price-display');
 
-    forms.forEach(form => {
+        function updatePrice() {
 
-        form.addEventListener('submit', function(e) {
+            if (!quantitySelect || !priceDisplay) return;
 
-            e.preventDefault();
+            const basePrice = parseFloat(priceDisplay.dataset.price) || 0;
 
-            const formData = new FormData(this);
+            // IMPORTANT: get actual text (100,200) not value (1,2)
+            const qty = parseInt(quantitySelect.options[quantitySelect.selectedIndex].text);
 
-            const data = {};
+            const total = basePrice * qty;
 
-            formData.forEach((value, key) => {
-                data[key] = value;
+            priceDisplay.innerHTML = `<strong>Price:</strong> £${total} for ${qty} items`;
+        }
+
+        if (quantitySelect) {
+            quantitySelect.addEventListener('change', updatePrice);
+            updatePrice();
+        }
+
+        /* ========= QUOTE FORM PRICE CALCULATION ========= */
+
+        const quoteForm = document.getElementById('quote-form');
+        const quotePriceDisplay = document.getElementById('quote-price-display');
+
+        if (quoteForm) {
+
+            const length = quoteForm.querySelector('#length');
+            const width = quoteForm.querySelector('#width');
+            const depth = quoteForm.querySelector('#depth');
+            const colors = quoteForm.querySelector('#colors');
+            const stock = quoteForm.querySelector('#stock');
+
+            function calculateQuotePrice() {
+
+                const l = parseFloat(length.value) || 0;
+                const w = parseFloat(width.value) || 0;
+                const d = parseFloat(depth.value) || 0;
+                const c = parseInt(colors.value) || 1;
+                const s = parseInt(stock.value) || 1;
+
+                // ===== CUSTOM LOGIC (EDIT AS NEEDED) =====
+                let base = (l + w + d);      // size factor
+                let colorCost = c * 5;       // per color
+                let stockCost = s * 0;      // stock multiplier
+
+                let total = (base * colorCost) + stockCost;
+
+                if (quotePriceDisplay) {
+                    quotePriceDisplay.innerHTML = `<strong>Estimated Price:</strong> £${total.toFixed(2)}`;
+                }
+
+                return total;
+            }
+
+            // trigger on change
+            [length, width, depth, colors, stock].forEach(el => {
+                if (el) el.addEventListener('input', calculateQuotePrice);
             });
 
-            console.log('Form Submitted:', this.id);
-            console.log(data);
+            // ===== ADD TO FORMDATA =====
+            quoteForm.addEventListener('submit', function (e) {
 
+                e.preventDefault();
+
+                const formData = new FormData(this);
+                const data = {};
+
+                const totalPrice = calculateQuotePrice();
+
+                formData.append('quote_price', totalPrice);
+
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+
+                console.log('Quote Form Submitted');
+                console.log(data);
+            });
+        }
+        /* ========= FORM DATA CONSOLE TEST ========= */
+
+        const forms = document.querySelectorAll('#sizes-form');
+
+        forms.forEach(form => {
+            form.addEventListener('submit', function (e) {
+
+                e.preventDefault();
+
+                const formData = new FormData(this);
+                const data = {};
+
+                // ===== GET TOTAL PRICE =====
+                const priceDisplay = document.getElementById('price-display');
+                const quantitySelect = document.getElementById('quantity');
+
+                let totalPrice = 0;
+
+                if (priceDisplay && quantitySelect) {
+                    const basePrice = parseFloat(priceDisplay.dataset.price) || 0;
+                    const qty = parseInt(quantitySelect.value) || 1;
+                    totalPrice = basePrice * qty;
+
+                    // ADD TO FORMDATA
+                    formData.append('total_price', totalPrice);
+                }
+
+                // convert to object (for debug)
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+
+                console.log('Form Submitted:', this.id);
+                console.log(data);
+            });
         });
-
     });
-
-});
 </script>

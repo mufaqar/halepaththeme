@@ -47,10 +47,10 @@
 $megaMenus = [
     "industries" => [
         "title" => "Industries",
-        "link" => "/industries/",
+        "link" => "https://halepathpackaging.co.uk/industries/",
         "groups" => [
             "Beauty & Personal Care" => [
-                "link" => "/industries/beauty-care/",
+                "link" => "https://halepathpackaging.co.uk/industries/beauty-care/",
                 "image" => true,
                 "items" => [
                     ["title" => "Cosmetics", "link" => "https://halepathpackaging.co.uk/industries/cosmetics/"],
@@ -67,7 +67,7 @@ $megaMenus = [
             ],
 
             "Food & Beverage" => [
-                "link" => "/industries/food-beverage/",
+                "link" => "https://halepathpackaging.co.uk/industries/food-beverage/",
                 "image" => true,
                 "items" => [
                     ["title" => "Food & Restaurant", "link" => "https://halepathpackaging.co.uk/industries/food-restaurant/"],
@@ -88,10 +88,10 @@ $megaMenus = [
             ],
 
             "Retail & E-commerce" => [
-                "link" => "/industries/retail-e-commerce/",
+                "link" => "https://halepathpackaging.co.uk/industries/retail-e-commerce/",
                 "image" => true,
                 "items" => [
-                    ["title" => "E-commerce Packaging", "link" => "https://halepathpackaging.co.uk/industries/e-commerce-packaging-retail-e-commerce/"],
+                    ["title" => "E-commerce Packaging", "link" => "https://halepathpackaging.co.uk/industries/e-commerce"],
                     ["title" => "Retail Boxes", "link" => "https://halepathpackaging.co.uk/industries/retail-boxes-retail-e-commerce/"],
                     ["title" => "Shopping Bags", "link" => "https://halepathpackaging.co.uk/industries/shopping-bags-retail-e-commerce/"],
                     ["title" => "Point of Sale Display", "link" => "https://halepathpackaging.co.uk/industries/point-of-sale-display/"],
@@ -101,7 +101,7 @@ $megaMenus = [
             ],
 
             "Cannabis & CBD" => [
-                "link" => "/industries/cannabis/",
+                "link" => "https://halepathpackaging.co.uk/industries/cannabis/",
                 "image" => true,
                 "items" => [
                     ["title" => "CBD Products", "link" => "https://halepathpackaging.co.uk/industries/cbd-products/"],
@@ -113,7 +113,7 @@ $megaMenus = [
             ],
 
             "Tobacco & Vaping" => [
-                "link" => "/industries/tobacco/",
+                "link" => "https://halepathpackaging.co.uk/industries/tobacco/",
                 "image" => false,
                 "items" => [
                     ["title" => "Tobacco Products", "link" => "https://halepathpackaging.co.uk/industries/tobacco-products-tobacco-vaping/"],
@@ -125,7 +125,7 @@ $megaMenus = [
             ],
 
             "Gifts & Celebrations" => [
-                "link" => "/industries/gifts-celebrations/",
+                "link" => "https://halepathpackaging.co.uk/industries/gifts-celebrations/",
                 "image" => false,
                 "items" => [
                     ["title" => "Candles", "link" => "https://halepathpackaging.co.uk/industries/candles/"],
@@ -140,7 +140,7 @@ $megaMenus = [
             ],
 
             "Apparel & Fashion" => [
-                "link" => "/industries/apparel-fashion-industries-we-serve/",
+                "link" => "https://halepathpackaging.co.uk/industries/apparel-fashion-industries-we-serve/",
                 "image" => false,
                 "items" => [
                     ["title" => "Garment Packaging", "link" => "https://halepathpackaging.co.uk/industries/garment-packaging/"],
@@ -155,7 +155,7 @@ $megaMenus = [
             ],
 
             "Pet Products" => [
-                "link" => "/industries/pet-products-industries-we-serve/",
+                "link" => "https://halepathpackaging.co.uk/industries/pet-products-industries-we-serve/",
                 "image" => false,
                 "items" => [
                     ["title" => "Pet Food", "link" => "https://halepathpackaging.co.uk/industries/pet-food/"],
@@ -166,7 +166,7 @@ $megaMenus = [
             ],
 
             "Pharmaceuticals" => [
-                "link" => "/industries/pharmaceuticals/",
+                "link" => "https://halepathpackaging.co.uk/industries/pharmaceuticals/",
                 "image" => false,
                 "items" => [
                     ["title" => "Supplements & Vitamins", "link" => "https://halepathpackaging.co.uk/industries/supplements-vitamins/"],
@@ -178,7 +178,7 @@ $megaMenus = [
             ],
 
             "Consumer Goods & Electronics" => [
-                "link" => "/industries/goods-electronics",
+                "link" => "https://halepathpackaging.co.uk/industries/goods-electronics",
                 "image" => false,
                 "items" => [
                     ["title" => "Mobile Accessories", "link" => "https://halepathpackaging.co.uk/industries/mobile-accessories/"],
@@ -189,7 +189,7 @@ $megaMenus = [
             ],
 
             "Automotive Industry" => [
-                "link" => "/industries/automotive/",
+                "link" => "https://halepathpackaging.co.uk/industries/automotive/",
                 "image" => false,
                 "items" => [
                     ["title" => "Auto Parts & Components", "link" => "https://halepathpackaging.co.uk/industries/auto-parts-components/"],
@@ -200,7 +200,7 @@ $megaMenus = [
             ],
 
             "Industrial Products" => [
-                "link" => "/industries/industrial/",
+                "link" => "https://halepathpackaging.co.uk/industries/industrial/",
                 "image" => false,
                 "items" => [
                     ["title" => "Manufacturing Components", "link" => "https://halepathpackaging.co.uk/industries/manufacturing-components/"],
@@ -211,7 +211,7 @@ $megaMenus = [
             ],
 
             "Sports & Fitness" => [
-                "link" => "/industries/sports-fitness/",
+                "link" => "https://halepathpackaging.co.uk/industries/sports-fitness/",
                 "image" => false,
                 "items" => [
                     ["title" => "Fitness Accessories", "link" => "https://halepathpackaging.co.uk/industries/fitness-accessories/"],
@@ -222,7 +222,7 @@ $megaMenus = [
             ],
 
             "Toys & Games" => [
-                "link" => "/industries/toys-games-industries-we-serve/",
+                "link" => "https://halepathpackaging.co.uk/industries/toys-games-industries-we-serve/",
                 "image" => false,
                 "items" => [
                     ["title" => "Board Games & Puzzles", "link" => "https://halepathpackaging.co.uk/industries/board-games-puzzles/"],
@@ -233,7 +233,7 @@ $megaMenus = [
             ],
 
             "Stationery & Office Supplies" => [
-                "link" => "/industries/stationary-and-office-supply/",
+                "link" => "https://halepathpackaging.co.uk/industries/stationary-and-office-supply/",
                 "image" => false,
                 "items" => [
                     ["title" => "Paper Products", "link" => "https://halepathpackaging.co.uk/industries/paper-products/"],
@@ -244,7 +244,7 @@ $megaMenus = [
             ],
 
             "Print, Advertising & Marketing" => [
-                "link" => "/industries/print-advertising/",
+                "link" => "https://halepathpackaging.co.uk/industries/print-advertising/",
                 "image" => false,
                 "items" => [
                     ["title" => "Business Cards & Stationery", "link" => "https://halepathpackaging.co.uk/industries/business-cards-stationery/"],
@@ -255,20 +255,20 @@ $megaMenus = [
             ],
 
             "Transport & Shipping Industry" => [
-                "link" => "/industries/transport-shipping/",
+                "link" => "https://halepathpackaging.co.uk/industries/transport-shipping/",
                 "image" => false,
                 "items" => [
                     ["title" => "Corrugated Boxes & Containers", "link" => "https://halepathpackaging.co.uk/industries/corrugated-boxes-containers/"],
                     ["title" => "Shipping Carton", "link" => "https://halepathpackaging.co.uk/industries/shipping-carton/"],
                     ["title" => "Hazardous Materials Packaging", "link" => "https://halepathpackaging.co.uk/industries/hazardous-materials-packaging/"],
-                    ["title" => "Industrial Packaging", "link" => "https://halepathpackaging.co.uk/industries/industrial-packaging/"],
+                    ["title" => "Industrial Packaging", "link" => "https://halepathpackaging.co.uk/industries/industrial/"],
                     ["title" => "Pallets & Crates", "link" => "https://halepathpackaging.co.uk/industries/pallets-crates/"],
                     ["title" => "Protective Packaging Materials", "link" => "https://halepathpackaging.co.uk/industries/protective-packaging-materials/"],
                 ]
             ],
 
             "Furniture Packaging" => [
-                "link" => "/industries/furniture-packaging/",
+                "link" => "https://halepathpackaging.co.uk/industries/furniture-packaging/",
                 "image" => false,
                 "items" => [
                     ["title" => "Office & Home Furniture Packaging", "link" => "https://halepathpackaging.co.uk/industries/office-home-furniture-packaging/"],
@@ -279,7 +279,7 @@ $megaMenus = [
             ],
 
             "Sustainable Solutions" => [
-                "link" => "/industries/sustainable-solutions/",
+                "link" => "https://halepathpackaging.co.uk/industries/sustainable-solutions/",
                 "image" => false,
                 "items" => [
                     ["title" => "Eco-Friendly Materials", "link" => "https://halepathpackaging.co.uk/industries/eco-friendly-materials-sustainable-solutions/"],
@@ -295,10 +295,10 @@ $megaMenus = [
     ],
     "custom_packaging" => [
         "title" => "Custom Packaging",
-        "link" => "/custom-packaging/",
+        "link" => "https://halepathpackaging.co.uk/custom-packaging/",
         "groups" => [
             "Box Styles" => [
-                "link" => "/custom-packaging/box-styles/",
+                "link" => "https://halepathpackaging.co.uk/custom-packaging/box-styles/",
                 "image" => true,
                 "items" => [
                     ["title" => "Folding Carton Boxes", "link" => "https://halepathpackaging.co.uk/custom-packaging/folding-carton-boxes/"],
@@ -329,7 +329,7 @@ $megaMenus = [
             ],
 
             "By Industry" => [
-                "link" => "/custom-packaging/by-industry/",
+                "link" => "https://halepathpackaging.co.uk/custom-packaging/by-industry/",
                 "image" => false,
                 "items" => [
                     ["title" => "CBD & Cannabis", "link" => "https://halepathpackaging.co.uk/custom-packaging/cbd-cannabis/"],
@@ -344,13 +344,13 @@ $megaMenus = [
                     ["title" => "Pet Products", "link" => "https://halepathpackaging.co.uk/custom-packaging/pet-products-packaging/"],
                     ["title" => "Electronics & Gadgets", "link" => "https://halepathpackaging.co.uk/custom-packaging/electronics-gadgets/"],
                     ["title" => "Toys & Games", "link" => "https://halepathpackaging.co.uk/custom-packaging/toys-games-packaging/"],
-                    ["title" => "Automotive & Office", "link" => "https://halepathpackaging.co.uk/custom-packaging/automotive-packaging/"],
+                    ["title" => "Automotive & Office", "link" => "https://halepathpackaging.co.uk/custom-packaging/automotive-office/"],
                     ["title" => "Stationery & Pen Boxes", "link" => "https://halepathpackaging.co.uk/custom-packaging/stationery-pen-boxes/"],
                 ]
             ],
 
             "By Purpose" => [
-                "link" => "/custom-packaging/by-purpose/",
+                "link" => "https://halepathpackaging.co.uk/custom-packaging/by-purpose/",
                 "image" => false,
                 "items" => [
                     ["title" => "Retail & Display", "link" => "https://halepathpackaging.co.uk/custom-packaging/retail-display/"],
@@ -365,7 +365,7 @@ $megaMenus = [
             ],
 
             "Materials" => [
-                "link" => "/custom-packaging/materials/",
+                "link" => "https://halepathpackaging.co.uk/custom-packaging/materials/",
                 "image" => false,
                 "items" => [
                     ["title" => "Core Materials", "link" => "https://halepathpackaging.co.uk/custom-packaging/core-materials/"],
@@ -382,7 +382,7 @@ $megaMenus = [
             ],
 
             "Services" => [
-                "link" => "/custom-packaging/services/",
+                "link" => "https://halepathpackaging.co.uk/custom-packaging/services/",
                 "image" => false,
                 "items" => [
                     ["title" => "Design & Sampling", "link" => "https://halepathpackaging.co.uk/custom-packaging/design-sampling/"],
@@ -399,10 +399,10 @@ $megaMenus = [
     ],
     "corrugated_packaging" => [
         "title" => "Corrugated Packaging",
-        "link" => "/corrugated-packaging",
+        "link" => "https://halepathpackaging.co.uk/corrugated-packaging",
         "groups" => [
             "Food & Beverage Packaging" => [
-                "link" => "/corrugated-packaging/food-beverage-packaging",
+                "link" => "https://halepathpackaging.co.uk/corrugated-packaging/food-beverage-packaging",
                 "image" => true,
                 "items" => [
                     ["title" => "Fresh Produce", "link" => "https://halepathpackaging.co.uk/corrugated-packaging/fresh-produce/"],
@@ -415,7 +415,7 @@ $megaMenus = [
             ],
 
             "Beverage Multipacks & Systems" => [
-                "link" => "/corrugated-packaging/beverage-multipacks/",
+                "link" => "https://halepathpackaging.co.uk/corrugated-packaging/beverage-multipacks/",
                 "image" => false,
                 "items" => [
                     ["title" => "Bottle Carriers", "link" => "https://halepathpackaging.co.uk/corrugated-packaging/bottle-carriers/"],
@@ -426,7 +426,7 @@ $megaMenus = [
             ],
 
             "E-Commerce Packaging" => [
-                "link" => "/corrugated-packaging/e-commerce/",
+                "link" => "https://halepathpackaging.co.uk/corrugated-packaging/e-commerce/",
                 "image" => false,
                 "items" => [
                     ["title" => "Standard Mailing Boxes", "link" => "https://halepathpackaging.co.uk/corrugated-packaging/standard-mailing-boxes/"],
@@ -439,7 +439,7 @@ $megaMenus = [
             ],
 
             "Shipping & Transport" => [
-                "link" => "/corrugated-packaging/shipping-transport/",
+                "link" => "https://halepathpackaging.co.uk/corrugated-packaging/shipping-transport/",
                 "image" => false,
                 "items" => [
                     ["title" => "Standard Shipping Boxes", "link" => "https://halepathpackaging.co.uk/corrugated-packaging/standard-shipping-boxes/"],
@@ -450,7 +450,7 @@ $megaMenus = [
             ],
 
             "Wall Constructions" => [
-                "link" => "/corrugated-packaging/wall-constructions/",
+                "link" => "https://halepathpackaging.co.uk/corrugated-packaging/wall-constructions/",
                 "image" => false,
                 "items" => [
                     ["title" => "Single Wall Boxes", "link" => "https://halepathpackaging.co.uk/corrugated-packaging/single-wall-boxes/"],
@@ -461,7 +461,7 @@ $megaMenus = [
             ],
 
             "Slotted & Standard Boxes" => [
-                "link" => "/corrugated-packaging/slotted-standard-boxes/",
+                "link" => "https://halepathpackaging.co.uk/corrugated-packaging/slotted-standard-boxes/",
                 "image" => false,
                 "items" => [
                     ["title" => "Regular Slotted Containers", "link" => "https://halepathpackaging.co.uk/corrugated-packaging/regular-slotted-containers/"],
@@ -473,7 +473,7 @@ $megaMenus = [
             ],
 
             "Functional & Automation-Friendly Boxes" => [
-                "link" => "/corrugated-packaging/functional-automation/",
+                "link" => "https://halepathpackaging.co.uk/corrugated-packaging/functional-automation/",
                 "image" => false,
                 "items" => [
                     ["title" => "Crash Lock Boxes", "link" => "https://halepathpackaging.co.uk/corrugated-packaging/crash-lock-boxes/"],
@@ -485,7 +485,7 @@ $megaMenus = [
             ],
 
             "Trays & Retail Ready Solutions" => [
-                "link" => "/corrugated-packaging/trays-retail-ready-solutions/",
+                "link" => "https://halepathpackaging.co.uk/corrugated-packaging/trays-retail-ready-solutions/",
                 "image" => false,
                 "items" => [
                     ["title" => "Corrugated Trays", "link" => "https://halepathpackaging.co.uk/corrugated-packaging/corrugated-trays/"],
@@ -496,7 +496,7 @@ $megaMenus = [
             ],
 
             "Bulk & Industrial Solutions" => [
-                "link" => "/corrugated-packaging/bulk-industrial-solutions/",
+                "link" => "https://halepathpackaging.co.uk/corrugated-packaging/bulk-industrial-solutions/",
                 "image" => false,
                 "items" => [
                     ["title" => "Bulk Bins & Containers", "link" => "https://halepathpackaging.co.uk/corrugated-packaging/bulk-bins-containers/"],
@@ -507,7 +507,7 @@ $megaMenus = [
             ],
 
             "Specialty Corrugated Packaging" => [
-                "link" => "/corrugated-packaging/specialty-corrugated-packaging/",
+                "link" => "https://halepathpackaging.co.uk/corrugated-packaging/specialty-corrugated-packaging/",
                 "image" => false,
                 "items" => [
                     ["title" => "eCommerce Mailer Boxes", "link" => "https://halepathpackaging.co.uk/corrugated-packaging/ecommerce-mailer-boxes/"],
@@ -521,10 +521,10 @@ $megaMenus = [
     ],
     "flexible_packaging" => [
         "title" => "Flexible Packaging",
-        "link" => "/flexible-packaging-pouches/",
+        "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/",
         "groups" => [
             "Flexible Flexible Packaging Bags" => [
-                "link" => "/flexible-packaging-pouches/flexible-packaging-bags/",
+                "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/flexible-packaging-bags/",
                 "image" => true,
                 "items" => [
                     ["title" => "Stand Up Pouch", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/stand-up-pouch/"],
@@ -544,7 +544,7 @@ $megaMenus = [
             ],
 
             "Food Packaging" => [
-                "link" => "/flexible-packaging-pouches/food-packaging/",
+                "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/food-packaging/",
                 "image" => false,
                 "items" => [
                     ["title" => "Coffee Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/coffee-packaging/"],
@@ -573,7 +573,7 @@ $megaMenus = [
                 ]
             ],
             "Non Food Packaging" => [
-                "link" => "/flexible-packaging-pouches/non-food-packaging/",
+                "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/non-food-packaging/",
                 "image" => false,
                 "items" => [
                     ["title" => "Detergent Packaging", "link" => "https://halepathpackaging.co.uk/flexible-packaging-pouches/detergent-packaging/"],
@@ -591,10 +591,10 @@ $megaMenus = [
     ],
     "commercial_printing" => [
         "title" => "Commercial Printing",
-        "link" => "commercial-printing/",
+        "link" => "https://halepathpackaging.co.uk/commercial-printing/",
         "groups" => [
             "Offset Printing (Lithography)" => [
-                "link" => "/commercial-printing/offset-printing-lithography/",
+                "link" => "https://halepathpackaging.co.uk/commercial-printing/offset-printing-lithography/",
                 "image" => true,
                 "items" => [
                     ["title" => "Digital Printing", "link" => "https://halepathpackaging.co.uk/commercial-printing/digital-printing/", "image" => true],
@@ -611,11 +611,11 @@ $megaMenus = [
     ],
     "print_advertising" => [
         "title" => "Print & Advertising",
-        "link" => "/print-advertising/",
+        "link" => "https://halepathpackaging.co.uk/print-advertising/",
         "groups" => [
 
             "Office Supplies" => [
-                "link" => "/print-advertising/office-supplies/",
+                "link" => "https://halepathpackaging.co.uk/print-advertising/office-supplies/",
                 "image" => true,
                 "items" => [
                     ["title" => "Workspace Accessories", "link" => "https://halepathpackaging.co.uk/print-advertising/workspace-accessories/"],
@@ -625,7 +625,7 @@ $megaMenus = [
             ],
 
             "Business Cards" => [
-                "link" => "/print-advertising/business-cards/",
+                "link" => "https://halepathpackaging.co.uk/print-advertising/business-cards/",
                 "image" => false,
                 "items" => [
                     ["title" => "Standard Card", "link" => "https://halepathpackaging.co.uk/print-advertising/standard-card/"],
@@ -637,7 +637,7 @@ $megaMenus = [
             ],
 
             "Postcards" => [
-                "link" => "/print-advertising/postcards/",
+                "link" => "https://halepathpackaging.co.uk/print-advertising/postcards/",
                 "image" => false,
                 "items" => [
                     ["title" => "Standard Postcard", "link" => "https://halepathpackaging.co.uk/print-advertising/standard-postcard/"],
@@ -649,7 +649,7 @@ $megaMenus = [
             ],
 
             "Marketing Materials" => [
-                "link" => "/print-advertising/marketing-materials/",
+                "link" => "https://halepathpackaging.co.uk/print-advertising/marketing-materials/",
                 "image" => false,
                 "items" => [
                     ["title" => "Flyers", "link" => "https://halepathpackaging.co.uk/print-advertising/flyers/"],
@@ -663,7 +663,7 @@ $megaMenus = [
             ],
 
             "Business Stationery" => [
-                "link" => "/print-advertising/business-stationery/",
+                "link" => "https://halepathpackaging.co.uk/print-advertising/business-stationery/",
                 "image" => false,
                 "items" => [
                     ["title" => "Shipping Mailers & Envelopes", "link" => "https://halepathpackaging.co.uk/print-advertising/shipping-mailers-envelopes/"],
@@ -674,7 +674,7 @@ $megaMenus = [
             ],
 
             "Banners & Displays" => [
-                "link" => "/print-advertising/banners-displays/",
+                "link" => "https://halepathpackaging.co.uk/print-advertising/banners-displays/",
                 "image" => false,
                 "items" => [
                     ["title" => "Hanging Banner", "link" => "https://halepathpackaging.co.uk/print-advertising/hanging-banner/"],
@@ -686,7 +686,7 @@ $megaMenus = [
             ],
 
             "Decals & Signage" => [
-                "link" => "/print-advertising/decals-signage/",
+                "link" => "https://halepathpackaging.co.uk/print-advertising/decals-signage/",
                 "image" => false,
                 "items" => [
                     ["title" => "Wall & Window Decals", "link" => "https://halepathpackaging.co.uk/print-advertising/wall-window-decals/"],
@@ -699,7 +699,7 @@ $megaMenus = [
             ],
 
             "Labels & Stickers" => [
-                "link" => "/print-advertising/labels-stickers/",
+                "link" => "https://halepathpackaging.co.uk/print-advertising/labels-stickers/",
                 "image" => false,
                 "items" => [
                     ["title" => "Sticker Singles", "link" => "https://halepathpackaging.co.uk/print-advertising/sticker-singles/"],
@@ -714,7 +714,7 @@ $megaMenus = [
             ],
 
             "Promotional Products" => [
-                "link" => "/print-advertising/promotional-products/",
+                "link" => "https://halepathpackaging.co.uk/print-advertising/promotional-products/",
                 "image" => false,
                 "items" => [
                     ["title" => "Booklet Catalogs", "link" => "https://halepathpackaging.co.uk/print-advertising/booklet-catalogs/"],
@@ -727,7 +727,7 @@ $megaMenus = [
             ],
 
             "Invitations, Cards & Gifts" => [
-                "link" => "/print-advertising/invitations-cards-gifts/",
+                "link" => "https://halepathpackaging.co.uk/print-advertising/invitations-cards-gifts/",
                 "image" => false,
                 "items" => [
                     ["title" => "Invitations & Announcements", "link" => "https://halepathpackaging.co.uk/print-advertising/invitations-announcements/"],
@@ -741,10 +741,10 @@ $megaMenus = [
     ],
     "innovation" => [
         "title" => "Innovation",
-        "link" => "/innovation/",
+        "link" => "https://halepathpackaging.co.uk/innovation/",
         "groups" => [
             "Branded Finishes" => [
-                "link" => "/innovation/branded-finishes-innovation/",
+                "link" => "https://halepathpackaging.co.uk/innovation/branded-finishes-innovation/",
                 "image" => true,
                 "items" => [
                     ["title" => "UV Printing Technology", "link" => "https://halepathpackaging.co.uk/innovation/uv-printing-technology/", "image" => true],
@@ -764,16 +764,16 @@ $megaMenus = [
     ],
     // "about_us" => [
     //     "title" => "About Us",
-    //     "link" => "/about-us",
+    //     "link" => "https://halepathpackaging.co.uk/about-us",
     //     "groups" => [
     //         "Company Overview" => [
-    //             "link" => "/about-us/company-overview",
+    //             "link" => "https://halepathpackaging.co.uk/about-us/company-overview",
     //             "image" => true,
     //             "items" => [
-    //                 ["title" => "Quality Commitment", "link" => "/about-us/quality-commitment", "image" => true],
-    //                 ["title" => "Innovation Approach", "link" => "/about-us/innovation-approach"],
-    //                 ["title" => "Sustainability Focus", "link" => "/about-us/sustainability"],
-    //                 ["title" => "Why Choose Us", "link" => "/about-us/why-choose-us"],
+    //                 ["title" => "Quality Commitment", "link" => "https://halepathpackaging.co.uk/about-us/quality-commitment", "image" => true],
+    //                 ["title" => "Innovation Approach", "link" => "https://halepathpackaging.co.uk/about-us/innovation-approach"],
+    //                 ["title" => "Sustainability Focus", "link" => "https://halepathpackaging.co.uk/about-us/sustainability"],
+    //                 ["title" => "Why Choose Us", "link" => "https://halepathpackaging.co.uk/about-us/why-choose-us"],
     //             ],
     //         ]
     //     ]

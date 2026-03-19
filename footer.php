@@ -94,8 +94,8 @@
                 </li>
                 <li><a href="tel:+4401213186768" class="footer_link">
                         <span class="marker"></span>01213186768</a></li>
-                <li><a href="mailto:info@halepathpackaging.co.uk" target="_blank" class="footer_link">
-                        <span class="marker"></span>info@halepathpackaging.co.uk</a></li>
+                <li><a href="mailto:sales@halepathpackaging.co.uk" target="_blank" class="footer_link">
+                        <span class="marker"></span>sales@halepathpackaging.co.uk</a></li>
             </ul>
         </div>
     </div>

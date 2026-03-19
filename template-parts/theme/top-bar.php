@@ -10,10 +10,10 @@
                 </a>
             </li>
             <li>
-                <a href="mailto:info@halepathpackaging.co.uk"
+                <a href="mailto:sales@halepathpackaging.co.uk"
                     class="text-sm font-normal text-white flex items-center gap-1 px-2 cursor-pointer">
                     <i class="fas fa-envelope"></i>
-                    info@halepathpackaging.co.uk
+                    sales@halepathpackaging.co.uk
                 </a>
             </li>
         </ul>

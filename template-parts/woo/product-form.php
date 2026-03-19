@@ -2,13 +2,25 @@
 // Initialize wrapper class (you can also make it conditional if needed)
 $quote_form_class = "container mx-auto mt-5 rounded-[19px] bg-[#CCCCCCB5]/70";
 
-// Get all WooCommerce products
-$products = wc_get_products(array('limit' => -1));
-
 global $product;
+$product_name = 'Product';
+$product_price = 0;
+$products_in_cat = wc_get_products($args);
 
-$product_name = $product ? $product->get_name() : 'Product';
-$product_price = $product ? $product->get_regular_price() : 0;
+// If viewing a single product
+if (is_product() && $product) {
+    $product_name = $product->get_name();
+    $product_price = $product->get_regular_price();
+}
+
+// If viewing a product category archive
+elseif (is_product_category()) {
+    $category = get_queried_object();
+    if ($category && isset($category->name)) {
+        $product_name = $category->name;
+        $product_price = 650;
+    }
+}
 ?>
 
 
@@ -31,10 +43,8 @@ $product_price = $product ? $product->get_regular_price() : 0;
                     </h2>
                     <p>
                         Choose from our popular Standard Sizes for a quick, off-the-shelf solution, or request a Custom
-                        Quote
-                        for a perfect, tailored fit. Whether you need something immediately or designed specifically for
-                        your
-                        brand, we provide flexible options to meet every need and budget.
+                        Quote for a perfect, tailored fit. Whether you need something immediately or designed
+                        specifically for your brand, we provide flexible options to meet every need and budget.
                     </p>
                     <div class="w-full gap-2.5">
                         <section class="grid md:grid-cols-4 grid-cols-2 gap-2 mt-2.5">
@@ -63,6 +73,7 @@ $product_price = $product ? $product->get_regular_price() : 0;
                                 <label for="quantity" class="text-sm font-medium hidden">Quantity</label>
                                 <select name="quantity" id="quantity" class="hale_input h-full appearance-none"
                                     required>
+                                    <option value="1" selected>1</option>
                                     <option value="100">100</option>
                                     <option value="200">200</option>
                                 </select>
@@ -73,8 +84,8 @@ $product_price = $product ? $product->get_regular_price() : 0;
                                 <label for="printing" class="text-sm font-medium hidden">Printing</label>
                                 <select name="printing" id="printing" class="hale_input h-full appearance-none"
                                     required>
-                                    <option value="Outside only">Outside only</option>
-                                    <option value="Inside &amp; outside">Inside &amp; outside</option>
+                                    <option value="outside_only">Outside only</option>
+                                    <option value="inside_outside">Inside &amp; outside</option>
                                 </select>
                                 <i
                                     class="absolute right-4 top-1/2 text-xl text-gray-500 -translate-y-1/2 fa fa-chevron-down"></i>
@@ -225,9 +236,11 @@ $product_price = $product ? $product->get_regular_price() : 0;
                             </label>
                         </div>
                     </div>
-                    <p id="quote-price-display" style="margin-top:20px; font-size:16px;">
-                        <strong>Estimated Price:</strong> £0
-                    </p>
+                    <p id="quote-price-display"
+   data-base-price="<?php echo esc_attr($product_price); ?>"
+   style="margin-top:20px; font-size:16px;">
+    <strong>Estimated Price:</strong> £<?php echo esc_html($product_price); ?>
+</p>
                     <!-- Submit Button -->
                     <section class="flex items-center gap-2 justify-between mt-2.5">
                         <div class="w-full">
@@ -313,28 +326,38 @@ $product_price = $product ? $product->get_regular_price() : 0;
             const colors = quoteForm.querySelector('#colors');
             const stock = quoteForm.querySelector('#stock');
 
-            function calculateQuotePrice() {
+          function calculateQuotePrice() {
 
-                const l = parseFloat(length.value) || 0;
-                const w = parseFloat(width.value) || 0;
-                const d = parseFloat(depth.value) || 0;
-                const c = parseInt(colors.value) || 1;
-                const s = parseInt(stock.value) || 1;
+    const basePrice = parseFloat(quotePriceDisplay.dataset.basePrice) || 0;
 
-                // ===== CUSTOM LOGIC (EDIT AS NEEDED) =====
-                let base = (l + w + d);      // size factor
-                let colorCost = c * 5;       // per color
-                let stockCost = s * 0;      // stock multiplier
+    const l = parseFloat(length.value) || 0;
+    const w = parseFloat(width.value) || 0;
+    const d = parseFloat(depth.value) || 0;
+    const c = parseInt(colors.value) || 1;
+    const s = parseInt(stock.value) || 1;
 
-                let total = (base * colorCost) + stockCost;
+    // ===== CUSTOM LOGIC =====
+    let base = (l + w + d);   // size factor
+    let colorCost = c * 5;
+    let stockCost = s * 0;
 
-                if (quotePriceDisplay) {
-                    quotePriceDisplay.innerHTML = `<strong>Estimated Price:</strong> £${total.toFixed(2)}`;
-                }
+    // ✅ ADD BASE PRICE HERE
+    let total = basePrice + (base * colorCost) + stockCost;
 
-                return total;
-            }
+    // ✅ If no input yet → show base price only
+    if (l === 0 && w === 0 && d === 0) {
+        quotePriceDisplay.innerHTML =
+            `<strong>Estimated Price:</strong> £${basePrice}`;
+        return basePrice;
+    }
 
+    if (quotePriceDisplay) {
+        quotePriceDisplay.innerHTML =
+            `<strong>Estimated Price:</strong> £${total.toFixed(2)}`;
+    }
+
+    return total;
+}
             // trigger on change
             [length, width, depth, colors, stock].forEach(el => {
                 if (el) el.addEventListener('input', calculateQuotePrice);
